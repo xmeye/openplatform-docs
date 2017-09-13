@@ -44,18 +44,20 @@
 </div>  
  
 ```
-		User client = User.newInstance();
-	    CheckMailVo vo = client.checkMailVo(mail);
-	    CheckUsernameVo vo = client.checkUsernameVo(username);
-	   Or
-	    client.checkMail(mail);
-	    client.checkUsername(username);
-	   Example of thejsonresponse:
-	    {
-	        "code": 4023,
-	        "msg": "mail exist",
-	        "data": ""
-	    }
+
+User client = User.newInstance();
+CheckMailVo vo = client.checkMailVo(mail);
+CheckUsernameVo vo = client.checkUsernameVo(username);
+Or
+client.checkMail(mail);
+client.checkUsername(username);
+Example of thejsonresponse:
+{
+    "code": 4023,
+    "msg": "mail exist",
+    "data": ""
+}
+
 ```
 
 <div style="margin-left:40px;">
