@@ -2,15 +2,15 @@
 <div name="zhunbei" id="zhunbei" style="font-size:25px;"><b>Integration preparation</b></div><br/> 
 
 <div name="huode" id="huode" style="font-size:20px;"><b>1.1Get uuid/AppKey/AppSecret/moveCard </b></div>  
-<p>&#160&#160&#160&#160&#160&#160&#160&#160  Find your application in “Console”, and view uuid, AppKey, AppSecret and moveCard these four values. If you haven't created an application, please see “Developers Must Read”- > <a href="http://open.xmeye.net/resource.docid=ec799b013aec4a589357b644630fd4d2&rid=69896d3a5962401dbd5db30988e67a56#undefined">“Newbie guide”.</a>"。</p>
+<p>Find your application in “Console”, and view uuid, AppKey, AppSecret and moveCard these four values. If you haven't created an application, please see “Developers Must Read”- > <a href="http://open.xmeye.net/resource.docid=ec799b013aec4a589357b644630fd4d2&rid=69896d3a5962401dbd5db30988e67a56#undefined">“Newbie guide”.</a>"。</p>
 
 <div name="xiazai" id="xiazai" style="font-size:20px;"><b>1.2Download SDK</b></div> 
 
-<p>&#160&#160&#160&#160&#160&#160&#160&#160SDK and Demo are in “Resource Center - > Download Center >web (java) Client, please select the corresponding platform to download.</p>
+<p>SDK and Demo are in “Resource Center - > Download Center >web (java) Client, please select the corresponding platform to download.</p>
 
 <div name="daoru" id="daoru" style="font-size:20px;"><b>1.3Import SDK</b></div> 
 
-<p>&#160&#160&#160&#160&#160&#160&#160&#160Put client.jar under the lib directory.</p>
+<p>Put client.jar under the lib directory.</p>
 <img src="http://open.xmeye.net/upload/image/20160713/1468397181338020287.png">
 
 <div name="peizhi" id="peizhi" style="font-size:20px;"><b>1.4Configure spring and app certificates</b></div>
