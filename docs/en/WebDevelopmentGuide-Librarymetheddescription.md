@@ -65,6 +65,7 @@ Example of thejsonresponse:
 </div>
 
 ```
+
 SendCode client = SendCode.newInstance();
 //SendCodeVo vo = client.mailVo(mail, "re");
 SendCodeVo vo = client.mailVo(mail,Type.REGISTER);
@@ -86,6 +87,7 @@ Example of thejson response:
         "data": "mrava"
     }
 }
+
 ```
 
 <div style="margin-left:40px;">
