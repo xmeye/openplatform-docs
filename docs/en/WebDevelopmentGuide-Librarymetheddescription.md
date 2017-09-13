@@ -64,27 +64,29 @@ Example of thejsonresponse:
 (2)Send mailbox verification code:
 </div>
 
-		SendCode client = SendCode.newInstance();
-	    //SendCodeVo vo = client.mailVo(mail, "re");
-	    SendCodeVo vo = client.mailVo(mail,Type.REGISTER);
-	    Or
-	    client.mail(mail, type);
-	    Example of thejson response:
-	    1:Register to send e-mail or send failed
-	    {
-	        "code": 4023,
-	        "msg": "mail exist",
-	        "data": ""
-	    }
-	   2:Finding back password is sent successfully will return to user ID and user
-	    {
-	        "code": 2000,
-	        "msg": "",
-	        "data": {
-	            "userId": "12345xx",
-	            "data": "mrava"
-	        }
-	    }
+```
+SendCode client = SendCode.newInstance();
+//SendCodeVo vo = client.mailVo(mail, "re");
+SendCodeVo vo = client.mailVo(mail,Type.REGISTER);
+Or
+client.mail(mail, type);
+Example of thejson response:
+1:Register to send e-mail or send failed
+{
+    "code": 4023,
+    "msg": "mail exist",
+    "data": ""
+}
+2:Finding back password is sent successfully will return to user ID and user
+{
+    "code": 2000,
+    "msg": "",
+    "data": {
+        "userId": "12345xx",
+        "data": "mrava"
+    }
+}
+```
 
 <div style="margin-left:40px;">
  (3)Get verification code xxxx from the registered mailbox, call regMail () or regMailVo () to register
