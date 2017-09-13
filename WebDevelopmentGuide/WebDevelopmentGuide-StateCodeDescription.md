@@ -1,0 +1,73 @@
+## 状态码说明
+
+<br/>
+<style>
+	table{
+		width:100%;
+		font-family:"楷体";
+		border-collapse:collapse;
+	}
+	table tr:hover{
+	    background-color:#f5f5f5;
+	}
+</style>
+<table>
+<thead>
+<tr style="background-color:#f5f5f5;"><td style="width:150px;">状态码</td><td>描述</td></tr>
+</thead>
+<tbody>
+<tr><td>2000</td><td>执行成功</td></tr>
+<tr><td>4000</td><td>用户名或密码错误</td></tr>
+<tr><td>4010</td><td>验证码错误</td></tr>
+<tr><td>4011</td><td>密码不一致</td></tr>
+<tr><td>4012</td><td>用户名已被注册</td></tr>
+<tr><td>4013</td><td>用户名为空</td></tr>
+<tr><td>4014</td><td>密码为空</td></tr>
+<tr><td>4015</td><td>确认密码为空</td></tr>
+<tr><td>4016</td><td>手机号为空/td></tr>
+<tr><td>4017</td><td>用户名格式不正确</td></tr>
+<tr><td>4018</td><td>密码格式不正确</td></tr>
+<tr><td>4019</td><td>确认密码格式不正确</td></tr>
+<tr><td>4020</td><td>手机号格式不正确</td></tr>
+<tr><td>4021</td><td>手机号已存在</td></tr>
+<tr><td>4022</td><td>手机号不存在</td></tr>
+<tr><td>4023</td><td>邮箱已存在</td></tr>
+<tr><td>4024</td><td>邮箱不存在</td></tr>
+<tr><td>4025</td><td>用户名不存在</td></tr>
+<tr><td>4026</td><td>原密码错误</td></tr>
+<tr><td>4027</td><td>修改密码失败</td></tr>
+<tr><td>4029</td><td>用户ID为空</td></tr>
+<tr><td>4030</td><td>验证码为空</td></tr>
+<tr><td>4031</td><td>邮箱为空</td></tr>
+<tr><td>4032</td><td>邮箱格式不正确</td></tr>
+<tr><td>4033</td><td>不允许用户修改密码</td></tr>
+<tr><td>4100</td><td>设备非法不允许添加</td></tr>
+<tr><td>4101</td><td>设备已存在</td></tr>
+<tr><td>4102</td><td>删除设备失败</td></tr>
+<tr><td>4103</td><td>修改失败</td></tr>
+<tr><td>4104</td><td>设备uuid参数异常</td></tr>
+<tr><td>4105</td><td>设备用户名参数异常</td></tr>
+<tr><td>4106</td><td>设备密码参数异常</td></tr>
+<tr><td>4200</td><td>添加授权失败</td></tr>
+<tr><td>4201</td><td>修改授权失败</td></tr>
+<tr><td>4202</td><td>删除授权失败</td></tr>
+<tr><td>4203</td><td>单个授权码同步失败，原因可能是type参数类型不对</td></tr>
+<tr><td>4300</td><td>发送失败</td></tr>
+<tr><td>4400</td><td>短信接口验证失败，请联系我们。</td></tr>
+<tr><td>4401</td><td>短信接口参数错误，请联系我们</td></tr>
+<tr><td>4402</td><td>每个手机号一天只能发送三次短信</td></tr>
+<tr><td>4403</td><td>发送失败，请稍后再试</td></tr>
+<tr><td>4404</td><td>发送太频繁了，请间隔120秒</td></tr>
+<tr><td>4405</td><td>发送失败</td></tr>
+<tr><td>4500</td><td>未查到用户列表或用户列表为空</td></tr>
+<tr><td>4501</td><td>未查到用户信息或用户信息为空</td></tr>
+<tr><td>4502</td><td>未查到设备列表或设备列表为空</td></tr>
+<tr><td>4503</td><td>重置app secret失败</td></tr>
+<tr><td>5000</td><td>服务器故障</td></tr>
+<tr><td>5001</td><td>证书不存在</td></tr>
+<tr><td>5002</td><td>请求头信息错误</td></tr>
+<tr><td>5003</td><td>证书失效</td></tr>
+<tr><td>5004</td><td>生成密钥校验错误</td></tr>
+<tr><td>5005</td><td>参数异常</td></tr>
+</tbody>
+</table>
