@@ -17,14 +17,14 @@
 <div name="peizhi1" id="peizhi1" style="font-size:15px;margin-left:20px;">1.4.1Configure spring-config.xml (or applicationContext.xml)</div>
 
 
-<p>&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160 Initialize Cfg in the configuration files of spring-config.xml (or applicationContext.xml)</p>
+<p>Initialize Cfg in the configuration files of spring-config.xml (or applicationContext.xml)</p>
 <label style="margin-left:120px;">
 <img src="http://open.xmeye.net/upload/image/20160726/1469514149844006427.bmp">
 </label>
 
 <div name="peizhi2" id="peizhi2" style="font-size:15px;margin-left:20px;">1.4.2Fill in APP certificates</div>
 
-<p>&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160 When the loading of spring container is completed, execute ClientFactory.init (cfg) immediately. You can write a listener to achieve the ApplicationListener, to achieve the method of original execution after the spring container is initialized and inject bean (cfg).</p>
+<p>When the loading of spring container is completed, execute ClientFactory.init (cfg) immediately. You can write a listener to achieve the ApplicationListener, to achieve the method of original execution after the spring container is initialized and inject bean (cfg).</p>
 
 	    public class ClientFactoryInit implements ApplicationListener<ContextRefreshedEvent> {    
 	        private Cfg cfg;
@@ -38,7 +38,7 @@
 	            }
 	        }
 	    }
-<p>&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160spring-config.xml</p>
+<p>spring-config.xml</p>
 	
 	    <bean id="init"class="net.xmcloud.action.ClientFactoryInit">    
 	        <property name="cfg" ref="cfg"></property>
