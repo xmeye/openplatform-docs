@@ -93,16 +93,21 @@ Example of thejson response:
 <div style="margin-left:40px;">
  (3)Get verification code xxxx from the registered mailbox, call regMail () or regMailVo () to register
 </div>
-		User client = User.newInstance();
-	    UserRegVo vo = client.regMailVo(username, password, confirmPass, mail, verCode);
-	    Or
-	    client.regMail(username, password, confirmPass, mail, verCode);
-	    Example of the json response:
-	    {
-	        "code": 4012,
-	        "msg": "username exist",
-	        "data": ""
-	    }
+
+```
+
+User client = User.newInstance();
+UserRegVo vo = client.regMailVo(username, password, confirmPass, mail, verCode);
+Or
+client.regMail(username, password, confirmPass, mail, verCode);
+Example of the json response:
+{
+    "code": 4012,
+    "msg": "username exist",
+    "data": ""
+}
+
+```
 
 <div name="yonghu2" id="yonghu2" style="font-size:20px;margin-left:25px;">
 2.1.2Mobile phone register
@@ -110,36 +115,61 @@ Example of thejson response:
 <div style="margin-left:40px;">
  (1)Use a unique checking mobile phone, username:
 </div>
-		 User client = User.newInstance();
-	     CheckPhoneVo vo = client.checkPhoneVo(mail);
-	     CheckUsernameVo vo = client.checkUsernameVo(username);
+
+```
+
+ User client = User.newInstance();
+ CheckPhoneVo vo = client.checkPhoneVo(mail);
+ CheckUsernameVo vo = client.checkUsernameVo(username);
+
+```
+
 <div style="margin-left:40px;">
 (2)Send mobile phone verification code:
 </div>
-		SendCode client = SendCode.newInstance();    
-    	//SendCodeVo vo = client.phone(phone,"re");//在1.2版本之前的写法
-    	SendCodeVo vo = client.phone(phone,Type.REGISTER);//在1.2版本之后的写法
+
+```
+
+SendCode client = SendCode.newInstance();    
+//SendCodeVo vo = client.phone(phone,"re");//在1.2版本之前的写法
+SendCodeVo vo = client.phone(phone,Type.REGISTER);//在1.2版本之后的写法
+
+```
+
 <div style="margin-left:40px;">
 (3)Get verification code, call regPhone() or regPhoneVo() to register
 </div>
-		User client = User.newInstance();
-    	UserRegVo vo = client.regPhoneVo(username,password,confirmPass,phone,verCode);
+
+```
+User client = User.newInstance();
+UserRegVo vo = client.regPhoneVo(username,password,confirmPass,phone,verCode);
+
+```
+
 <div name="yonghu3" id="yonghu3" style="font-size:20px;margin-left:25px;"> 
 2.1.3Find back password verification code to verify
 </div>
 <div style="margin-left:40px;">
  (1).Send verification code by mailbox or mobile phone
 </div>
-		1.Send mailbox verification code:
-	    SendCode client = SendCode.newInstance();
-	    //SendCodeVo = client.mailVo(mail,"fp");
-	    SendCodeVo = client.mailVo(mail,Type.FIND_PASSWORD);
-	    2.Send mobile phone verification code:
-	    SendCode client = SendCode.newInstance();
-	    SendCodeVo = client.phoneVo(phone,Type.FIND_PASSWORD);
+
+```
+1.Send mailbox verification code:
+SendCode client = SendCode.newInstance();
+//SendCodeVo = client.mailVo(mail,"fp");
+SendCodeVo = client.mailVo(mail,Type.FIND_PASSWORD);
+2.Send mobile phone verification code:
+SendCode client = SendCode.newInstance();
+SendCodeVo = client.phoneVo(phone,Type.FIND_PASSWORD);
+
+```
+
 <div style="margin-left:40px;">
   (2)Support cellphone number and mailbox. If you input cellphone number and mailbox at the same time, only verify cell-phone number.
 </div>
+
+```
+
 		User client = User.newInstance();
 	    EditorPassVo vo = client.cpcVo(phone, mail, verCode);
 	    Example of the json response:
@@ -148,6 +178,9 @@ Example of thejson response:
 	        "msg": "code error",
 	        "data": ""
 	    }
+
+```
+
 <div name="yonghu4" id="yonghu4" style="font-size:20px;margin-left:25px;"> 
 2.1.4Find back password by mailbox
 </div>
