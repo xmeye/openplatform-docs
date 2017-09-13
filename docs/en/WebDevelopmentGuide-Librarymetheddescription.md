@@ -43,7 +43,7 @@
 (1)Use a unique checking mailbox, username:
 </div>
 
-```md  
+```  
 
 User client = User.newInstance();
 CheckMailVo vo = client.checkMailVo(mail);
@@ -63,6 +63,7 @@ Example of thejsonresponse:
 <div style="margin-left:40px;">
 (2)Send mailbox verification code:
 </div>
+
 		SendCode client = SendCode.newInstance();
 	    //SendCodeVo vo = client.mailVo(mail, "re");
 	    SendCodeVo vo = client.mailVo(mail,Type.REGISTER);
@@ -84,6 +85,7 @@ Example of thejsonresponse:
 	            "data": "mrava"
 	        }
 	    }
+
 <div style="margin-left:40px;">
  (3)Get verification code xxxx from the registered mailbox, call regMail () or regMailVo () to register
 </div>
