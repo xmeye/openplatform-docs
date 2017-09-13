@@ -14,10 +14,8 @@
 <img src="http://open.xmeye.net/upload/image/20160713/1468397181338020287.png">
 
 <div name="peizhi" id="peizhi" style="font-size:20px;"><b>1.4Configure spring and app certificates</b></div>
-<div name="peizhi1" id="peizhi1" style="font-size:15px;margin-left:20px;">1.4.1Configure spring-config.xml (or applicationContext.xml)</div>
-
-
-<p>Initialize Cfg in the configuration files of spring-config.xml (or applicationContext.xml)</p>
+<div name="peizhi1" id="peizhi1" style="font-size:15px;margin-left:20px;">1.4.1Configure spring-config.xml (or applicationContext.xml)Initialize Cfg in the configuration files of spring-config.xml (or applicationContext.xml)
+</div>
 <label style="margin-left:120px;">
 <img src="http://open.xmeye.net/upload/image/20160726/1469514149844006427.bmp">
 </label>
