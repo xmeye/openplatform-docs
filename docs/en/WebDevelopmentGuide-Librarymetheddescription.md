@@ -42,6 +42,7 @@
 <div style="margin-left:40px;">
 (1)Use a unique checking mailbox, username:
 </div>   
+```
 		User client = User.newInstance();
 	    CheckMailVo vo = client.checkMailVo(mail);
 	    CheckUsernameVo vo = client.checkUsernameVo(username);
@@ -54,10 +55,12 @@
 	        "msg": "mail exist",
 	        "data": ""
 	    }
+```
 
 <div style="margin-left:40px;">
 (2)Send mailbox verification code:
 </div>
+```
 		SendCode client = SendCode.newInstance();
 	    //SendCodeVo vo = client.mailVo(mail, "re");
 	    SendCodeVo vo = client.mailVo(mail,Type.REGISTER);
@@ -79,9 +82,11 @@
 	            "data": "mrava"
 	        }
 	    }
+```
 <div style="margin-left:40px;">
  (3)Get verification code xxxx from the registered mailbox, call regMail () or regMailVo () to register
 </div>
+```
 		User client = User.newInstance();
 	    UserRegVo vo = client.regMailVo(username, password, confirmPass, mail, verCode);
 	    Or
@@ -92,6 +97,7 @@
 	        "msg": "username exist",
 	        "data": ""
 	    }
+```
 
 <div name="yonghu2" id="yonghu2" style="font-size:20px;margin-left:25px;">
 2.1.2Mobile phone register
@@ -99,20 +105,26 @@
 <div style="margin-left:40px;">
  (1)Use a unique checking mobile phone, username:
 </div>
+```
 		 User client = User.newInstance();
 	     CheckPhoneVo vo = client.checkPhoneVo(mail);
 	     CheckUsernameVo vo = client.checkUsernameVo(username);
+```
 <div style="margin-left:40px;">
 (2)Send mobile phone verification code:
 </div>
+```
 		SendCode client = SendCode.newInstance();    
     	//SendCodeVo vo = client.phone(phone,"re");//在1.2版本之前的写法
     	SendCodeVo vo = client.phone(phone,Type.REGISTER);//在1.2版本之后的写法
+```
 <div style="margin-left:40px;">
 (3)Get verification code, call regPhone() or regPhoneVo() to register
 </div>
+```
 		User client = User.newInstance();
     	UserRegVo vo = client.regPhoneVo(username,password,confirmPass,phone,verCode);
+```
 <div name="yonghu3" id="yonghu3" style="font-size:20px;margin-left:25px;"> 
 2.1.3Find back password verification code to verify
 </div>
