@@ -41,6 +41,7 @@
 </div>
 <div style="margin-left:40px;">
 (1)Use a unique checking mailbox, username:
+<<<<<<< HEAD
 </div>  
  
 ```
@@ -58,6 +59,22 @@ Example of thejsonresponse:
     "data": ""
 }
 
+=======
+</div>   
+```
+		User client = User.newInstance();
+	    CheckMailVo vo = client.checkMailVo(mail);
+	    CheckUsernameVo vo = client.checkUsernameVo(username);
+	   Or
+	    client.checkMail(mail);
+	    client.checkUsername(username);
+	   Example of thejsonresponse:
+	    {
+	        "code": 4023,
+	        "msg": "mail exist",
+	        "data": ""
+	    }
+>>>>>>> 73cf7046b0e0dca427e68ca68ebb7e8cc47c995f
 ```
 
 <div style="margin-left:40px;">
@@ -116,13 +133,19 @@ Example of thejsonresponse:
 <div style="margin-left:40px;">
 (2)Send mobile phone verification code:
 </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 73cf7046b0e0dca427e68ca68ebb7e8cc47c995f
 ```
 		SendCode client = SendCode.newInstance();    
     	//SendCodeVo vo = client.phone(phone,"re");//在1.2版本之前的写法
     	SendCodeVo vo = client.phone(phone,Type.REGISTER);//在1.2版本之后的写法
 ```
+<<<<<<< HEAD
 
+=======
+>>>>>>> 73cf7046b0e0dca427e68ca68ebb7e8cc47c995f
 <div style="margin-left:40px;">
 (3)Get verification code, call regPhone() or regPhoneVo() to register
 </div>
