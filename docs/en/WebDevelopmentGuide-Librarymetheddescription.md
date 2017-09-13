@@ -41,11 +41,9 @@
 </div>
 <div style="margin-left:40px;">
 (1)Use a unique checking mailbox, username:
-<<<<<<< HEAD
 </div>  
  
 ```
-
 User client = User.newInstance();
 CheckMailVo vo = client.checkMailVo(mail);
 CheckUsernameVo vo = client.checkUsernameVo(username);
@@ -59,22 +57,6 @@ Example of thejsonresponse:
     "data": ""
 }
 
-=======
-</div>   
-```
-		User client = User.newInstance();
-	    CheckMailVo vo = client.checkMailVo(mail);
-	    CheckUsernameVo vo = client.checkUsernameVo(username);
-	   Or
-	    client.checkMail(mail);
-	    client.checkUsername(username);
-	   Example of thejsonresponse:
-	    {
-	        "code": 4023,
-	        "msg": "mail exist",
-	        "data": ""
-	    }
->>>>>>> 73cf7046b0e0dca427e68ca68ebb7e8cc47c995f
 ```
 
 <div style="margin-left:40px;">
