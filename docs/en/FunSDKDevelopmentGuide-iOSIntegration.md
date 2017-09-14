@@ -90,7 +90,7 @@ In addition to  <lable style="color:red">FunSDK.framework </lable>， it also ne
 <div>
 &#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160No matter what kind of mode (local, AP, or P2P) you use, it all uses the same set of login and logout interface, and just the devid parameters are different if using different login methods to login device. 
 
-&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160DevId are filled in the “ip:port” format, whether it is local login or AP login. For example, the device IP address is 192.168.1.12, the device tcp port is set to 34567 (the default value of common device), then the devid is “192.168.1.12:34567”. AP mode, because the device is a gateway, so devid generally fill in for the "192.168.10.1:34567" format.     
+DevId are filled in the “ip:port” format, whether it is local login or AP login. For example, the device IP address is 192.168.1.12, the device tcp port is set to 34567 (the default value of common device), then the devid is “192.168.1.12:34567”. AP mode, because the device is a gateway, so devid generally fill in for the "192.168.10.1:34567" format.     
 </div>
 <div style="margin-left:60px;">
 In P2P mode, devid is the serial number of the device;<br/>
