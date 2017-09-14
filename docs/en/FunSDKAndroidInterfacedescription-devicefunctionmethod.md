@@ -1,15 +1,7 @@
 
 <div name="huoqu" id="huoqu" style="font-size:20px;"><b>4.1 Get channel name</b></div> 
 <br/>
-<style>
-	table{
-		border-collapse:collapse;
-		width:100%;
-	}
-	table tr td{
-		border:1px solid #000;
-	}
-</style>
+
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition</td><td colspan="2">int   DevGetChnName(int hUser, String devId, String szUser, String password,   int  nSeq);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">Description</td><td colspan="2">Get channel name</td></tr>
