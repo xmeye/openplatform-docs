@@ -1,4 +1,5 @@
-### Error code description ###
+## Error code description
+
 1. Basic error code                            
 2. User management error code                
 3. configuration management error code         
@@ -10,7 +11,8 @@
 
 <hr> 
 
-<div style="margin-left:25px;line-height:40px;"><b> ///Basic error code  </b></div>
+## Basic error code
+
 <br/>
 <style>
 	table{
@@ -92,7 +94,8 @@
 </table>
 <br/>
 
-<div style="margin-left:25px;line-height:40px;"><b> /// User management section error code
+## User management section error code
+
  </b></div>
 <br/>
 
@@ -158,7 +161,8 @@
 </table>
 <br/>
 
-<div style="margin-left:25px;line-height:40px;"><b>  /// Configuration management related error code </b></div>
+## Configuration management related error code
+
 <br/>
 
 <table>
@@ -198,7 +202,8 @@
 </table>
 <br/>
 
-<div style="margin-left:25px;line-height:40px;"><b>  ///DNS protocol parse return error code </b></div>
+## DNS protocol parse return error code
+
 <br/>
 
 <table>
@@ -267,7 +272,8 @@
 </table>
 <br/>
 
-<div style="margin-left:25px;line-height:40px;"><b>  ///Copyright related</b></div>
+## Copyright related
+
 <br/>
 
 <table>
@@ -293,7 +299,8 @@
 
 <br/>
 
-<div style="margin-left:25px;line-height:40px;"><b>  ///Upgrade error code  </b></div>
+## Upgrade error code
+
 <br/>
 
 <table>
