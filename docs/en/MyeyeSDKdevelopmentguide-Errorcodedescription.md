@@ -22,7 +22,7 @@ G.Release SDK resources:
     SDK exit     P_Client_ClearUp ()
 </pre>
 
-# 错误码 #
+# Error code
 
     
 <pre>
