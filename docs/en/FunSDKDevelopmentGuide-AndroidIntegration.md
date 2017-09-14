@@ -62,10 +62,10 @@ Put all so files under libs/armeabi directory;<br/>
 <div style="margin-left:80px;font-size:15px;">
 The Complete APP certificates include uuid/AppKey/AppSecret/moveCard four parts. After the initialization of FunSDK, set the APP certificates for the development platform, for example:
 <div style="margin-left:30px;">
-&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160uuid ：<label style="background-color:#fc6">e0534f3240274897821a126be19b6d46</label><br/>
-&#160&#160&#160&#160App Key ：<label style="background-color:#fc6">0621ef206a1d4cafbe0c5545c3882ea8</label><br/>
+uuid ：<label style="background-color:#fc6">e0534f3240274897821a126be19b6d46</label><br/>
+App Key ：<label style="background-color:#fc6">0621ef206a1d4cafbe0c5545c3882ea8</label><br/>
 App Secret ：<label style="background-color:#fc6">90f8bc17be2a425db6068c749dee4f5d</label><br/>
-  &#160moveCard ：<label style="background-color:#fc6">2</label><br/>
+moveCard ：<label style="background-color:#fc6">2</label><br/>
 </div>
 (Temporarily not support to configure in manifest, code calls incoming will prevail）
 </div>
@@ -94,7 +94,7 @@ The initialization process can refer to the interface realization in FunSDKDemo 
 <img src="http://open.xmeye.net/upload/image/20160516/1463375480321031106.png">
 </label>
 <div name="jicheng2" id="jicheng2" style="margin-left:20px;font-size:15px;line-height:60px;"><b>2.2 Several frequently-used methods of device visiting</b></div>
-<div>&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160At present, FunSDK needs to call different SysInit initialization interface in different usage scenarios and in different ways to visit device. In addition, the interface of device visit and other device operation is completely unified, and can switch to each other in using process. When you use, you can refer to the usage of FunSupport.setLoginType() in Demo, the specific instructions as follows:</div>
+<div>At present, FunSDK needs to call different SysInit initialization interface in different usage scenarios and in different ways to visit device. In addition, the interface of device visit and other device operation is completely unified, and can switch to each other in using process. When you use, you can refer to the usage of FunSupport.setLoginType() in Demo, the specific instructions as follows:</div>
 <div name="jicheng21" id="jicheng21" style="margin-left:40px;font-size:15px;line-height:60px;"><b>2.2.1 AP mode: direct connect to device by AP</b></div>
 <div style="margin-left:80px;">
  Need to call: FunSDK.SysInitAsAPModle()；<br/>
@@ -114,8 +114,8 @@ Model Description: need to register an account firstly, and then add device unde
 Examples: Demo reference “2.Device correlation” -> “2.6 Connect to device (connect by serial number)”
 </div>
 <div name="jicheng3" id="jicheng3" style="margin-left:20px;font-size:15px;line-height:60px;"><b>2.3 Preparation of functional interface before use</b></div>
-<div style="margin-left:40px;">&#160&#160&#160&#160&#160&#160&#160&#160Use the asynchronous message way to return the result to the caller thread interface, interface descriptions are as follows:</div>
-<div style="margin-left:40px;">&#160&#160&#160&#160&#160&#160&#160&#160 Functional interface user calls SDK.RegUser (this) method, complete the message receiver's registration, realize the interface “OnFunSDKResult (MSG Message, ex XMSG)”,
+<div style="margin-left:40px;">Use the asynchronous message way to return the result to the caller thread interface, interface descriptions are as follows:</div>
+<div style="margin-left:40px;">Functional interface user calls SDK.RegUser (this) method, complete the message receiver's registration, realize the interface “OnFunSDKResult (MSG Message, ex XMSG)”,
  and complete the processing of the message receiving functions. Remove the registration use “SDK.UnRegUser ()”. After registration, the message recipient is assigned to a unique recipient ID (an int value). When using the corresponding functional interface, this value, which is used as the result recipient identifier, is transferred to the interface.
 </div>
 <br/>
@@ -185,28 +185,28 @@ Alarm push switch refers to whether the device alarm message is sent to the alar
 
 <div name="guanyu" id="guanyu" style="font-size:20px;line-height:60px;"><b>4. About com.lib.funsdk.support</b></div>
 <div>
-&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160Com.lib.funsdk.support is not a part of the FunSDK, but is a provided reference code that in order to facilitate the transplantation and understanding of the FunSDK interface calls and be more suitable for the development habits of Android/Java. Open source, it is free to use under the authorization of our company; it can be developed on this basis, if there are changes, please synchronize to us.  <br/>
+Com.lib.funsdk.support is not a part of the FunSDK, but is a provided reference code that in order to facilitate the transplantation and understanding of the FunSDK interface calls and be more suitable for the development habits of Android/Java. Open source, it is free to use under the authorization of our company; it can be developed on this basis, if there are changes, please synchronize to us.  <br/>
 </div>
 <div style="margin-left:40px;">
 The existing purpose of com.lib.funsdk.support is to transplant FunSDK more simple.
 </div>
 <div name="guanyu1" id="guanyu1" style="margin-left:20px;font-size:15px;line-height:60px;"><b>4.1 FunSupport</b></div>
 <div>
-&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160FunSupport encapsulates most of the FunSDK interface and achieve IFunSDKResult.OnFunSDKResult().Most of the results processing can refer to the code here; in FunSupport, after processing IFunSDKResult.OnFunSDKResult(), it will callback in the corresponding way. When you use, you can firstly register Listener, there are several major kinds:
+FunSupport encapsulates most of the FunSDK interface and achieve IFunSDKResult.OnFunSDKResult().Most of the results processing can refer to the code here; in FunSupport, after processing IFunSDKResult.OnFunSDKResult(), it will callback in the corresponding way. When you use, you can firstly register Listener, there are several major kinds:
 </div>
 <div style="margin-left:40px;">
 1. OnFunLoginListener<br/>
-&#160&#160&#160&#160User login / logout results monitoring<br/>
+User login / logout results monitoring<br/>
 2. OnFunDeviceListener<br/>
-&#160&#160&#160&#160Device list changes, device status updates monitoring<br/>
+Device list changes, device status updates monitoring<br/>
 3. OnFunDeviceOptListener<br/>
-&#160&#160&#160&#160Device login, get / set up device configuration information monitoring;<br/>
+Device login, get / set up device configuration information monitoring;<br/>
 4. OnFunDeviceFileListener<br/>
-&#160&#160&#160&#160 Device file download monitoring;<br/>
+Device file download monitoring;<br/>
 5. Others   <br/>
 </div>
 <div>
- &#160&#160&#160&#160&#160&#160&#160&#160&#160&#160<lable style="color:red">Note:</lable>： It is completely possible if do not use FunSupport, you can refer to the FunSDK interface description; it is also a direct calling FunSDK interface in FunSupport; regardless of whether or not to use the code in the FunSupport, please read carefully the FunSDK interface description.    
+<lable style="color:red">Note:</lable>： It is completely possible if do not use FunSupport, you can refer to the FunSDK interface description; it is also a direct calling FunSDK interface in FunSupport; regardless of whether or not to use the code in the FunSupport, please read carefully the FunSDK interface description.    
 </div>
 <div name="guanyu2" id="guanyu2" style="margin-left:20px;font-size:15px;line-height:60px;"><b>4.2 FunVideoView</b></div>
 <div style="margin-left:60px;">
@@ -220,8 +220,8 @@ It can be directly used in the layout file (layout.xml) (Reference./res/layout/a
 <div style="margin-left:60px;">
 Several special interface instructions<br/>
 1.FunVideoView.setRealDevice(String devSn); <br/>
-&#160&#160&#160&#160Set the device serial number that need to play video. If the connection is AP mode, then it is the format of IP:PORT;<br/>
+Set the device serial number that need to play video. If the connection is AP mode, then it is the format of IP:PORT;<br/>
 2.FunVideoView.setStreamType(FunStreamType streamType);<br/>
-&#160&#160&#160&#160 Set the stream type, main /sub stream (if the device does not support, setup is invalid);<br/>
+Set the stream type, main /sub stream (if the device does not support, setup is invalid);<br/>
 </div>
 
