@@ -1,11 +1,14 @@
-### 1.Brief introduction ###
-### 1.1.Summary ###
+# 1.Brief introduction
+
+### 1.1.Summary
+
 This document introduces the Demo interface and operating procedures in order to support the instructions of ClientSDK demonstration program.<br/>
 Since this Demo is only used as a demonstration program and only represents the usage method of control interface. The design of Demo program may not be perfect, hereby note.
 
 
 
-### 1.2.Preliminary preparation ###
+### 1.2.Preliminary preparation
+
 Before starting Demo, please make sure that the file in the executing program is complete:<br/>
 
 <img src="http://open.xmeye.net/upload/image/20161110/1478763898739097377.png">
@@ -13,7 +16,9 @@ Before starting Demo, please make sure that the file in the executing program is
 Start Demo program, the interface is as follows<br/>
 <img src="http://open.xmeye.net/upload/image/20161110/1478763898736052953.png">
 <br/><br/>
-### 2.Function module instructions ###
+
+## 2.Function module instructions
+
 
 ### Login ###
 Calling interface：<br/>
@@ -54,14 +59,14 @@ Operation instructions:
 Get the specific device information, acquired information uses CFLOrganization to parse into nodes, showing in the tree control below.
 </div>
 For example:
-<img src="http://open.xmeye.net/upload/image/20161110/1478763898810097184.png">如：
+<img src="http://open.xmeye.net/upload/image/20161110/1478763898810097184.png">
 <br/>
 
 ### Real-time monitoring ###
 Select a channel node on the device tree (select device node is invalid).<br>
 Click OPenVideo, after the success, it will display the image below, and display play handle in Handle
 
-<img src="http://open.xmeye.net/upload/image/20161110/1478763898839095226.png">如：
+<img src="http://open.xmeye.net/upload/image/20161110/1478763898839095226.png">
 
 ### Open video: ###
 Calling interface:
@@ -149,16 +154,19 @@ Input time in “start time” and “end time”, for example:<br/>
 <img src="http://open.xmeye.net/upload/image/20161110/1478763898864063696.png">
 <br/>
 
-#### Note: ####
+#### Note:
 When query the center video, need to pay attention that direct mode is “non direct”, otherwise it will return an error.
-#### Playback ####
+
+#### Playback：
 Select video information, click to Play and play video
-#### Start playback: ####
+
+#### Start playback:
 Calling interface:
 <div style="margin-left:30px;">
 P_Client_PlaybackByFile
 </div>
-#### 停止回放： ####
+
+#### Stop playback：
 Calling interface:
 <div style="margin-left:30px;">
 P_Client_StopPlaybackByFile
@@ -166,13 +174,13 @@ P_Client_StopPlaybackByFile
 After input the start time and the end time, directly click the TimePlay to playback by time<br/>
 Calling interface P_Client_PlaybackByTime
 
-#### Playback control： ####
+#### Playback control：
 Calling interface:
 <div style="margin-left:30px;">
 P_Client_PlaybackControl
 </div><br/>
-#### Playback progress: ####
 
+#### Playback progress:
 Calling interface:
 <div style="margin-left:30px;">
 P_Client_PlaybackByTime
