@@ -1,18 +1,16 @@
-## Example development environment description
-
-### Development tool
+## Development tool
 
 Intellij IDEA
 
-### Server
+## Server
 
 Tomcat7
 
-### Frame
+## Frame
 
 Struts2+Spring
 
-### Major jar package of dependencies
+## Major jar package of dependencies
 
 client.jar(provided by open platform)
 
