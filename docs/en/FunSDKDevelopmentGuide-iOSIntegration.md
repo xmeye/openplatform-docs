@@ -20,7 +20,7 @@ In addition to  <lable style="color:red">FunSDK.framework </lable>， it also ne
 <div name="jicheng" id="jicheng" style="font-size:25px;line-height:60px;"><b>2.Basic function integration</b></div>
 <div name="jicheng1" id="jicheng1" style="margin-left:20px;font-size:20px;line-height:30px;"><b>2.1 FunSDK initialization</b></div>
 <div>
- &#160 &#160 &#160&#160 &#160 &#160&#160 &#160 &#160 The initialization of FunSDK could be executed in -<lable style="color:red">(BOOL)</lable>application:(<lable style="color:#5500ff">UIApplication </lable>*)application didFinishLaunchingWithOptions:(<lable style="color:#5500ff">NSDictionary </lable>*)launchOptionsof AppDelegate, through the following steps:
+The initialization of FunSDK could be executed in -<lable style="color:red">(BOOL)</lable>application:(<lable style="color:#5500ff">UIApplication </lable>*)application didFinishLaunchingWithOptions:(<lable style="color:#5500ff">NSDictionary </lable>*)launchOptionsof AppDelegate, through the following steps:
 </div>
 <div style="margin-left:60px;">
    a>  Library initialization 1: Fun_Init();<br/>
