@@ -1,5 +1,5 @@
-#### 2.1 Initialization ####
-<br/>
+## Initialization
+
 <style>
 	table{
 		border-collapse:collapse;
@@ -23,8 +23,7 @@
 </table>
 <br/>
 
-#### 2.2 Anti-initialization ####
-<br/>
+## Anti-initialization
 
 <table>
 <tr><td style="background-color:#ccc;text-align:center;width:200px;">Definition</td><td colspan="2"><b>void UnInit();</b></td><tr>
@@ -33,8 +32,7 @@
 </table>
 <br/>
 
-#### 2.3 Initialization service (AP mode) ####
-<br>
+## Initialization service (AP mode)
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:100px;">Definition</td><td colspan="2">int SysInitAsAPModle(String szDBFile);
@@ -49,8 +47,7 @@
 </table>
 <br/>
 
-#### 2.4 Initialization service (Cloud login) ####
-<br/>
+## Initialization service (Cloud login) 
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:100px;">Definition</td><td colspan="2">int SysInitNet(String szIP, int nPort);
@@ -67,8 +64,7 @@
 </table>
 <br/>
 
-#### 2.5 Initialization (NetSDK) ####
-<br/>
+## Initialization (NetSDK) 
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:100px;">Definition</td><td colspan="2">int InitNetSDK();</td><tr>
@@ -80,9 +76,7 @@
 </table>
 <br/>
 
-#### 2.6 Anti-initialization (NetSDK) ####
-<br/>
-
+## Anti-initialization (NetSDK) 
 
 <table>
 <tr><td style="background-color:#ccc;text-align:center;width:100px;">Definition</td><td colspan="2">void UnInitNetSDK();</td><tr>
@@ -94,9 +88,7 @@
 </table>
 <br/>
 
-#### 2.7 Initialization service (Local Login） ####
-<br/>
-
+## Initialization service (Local Login）
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:100px;">Definition</td><td colspan="2">int SysInitLocal(String szDBFile);</td><tr>
@@ -113,9 +105,7 @@
 </table>
 <br/>
 
-#### 2.8 Initialize App certificates ####
-<br/>
-
+## nitialize App certificates
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:100px;">Definition</td><td colspan="2">int XMCloundPlatformInit(String uuid, String appKey, String appSecret, int movedCard);</td><tr>
@@ -126,4 +116,3 @@
 <tr style="text-align:center"><td></td><td>Obtain the field after register application</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">Return</td><td colspan="2" style="text-align:center";>For details, see error code description</td><tr>
 </table>
-<br/>
