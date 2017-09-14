@@ -220,8 +220,8 @@ It can be directly used in the layout file (layout.xml) (Reference./res/layout/a
 <div style="margin-left:60px;">
 Several special interface instructions<br/>
 1.FunVideoView.setRealDevice(String devSn); <br/>
-  Set the device serial number that need to play video. If the connection is AP mode, then it is the format of IP:PORT;<br/>
+   Set the device serial number that need to play video. If the connection is AP mode, then it is the format of IP:PORT;<br/>
 2.FunVideoView.setStreamType(FunStreamType streamType);<br/>
-  Set the stream type, main /sub stream (if the device does not support, setup is invalid);<br/>
+   Set the stream type, main /sub stream (if the device does not support, setup is invalid);<br/>
 </div>
 
