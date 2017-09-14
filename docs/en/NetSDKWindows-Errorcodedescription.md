@@ -13,16 +13,7 @@
 
 ## Basic error code
 
-<br/>
-<style>
-	table{
-		text-align:center;
-		border-collapse:collapse;
-		width:100%;
-	}
-	table tr td{
-		border:1px solid #fff;
-	}
+
 </style>
 <table>
 <tr><td style="width:10%;background-color:#fff8dc"> Sequence number
