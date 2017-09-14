@@ -1,6 +1,4 @@
-<div style="text-align:center;font-size:30px;">SDK demon description</div>
-
- 
+# SDK demon description
 
 ## ClientDemo
 
