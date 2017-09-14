@@ -1,14 +1,5 @@
 ## Initialization
 
-<style>
-	table{
-		border-collapse:collapse;
-		width:100%;
-	}
-	table tr td{
-		border:1px solid #000;
-	}
-</style>
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:80px;">Definition</td><td colspan="2"><b>int Init(int nType = 0, byte []pParam = NULL);
 </b></td><tr>
@@ -21,7 +12,6 @@
 <tr><td style="background-color:#ccc;text-align:center">Return</td><td colspan="2" style="text-align:center";>For details, see error code description
 </td><tr>
 </table>
-<br/>
 
 ## Anti-initialization
 
@@ -30,7 +20,6 @@
 <tr><td style="background-color:#ccc;text-align:center">Description</td><td colspan="2">Function library anti initialization
 </td></tr>
 </table>
-<br/>
 
 ## Initialization service (AP mode)
 
@@ -45,7 +34,6 @@
 </td></tr>
 <tr><td style="background-color:#ccc;text-align:center">Return</td><td colspan="2" style="text-align:center";>For details, see error code description</td><tr>
 </table>
-<br/>
 
 ## Initialization service (Cloud login) 
 
@@ -62,7 +50,6 @@
 
 </td><tr>
 </table>
-<br/>
 
 ## Initialization (NetSDK) 
 
@@ -74,7 +61,6 @@
 <tr style="height:30px"><td></td><td></td></tr>
 <tr><td style="background-color:#ccc;text-align:center">Return</td><td colspan="2" style="text-align:center";>For details, see error code description</td><tr>
 </table>
-<br/>
 
 ## Anti-initialization (NetSDK) 
 
@@ -86,7 +72,6 @@
 <tr style="text-align:center"><td>szDBFile</td><td>The data file path of device information storage in AP mode</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">Return</td><td colspan="2" style="text-align:center";>For details, see error code description</td><tr>
 </table>
-<br/>
 
 ## Initialization service (Local Login）
 
@@ -103,7 +88,6 @@
 </td></tr>
 <tr><td style="background-color:#ccc;text-align:center">Return</td><td colspan="2" style="text-align:center";>For details, see error code description</td><tr>
 </table>
-<br/>
 
 ## nitialize App certificates
 
