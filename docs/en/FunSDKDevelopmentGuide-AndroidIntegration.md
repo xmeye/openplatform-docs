@@ -196,13 +196,13 @@ FunSupport encapsulates most of the FunSDK interface and achieve IFunSDKResult.O
 </div>
 <div style="margin-left:40px;">
 1. OnFunLoginListener<br/>
-User login / logout results monitoring<br/>
+   User login / logout results monitoring<br/>
 2. OnFunDeviceListener<br/>
-Device list changes, device status updates monitoring<br/>
+   Device list changes, device status updates monitoring<br/>
 3. OnFunDeviceOptListener<br/>
-Device login, get / set up device configuration information monitoring;<br/>
+   Device login, get / set up device configuration information monitoring;<br/>
 4. OnFunDeviceFileListener<br/>
-Device file download monitoring;<br/>
+   Device file download monitoring;<br/>
 5. Others   <br/>
 </div>
 <div>
@@ -220,8 +220,8 @@ It can be directly used in the layout file (layout.xml) (Reference./res/layout/a
 <div style="margin-left:60px;">
 Several special interface instructions<br/>
 1.FunVideoView.setRealDevice(String devSn); <br/>
-Set the device serial number that need to play video. If the connection is AP mode, then it is the format of IP:PORT;<br/>
+  Set the device serial number that need to play video. If the connection is AP mode, then it is the format of IP:PORT;<br/>
 2.FunVideoView.setStreamType(FunStreamType streamType);<br/>
-Set the stream type, main /sub stream (if the device does not support, setup is invalid);<br/>
+  Set the stream type, main /sub stream (if the device does not support, setup is invalid);<br/>
 </div>
 
