@@ -1,20 +1,18 @@
 ## Example development environment description
 
-Development tool
+### Development tool
 
-
-<div style="margin-left:30px;">
 Intellij IDEA
-</div>
-Server
-<div style="margin-left:30px;">
+
+### Server
+
 Tomcat7
-</div>
-Frame
-<div style="margin-left:30px;">
+
+### Frame
+
 Struts2+Spring
-</div>
-Major jar package of dependencies
-<div style="margin-left:30px;">
+
+### Major jar package of dependencies
+
 client.jar(provided by open platform)
-</div>
+
