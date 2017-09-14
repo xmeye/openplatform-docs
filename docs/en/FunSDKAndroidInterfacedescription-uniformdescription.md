@@ -27,4 +27,4 @@ The related methods of media function start with “Media”<br/>
 
 ## Calling process
 
-<img src="http://open.xmeye.net/upload/image/20160516/1463375625617066148.png">
+<div><img src="http://open.xmeye.net/upload/image/20160516/1463375625617066148.png"></div>
