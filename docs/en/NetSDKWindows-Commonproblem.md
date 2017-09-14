@@ -1,6 +1,7 @@
 ### Customer FAQ： ###
 
-#### 一、Capture problem ####
+## 一、Capture problem
+
 <div style="color:red;margin-left:20px;">
   1.The capture function get a picture of what format?
 </div>
@@ -15,7 +16,9 @@
   If you have any questions, ask for technical support....
 
 </div>
-#### 二、Bitstream issues in Preview ####
+
+## 二、Bitstream issues in Preview
+
 <div style="color:red;margin-left:20px;">
   1.Can you provide the decoding library under Linux?
 </div>
@@ -37,7 +40,7 @@
     Answer：H264_PLAY_Stop(nIndex) -> H264_PLAY_CloseStream(nIndex) -> H264_PLAY_FreePort(nIndex)
 </div>
 <div style="color:red;margin-left:20px;">
-  4.码流格式？
+  4.Stream format？
 </div>
 <div style="margin-left:20px;">
     Answer：YUV format access: use the play play library H264_PLAY_SetDisplayCallBack interface function callback to obtain. <br/>
@@ -56,7 +59,8 @@
     Answer：Using the corresponding stream callback function with H264_DVR_SetRealDataCallBackV2 interface, to obtain each with a private head frame, the frame type from the first field analysis of second parameter structure of the callback function in the body. Access to each frame of data, the private data stream is removed from the head of H264 stream data standard, private head for a 16 bit data stream I frame, P frame head of private data stream for 8. The standard H264 code stream is used for playback. The operation is the same as above (refer to Clientdemo2)
 </div>
 
-三、Video playback problem <br/>
+## 三、Video playback problem
+
 <label style="color:red;margin-left:20px;">
   1.There are two ways to remotely replay query Videos: </label>, document querying, video recording, and video recording by time.
 
@@ -71,7 +75,8 @@
     (2)According to the file by file playback can also query, download the file.
 </div>
 
-#### 四、Yuntai control problem ####
+## 四、Yuntai control problem
+
 <div style="color:red;margin-left:20px;">
   1.How to add the parameters of the pan tilt control interface function?
 </div>
@@ -90,7 +95,9 @@
 <div style="margin-left:20px;">
     Answer：You can obtain all preset points of the device of the ball player through the command E_SDK_CFG_PTZPRESET, and obtain all the cruise routes and all preset point information of the ball machine by command E_SDK_CFG_PTZTOUR.
 </div>
-#### 五、Configuration settings and save questions ####
+
+## 五、Configuration settings and save questions
+
 <div style="color:red;margin-left:20px;">
   1.Video configuration problem
 </div>
@@ -103,7 +110,9 @@
 <div style="margin-left:20px;">
     Answer: if you want to know whether the function exists, must first obtain the level of function, use the command E_SDK_CONFIG_ABILITY_SYSFUNC to obtain the SDK_SystemFunction structure information can correspond, through the notes to understand the field is the ability which function.
 </div>
-#### 六、Cloud sequence number landing problem ####
+
+## 六、Cloud sequence number landing problem
+
 <div style="margin-left:20px;">
     Answer: when using the H264_DVR_Login interface, the first parameter is the device serial number, for example:
 "12184db7e85c4e25"; the second parameter is the port number; the third parameter is the user name; the fourth parameter is the password; the fifth parameter is the device information; the sixth parameter is the error code; and the seventh parameter is 2
