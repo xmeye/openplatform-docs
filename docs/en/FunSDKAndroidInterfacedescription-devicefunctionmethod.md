@@ -1,6 +1,4 @@
-
-<div name="huoqu" id="huoqu" style="font-size:20px;"><b>4.1 Get channel name</b></div> 
-<br/>
+## Get channel name
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition</td><td colspan="2">int   DevGetChnName(int hUser, String devId, String szUser, String password,   int  nSeq);</td></tr>
@@ -22,10 +20,8 @@ Device login password;</td></tr>
 <tr><td style="text-align:center">pData
 </td><td>Point to SDK_ChannelNameConfigAll object byte stream</td></tr>
 </table>
-<br/>
 
-<div name="chaxun1" id="chaxun1" style="font-size:20px;"><b>4.2 Query video</b></div> 
-<br/>
+## Query video
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:100px;">Definition</td><td colspan="2">int  DevFindFile(int hUser, String devId, byte   []pH264_DVR_FINDINFO, int  nMaxCount,   int  waittime, int  nSeq);
@@ -51,10 +47,8 @@ message
 <tr><td  style="text-align:center">pData</td>
 <td>Point to H264_DVR_FILE_DATA object array byte stream</td></tr>
 </table>
-<br/>
 
-<div name="chaxun2" id="chaxun2" style="font-size:20px;"><b>4.3 Query video (by time)</b></div> 
-<br/>
+## Query video (by time)
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:50px;">Definition</td><td colspan="2">int  DevFindFileByTime (int hUser, String devId,   byte []pSDK_SearchByTime, int    waittime, int  nSeq);</td></tr>
@@ -78,10 +72,8 @@ message
 <tr><td  style="text-align:center">pData
 </td><td>Point to SDK_SearchByTimeResult object byte stream</td></tr>
 </table>
-<br/>
 
-<div name="xiazai1" id="xiazai1" style="font-size:20px;"><b>4.4 Download by file video</b></div> 
-<br/>
+## Download by file video
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition</td><td colspan="2">int   DevDowonLoadByFile(int hUser, String szDevId, byte []pH264_DVR_FILE_DATA,   String szFileName, int nSeq)</td></tr>
@@ -104,11 +96,8 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:ownload progress   message callback<br/>
 <tr><td style="text-align:center">arg1
 </td><td><0：fail, for details, see error code description</td></tr>
 </table>
-<br/>
 
-<div name="xiazai2" id="xiazai2" style="font-size:20px;"><b>4.5 Download by time video</b></div> 
-<br/>
-
+## Download by time video
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition</td><td colspan="2">int   DevDowonLoadByTime(int hUser, String szDevId, byte []pH264_DVR_FINDINFO,   String szFileName, int nSeq)</td></tr>
@@ -132,10 +121,8 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:download progress   message callback<br/>
 <tr><td style="text-align:center">arg1
 </td><td><0：fail, for details, see error code description</td></tr>
 </table>
-<br/>
 
-<div name="xiazai3" id="xiazai3" style="font-size:20px;"><b>4.6 Device stop downloading</b></div> 
-<br/>
+## Device stop downloading
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition</td><td colspan="2">int   DevStopDownLoad(int hDownload);</td></tr>
@@ -154,10 +141,8 @@ Download operating object handle</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td><0： fail, for details, see error code description</td></tr>
 </table>
-<br/>
 
-<div name="yuntai" id="yuntai" style="font-size:20px;"><b> 4.7 PTZ control</b></div> 
-<br/>
+## PTZ control
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition</td><td colspan="2">int   DevPTZControl(int hUser, String devId, int nChnIndex, int nPTZCommand, int   bStop, int nSpeed, int nSeq)</td></tr>
@@ -177,10 +162,8 @@ Download operating object handle</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：success；<0:  fail, for details, see error code description</td></tr>
 </table>
-<br/>
 
-<div name="duijiang1" id="duijiang1" style="font-size:20px;"><b>4.8 Voice talk-back – start</b></div> 
-<br/>
+## Voice talk-back – start
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int   DevStarTalk(int hUser, String devId, int nSeq);</td></tr>
@@ -200,10 +183,8 @@ Download operating object handle</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：success；<0:  fail, for details, see error code description</td></tr>
 </table>
-<br/>
 
-<div name="duijiang2" id="duijiang2" style="font-size:20px;"><b>4.9 Voice talk-back – stop</b></div> 
-<br/>
+## Voice talk-back – stop
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">void   DevStopTalk(int hTalker);</td></tr>
@@ -219,10 +200,8 @@ Download operating object handle</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：success；<0:  fail, for details, see error code description</td></tr>
 </table>
-<br/>
 
-<div name="duijiang3" id="duijiang3" style="font-size:20px;"><b>4.10 4.10 Voice talk-back – send data</b></div> 
-<br/>
+## Voice talk-back – send data
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int   DevSendTalkData(String devId, byte [] pPCMData);</td></tr>
@@ -240,10 +219,8 @@ Download operating object handle</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：success；<0:  fail, for details, see error code description</td></tr>
 </table>
-<br/>
 
-<div name="sousuo" id="sousuo" style="font-size:20px;"><b>4.11 Device search</b></div>
-<br/>
+## Device search
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int   DevSearchDevice(int hUser, int nTimeout, int nSeq);</td></tr>
@@ -261,10 +238,8 @@ Download operating object handle</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：success；<0:  fail, for details, see error code description</td></tr>
 </table>
-<br/>
-
-<div name="peizhi1" id="peizhi1" style="font-size:20px;"><b>4.12 Parameter configuration - get configuration</b></div>
-<br/>
+.
+## Parameter configuration - get configuration
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int   DevGetConfig(int hUser, String devId, int nCommand, int nOutBufLen, int   nChannelNO, int nTimeout, int nSeq);</td></tr>
@@ -291,11 +266,8 @@ Download operating object handle</td></tr>
 <tr><td style="text-align:center">pData
 </td><td>Point to the result object byte stream</td></tr>
 </table>
-<br/>
 
-<div name="peizhi2" id="peizhi2" style="font-size:20px;"><b>4.13 Parameter configuration – get configuration (Json)</b></div> 
-<br/>
-<br/>
+## Parameter configuration – get configuration (Json)
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int DevGetConfigByJson(int   hUser, String szDevId,String szCommand,int nOutBufLen,int nChannelNO,int   nTimeout,int nSeq);</td></tr>
@@ -323,10 +295,8 @@ Result length</td></tr>
 <tr><td style="text-align:center">pData
 </td><td>Point to the result object byte stream</td></tr>
 </table>
-<br/>
 
-<div name="peizhi3" id="peizhi3" style="font-size:20px;"><b>4.14 Parameter configuration - save configuration</b></div>
-<br/>
+## Parameter configuration - save configuration
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:20px;">Definition</td><td colspan="2">int   DevSetConfig(int hUser, String devId, int nCommand, byte []pConfig, int   nChannelNO, int nTimeout, int nSeq);</td></tr>
@@ -352,10 +322,8 @@ Result length</td></tr>
 </td><td>==0：success；<0:  fail, for details, see error code description
 </td></tr>
 </table>
-<br/>
 
-<div name="peizhi4" id="peizhi4" style="font-size:20px;"><b>4.15 Parameter configuration - save configuration (Json)</b></div> 
-<br/>
+## Parameter configuration - save configuration (Json)
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int DevSetConfigByJson(int   hUser, String szDevId,String szCommand,String pConfig,int nChannelNO,int   nTimeout,int   nSeq);</td></tr>
@@ -381,10 +349,8 @@ Result length</td></tr>
 </td><td>==0：success；<0:  fail, for details, see error code description
 </td></tr>
 </table>
-<br/>
 
-<div name="peizhi5" id="peizhi5" style="font-size:20px;"><b>4.16 Parameter configuration – get device attributes</b></div>
-<br/>
+## Parameter configuration – get device attributes
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int   DevGetAttr(int hUser, String devId, int nCommand, int nOutBufLen, int   nChannelNO, int nTimeout, int nSeq);
@@ -413,10 +379,8 @@ Result length</td></tr>
 </td><td>Result return to byte stream</td>
 </tr>
 </table>
-<br/>
 
-<div name="peizhi6" id="peizhi6" style="font-size:20px;"><b>4.17 Parameter configuration – set device attributes </b></div> 
-<br/>
+## Parameter configuration – set device attributes
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int   DevSetAttr(int hUser, String devId, int nCommand, byte []pConfig, int   nChannelNO, int nTimeout, int nSeq);</td></tr>
@@ -441,10 +405,8 @@ Result length</td></tr>
 </td><td>==0：success；<0:  fail, for details, see error code description</td>
 </tr>
 </table>
-<br/>
 
-<div name="peizhi7" id="peizhi7" style="font-size:20px;"><b>4.18 Open quick configuration</b></div> 
-<br/>
+## Open quick configuration
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int   DevStartAPConfig(int hUser, int nGetRetType,String ssid, String data, String   info, String ipaddr, int type,int   isbroad, int nTimeout);</td></tr>
@@ -476,10 +438,8 @@ Result length</td></tr>
 </td><td>==0：success；<0:  fail, for details, see error code description</td>
 </tr>
 </table>
-<br/>
 
-<div name="peizhi8" id="peizhi8" style="font-size:20px;"><b>4.19 Close quick configuration</b></div> 
-<br/>
+## Close quick configuration
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">void   DevStopAPConfig();</td></tr>
@@ -496,10 +456,8 @@ Result length</td></tr>
 <tr><td style="text-align:center">arg1</td>
 <td>None </td></tr>
 </table>
-<br/>
 
-<div name="wifi" id="wifi" style="font-size:20px;"><b>4.20 Set WiFi configuration</b></div> 
-<br/>
+## Set WiFi configuration
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int DevSetWIFIConfig(int   hUser,byte[] pSDK_NetWifiConfig, int nTimeout, int nSeq);</td></tr>
@@ -518,10 +476,8 @@ Result length</td></tr>
 </td><td>==0：success；<0:  fail, for details, see error code description</td>
 </tr>
 </table>
-<br/>
 
-<div name="tuichu" id="tuichu" style="font-size:20px;"><b>4.21 Device exit login</b></div> 
-<br/>
+## Device exit login
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int   DevLogout(int hUser, String szDevId, int nSeq);</td></tr>
@@ -538,10 +494,8 @@ Result length</td></tr>
 </td><td> none</td>
 </tr>
 </table>
-<br/>
 
-<div name="xuanxiang" id="xuanxiang" style="font-size:20px;"><b>4.22 Device options </b></div> 
-<br/>
+## Device options
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int   DevOption(int hUser, String szDevId, int nOptId,byte[] pData, int nDataLen,   int param1, int param2, int param3,String szStr, int seq);
@@ -580,10 +534,8 @@ Device options</td></tr>
 </td><td>If there is returned data, then that is the data returned by   the device. Note: it may be empty.</td>
 </tr>
 </table>
-<br/>
 
-<div name="xuanxiang1" id="xuanxiang1" style="font-size:15px;"><b>4.22.1 Transparent serial port</b></div>
-<br/>
+### Transparent serial port
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int DevOption(int hUser, String szDevId, int nOptId,byte[] pData, int   nDataLen, int param1, int param2, int param3,String szStr, int seq);</td></tr>
@@ -624,10 +576,8 @@ Write：EDOPT_DEV_TANSPORT_COM_WRITE（8）<br/>
 </td>
 </tr>
 </table>
-<br/>
 
-<div name="yonghu" id="yonghu" style="font-size:20px;"><b>4.23 Device set user data</b></div> 
-<br/>
+## Device set user data
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int   DevSetUserData(int nType, byte[] pData);
@@ -649,10 +599,8 @@ Device set user data </td></tr>
 </td><td>None</td>
 </tr>
 </table>
-<br/>
 
-<div name="shengji1" id="shengji1" style="font-size:20px;"><b>4.24 Device check upgrade</b></div> 
-<br/>
+## Device check upgrade
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int   DevCheckUpgrade(int hUser, String szDevId, int nSeq);
@@ -671,10 +619,8 @@ Device check upgrade</td></tr>
 </td><td>0: the latest program currently, 1: support for Cloud upgrade, 2: local or server upgrade; <0: fail, for details, see error code description
 </td></tr>
 </table>
-<br/>
 
-<div name="shengji2" id="shengji2" style="font-size:20px;"><b>4.25 Device start to upgrade</b></div>
-<br/>
+## Device start to upgrade
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int   DevStartUpgrade(int hUser, String szDevId, int nType, int nSeq);
@@ -698,10 +644,8 @@ Download progress of the upgrade file is handled via message ” EUIMSG .EMSG_DE
 </td><td>==0：success；<0:  fail, for details, see error code description</td>
 </tr>
 </table>
-<br/>
 
-<div name="shengji3" id="shengji3" style="font-size:20px;"><b>4.26 Upgrade via file</b></div> 
-<br/>
+## Upgrade via file
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:100px;">Definition</td><td colspan="2">int   DevStartUpgradeByFile(int hUser, String szDevId, String sFileName, int nSeq);</td></tr>
@@ -720,10 +664,8 @@ Download progress of the upgrade file is handled via message ” EUIMSG .EMSG_DE
 <tr><td  style="text-align:center">arg1</td>
 <td>==0：success；<0:  fail, for details, see error code description</td></tr>
 </table>
-<br/>
 
-<div name="shengji4" id="shengji4" style="font-size:20px;"><b>4.27 Device stop upgrading</b></div> 
-<br/>
+## Device stop upgrading
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:50px;">Definition</td><td colspan="2">int   DevStopUpgrade(int hUser, String szDevId, int nSeq);
@@ -742,10 +684,8 @@ Download progress of the upgrade file is handled via message ” EUIMSG .EMSG_DE
 <tr><td  style="text-align:center">arg1
 </td><td>==0：success；<0:  fail, for details, see error code description</td></tr>
 </table>
-<br/>
 
-<div name="shengji5" id="shengji5" style="font-size:20px;"><b>4.28 Device check upgrade - cloud upgrade</b></div>
-<br/>
+## Device check upgrade - cloud upgrade
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition</td><td colspan="2">int SysCloudUpGradeCheck (int hUser, String szDevId, int nSeq);
@@ -766,11 +706,8 @@ Device check upgrade - cloud upgrade</td></tr>
 </td><td>0: the latest program currently, 1: device connection upgrade, the  server upgrade, 2: local upgrade, but the upgrade file has not been downloaded; 3: local upgrade, upgrade file has been downloaded, <0: fail, for details, see error code description
 </td></tr>
 </table>
-<br/>
 
-<div name="shengji6" id="shengji6" style="font-size:20px;"><b>4.29 Download the upgrade file - cloud upgrade</b></div> 
-<br/>
-
+## Download the upgrade file - cloud upgrade
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition</td><td colspan="2">int SysCloudUpGradeDownLoad (int hUser, String szDevId, int nSeq);
@@ -792,10 +729,8 @@ Download the upgrade file - cloud upgrade</td></tr>
 </td><td>==0：success；<0:  fail, for details, see error code description
 </td></tr>
 </table>
-<br/>
 
-<div name="shengji7" id="shengji7" style="font-size:20px;"><b>4.30 Stop downloading the upgrade file- cloud upgrade</b></div>
-<br/>
+## Stop downloading the upgrade file- cloud upgrade
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition</td><td colspan="2">int SysStopCloudUpGradeDownLoad (int hUser, String szDevId, int nSeq);
@@ -814,10 +749,8 @@ Upgrade via file</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：success；<0:  fail, for details, see error code description</td></tr>
 </table>
-<br/>
 
-<div name="qita" id="qita" style="font-size:20px;"><b>4.31 Other methods</b></div> 
-<br/>
+## Other methods
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:16%;">Definition</td><td colspan="5">GetObjHandle(EOOBJECT_ID.EOOBJECT_USER_SERVER)   + SendMsg</td></tr>
@@ -871,10 +804,8 @@ Upgrade via file</td></tr>
 <tr style="background-color:#ccc;"><td style="text-align:center;width:16%;">KSSAPIUpLoadVideo</td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td style="text-align:center;width:16%;">KSSAPIUpLoadVideo</td><td>For details,    see error code</td><td></td><td></td><td>JSON format</td><td></td></tr>
 </table>
-<br/>
 
-<div name="shouquan" id="shouquan" style="font-size:20px;"><b>4.32 Get KSS authorization information</b></div> 
-<br/>
+## Get KSS authorization information
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int   CSSAPICommandCFS(int hUser, String szDevId, String cmd, String param, String   date, int nSeq);</td></tr>
@@ -923,10 +854,8 @@ when cdm is cfs_sig: <br/>
 <tr><td style="text-align:center">arg1
 </td><td>==0：success；<0:  fail, for details, see error code description</td></tr>
 </table>
-<br/>
 
-<div name="baojing1" id="baojing1" style="font-size:20px;"><b>4.33 Set to turn on / off local area network alarm</b></div>
-<br/>
+## Set to turn on / off local area network alarm
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int DevSetAttrAlarmByInt(int hUser, String szDevId, int nCommand, int nValue, int nSeq)<br/>
@@ -964,10 +893,8 @@ IOS: useFUN_DevSetAttr (UI_HANDLE hUser, const char *szDevId, int nCommand, cons
 Note: before calling this function, make sure that it has called DevSetAlarmListener(int hUser, int nSeq), otherwise, real-time alarm message cannot be received.<br/>
 </td></tr>
 </table>
-<br/>
 
-<div name="baojing2" id="baojing2" style="font-size:20px;"><b>4.34 Local area network alarm function</b></div>
-<br/>
+## Local area network alarm function
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int DevSetAlarmListener(int hUser, int nSeq);</td></tr>
@@ -987,10 +914,8 @@ Note: before calling this function, make sure that it has called DevSetAlarmList
 <tr><td style="text-align:center">str
 </td><td>Device serial number or ip</td></tr>
 </table>
-<br/>
 
-<div name="jiekou" id="jiekou" style="font-size:20px;"><b>4.35 General command interface</b></div> 
-<br/>
+## General command interface
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:20px;">Definition</td><td colspan="2">int   DevCmdGeneral(int hUser, String szDevId,int nCmdReq, String szCmd, int   nRetSize, int nTimeout,byte[] pInParam, int nCmdRes, int nSeq);
@@ -1029,10 +954,7 @@ Command ID, that is command ID in parameters</td></tr>
 </td><td>	
 Returnd byte stream</td></tr>
 </table>
-<br/>
-
-<div name="jiekou1" id="jiekou1" style="font-size:15px;"><b>4.35.1 Video calendar query</b></div>
-<br/>
+### Video calendar query
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int   DevCmdGeneral(int hUser, String szDevId,int nCmdReq, String szCmd, int   nRetSize, int nTimeout,byte[] pInParam, int nCmdRes, int nSeq);
@@ -1067,10 +989,8 @@ Returnd byte stream</td></tr>
 <tr><td style="text-align:center">Note
 </td><td colspan="2">Other information can refer to 4.35</td></tr>
 </table>
-<br/>
 
-<div name="jiekou2" id="jiekou2" style="font-size:15px;"><b>4.35.2 Transparent transmission </b></div>
-<br/>
+### Transparent transmission
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition</td><td colspan="2">int   DevCmdGeneral(int hUser, String szDevId,int nCmdReq, String szCmd, int   nRetSize, int nTimeout,byte[] pInParam, int nCmdRes, int nSeq);</td></tr>
@@ -1101,10 +1021,8 @@ Returnd byte stream</td></tr>
 <tr><td style="text-align:center">Note
 </td><td colspan="2">Other information can refer to 4.35</td></tr>
 </table>
-<br/>
 
-<div name="jiekou3" id="jiekou3" style="font-size:15px;"><b>4.35.3 Query monthly video or picture information</b></div>
-<br/>
+### Query monthly video or picture information
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition</td><td colspan="2">int  DevCmdGeneral(int hUser, String szDevId,int   nCmdReq, String szCmd, int   nRetSize, int nTimeout,byte[] pInParam, int   nCmdRes, int nSeq)
@@ -1163,10 +1081,8 @@ Query monthly video or picture information</td></tr>
 Description：Maskis a number of binary 32-bit. Judge from the  first bit, 0: no video, 1: have video, until complete the judgement of the whole month
 </td></tr>
 </table>
-<br/>
 
-<div name="suoluetu" id="suoluetu" style="font-size:20px;"><b>4.36 Query device compressed pictures</b></div> 
-<br/>
+## Query device compressed pictures
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:20px;">Definition</td><td colspan="2">int   DevSearchPicture(int hUser, String szDevId,int nCmdReq, int nRetSize, int   nTimeout,byte[] pInParam, int   nCount, int nCmdRes, String szFileName, int nSeq);</td></tr>
@@ -1203,10 +1119,8 @@ others: matching<br/>
 <tr><td style="text-align:center">arg1
 </td><td>==0：success；<0:  fail, for details, see error code description</td></tr>
 </table>
-<br/>
 
-<div name="shishiliu1" id="shishiliu1" style="font-size:20px;"><b>4.37 Save device real-time streaming</b></div>
-<br/>
+## Save device real-time streaming
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int DevSaveRealTimeStream (int hUser, String szDevId, int nChannel,   int nStreamType, String szFileName, int nSeq)</td></tr>
@@ -1231,10 +1145,8 @@ others: matching<br/>
 <tr><td style="background-color:#ccc;text-align:center">Description</td>
 <td colspan="2">If return failed, do not need to call DevCloseRealTimeStream</td></tr>
 </table>
-<br/>
 
-<div name="shishiliu2" id="shishiliu2" style="font-size:20px;"><b>4.38 Stop saving real-time streaming</b></div>
-<br/>
+## Stop saving real-time streaming
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">Definition</td><td colspan="2">int DevCloseRealTimeStream(<label
