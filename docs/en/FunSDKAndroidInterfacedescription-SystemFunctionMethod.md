@@ -631,7 +631,7 @@ Name</td><td style="background-color:#ccc;text-align:center;">Description
 <td>E-mail account</td></tr>
 
 <tr><td rowspan="3" style="background-color:#ccc;text-align:center">Result<br/>Message 
-</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">Description
+</td><td style="background-color:#ccc;text-align:center;width:20%;">Name</td><td style="background-color:#ccc;text-align:center;">Description
 </td></tr>
 <tr><td style="text-align:center">id
 </td><td>Message value：EUIMSG   . SYS_SEND_EMAIL_FOR_CODE</td></tr>
