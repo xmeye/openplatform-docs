@@ -51,18 +51,18 @@ streams and objects</td></tr>
 </td></tr>
 <tr><td style="text-align:center">pDevInfo</td>
 <td>
-设备信息对象字节流<br/><br/>
+Device information object byte stream<br/><br/>
 typedef struct SDBDeviceInfo<br>
 
 {<br>
-&#160&#160&#160 &#160  char Devmac[64]; // DEV_SN / IP / DNS<br/>
-&#160&#160&#160 &#160  char Devname[128]; // Name<br/>
-&#160&#160&#160 &#160  char devIP[64]; // Name<br/>
-&#160&#160&#160 &#160  char loginName[16]; // username<br/>
-&#160&#160&#160 &#160  char loginPsw[16]; //  password<br/>
-&#160&#160&#160 &#160  int nPort; //  port mapping port<br/><br/>
-&#160&#160&#160 &#160  int nType; // --device type 1: socket<br/>
-&#160&#160&#160 &#160  int nID; // --device ID, internal use<br/>
+char Devmac[64]; // DEV_SN / IP / DNS<br/>
+char Devname[128]; // Name<br/>
+char devIP[64]; // Name<br/>
+char loginName[16]; // username<br/>
+char loginPsw[16]; //  password<br/>
+int nPort; //  port mapping port<br/><br/>
+int nType; // --device type 1: socket<br/>
+int nID; // --device ID, internal use<br/>
 }SDBDeviceInfo;<br>
 </td></tr>
 <tr><td  style="text-align:center">userName
@@ -95,7 +95,7 @@ message
 </td><td>System username; when it is empty, that means it isthe same as the username used by calling  SysGetDevList</td></tr>
 <tr><td  style="text-align:center">password</td><td>System password; when it is empty, that means it is the same as the password used by calling   SysGetDevList</td></tr>
 <tr><td rowspan="3" style="background-color:#ccc;text-align:center">Result<br/>message
-</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">Description
+</td><td style="background-color:#ccc;text-align:center;width:20%;">Name</td><td style="background-color:#ccc;text-align:center;">Description
 </td></tr>
 <tr><td  style="text-align:center">id
 </td><td>Message value：EUIMSG   . EMSG_SYS_DELETE_DEV
@@ -775,7 +775,7 @@ Check if the user has been registered</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">Description</td><td colspan="2">Check APP update</td></tr>
 <tr><td rowspan="3" style="background-color:#ccc;text-align:center">Parameters<br/>Description</td><td style="background-color:#ccc;text-align:center;width:20%;">Name</td><td style="background-color:#ccc;text-align:center">Description</td></tr>
 <tr><td style="text-align:center">appToken</td>
-<td>包名</td></tr>
+<td>Package name</td></tr>
 <tr><td style="text-align:center">appId</td>
 <td>App Id</td></tr>
 <tr><td rowspan="3" style="background-color:#ccc;text-align:center">Result<br/>message
