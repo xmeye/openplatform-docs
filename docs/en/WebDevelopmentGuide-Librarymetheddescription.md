@@ -190,8 +190,8 @@ SendCodeVo = client.phoneVo(phone,Type.FIND_PASSWORD);
 
 ```
 
-		SendCode client = SendCode.newInstance();
-	    SendCodeVo vo = client.mailVo(mail,Type.FIND_PASSWORD);
+SendCode client = SendCode.newInstance();
+SendCodeVo vo = client.mailVo(mail,Type.FIND_PASSWORD);
 
 ```
 
@@ -201,8 +201,8 @@ SendCodeVo = client.phoneVo(phone,Type.FIND_PASSWORD);
 
 ```
 
-		FindPassword client = FindPassword.newInstance();
-	    FindPasswordVo vo = client.byMVo(userId,mail,verCode,password,confirmPass);
+FindPassword client = FindPassword.newInstance();
+FindPasswordVo vo = client.byMVo(userId,mail,verCode,password,confirmPass);
 
 ```
 
@@ -212,41 +212,65 @@ SendCodeVo = client.phoneVo(phone,Type.FIND_PASSWORD);
 <div style="margin-left:40px;">
  (1)Send mobile phone verification code:
 </div>
-		SendCode client = SendCode.newInstance();
-	    SendCodeVo vo = client.phoneVo("phone",Type.FIND_PASSWORD);
+
+```
+
+SendCode client = SendCode.newInstance();
+SendCodeVo vo = client.phoneVo("phone",Type.FIND_PASSWORD);
+
+```
+
 <div style="margin-left:40px;">
   (2)Get verification code xxxx from mobile phone, call byPVo () or byP() to find back
 </div>
-	    FindPassword client = User.newInstance();
-	    FindPasswordVo vo = client.byPVo(userId,phone,verCode,newPass,confirmPass);
+
+```
+
+FindPassword client = User.newInstance();
+FindPasswordVo vo = client.byPVo(userId,phone,verCode,newPass,confirmPass);
+
+```
+
 <div name="yonghu6" id="yonghu6" style="font-size:20px;margin-left:25px;"> 
  2.1.6Modify password
 </div>
 <div style="margin-left:40px;">
  (1)Input username and old password, then input new password and confirm password, call cp () or coVo ()
 </div>
-		User client = User.newInstance();
-	    EditorPassVo vo = client.cpVo(username,oldPwd,newPwd,confirmPass);
+
+```
+
+User client = User.newInstance();
+EditorPassVo vo = client.cpVo(username,oldPwd,newPwd,confirmPass);
+
+```
+
 <div name="yonghu7" id="yonghu7" style="font-size:20px;margin-left:25px;"> 
  2.1.7Obtain user information via user identifier
 </div>
 <div style="margin-left:40px;">
  (1)Input userld, call info () or infoVo() to obtain user information
 </div>
-	 	User client = User.newInstance();
-	    UserInfoVo vo = client.infoVo(userId);
-	    Example of the json response:
-	    {
-	        "code": 2000,
-	        "msg": "success",
-	        "data": {
-	            "id": "demo",
-	            "username": "mrava",
-	            "mail": "demo@qq.com",
-	            "phone": "demo",
-	            "company": "demo"
-	        }
-	    }
+
+```
+
+	User client = User.newInstance();
+UserInfoVo vo = client.infoVo(userId);
+Example of the json response:
+{
+    "code": 2000,
+    "msg": "success",
+    "data": {
+        "id": "demo",
+        "username": "mrava",
+        "mail": "demo@qq.com",
+        "phone": "demo",
+        "company": "demo"
+    }
+}
+
+```
+
 <div name="yonghu8" id="yonghu8" style="font-size:20px;margin-left:25px;"> 
  2.1.8Obtain user information via username and password
 </div>
