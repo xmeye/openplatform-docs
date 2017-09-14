@@ -154,7 +154,7 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:download progress   message callback<br/>
 <tr><td  style="text-align:center">hDownload</td>
 <td>	
 Download operating object handle</td></tr>
-<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果<br/>消息
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">Result<br/>message
 </td><td style="background-color:#ccc;text-align:center;width:20%;">Name</td><td style="background-color:#ccc;text-align:center;">Description
 </td></tr>
 <tr><td style="text-align:center">id
