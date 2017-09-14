@@ -1,14 +1,5 @@
-#### 2.1 Initialization ####
-<br/>
-<style>
-	table{
-		border-collapse:collapse;
-		width:100%;
-	}
-	table tr td{
-		border:1px solid #000;
-	}
-</style>
+## Initialization
+
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:80px;">Definition</td><td colspan="2"><b>int FUN_Init(int nType = 0, SInitParam *pParam = NULL);
 </b></td><tr>
@@ -21,20 +12,16 @@
 <tr><td style="background-color:#ccc;text-align:center">Return</td><td colspan="2" style="text-align:center";>For details, see error code description
 </td><tr>
 </table>
-<br/>
 
-#### 2.2 Anti-initialization ####
-<br/>
+## Anti-initialization
 
 <table>
 <tr><td style="background-color:#ccc;text-align:center;width:200px;">Definition</td><td colspan="2"><b>void FUN_UnInit();</b></td><tr>
 <tr><td style="background-color:#ccc;text-align:center">Description</td><td colspan="2">Function library anti initialization
 </td></tr>
 </table>
-<br/>
 
-####  2.3 Initialization service (AP mode) ####
-<br>
+## Initialization service (AP mode)
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:100px;">Definition</td><td colspan="2">int FUN_SysInitAsAPModle(const char *szDBFile);
@@ -49,8 +36,7 @@
 </table>
 <br/>
 
-#### 2.4 Initialization service (Cloud login) ####
-<br/>
+## Initialization service (Cloud login)
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:100px;">Definition</td><td colspan="2">int FUN_SysInitNet(const char *szIP, int nPort);
@@ -65,10 +51,8 @@
 
 </td><tr>
 </table>
-<br/>
 
-#### 2.5 Initialization (NetSDK) ####
-<br/>
+## Initialization (NetSDK)
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:100px;">Definition</td><td colspan="2">int FUN_InitNetSDK();</td><tr>
@@ -80,9 +64,7 @@
 </table>
 <br/>
 
-#### 2.6 Anti-initialization (NetSDK) ####
-<br/>
-
+## Anti-initialization (NetSDK)
 
 <table>
 <tr><td style="background-color:#ccc;text-align:center;width:100px;">Definition</td><td colspan="2">void FUN_UnInitNetSDK();</td><tr>
@@ -94,9 +76,7 @@
 </table>
 <br/>
 
-#### 2.7 Initialization service (Local Login） ####
-<br/>
-
+## Initialization service (Local Login）
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:100px;">Definition</td><td colspan="2">int FUN_SysInitLocal(const char *szDBFile);</td><tr>
@@ -113,9 +93,7 @@
 </table>
 <br/>
 
-#### 2.8 Initialize App certificates ####
-<br/>
-
+## Initialize App certificates
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:100px;">Definition</td><td colspan="2">int FUN_XMCloundPlatformInit(const char *uuid, const char *appKey, const char *appSecret, int movedCard);</td><tr>
@@ -126,4 +104,3 @@
 <tr style="text-align:center"><td></td><td>Obtain the field after register application</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">Return</td><td colspan="2" style="text-align:center";>For details, see error code description</td><tr>
 </table>
-<br/>
