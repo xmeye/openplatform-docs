@@ -1,7 +1,5 @@
-
 <div name="huoqu" id="huoqu" style="font-size:20px;"><b>4.1 Get channel name</b></div> 
 <br/>
-
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition</td><td colspan="2">int   DevGetChnName(int hUser, String devId, String szUser, String password,   int  nSeq);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">Description</td><td colspan="2">Get channel name</td></tr>
@@ -1250,4 +1248,3 @@ Stop saving real-time streaming </td></tr>
 <tr><td style="text-align:center">hSaveObj</td>
 <td>Return value of DevSaveRealTimeStream</td></tr>
 </table>
-<br/>
