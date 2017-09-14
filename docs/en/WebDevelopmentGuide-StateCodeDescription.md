@@ -1,13 +1,3 @@
-<style>
-	table{
-		width:100%;
-		font-family:"楷体";
-		border-collapse:collapse;
-	}
-	table tr:hover{
-	    background-color:#f5f5f5;
-	}
-</style>
 <table>
 <thead>
 <tr style="background-color:#f5f5f5;"><td style="width:150px;">State code</td><td>Description</td></tr>
