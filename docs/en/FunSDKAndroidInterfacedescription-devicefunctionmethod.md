@@ -301,7 +301,7 @@ Download operating object handle</td></tr>
 </table>
 <br/>
 
-<div name="peizhi2" id="peizhi2" style="font-size:20px;"><b>4.13 参数配置-获取配置(Json)</b></div> 
+<div name="peizhi2" id="peizhi2" style="font-size:20px;"><b>4.13 Parameter configuration – get configuration (Json)</b></div> 
 <br/>
 <br/>
 
