@@ -1,7 +1,7 @@
 <br/>
 
 <div>
-&#160&#160&#160&#160&#160&#160 This text is an alarm interface description. The difference between Android and IOS is not big in the respect of calling interface, but there are a lot of differences in the alarm push. IOS need to have a certificate of alarm function, provide a certificate to us (our alarm server will push message to the Apple server) and tell us theid of releasing APP; Android does not need. The following will make a description of provided interfaces, and explain the usage of Android interface used .
+This text is an alarm interface description. The difference between Android and IOS is not big in the respect of calling interface, but there are a lot of differences in the alarm push. IOS need to have a certificate of alarm function, provide a certificate to us (our alarm server will push message to the Apple server) and tell us theid of releasing APP; Android does not need. The following will make a description of provided interfaces, and explain the usage of Android interface used .
 </div>
 #### Initialization ####
 <br/>
