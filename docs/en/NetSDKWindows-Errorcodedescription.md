@@ -13,8 +13,6 @@
 
 ## Basic error code
 
-
-</style>
 <table>
 <tr><td style="width:10%;background-color:#fff8dc"> Sequence number
 </td><td style="width:35%;background-color:#cc9">Macro definition of error code
