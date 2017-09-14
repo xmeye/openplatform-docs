@@ -1,6 +1,3 @@
-## State code description ##
-
-<br/>
 <style>
 	table{
 		width:100%;
