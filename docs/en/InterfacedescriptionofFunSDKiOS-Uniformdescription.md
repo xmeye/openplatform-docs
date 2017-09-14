@@ -1,9 +1,6 @@
-<div style="color:#036;font-size:20px;"><b>Uniform description</b></div>
-<hr>
-<br/>
+## Uniform description
 
-<div style="margin-left:20px;">
-<b>1)  If there is no special description method, then return "EE_OK" for success; other for failure, failure see “error code description” section.<br/>
+1)  If there is no special description method, then return "EE_OK" for success; other for failure, failure see “error code description” section.<br/>
 
 2) Function is the way of asynchronous message and the message recipient that directly return to the method.<br/>
 
@@ -26,10 +23,7 @@ The related methods of media function start with “Media”<br/>
 	     public static int com.basic.BytesToObj(Object []objs, byte []bytes);<br/>
 	</div>
 </div>
-<br/>
 
-<div style="color:#036;font-size:20px;"><b>Calling process</b></div>
-<hr>
-<br/>
+## Calling process
 
-<img src="http://open.xmeye.net/upload/image/20160516/1463375625617066148.png">
+<div><img src="http://open.xmeye.net/upload/image/20160516/1463375625617066148.png"></div>
