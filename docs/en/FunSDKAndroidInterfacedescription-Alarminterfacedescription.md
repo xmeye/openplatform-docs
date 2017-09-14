@@ -7,15 +7,7 @@ This text is an alarm interface description. The difference between Android and 
 #### Initialization ####
 <br/>
 
-<style>
-	table{
-		border-collapse:collapse;
-		width:100%;
-	}
-	table tr td{
-		border:1px solid #000;
-	}
-</style>
+
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition
 </td><td colspan="2">int Init(int hUser, byte []pSMCInitInfo,  int nSeq)</td></tr>
