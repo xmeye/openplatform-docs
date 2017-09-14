@@ -1,15 +1,7 @@
 
 <div name="huoqu" id="huoqu" style="font-size:20px;"><b>4.1 Get channel name</b></div> 
 <br/>
-<style>
-	table{
-		border-collapse:collapse;
-		width:100%;
-	}
-	table tr td{
-		border:1px solid #000;
-	}
-</style>
+
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition</td><td colspan="2">int   DevGetChnName(int hUser, String devId, String szUser, String password,   int  nSeq);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">Description</td><td colspan="2">Get channel name</td></tr>
@@ -133,7 +125,7 @@ Device serial number</td></tr>
 </td><td style="background-color:#ccc;text-align:center;width:20%;">Name</td><td style="background-color:#ccc;text-align:center;">Description
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_ON_FILE_DOWNLOAD:download function calling result<br/>
+</td><td>Message value：EUIMSG   .EMSG_ON_FILE_DOWNLOAD:download function calling result<br/>
 EUIMSG   . EMSG_ON_FILE_DLD_COMPLETE:download  completed message callback<br/>
 EUIMSG   . EMSG_ON_FILE_DLD_POS:download progress   message callback<br/>
 </td></tr>
@@ -155,7 +147,7 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:download progress   message callback<br/>
 <tr><td  style="text-align:center">hDownload</td>
 <td>	
 Download operating object handle</td></tr>
-<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果<br/>消息
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">Result <br/>message
 </td><td style="background-color:#ccc;text-align:center;width:20%;">Name</td><td style="background-color:#ccc;text-align:center;">Description
 </td></tr>
 <tr><td style="text-align:center">id
@@ -230,7 +222,7 @@ Download operating object handle</td></tr>
 </table>
 <br/>
 
-<div name="duijiang3" id="duijiang3" style="font-size:20px;"><b>4.10 4.10 Voice talk-back – send data</b></div> 
+<div name="duijiang3" id="duijiang3" style="font-size:20px;"><b>4.10 Voice talk-back – send data</b></div> 
 <br/>
 
 <table >
@@ -302,7 +294,7 @@ Download operating object handle</td></tr>
 </table>
 <br/>
 
-<div name="peizhi2" id="peizhi2" style="font-size:20px;"><b>4.13 参数配置-获取配置(Json)</b></div>
+<div name="peizhi2" id="peizhi2" style="font-size:20px;"><b>4.13 Parameter configuration – get configuration(Json)</b></div>
 <br/>
 
 <table >
@@ -496,7 +488,7 @@ Result length</td></tr>
 <tr><td style="text-align:center">None  </td>
 <td>None  </td></tr>
 
-<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果<br/>消息
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">Result<br/>message
 </td><td style="background-color:#ccc;text-align:center;width:20%;">Name</td><td style="background-color:#ccc;text-align:center;">Description
 </td></tr>
 <tr><td style="text-align:center">id
