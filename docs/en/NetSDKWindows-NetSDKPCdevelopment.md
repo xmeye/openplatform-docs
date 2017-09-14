@@ -25,21 +25,29 @@ The key is that incming the window handle in the parameters of start playing;
 5.Double click the channel in the device list, and select the playing window so that you can play. Click the right box below: PTZ control, image color, video playback, device configuration, network keyboard, and network alarm functions demonstration.<br/>
 6.(Figure four) is playback dialog box, local play and file conversion; (Figure five is capture image and record); right-click the device list, it has talk-back.<br/>
 </div>
-#### ClientDemo2 ####
+
+## ClientDemo2
+
 <div style="margin-left:25px;">
 Network and decoding the two sets of SDK completely separate. Cooperate with the two sets of SDK to complete the final function implementation. <br/>
 
 The feature of this usage is using flexibly. It is a good choice for the application which wants to do secondary processing or forwarding for network data. In addition, do some special effects processing in the display; it can be able to apply flexibly if playing SDK.
 </div>
-#### ConfigDemo ####
+
+## ConfigDemo
+
 <div style="margin-left:25px;">
 The processing of configured data processing is various. This demon clearly demonstrates the acquisition and setting of almost all configurations.
 </div>
-#### Transparent ####
+
+## Transparent
+
 <div style="margin-left:25px;">
 Simple calling presentation for transparent 485 application
 </div>
-#### AlarmCenter ####
+
+## AlarmCenter
+
 <div style="margin-left:25px;">
 Application of alarm center
 </div>
