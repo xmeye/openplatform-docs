@@ -557,9 +557,9 @@ Responsive example:
 
 ```
 
-		AuthCode code = AuthCode.newInstance();
-	    CommonVo vo = client.acsyntypeVo(uuid, Type.DSS, userId, uname, upass);
-	    Responsive example:
-	    {"code":2000,"msg":"dss syn success","data":"0149957b1262899001"}
+AuthCode code = AuthCode.newInstance();
+CommonVo vo = client.acsyntypeVo(uuid, Type.DSS, userId, uname, upass);
+Responsive example:
+{"code":2000,"msg":"dss syn success","data":"0149957b1262899001"}
 
 ```
