@@ -47,11 +47,11 @@ Device information object byte stream<br/><br/>
 typedef struct SDBDeviceInfo<br>
 
 {<br>
- char Devmac[64]; // DEV_SN / IP / DNS<br/>
- char Devname[128]; // Name<br/>
- char devIP[64]; // Name<br/>
- char loginName[16]; // username<br/>
- char loginPsw[16]; //  password<br/>
+char Devmac[64]; // DEV_SN / IP / DNS<br/>
+char Devname[128]; // Name<br/>
+char devIP[64]; // Name<br/>
+char loginName[16]; // username<br/>
+char loginPsw[16]; //  password<br/>
 int nPort; //  port mapping port<br/><br/>
 int nType; // --device type 1: socket<br/>
 int nID; // --device ID, internal use<br/>
