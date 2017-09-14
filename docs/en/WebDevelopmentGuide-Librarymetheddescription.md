@@ -187,13 +187,25 @@ SendCodeVo = client.phoneVo(phone,Type.FIND_PASSWORD);
 <div style="margin-left:40px;">
  (1)Send mailbox verification code:
 </div>
+
+```
+
 		SendCode client = SendCode.newInstance();
 	    SendCodeVo vo = client.mailVo(mail,Type.FIND_PASSWORD);
+
+```
+
 <div style="margin-left:40px;">
   (2)Get verification code xxxx from mailbox, call byMVo () or byM() to find back
 </div>
+
+```
+
 		FindPassword client = FindPassword.newInstance();
 	    FindPasswordVo vo = client.byMVo(userId,mail,verCode,password,confirmPass);
+
+```
+
 <div name="yonghu5" id="yonghu5" style="font-size:20px;margin-left:25px;"> 
 2.1.5Find back password by mobile phone
 </div>
