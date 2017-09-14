@@ -496,7 +496,7 @@ Result length</td></tr>
 <tr><td style="text-align:center">None  </td>
 <td>None  </td></tr>
 
-<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果<br/>消息
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">Result<br/>message
 </td><td style="background-color:#ccc;text-align:center;width:20%;">Name</td><td style="background-color:#ccc;text-align:center;">Description
 </td></tr>
 <tr><td style="text-align:center">id
