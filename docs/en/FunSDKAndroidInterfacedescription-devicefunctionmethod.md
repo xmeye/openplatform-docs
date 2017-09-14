@@ -133,7 +133,7 @@ Device serial number</td></tr>
 </td><td style="background-color:#ccc;text-align:center;width:20%;">Name</td><td style="background-color:#ccc;text-align:center;">Description
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_ON_FILE_DOWNLOAD:download function calling result<br/>
+</td><td>Message value：EUIMSG   .EMSG_ON_FILE_DOWNLOAD:download function calling result<br/>
 EUIMSG   . EMSG_ON_FILE_DLD_COMPLETE:download  completed message callback<br/>
 EUIMSG   . EMSG_ON_FILE_DLD_POS:download progress   message callback<br/>
 </td></tr>
