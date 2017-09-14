@@ -7,7 +7,7 @@
 Basic description：
 
 <div style="margin-left:25px;">
-&#160&#160&#160&#160&#160&#160SDK integrates a lot of playing parts that is decoded locally. Just need to call the network SDK, it can complete the network transmission and video play. This usage makes it easy to use in secondary development. Commonly used functions all can be completed as long as calling the NETSDK.
+SDK integrates a lot of playing parts that is decoded locally. Just need to call the network SDK, it can complete the network transmission and video play. This usage makes it easy to use in secondary development. Commonly used functions all can be completed as long as calling the NETSDK.
 </div>
 Main points:
 <div style="margin-left:25px;">
@@ -25,9 +25,9 @@ The key is that incming the window handle in the parameters of start playing;
 </div>
 #### ClientDemo2 ####
 <div style="margin-left:25px;">
-&#160&#160&#160&#160&#160&#160Network and decoding the two sets of SDK completely separate. Cooperate with the two sets of SDK to complete the final function implementation. <br/>
+Network and decoding the two sets of SDK completely separate. Cooperate with the two sets of SDK to complete the final function implementation. <br/>
 
-&#160&#160&#160&#160&#160&#160The feature of this usage is using flexibly. It is a good choice for the application which wants to do secondary processing or forwarding for network data. In addition, do some special effects processing in the display; it can be able to apply flexibly if playing SDK.
+The feature of this usage is using flexibly. It is a good choice for the application which wants to do secondary processing or forwarding for network data. In addition, do some special effects processing in the display; it can be able to apply flexibly if playing SDK.
 </div>
 #### ConfigDemo ####
 <div style="margin-left:25px;">
