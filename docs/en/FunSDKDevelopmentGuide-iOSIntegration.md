@@ -88,7 +88,7 @@ The initialization of FunSDK could be executed in -<lable style="color:red">(BOO
 }
 <div name="jicheng2" id="jicheng2" style="margin-left:20px;font-size:20px;line-height:30px;"><b>2.2  Device login </b></div>
 <div>
-&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160No matter what kind of mode (local, AP, or P2P) you use, it all uses the same set of login and logout interface, and just the devid parameters are different if using different login methods to login device. 
+No matter what kind of mode (local, AP, or P2P) you use, it all uses the same set of login and logout interface, and just the devid parameters are different if using different login methods to login device. 
 
 DevId are filled in the “ip:port” format, whether it is local login or AP login. For example, the device IP address is 192.168.1.12, the device tcp port is set to 34567 (the default value of common device), then the devid is “192.168.1.12:34567”. AP mode, because the device is a gateway, so devid generally fill in for the "192.168.10.1:34567" format.     
 </div>
