@@ -51,17 +51,6 @@
 #### 1.1SDK initialization ####
 <br/>
 
-<style>
-	table{
-		border-collapse:collapse;
-		width:100%;
-		text-align:center;
-		margin-left:20px;
-	}
-	table tr td{
-		border:1px solid #fff;
-	}
-</style>
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
 </td><td style="background-color:#B9B973">H264_DVR_API long CALL_METHOD H264_DVR_GetLastError();</td></tr>
@@ -320,7 +309,6 @@ Partial error code analysis:
 <div style="font-size:20px;">
 <b>1.5Playback and download</b>
 </div>
-#### 1.5.1Query video file ####
 <br/>
 
 <table>
@@ -681,7 +669,7 @@ waittime[in]: wait time<br/>
 </td><td style="background-color:#B9B973">H264_DVR_API long CALL_METHOD H264_DVR_SetConfigOverNet(unsigned long dwCommand, int nChannelNO, char * lpInBuffer, unsigned long dwInBufferSize, int waittime DEF_PARAM(1000));
 </td></tr>
 <tr><td style="background-color:#dedebe">Function description
-</td><td style="background-color:#B9B973">跨网段设置设备配置，目前只支持对网络配置进行设置
+</td><td style="background-color:#B9B973"> Cross network setting device configuration,   currently only supports the network configuration settings
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
 </td><td style="background-color:#B9B973;text-align:left;">dwCommand[in]:configuration   type, E_SDK_CONFIG_SYSNET<br/>
@@ -1116,7 +1104,7 @@ dwDataUser[in]:callback function   parameters<br/>
 </td><td style="background-color:#B9B973;">lLoginID[in]: login handle  pStorageCtl[in]: operating   parameters-see<a href="http://open.xmeye.net/zh/#StorageDeviceControl">SDK_StorageDeviceControl</a>
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
-</td><td style="background-color:#B9B973">> 0为成功，<=0为失败
+</td><td style="background-color:#B9B973">> 0 success，<=0   fail
 </td></tr>
 </table>
 <br/>
@@ -1872,7 +1860,7 @@ nInParamLen[in]:requested command send to device json size (byte)<br/>
 </table>
 <br/>
 
-#### 1.45查询设备是否在线 ####
+#### 1.45Check whether the device is online  ####
 <br/>
 
 <table>
