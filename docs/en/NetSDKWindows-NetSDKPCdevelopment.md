@@ -2,7 +2,7 @@
 
  
 
-#### ClientDemo ####
+## ClientDemo
 
 Basic description：
 
@@ -13,7 +13,9 @@ Main points:
 <div style="margin-left:25px;">
 The key is that incming the window handle in the parameters of start playing;
 </div>
-#### Basic process of application: ####
+
+## Basic process of application
+
 <div style="margin-left:25px;">
 1.After entering, the device list on the right is empty (as shown in Figure one below).
 <br/>
