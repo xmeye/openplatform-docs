@@ -68,11 +68,11 @@ MC_SearchAlarmPic(UI_HANDLE hUser, const char *fileName, XPMS_SEARCH_ALARMPIC_RE
 
 ## 使用真机编译时出现如下错误
 
-![All text](http://open.xmeye.net/upload/image/20161110/1478742789362023697.png)
+<div>![All text](http://open.xmeye.net/upload/image/20161110/1478742789362023697.png)</div>
 
 <div style="margin-left:20px;">
 <b>解决方法</b><br/>
 设置 Enable Testability为NO<br/>
 </div>
 
-![All text](http://open.xmeye.net/upload/image/20161110/1478742815379085531.png)
+<div>![All text](http://open.xmeye.net/upload/image/20161110/1478742815379085531.png)</div>
