@@ -1,9 +1,6 @@
-  
-<div style="text-align:center;font-size:25px;"><b>Simple development process
-</b>(The calingl interface function parameters, please refer to the use of the interface function)</div>
+(The calingl interface function parameters, please refer to the use of the interface function)
 
-#### 1.Initialization  ####
-<br/>
+## Initialization
 
 <style>
 	table{
@@ -22,8 +19,7 @@
 </table>
 <br/>
 
-#### 2.SDK functional information acquisition ####
-<br/>
+## SDK functional information acquisition
 
 <table>
 <tr><td style="background-color:#dedebe">Calling function</td><td style="background-color:#B9B973">Significance</td></tr>
@@ -33,8 +29,7 @@
 <br/>
 
 
-####  3.Login connection device  ####
-<br/>
+## Login connection device
 
 <table>
 <tr><td style="background-color:#dedebe">Calling function</td><td style="background-color:#B9B973">Significance</td></tr>
@@ -45,10 +40,8 @@
 <tr><td style="background-color:#dedebe">H264_DVR_SetupAlarmChan()
 </td><td style="background-color:#B9B973">Alarm message subscription</td></tr>
 </table>
-<br/>
 
-####   4.Device function operation and information acquisition ####
-<br/>
+## Device function operation and information acquisition
 
 <table>
 <tr><td style="background-color:#dedebe">Significance</td><td style="background-color:#B9B973">Significance</td></tr>
@@ -67,10 +60,9 @@
 <tr><td style="background-color:#dedebe">H264_DVR_CloseTransComChannel()
 </td><td style="background-color:#B9B973">Close</td></tr>
 </table>
-<br/>
 
-####    5.Real-time monitoring channel ####
-<br/>
+
+## Real-time monitoring channel
 
 <table>
 <tr><td style="background-color:#dedebe">Significance</td><td style="background-color:#B9B973">Significance</td></tr>
@@ -81,10 +73,8 @@
 <tr><td style="background-color:#dedebe">H264_DVR_SetRealDataCallBack()
 </td><td style="background-color:#B9B973">Monitoring data callback save </td></tr>
 </table>
-<br/>
 
-####   6.Playback download  ####
-<br/>
+## Playback download
 
 <table>
 <tr><td style="background-color:#dedebe">Significance</td><td style="background-color:#B9B973">Significance</td></tr>
@@ -101,10 +91,8 @@
 <tr><td style="background-color:#dedebe">H264_DVR_PlauBackByTimeEx()
 </td><td style="background-color:#B9B973"> </td></tr>
 </table>
-<br/>
 
-####   7.Remote control  ####
-<br/>
+## Remote control
 
 <table>
 <tr><td style="background-color:#dedebe">Significance</td><td style="background-color:#B9B973">Significance</td></tr>
@@ -117,10 +105,8 @@
 <tr><td style="background-color:#dedebe">H264_DVR_ControlDVR()
 </td><td style="background-color:#B9B973">Reset / clear log</td></tr>
 </table>
-<br/>
 
-####   8.Cancel disconnected device ####
-<br/>
+## Cancel disconnected device
 
 <table>
 <tr><td style="background-color:#dedebe">Significance</td><td style="background-color:#B9B973">Significance</td></tr>
@@ -129,14 +115,11 @@
 <tr><td style="background-color:#dedebe">H264_DVR_Logout()
 </td><td style="background-color:#B9B973">Disconnect</td></tr>
 </table>
-<br/>
 
-####    9.Release SDK resources ####
-<br/>
+## Release SDK resources
 
 <table>
 <tr><td style="background-color:#dedebe">Significance</td><td style="background-color:#B9B973">Significance</td></tr>
 <tr><td style="background-color:#dedebe">H264_DVR_Cleanup()
 </td><td style="background-color:#B9B973">SDK exit  </td></tr>
 </table>
-<br/>
