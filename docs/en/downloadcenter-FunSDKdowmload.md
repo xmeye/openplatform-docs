@@ -15,11 +15,6 @@ download SDK for iOS 2017-08-05
 
 </td><td>
 
-<a href="http://beijing.ksyun.com/funsdk/ios/FunSDKDemo_iOS_V1.9_20170103.zip"><br/>
-
-download Demo  for iOS 2017-01-03 old
-
-</a><br/>
 
 <a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDKDemo_iOS_New_V1.2.zip"><br/>
 
