@@ -1,15 +1,19 @@
-**Download address of SDK and Demo：**
+## SDK和Demo下载地址
+
 <table style="width:100%;border-collapse:collapse;text-align:center">
-<tr><td><a href="https://ks3-cn-beijing.ksyun.com/xmopen/web-client/client/clinet-1.2-snapshots.jar">Download SDK for WebClient v1.2</a>
-</td><td><a href="http://ks3-cn-beijing.ksyun.com/xmopen/web-client/demo/Demo-1.1.zip">Download Demo  for WebClient v1.1 2016-08-04</a>
+<tr><td><a href="https://ks3-cn-beijing.ksyun.com/xmopen/web-client/client/clinet-1.2-snapshots.jar">下载 SDK for WebClient v1.2</a>
+</td><td><a href="http://ks3-cn-beijing.ksyun.com/xmopen/web-client/demo/Demo-1.1.zip">下载 Demo  for WebClient v1.1 2016-08-04</a>
 </td></tr>
 </table>
-<br/>
-**Demo function description**  
+
+## Demo功能说明
+
 <div style="margin-left:20px;">
-1. Demo provides the code example of part function of FunSDK, does not include all functional interface. If you need to complete the function that is not in Demo, please contact the salesman or customer service;<br/>
-2. Demo code only as a reference, the user can refer to or copy some of the code. It is not recommended to publish and use it as a formal version of Web.Demo function list (the black part is completed which can refer to use; the red part is not completed or not added, which cannot refer to).
+1. Demo提供了FunSDK部分功能的代码示例，并不包括所有功能接口，如果需要完成Demo中没有的功能，还请联系业务人员或客服；
+2. Demo代码只作为参考，使用者可以引用或者拷贝部分代码，并不建议作为正式版Web来发布使用；
 </div>
+
+## Demo功能列表
 
 <style>
 	table{
@@ -21,23 +25,22 @@
 	}
 </style>
 <div>
-<label style="color:#039">Demo for WebClient Function list </label>
+<label style="color:#039">Demo for WebClient功能列表</label>
 <table id="table2">
-<tr style="text-align:center;color:#000;"><td>module</td><td>Function</td><td>Description</td></tr>
-<tr><td rowspan="5">1 User-related</td><td>1.1 User registration (mobile phone   registration, mailbox registration)
-</td><td> </td></tr>
-<tr><td>1.2 User login</td><td> </td></tr>
-<tr><td>1.3 Modify password</td><td></td></tr>
-<tr><td>1.4 Forget password (by phone, by   mailbox)</td><td></td></tr>
-<tr><td>1.5  User information</td><td></td></tr>
-<tr><td rowspan="5">2 Device-related</td><td>2.1 User add device</td><td>  </td></tr>
-<tr><td>2.2 User remove device</td><td>  </td></tr>
-<tr><td>2.6 User modify device name</td><td>  </td></tr>
-<tr><td>2.7 User modify device username</td><td>  </td></tr>
-<tr><td>2.8 User query device online   status</td><td>  </td></tr>
-<tr><td rowspan="2">3 Authorization-related</td><td>3.1 Device authorization
+<tr style="text-align:center;color:#000;"><td>模块</td><td>功能</td><td>说明</td></tr>
+<tr><td rowspan="5">1 用户相关</td><td>1.1 用户注册(手机注册，邮箱注册)</td><td> </td></tr>
+<tr><td>1.2 用户登录</td><td> </td></tr>
+<tr><td>1.3 修改密码</td><td></td></tr>
+<tr><td>1.4 忘记密码(通过手机，通过邮箱)</td><td></td></tr>
+<tr><td>1.5 用户信息</td><td></td></tr>
+<tr><td rowspan="5">2 设备相关</td><td>2.1 用户添加设备</td><td>  </td></tr>
+<tr><td>2.2 用户移除设备</td><td>  </td></tr>
+<tr><td>2.6 用户修改设备名</td><td>  </td></tr>
+<tr><td>2.7 用户修改设备用户名</td><td>  </td></tr>
+<tr><td>2.8 用户查询设备在线状态</td><td>  </td></tr>
+<tr><td rowspan="2">3 媒体功能</td><td>3.1 设备授权
 </td><td>  </td></tr></tr>
-<tr><td>3.2 Device authorization code query</td><td>  </td></tr>
+<tr><td>3.2 设备授权码查询</td><td>  </td></tr>
 
 </table>
 </div>
