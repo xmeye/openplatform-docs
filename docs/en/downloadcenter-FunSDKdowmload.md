@@ -1,16 +1,5 @@
 ## SDK and Demo download address
 
-<style>
-	#table1{
-		width:1000px;
-		border-collapse:collapse;
-		text-align:center;
-	}
-	table tr:hover{
-	    background-color:#f5f5f5;
-	}
-
-</style>
 <table id="table1">
 <tr><td style="width:300px;">
 
@@ -18,9 +7,9 @@
 
 </td><td>
 
-<a href="http://beijing.ksyun.com/funsdk/android/FunSDK.framework_iOS_ForCustom_V1.2.2_170621.zip">
+<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDK.framework_iOS_ForCustom_V1.2.4_170805.zip">
 
-download SDK for iOS 2017-06-23
+download SDK for iOS 2017-08-05
 
 </a>
 
@@ -32,9 +21,9 @@ download Demo  for iOS 2017-01-03 old
 
 </a><br/>
 
-<a href="http://beijing.ksyun.com/funsdk/ios/FunSDKDemo_iOS_New_V1.1.zip"><br/>
+<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDKDemo_iOS_New_V1.2.zip"><br/>
 
-download Demo  for iOS 2017-05-23 new
+Download Demo for iOS 2017-07-14 new
 
 </a>
 
@@ -46,17 +35,17 @@ download Demo  for iOS 2017-05-23 new
 
 </td><td>
 
-<a href="http://beijing.ksyun.com/funsdk/android/FunSDKLibs_ReleaseV1.1.7.zip"><br/>
+<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKLibs_ReleaseV1.1.8_20170805.zip"><br/>
 
-download SDK for Android v1.1.7 2017-06-23
+Download SDK   for Android v1.1.8 2017-08-05 
 
 </a>
 
 </td><td>
 
-<a href="http://beijing.ksyun.com/funsdk/android/FunSDKDemo_v1.3.3.zip"><br/>
+<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKDemo_v1.3.5.zip"><br/>
 
-download Demo for Android v1.3.3 2017-06-02
+ Download Demo for Android v1.3.5 2017-07-31
 
 </a> 
 
