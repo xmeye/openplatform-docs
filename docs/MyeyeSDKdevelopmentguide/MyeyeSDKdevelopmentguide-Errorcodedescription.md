@@ -1,6 +1,5 @@
 ## 典型调用顺序
 
-<pre>
 A.初始化 ：       
     SDK初始化             P_Client_Init ()
 B.SDK功能信息获取： 
@@ -22,11 +21,9 @@ F.回放：
                        P_Client_PlaybackByTime ()
 G.释放SDK资源：
     SDK退出            P_Client_ClearUp ()
-</pre>
 
 ## 错误码
-    
-<pre>
+
 <label style="color:blue">#define</label> P_CLIENT_UNKNOW_ERROR    			-1   <label style="color:green">//未知错误</label>
 <label style="color:blue">#define</label> P_CLIENT_LOGIN_TIMEOUT   			-2   <label style="color:green">//登陆超时</label>
 <label style="color:blue">#define</label> P_CLIENT_NO_USER			-3   <label style="color:green">//没有当前用户</label>
@@ -94,9 +91,6 @@ G.释放SDK资源：
 <label style="color:blue">#define</label> P_CLIENT_PLAYBACK_HAS_OPENED_OTHER     -222 <label style="color:green">//当前通道被其他客户端占用</label>
 <label style="color:blue">#define</label> P_CLIENT_PLAYBACK_FAILED_DEV  -223 <label style="color:green">//回放失败，SDK返回</label>
 
-
- 
-
 <label style="color:blue">#define</label> P_CLIENT_TALK_EXISIT -300 <label style="color:green">//已经有设备在对讲，请先关闭原先的</label>
 <label style="color:blue">#define</label> P_CLIENT_TALK_EXCEPTION       -301 <label style="color:green">//对讲异常，可能是设备已经被流媒体删除</label>
 <label style="color:blue">#define</label> P_CLIENT_TALK_NOT_FOUND       -302 <label style="color:green">//对讲不存在</label>
@@ -106,12 +100,8 @@ G.释放SDK资源：
 <label style="color:blue">#define</label> P_CLIENT_TALK_RTSP_ERROR      -306 <label style="color:green">//连接流媒体失败</label>
 <label style="color:blue">#define</label> F_CLIENT_TALK_LOGIN_FAILED    -307 <label style="color:green">//登陆设备失败，直连时候使用</label>
 
- 
-
 <label style="color:blue">#define</label> P_CLIENT_PTZ_NOT_SUPPORT      -400 <label style="color:green">//不支持的命令</label>
 <label style="color:blue">#define</label> P_CLIENT_CFG_INVALID_PARAM    -401 <label style="color:green">//输入配置参数错误</label>
 <label style="color:blue">#define</label> P_CLIENT_CFG_NO_DMS  -402 <label style="color:green">//设备授权失败</label>
 <label style="color:blue">#define</label> P_CLIENT_CFG_TIMEOUT -403 <label style="color:green">//配置超时</label>
 <label style="color:blue">#define</label> P_CLIENT_CFG_NOT_MATCH        -404 <label style="color:green">//不匹配，一般是缓冲长度不够了</label>
-
-</pre>
