@@ -1,13 +1,11 @@
 # 1.Brief introduction
 
-### 1.1.Summary
+## Summary
 
 This document introduces the Demo interface and operating procedures in order to support the instructions of ClientSDK demonstration program.<br/>
 Since this Demo is only used as a demonstration program and only represents the usage method of control interface. The design of Demo program may not be perfect, hereby note.
 
-
-
-### 1.2.Preliminary preparation
+## Preliminary preparation
 
 Before starting Demo, please make sure that the file in the executing program is complete:<br/>
 
@@ -17,10 +15,11 @@ Start Demo program, the interface is as follows<br/>
 <img src="http://open.xmeye.net/upload/image/20161110/1478763898736052953.png">
 <br/><br/>
 
-## 2.Function module instructions
+## Function module instructions
 
 
-### Login ###
+## Login
+
 Calling interface：<br/>
 Int P_Client_LoginServer (<br/>
 )
@@ -40,11 +39,12 @@ Function area interface is as follows:
 In the edit box, follow the prompts to input the IP address, port number, username, password, and then click to login.
 </div>
 
-### Get device information ###
+## Get device information
+
 Control basic settings and device acquisition, the interface is as follows<br/>
 <img src="http://open.xmeye.net/upload/image/20161110/1478763898800031683.png">
 
-### Get device information: ###
+## Get device information
 
 Calling interface:
 <div style="margin-left:30px;">
@@ -62,19 +62,22 @@ For example:
 <img src="http://open.xmeye.net/upload/image/20161110/1478763898810097184.png">
 <br/>
 
-### Real-time monitoring ###
+## Real-time monitoring
+
 Select a channel node on the device tree (select device node is invalid).<br>
 Click OPenVideo, after the success, it will display the image below, and display play handle in Handle
 
 <img src="http://open.xmeye.net/upload/image/20161110/1478763898839095226.png">
 
-### Open video: ###
+## Open video
+
 Calling interface:
 <div style="margin-left:30px;">
 P_Client_ConnectRealPlay
 </div>
  
-### Close video: ###
+## Close video
+
 Calling interface:
 <div style="margin-left:30px;">
    P_Client_StopRealPlay
@@ -91,7 +94,8 @@ Operation instructions:
 
  
 
-### Open the intercom: ###
+## Open the intercom
+
 Calling interface:
 <div style="margin-left:30px;">
 P_Client_StartTalk
@@ -106,7 +110,8 @@ Operation instructions:
 </div>
  
 
-### Close the intercom: ###
+## Close the intercom
+
 Calling interface:
 <div style="margin-left:30px;">
 P_Client_StopTalk
@@ -120,20 +125,16 @@ Operation instructions:
     Close the specified intercom, after the success, the intercom ID will invalidate.
 </div>
  
+## Video playback
 
- 
-
- 
-
- 
-
-### Video playback ###
 Select a channel node in the device tree, right-click, for example
 <img src="http://open.xmeye.net/upload/image/20161110/1478763898822025791.png">
 Click “Playback” into the playback interface, for example:
 <img src="http://open.xmeye.net/upload/image/20161110/1478763898852035309.png">
 <br/>
-#### Query: ####
+
+## Query
+
 Calling interface:
 <div style="margin-left:30px;">
 P_Client_QueryRecord
@@ -154,19 +155,22 @@ Input time in “start time” and “end time”, for example:<br/>
 <img src="http://open.xmeye.net/upload/image/20161110/1478763898864063696.png">
 <br/>
 
-#### Note:
+## Note
+
 When query the center video, need to pay attention that direct mode is “non direct”, otherwise it will return an error.
 
-#### Playback：
+## Playback
+
 Select video information, click to Play and play video
 
-#### Start playback:
+## Start playback
 Calling interface:
 <div style="margin-left:30px;">
 P_Client_PlaybackByFile
 </div>
 
-#### Stop playback：
+## Stop playback
+
 Calling interface:
 <div style="margin-left:30px;">
 P_Client_StopPlaybackByFile
@@ -174,13 +178,15 @@ P_Client_StopPlaybackByFile
 After input the start time and the end time, directly click the TimePlay to playback by time<br/>
 Calling interface P_Client_PlaybackByTime
 
-#### Playback control：
+## Playback control
+
 Calling interface:
 <div style="margin-left:30px;">
 P_Client_PlaybackControl
 </div><br/>
 
-#### Playback progress:
+## Playback progress
+
 Calling interface:
 <div style="margin-left:30px;">
 P_Client_PlaybackByTime

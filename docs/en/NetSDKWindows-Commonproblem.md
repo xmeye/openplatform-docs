@@ -1,6 +1,6 @@
 ### Customer FAQ： ###
 
-## 一、Capture problem
+## Capture problem
 
 <div style="color:red;margin-left:20px;">
   1.The capture function get a picture of what format?
@@ -17,7 +17,7 @@
 
 </div>
 
-## 二、Bitstream issues in Preview
+## Bitstream issues in Preview
 
 <div style="color:red;margin-left:20px;">
   1.Can you provide the decoding library under Linux?
@@ -59,7 +59,7 @@
     Answer：Using the corresponding stream callback function with H264_DVR_SetRealDataCallBackV2 interface, to obtain each with a private head frame, the frame type from the first field analysis of second parameter structure of the callback function in the body. Access to each frame of data, the private data stream is removed from the head of H264 stream data standard, private head for a 16 bit data stream I frame, P frame head of private data stream for 8. The standard H264 code stream is used for playback. The operation is the same as above (refer to Clientdemo2)
 </div>
 
-## 三、Video playback problem
+## Video playback problem
 
 <label style="color:red;margin-left:20px;">
   1.There are two ways to remotely replay query Videos: </label>, document querying, video recording, and video recording by time.
@@ -75,7 +75,7 @@
     (2)According to the file by file playback can also query, download the file.
 </div>
 
-## 四、Yuntai control problem
+## Yuntai control problem
 
 <div style="color:red;margin-left:20px;">
   1.How to add the parameters of the pan tilt control interface function?
@@ -96,7 +96,7 @@
     Answer：You can obtain all preset points of the device of the ball player through the command E_SDK_CFG_PTZPRESET, and obtain all the cruise routes and all preset point information of the ball machine by command E_SDK_CFG_PTZTOUR.
 </div>
 
-## 五、Configuration settings and save questions
+## Configuration settings and save questions
 
 <div style="color:red;margin-left:20px;">
   1.Video configuration problem
@@ -111,7 +111,7 @@
     Answer: if you want to know whether the function exists, must first obtain the level of function, use the command E_SDK_CONFIG_ABILITY_SYSFUNC to obtain the SDK_SystemFunction structure information can correspond, through the notes to understand the field is the ability which function.
 </div>
 
-## 六、Cloud sequence number landing problem
+## Cloud sequence number landing problem
 
 <div style="margin-left:20px;">
     Answer: when using the H264_DVR_Login interface, the first parameter is the device serial number, for example:

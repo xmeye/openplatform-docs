@@ -14,21 +14,21 @@
 <tr><td style="width:100px;text-align:center;">Update date</td>
 <td style="text-align:center;">Modified content</td></tr>
 <tr><td> 2017-06-23</td>
-<td>SDK for Android & ios Update:<br/>&#160&#160&#160&#160&#160Fixed video playback exception bug of P2P
+<td>SDK for Android & ios Update:<br/>Fixed video playback exception bug of P2P
 </td></tr> 
 <tr><td>2017-06-10</td>
-<td>SDK for Android & ios Update:<br/>&#160&#160&#160&#160&#160Fixed DSS real-time video without sound bug<br/>&#160&#160&#160&#160&#160Optimize broken line reconnection<br/>&#160&#160&#160&#160&#160Fixed real-time preview part bitstream collapse problem<br/>&#160&#160&#160&#160&#160There's no sound in the restoration video, bug<br/></td></tr>
+<td>SDK for Android & ios Update:<br/>Fixed DSS real-time video without sound bug<br/>Optimize broken line reconnection<br/>Fixed real-time preview part bitstream collapse problem<br/>There's no sound in the restoration video, bug<br/></td></tr>
 <tr><td>2017-06-02</td>
-<td>Demo for Android Update:<br/>&#160&#160&#160&#160&#160 1. add IPNet operation interface<br/> &#160&#160&#160&#160&#160 2. preset point function logic correction<br/>
+<td>Demo for Android Update:<br/> 1. add IPNet operation interface<br/>  2. preset point function logic correction<br/>
 </td></tr>
 <tr><td>  2017-05-23</td>
-<td>Demo for ios Update：<br/>&#160&#160&#160&#160&#160  1.Recover the bug that can not subscribe alarm push   
+<td>Demo for ios Update：<br/>  1.Recover the bug that can not subscribe alarm push   
 </td></tr>
 <tr><td>2017-05-04</td>
-<td>Demo for ios Update：<br/>&#160&#160&#160&#160&#160 1.Upload a new version of Demo
+<td>Demo for ios Update：<br/> 1.Upload a new version of Demo
 </td></tr>
 <tr><td>2017-05-03</td>
-<td>SDK for IOS Update：<br/>&#160&#160&#160&#160&#160 1.recover the bug about preview
+<td>SDK for IOS Update：<br/> 1.recover the bug about preview
 </td></tr>
 <tr><td> 2017-04-26</td>
 <td>Demo for Android Update：<br/>Update libraries and jar packages
@@ -60,7 +60,7 @@ Repar the bug When the mobile phone repair intercom data transmission equipment 
 </td><td>SDK and Demo for iOS Update：<br/>1.MediaStop will block BUG repair in Demo<br/>
 2.video playback takes up large memory BUG fixes
 Library usage description (IOS) update<br/>
-库使用说明（ios）更新<br/></td></tr>
+</td></tr>
 <tr><td>2016-12-30
 </td><td>SDK for Android Update：1、optimized playback and request response time
 2、video playback takes up large memory BUG fixes
