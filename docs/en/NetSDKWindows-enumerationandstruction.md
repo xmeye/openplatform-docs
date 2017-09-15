@@ -1,6 +1,6 @@
 
-<div name="hong" id="hong" style="font-size:20px;"><b>1.Macro definition </b></div>
-<div style="margin-left:15px;">
+## Macro definition
+
   #define <label style="color:#69f">NET_MAX_CHANNUM </label>	64    <label style="color:#c33">//Maximum numberof  channels </label><br/>
   #define <label style="color:#69f">NET_DECORDR_CH  </label>    64    <label style="color:#c33">  //Maximum number of decoded channels</label><br/>
   #define <label style="color:#69f">NET_MAX_USER_NUM	</label>60	  <label style="color:#c33">//Maximum number of users</label><br/>
