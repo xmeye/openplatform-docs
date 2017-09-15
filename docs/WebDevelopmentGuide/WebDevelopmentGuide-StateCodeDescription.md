@@ -1,16 +1,5 @@
 ## 状态码说明
 
-<br/>
-<style>
-	table{
-		width:100%;
-		font-family:"楷体";
-		border-collapse:collapse;
-	}
-	table tr:hover{
-	    background-color:#f5f5f5;
-	}
-</style>
 <table>
 <thead>
 <tr style="background-color:#f5f5f5;"><td style="width:150px;">状态码</td><td>描述</td></tr>
