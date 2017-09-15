@@ -4584,13 +4584,11 @@ SDK\_EventHandler hEvent;	//人脸检测联动参数
 //全通道人脸检测
 
 typedef struct SDK\_FaceDetectAll
+
 {
 
 SDK\_FaceDetect vFaceDetect[NET\_MAX\_CHANNUM];
 
-}SDK\_FaceDetectAll;
+}
 
-
-
- 
-​
+SDK\_FaceDetectAll;
