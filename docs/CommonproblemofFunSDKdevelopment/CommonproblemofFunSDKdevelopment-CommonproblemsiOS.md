@@ -14,7 +14,7 @@ int FUN_DevCmdGeneral(UI_HANDLE hUser, const char *szDevId, int nCmdReq, const c
 
 (2)参数设定 nCmdReq：1450 nIsBinary：4096,2048,1042等 szCmd：OPMachine pInParam: 待发的请求json
 
-<pre>
+```
 {
     "Name": "OPMachine",
     "OPMachine": {
@@ -22,7 +22,7 @@ int FUN_DevCmdGeneral(UI_HANDLE hUser, const char *szDevId, int nCmdReq, const c
         "SessionID": "0x3"
     }
 }
-</pre>
+```
 
 nCmdRes:-1 nSeq:0,1,2,...<br/>
 
@@ -41,7 +41,7 @@ nLevel：按如下设置<br/>
 
 typedef enum EDECODE_TYPE
 
-<pre>
+```
 {
     EDECODE_REAL_TIME_STREAM0,      // 最实时--适用于IP\AP模式等网络状态很好的情况
     EDECODE_REAL_TIME_STREAM1,      //
@@ -52,7 +52,7 @@ typedef enum EDECODE_TYPE
     EDECODE_REAL_TIME_STREAM6,      // 最流畅--适用于网络不好,网络波动大的情况
     EDECODE_FILE_STREAM = 100,                // 文件流
 } EDECODE_TYPE;
-</pre>
+```
 
 ## 如果想要改手机缓存，应该选用哪个参数？
 
