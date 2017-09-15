@@ -1,15 +1,16 @@
 ## Error code description
 
-1. Basic error code                            
-2. User management error code                
-3. configuration management error code         
-4. DNS protocol parse error code               
+1. Basic error code 
+                           
+2. User management error code     
+           
+3. configuration management error code      
+   
+4. DNS protocol parse error code    
+           
 5. Copyright related error code     
+
 6. Upgrade error code                        
-
-  
-
-<hr> 
 
 ## Basic error code
 
@@ -81,12 +82,8 @@
 </td><td style="width:35%;background-color:#f08080">  The channel has already opened the preview (the opening and   closing of the channel need to correspond one-to-one, if you open several   times and you need to close several times.      Inconsistency will prompt the error;   to prevent the unreasonable design of   the client development logic to increase this error value).
 </td><tr>
 </table>
-<br/>
 
 ## User management section error code
-
- </b></div>
-<br/>
 
 <table>
 <tr><td style="width:10%;background-color:#fff8dc">Sequence number</td>
@@ -148,11 +145,9 @@
 </td><td style="width:35%;background-color:#f08080">  System maintenance, cannot be logged in</td><tr>
 </td><tr>
 </table>
-<br/>
 
 ## Configuration management related error code
 
-<br/>
 
 <table>
 <tr><td style="width:10%;background-color:#fff8dc">Sequence number
@@ -189,11 +184,8 @@
 </td><td style="width:10%;background-color:pink">-11503
 </td><td style="width:35%;background-color:#f08080">Decode failed</td><tr>
 </table>
-<br/>
 
 ## DNS protocol parse return error code
-
-<br/>
 
 <table>
 <tr><td style="width:10%;background-color:#fff8dc">Sequence number
@@ -259,11 +251,8 @@
 </td><td style="width:10%;background-color:pink">-11621
 </td><td style="width:35%;background-color:#f08080">Search failed</td><tr>
 </table>
-<br/>
 
 ## Copyright related
-
-<br/>
 
 <table>
 <tr><td style="width:10%;background-color:#fff8dc">Sequence number
@@ -286,11 +275,7 @@
 </td><td style="width:35%;background-color:#f08080">Authentication code error</td><tr>
 </table>
 
-<br/>
-
 ## Upgrade error code
-
-<br/>
 
 <table>
 <tr><td style="width:10%;background-color:#fff8dc"> Sequence number
@@ -321,4 +306,3 @@
 </td><td style="width:10%;background-color:pink">-11811
 </td><td style="width:35%;background-color:#f08080">    Under the current WiFi card, WiFi     driver and device of the upgrade program   do not match</td><tr>
 </table>
-<br/>

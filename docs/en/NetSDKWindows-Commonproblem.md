@@ -1,5 +1,3 @@
-### Customer FAQ： ###
-
 ## Capture problem
 
 <div style="color:red;margin-left:20px;">
@@ -14,7 +12,6 @@
 <div style="margin-left:20px;">
     Answer：Yes, the path under Windows needs to be set as "C:\\" format.<br/>
   If you have any questions, ask for technical support....
-
 </div>
 
 ## Bitstream issues in Preview
