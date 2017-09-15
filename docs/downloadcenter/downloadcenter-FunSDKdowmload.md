@@ -12,11 +12,10 @@
 
 </style>
 <table id="table1">
-<tr><td style="width:300px;"><img src="http://open.xmeye.net/upload/image/20160516/1463375682024076806.png"></td><td><a href="beijing.ksyun.com/funsdk/android/FunSDK.framework_iOS_ForCustom_V1.2.2_170621.zip">下载 SDK for iOS 2017-06-23</a>
-</td><td><a href="beijing.ksyun.com/funsdk/ios/FunSDKDemo_iOS_V1.9_20170103.zip">下载 Demo  for iOS 2017-01-03 旧版</a><br/>
-<a href="beijing.ksyun.com/funsdk/ios/FunSDKDemo_iOS_New_V1.1.zip">下载 Demo  for iOS 2017-05-23 新版</a></td></tr>
-<tr><td><img src="http://open.xmeye.net/upload/image/20160516/1463375687266037320.png"></td><td><a href="beijing.ksyun.com/funsdk/android/FunSDKLibs_ReleaseV1.1.7.zip">下载 SDK for Android v1.1.7 2017-06-23</a>
-</td><td><a href="beijing.ksyun.com/funsdk/android/FunSDKDemo_v1.3.3.zip">下载 Demo for Android v1.3.3 2017-06-02</a> 
+<tr><td style="width:300px;"><img src="http://open.xmeye.net/upload/image/20160516/1463375682024076806.png"></td><td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDK.framework_iOS_ForCustom_V1.2.4_170805.zip">下载 SDK for iOS 2017-08-05</a>
+</td><td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDKDemo_iOS_New_V1.2.zip">下载 Demo  for iOS 2017-07-14</a></td></tr>
+<tr><td><img src="http://open.xmeye.net/upload/image/20160516/1463375687266037320.png"></td><td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKLibs_ReleaseV1.1.8_20170805.zip">下载 SDK for Android v1.1.8 2017-08-15</a>
+</td><td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKDemo_v1.3.5.zip">下载 Demo for Android v1.3.5 2017-07-31</a> 
 </td></tr>
 </table>
 
