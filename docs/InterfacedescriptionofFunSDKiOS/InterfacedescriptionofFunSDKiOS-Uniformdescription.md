@@ -18,4 +18,4 @@
 
 ## 调用流程
 
-<img src="http://open.xmeye.net/upload/image/20160718/1468826344240087644.png">
+<div><img src="http://open.xmeye.net/upload/image/20160718/1468826344240087644.png"></div>
