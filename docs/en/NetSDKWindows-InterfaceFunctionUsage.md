@@ -1,55 +1,4 @@
-
-<div style="text-align:center;font-size:25px;font-family:黑体"><b>Definition and usage of interface function    
-</b></div>
-1.1 SDK initialization                      
-1.2 Alarm state acquisition                
-1.3 Device registration                    
-1.4 Real-time monitoring                   
-1.5 Playback and download                 
-1.6 Playback control                     
-1.7 PTZ control                             
-1.8 System configuration                     
-1.9 Log management                      
-1.10 Remote control                       
-1.11 Voice intercom                        
-1.12 Record mode settings                   
-1.13 Set system time                      
-1.14 Get set running status information       
-1.15 Network keyboard                     
-1.16 Network alarm                       
-1.17 Alarm center                          
-1.18 Disk management                        
-1.19 Capture image                          
-1.20 Transparent 232, 485                     
-1.21 Get DDNS information                     
-1.22 Support forced I-frames                    
-1.23 Set timeout and attempt times of login device
-1.24 Transparent serial port                    
-1.25 DVR local
-1.26 Client record                             
-1.27 Open voice intercom (2)                    
-1.28 Client audio                              
-1.29Client capture image                       
-1.30 Play location                            
-1.31 Set information frame callback               
-1.32 Client video color                         
-1.33 Play client local file                      
-1.34 Bind local IP                              
-1.35 Set reported data callback                 
-1.36 Support device active registration          
-1.37 Set sub connection disconnect callback   
-1.38 Set heartbeat packet time and disconnection time  
-1.39 Search local area network device       
-1.40 Get public IP                       
-1.41 Get smart socket control commands   
-1.42 Set smart socket control commands     
-1.43 Smart socket control command parameters description    
-1.44 Get set control commands           
-1.45 Check whether the device is online   
-<hr>
-
-#### 1.1SDK initialization ####
-<br/>
+## SDK initialization
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -61,7 +10,7 @@
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Query corresponding error code</td></tr>
 </table>
-<br/>
+
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Calling function
@@ -73,7 +22,7 @@
 </td><td style="background-color:#B9B973">Success return TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
+
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -87,7 +36,7 @@
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
+
 
 
 <table>
@@ -100,11 +49,8 @@
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">None</td></tr>
 </table>
-<br/>
 
-
-#### 1.2 Alarm state acquisition ####
-<br/>
+## Alarm state acquisition
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Calling function
@@ -117,7 +63,7 @@
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
+
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -131,7 +77,7 @@
 </td><td style="background-color:#B9B973">TRUE is that callback function   executes correctly, FALSE is execution error
 </td></tr>
 </table>
-<br/>
+
 
 
 <table>
@@ -146,9 +92,9 @@
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.3Device registration ####
+
+## Device registration
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -207,10 +153,8 @@
 <tr><td style="background-color:#eff">Return value
 </td><td style="background-color:#cff">Success return 1, fail return 0</td></tr>
 </table>
-<br/>
 
-#### 1.4Real-time monitoring ####
-<br/>
+## Real-time monitoring
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -297,7 +241,7 @@
 <div style="background-color:#c66;width:120px;">
 Partial error code analysis:   
 </div>
-<br/>
+
 
 <table>
 <tr style="background-color:#c66"><td>1.Return value=-11202：Set video sub connection failed,   the device may not be online or in the restart process. Treatment methods:   after received disconnection callback, logout and then login again.</td><tr>
@@ -305,11 +249,11 @@ Partial error code analysis:
 <tr style="background-color:#c66"><td>3.Return value=-11206：Illegal error,   the main connection has been disconnected. The device has been disconnected and   then restarts success, but has not received disconnection callback which   still uses the previous login handle at this time.   Treatment method: after received the   disconnection callback, then logout.
 </td><tr>
 </table>
-<br/>
+
 <div style="font-size:20px;">
 <b>1.5Playback and download</b>
 </div>
-<br/>
+
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -319,12 +263,12 @@ Partial error code analysis:
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
 
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID: login handle<br/>
-lpFindInfo:query condition-view H264_DVR_FINDINFO structure<br/>
-lpFileData:query result-view H264_DVR_FILE_DATA   structure<br/>
-lMaxCount:queried maximum   number of videos(unit byte, recommended between 100-200*sizeof   (H264_DVR_FILE_DATA)<br/>
-findcount:queried maximum number of   videos, which is the maximum output parameters that can only   check the recording of the full buffer<br/>
-waittime:wait time<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID: login handle
+lpFindInfo:query condition-view H264_DVR_FINDINFO structure
+lpFileData:query result-view H264_DVR_FILE_DATA   structure
+lMaxCount:queried maximum   number of videos(unit byte, recommended between 100-200*sizeof   (H264_DVR_FILE_DATA)
+findcount:queried maximum number of   videos, which is the maximum output parameters that can only   check the recording of the full buffer
+waittime:wait time
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
@@ -337,20 +281,20 @@ waittime:wait time<br/>
 </td><td style="background-color:#B9B973">Query video file by time
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID: login handle<br/>
-lpFindInfo:query   condition-view SDK_SearchByTime structure<br/>
-lpFileData: returned video file information, is a SDK_SearchByTimeResult structure array, external open memory <br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID: login handle
+lpFindInfo:query   condition-view SDK_SearchByTime structure
+lpFileData: returned video file information, is a SDK_SearchByTimeResult structure array, external open memory 
 waittime: wait time, unit ms
-<br/>
+
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-####  1.5.2Replay video file ####
-<br/>
+
+### Replay video file
+
 <table>
 <tr><td style="background-color:#cfc;width:30%;">Callback function
 </td><td style="background-color:#9c6">typedef void(CALL_METHOD *fDownLoadPosCallBack) (long lPlayHandle, long lTotalSize, long lDownLoadSize, long dwUser);</td></tr>
@@ -376,11 +320,11 @@ waittime: wait time, unit ms
 </td><td style="background-color:#B9B973">Playback video file by file name
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID: login handle <br/>
-sPlayBackFile:  playback file parameters<br/>
-cbDownLoadPos:progress   callback, user notify that whether the user device has been sent  the data completely.   lDownLoadSize=-1 in callback,   represents data is sent completed.<br/>
-fDownLoadDataCallBack:playback data callback<br/>
-dwDataUser:data callback parameters<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID: login handle 
+sPlayBackFile:  playback file parameters
+cbDownLoadPos:progress   callback, user notify that whether the user device has been sent  the data completely.   lDownLoadSize=-1 in callback,   represents data is sent completed.
+fDownLoadDataCallBack:playback data callback
+dwDataUser:data callback parameters
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   network playback ID, fail return 0
@@ -393,12 +337,12 @@ dwDataUser:data callback parameters<br/>
 </td><td style="background-color:#B9B973">Playback video file   by file name
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID: login handle <br/>
-sPlayBackFile: playback file   parameters<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID: login handle 
+sPlayBackFile: playback file   parameters
 cbDownLoadPos: progress   callback, user notify that whether the user device has been sent  the data completely.   lDownLoadSize=-1 in callback, represents   data is sent completed.
-<br/>
-fDownLoadDataCallBack:playback data callback <br/>
-dwDataUser:data callback   parameters<br/>
+
+fDownLoadDataCallBack:playback data callback 
+dwDataUser:data callback   parameters
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   network playback ID, fail return 0
@@ -411,12 +355,12 @@ dwDataUser:data callback   parameters<br/>
 </td><td style="background-color:#B9B973">Playback video file   by time
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID: login handle <br/>
-sPlayBackFile: playback file   parameters<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID: login handle 
+sPlayBackFile: playback file   parameters
 cbDownLoadPos: progress   callback, user notify that whether the user device has been sent  the data completely.   lDownLoadSize=-1 in callback, represents   data is sent completed.
-<br/>
-fDownLoadDataCallBack:playback data callback <br/>
-dwDataUser:data callback   parameters<br/>
+
+fDownLoadDataCallBack:playback data callback 
+dwDataUser:data callback   parameters
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   network playback ID, fail return 0
@@ -429,10 +373,10 @@ dwDataUser:data callback   parameters<br/>
 </td><td style="background-color:#B9B973">Playback video Ex by time, progress   callback and data callback use different callback parameters, the other is   the same with H264_DVR_PlayBackByTime.
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">dwDataUser：the parameters of   fDownLoadDataCallBack progress callback function<br/>
+</td><td style="background-color:#B9B973;text-align:left;">dwDataUser：the parameters of   fDownLoadDataCallBack progress callback function
 cbDownLoadPos：currently only used to play the end   callback (get the location, please call H264_DVR_GetPlayPos <a href="http://open.xmeye.net/zh #GetPlayPos">
-H264_DVR_GetPlayPosinterface)</a><br/>
-dwPosUser：the parameters of cbDownLoadPos   data callback function<br/>
+H264_DVR_GetPlayPosinterface)</a>
+dwPosUser：the parameters of cbDownLoadPos   data callback function
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   network playback ID, fail return 0
@@ -445,10 +389,10 @@ dwPosUser：the parameters of cbDownLoadPos   data callback function<br/>
 </td><td style="background-color:#B9B973"> The data stream callback from the fDownLoadDataCallBack   data has been analyzed，the other is same   with H264_DVR_PlayBackByTimeEx
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">dwDataUser：the parameters of   fDownLoadDataCallBack progress callback function<br/>
+</td><td style="background-color:#B9B973;text-align:left;">dwDataUser：the parameters of   fDownLoadDataCallBack progress callback function
 cbDownLoadPos：currently only used to play the end   callback (get the location, please call H264_DVR_GetPlayPos <a href="http://open.xmeye.net/zh #GetPlayPos">
-H264_DVR_GetPlayPosinterface)</a><br/>
-dwPosUser：the parameters of cbDownLoadPos   data callback function<br/>
+H264_DVR_GetPlayPosinterface)</a>
+dwPosUser：the parameters of cbDownLoadPos   data callback function
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   network playback ID, fail return 0
@@ -465,10 +409,8 @@ dwPosUser：the parameters of cbDownLoadPos   data callback function<br/>
 <tr><td style="background-color:#9cf">Return value
 </td><td style="background-color:#69c">Success return   TRUE, fail return FALSE
 </table>
-<br/>
 
-#### 1.5.3Download video file ####
-<br/>
+### Download video file
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -477,12 +419,12 @@ dwPosUser：the parameters of cbDownLoadPos   data callback function<br/>
 <tr><td style="background-color:#dedebe">Function description
 </td><td style="background-color:#B9B973">  Download by file name, user cannot use callback and get progress via H264_DVR_GetDownloadPos</td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle<br/>
-sPlayBackFile[in]:downloaded video   information<br/>
-sSavedFileName[in]:saved file path,   the full path<br/>
-cbDownLoadPos[out]:download progress   callback fDownLoadPosCallBack function, can be empty, user call   H264_DVR_GetDownloadPos to get progress<br/>
-dwDataUser[in]:callback function parameters<br/>
-fDownLoadDataCallBack[out]:data callback fRealDataCallBack <a href="http://open.xmeye.net/zh/#fRealDataCallBack">fRealDataCallBack</a>function<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle
+sPlayBackFile[in]:downloaded video   information
+sSavedFileName[in]:saved file path,   the full path
+cbDownLoadPos[out]:download progress   callback fDownLoadPosCallBack function, can be empty, user call   H264_DVR_GetDownloadPos to get progress
+dwDataUser[in]:callback function parameters
+fDownLoadDataCallBack[out]:data callback fRealDataCallBack <a href="http://open.xmeye.net/zh/#fRealDataCallBack">fRealDataCallBack</a>function
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
@@ -495,12 +437,12 @@ fDownLoadDataCallBack[out]:data callback fRealDataCallBack <a href="http://open.
 </td><td style="background-color:#B9B973"> Download V2 version by file name, data callback is analyzed by stream,   the other is same with H264_DVR_GetFileByName
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle<br/>
-sPlayBackFile[in]:downloaded video   information<br/>
-sSavedFileName[in]:saved file path,   the full path<br/>
-cbDownLoadPos[out]:download progress   callback fDownLoadPosCallBack function, can be empty, user call   H264_DVR_GetDownloadPos to get progress<br/>
-dwDataUser[in]:callback function parameters<br/>
-fDownLoadDataCallBack[out]:data callback fRealDataCallBack <a href="http://open.xmeye.net/zh/#fRealDataCallBack">fRealDataCallBack</a>function<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle
+sPlayBackFile[in]:downloaded video   information
+sSavedFileName[in]:saved file path,   the full path
+cbDownLoadPos[out]:download progress   callback fDownLoadPosCallBack function, can be empty, user call   H264_DVR_GetDownloadPos to get progress
+dwDataUser[in]:callback function parameters
+fDownLoadDataCallBack[out]:data callback fRealDataCallBack <a href="http://open.xmeye.net/zh/#fRealDataCallBack">fRealDataCallBack</a>function
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
@@ -513,12 +455,12 @@ fDownLoadDataCallBack[out]:data callback fRealDataCallBack <a href="http://open.
 </td><td style="background-color:#B9B973">Download video file by time
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle<br/>
-sPlayBackFile[in]:downloaded video   information<br/>
-sSavedFileName[in]:saved file path,   the full path<br/>
-cbDownLoadPos[out]:download progress   callback fDownLoadPosCallBack function, can be empty, user call   H264_DVR_GetDownloadPos to get progress<br/>
-dwDataUser[in]:callback function parameters<br/>
-fDownLoadDataCallBack[out]:data callback fRealDataCallBack <a href="http://open.xmeye.net/zh/#fRealDataCallBack">fRealDataCallBack</a>function<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle
+sPlayBackFile[in]:downloaded video   information
+sSavedFileName[in]:saved file path,   the full path
+cbDownLoadPos[out]:download progress   callback fDownLoadPosCallBack function, can be empty, user call   H264_DVR_GetDownloadPos to get progress
+dwDataUser[in]:callback function parameters
+fDownLoadDataCallBack[out]:data callback fRealDataCallBack <a href="http://open.xmeye.net/zh/#fRealDataCallBack">fRealDataCallBack</a>function
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
@@ -531,12 +473,12 @@ fDownLoadDataCallBack[out]:data callback fRealDataCallBack <a href="http://open.
 </td><td style="background-color:#B9B973">The data stream callback from the   fDownLoadDataCallBack data has been analyzed，the other is same with H264_DVR_GetFileByTime
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle<br/>
-sPlayBackFile[in]:downloaded video   information<br/>
-sSavedFileName[in]:saved file path,   the full path<br/>
-cbDownLoadPos[out]:download progress   callback fDownLoadPosCallBack function, can be empty, user call   H264_DVR_GetDownloadPos to get progress<br/>
-dwDataUser[in]:callback function parameters<br/>
-fDownLoadDataCallBack[out]:data callback fRealDataCallBack <a href="http://open.xmeye.net/zh/#fRealDataCallBack">fRealDataCallBack</a>function<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle
+sPlayBackFile[in]:downloaded video   information
+sSavedFileName[in]:saved file path,   the full path
+cbDownLoadPos[out]:download progress   callback fDownLoadPosCallBack function, can be empty, user call   H264_DVR_GetDownloadPos to get progress
+dwDataUser[in]:callback function parameters
+fDownLoadDataCallBack[out]:data callback fRealDataCallBack <a href="http://open.xmeye.net/zh/#fRealDataCallBack">fRealDataCallBack</a>function
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
@@ -553,10 +495,8 @@ fDownLoadDataCallBack[out]:data callback fRealDataCallBack <a href="http://open.
 <tr><td style="background-color:#9cf">Return value
 </td><td style="background-color:#69c">>= 0 for download progress   (percentage), < 0 for fail
 </table>
-<br/>
 
-#### 1.6Playback control ####
-<br/>
+## Playback control
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -567,18 +507,16 @@ fDownLoadDataCallBack[out]:data callback fRealDataCallBack <a href="http://open.
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
 </td><td style="background-color:#B9B973;text-align:left;">lPlayHandle[in]:playback handle
-<br/>
-lControlCode[in]:control command, see enum <a href="http://open.xmeye.net/zh/#PlayBackAction">SDK_PlayBackAction</a><br/>
-lCtrlValue[in]:control value<br/>
+
+lControlCode[in]:control command, see enum <a href="http://open.xmeye.net/zh/#PlayBackAction">SDK_PlayBackAction</a>
+lCtrlValue[in]:control value
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.7PTZ control ####
-<br/>
+## PTZ control
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -589,11 +527,11 @@ lCtrlValue[in]:control value<br/>
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
 </td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:	  login handle
-<br/>
-nChannelNo[in]:	channel number<br/>
-lPTZCommand[in]:control command,   see enum<a herf="http://open.xmeye.net/zh/#ControlType">enum PTZ_ControlType</a><br/>
-bStop[in]:    whether it is pause<br/>
-lSpeed[in]:   speed<br/>
+
+nChannelNo[in]:	channel number
+lPTZCommand[in]:control command,   see enum<a herf="http://open.xmeye.net/zh/#ControlType">enum PTZ_ControlType</a>
+bStop[in]:    whether it is pause
+lSpeed[in]:   speed
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
@@ -606,25 +544,23 @@ lSpeed[in]:   speed<br/>
 </td><td style="background-color:#B9B973">   Expand PTZ settings, including preset   point setting, the cruise route, rapid positioning, etc.
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:login handle<br/>
-nChannelNo[in]:	channel   number<br/>
-lPTZCommand[in]:control command,   see enum  <a herf="http://open.xmeye.net/zh/#ControlType">enum PTZ_ControlType</a><br/>
-lParam1[in]，lParam2[in]，lParam3[in]:<br/>
- 1、Set up, delete, and turn to the preset point:   lParam1 is preset point value.<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:login handle
+nChannelNo[in]:	channel   number
+lPTZCommand[in]:control command,   see enum  <a herf="http://open.xmeye.net/zh/#ControlType">enum PTZ_ControlType</a>
+lParam1[in]，lParam2[in]，lParam3[in]:
+ 1、Set up, delete, and turn to the preset point:   lParam1 is preset point value.
  2、Add the preset point to the cruise; delete the   preset point in the cruise:  lParam1 is   the value of the cruise route, lParam2 is preset point value, and lParam3 is   time interval.
-<br/>
- 3、Start cruising, stop cruising, and clear the cruise   routes: lParam1 is the value of the cruise line.<br/>
- 4、PTZ direction setting: lParam1 is horizontal step length,   lParam2 is vertical step length.<br/>
- 5、 PTZ preset point cruise: lParam3 is time interval. bStop[in]: whether it is pause<br/>
+
+ 3、Start cruising, stop cruising, and clear the cruise   routes: lParam1 is the value of the cruise line.
+ 4、PTZ direction setting: lParam1 is horizontal step length,   lParam2 is vertical step length.
+ 5、 PTZ preset point cruise: lParam3 is time interval. bStop[in]: whether it is pause
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.8System configuration ####
-<br/>
+## System configuration
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -634,13 +570,13 @@ lParam1[in]，lParam2[in]，lParam3[in]:<br/>
 </td><td style="background-color:#B9B973">Remote setting configuration   parameters
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle<br/>
-dwCommand[in]: control command, see enum   SDK_CONFIG_TYPE<br/>
-nChannelNO[in]:	-1 represents the full   channel, 0-n represents single channel<br/>
-lpOutBuffer[out]:receive buffer, store buffer which input parameters. According   to different types, output different configuration structure, for details,   see configuration structure in the data structure definition.<br/>
-dwOutBufferSize[in]:receive buffer size (unit byte)<br/>
-lpBytesReturned[out]: the actual returned buffer size, corresponding to the   size of the configuration structure (unit byte)<br/>
-waittime[in]: wait time<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle
+dwCommand[in]: control command, see enum   SDK_CONFIG_TYPE
+nChannelNO[in]:	-1 represents the full   channel, 0-n represents single channel
+lpOutBuffer[out]:receive buffer, store buffer which input parameters. According   to different types, output different configuration structure, for details,   see configuration structure in the data structure definition.
+dwOutBufferSize[in]:receive buffer size (unit byte)
+lpBytesReturned[out]: the actual returned buffer size, corresponding to the   size of the configuration structure (unit byte)
+waittime[in]: wait time
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">= 0: success, <   0: fail
@@ -653,13 +589,13 @@ waittime[in]: wait time<br/>
 </td><td style="background-color:#B9B973">Remote setting configuration   parameters
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle<br/>
-dwCommand[in]: control command, see enum   SDK_CONFIG_TYPE<br/>
-nChannelNO[in]:	-1 represents the full   channel, 0-n represents single channel<br/>
-lpOutBuffer[out]:receive buffer, store buffer which input parameters. According   to different types, output different configuration structure, for details,   see configuration structure in the data structure definition.<br/>
-dwOutBufferSize[in]:receive buffer size (unit byte)<br/>
-lpBytesReturned[out]: the actual returned buffer size, corresponding to the   size of the configuration structure (unit byte)<br/>
-waittime[in]: wait time<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle
+dwCommand[in]: control command, see enum   SDK_CONFIG_TYPE
+nChannelNO[in]:	-1 represents the full   channel, 0-n represents single channel
+lpOutBuffer[out]:receive buffer, store buffer which input parameters. According   to different types, output different configuration structure, for details,   see configuration structure in the data structure definition.
+dwOutBufferSize[in]:receive buffer size (unit byte)
+lpBytesReturned[out]: the actual returned buffer size, corresponding to the   size of the configuration structure (unit byte)
+waittime[in]: wait time
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">= 0: success, <   0: fail
@@ -672,20 +608,18 @@ waittime[in]: wait time<br/>
 </td><td style="background-color:#B9B973"> Cross network setting device configuration,   currently only supports the network configuration settings
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">dwCommand[in]:configuration   type, E_SDK_CONFIG_SYSNET<br/>
-nChannelNO[in]:configure   channel number, 1 temporary storage, the other for the permanent preservation<br/>
-lpInBuffer[in]:	store buffer which input parameters, SDK_CONFIG_NET_COMMON_V3   structure address<br/>
-dwInBufferSize[in]:input buffer size   sizeof (SDK_CONFIG_NET_COMMON_V3) unit byte<br/>
-waittime[in]:wait time<br/>
+</td><td style="background-color:#B9B973;text-align:left;">dwCommand[in]:configuration   type, E_SDK_CONFIG_SYSNET
+nChannelNO[in]:configure   channel number, 1 temporary storage, the other for the permanent preservation
+lpInBuffer[in]:	store buffer which input parameters, SDK_CONFIG_NET_COMMON_V3   structure address
+dwInBufferSize[in]:input buffer size   sizeof (SDK_CONFIG_NET_COMMON_V3) unit byte
+waittime[in]:wait time
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">= 0: success, <   0: fail
 </td></tr>
 </table>
-<br/>
 
-#### 1.9 Log management ####
-<br/>
+## Log management
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -695,20 +629,18 @@ waittime[in]:wait time<br/>
 </td><td style="background-color:#B9B973">Log query
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:login handle<br/>
-pFindParam[in]:query condition<br/>
-pRetBuffer[out]:log return   information<br/>
-lBufSize[in]:receive log information   size<br/>
-waittime:wait time<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:login handle
+pFindParam[in]:query condition
+pRetBuffer[out]:log return   information
+lBufSize[in]:receive log information   size
+waittime:wait time
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.10Remote control ####
-<br/>
+## Remote control
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -718,31 +650,29 @@ waittime:wait time<br/>
 </td><td style="background-color:#B9B973">Device control
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:login handle<br/>
-type[in]:	control type, 0.Reset   device, 1.Clear log 2.Shutdown 3. Recover record   log 4.Stop record log<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:login handle
+type[in]:	control type, 0.Reset   device, 1.Clear log 2.Shutdown 3. Recover record   log 4.Stop record log
 waittime[in]: wait time
-<br/>
+
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.10.1Local upgrade ####
-<br/>
+### Local upgrade
 
 <table>
 <tr><td style="background-color:#cfc;width:30%;">Callback function
 </td><td style="background-color:#9c6">typedef void(CALL_METHOD *fUpgradeCallBack) (long lLoginID, long lUpgradechannel,int nTotalSize, int nSendSize, long dwUser);</td></tr>
 <tr><td style="background-color:#cfc">Callback function description
-</td><td style="background-color:#9c6;text-align:left">lUpgradechannel, the returned handle for updrading <a href="http://open.xmeye.net/zh/#Upgrade">H264_DVR_Upgrade</a>function<br/>
-nSendSize = -1 upgrade completed  <br/>
-nSendSize = -2 upgrade error<br/>
-nTotalSize = -1, nSendSize:1-99return upgrade   progress <br/>
-nTotalSize =0,nSendSize = H264_DVR_NOENOUGH_MEMORY-H264_DVR_INVALID_WIFI_DRIVE upgrade error specific   code<br/>
-Other is to send progress<br/>
-Cloud upgrade add this step:nTotalSize=-2, nSendSize:0   - 100=download progress, no send progress<br/>
+</td><td style="background-color:#9c6;text-align:left">lUpgradechannel, the returned handle for updrading <a href="http://open.xmeye.net/zh/#Upgrade">H264_DVR_Upgrade</a>function
+nSendSize = -1 upgrade completed  
+nSendSize = -2 upgrade error
+nTotalSize = -1, nSendSize:1-99return upgrade   progress 
+nTotalSize =0,nSendSize = H264_DVR_NOENOUGH_MEMORY-H264_DVR_INVALID_WIFI_DRIVE upgrade error specific   code
+Other is to send progress
+Cloud upgrade add this step:nTotalSize=-2, nSendSize:0   - 100=download progress, no send progress
 </td></tr>
 <tr><td colspan="2" style="background-color:#ccc">&#160</td></tr>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -751,11 +681,11 @@ Cloud upgrade add this step:nTotalSize=-2, nSendSize:0   - 100=download progress
 <tr><td style="background-color:#dedebe">Function description
 </td><td style="background-color:#B9B973">Set up upgrade program for the front   end device network</td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle<br/>
-sFileName[in]:upgrade file path<br/>
-nType[in]:upgrade type, 1-start   to upgrade  0-stop upgrading<br/>
-cbUpgrade[in]:upgrade progress   callback<br/>
-dwUser[in]:callback function parameters<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle
+sFileName[in]:upgrade file path
+nType[in]:upgrade type, 1-start   to upgrade  0-stop upgrading
+cbUpgrade[in]:upgrade progress   callback
+dwUser[in]:callback function parameters
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return upgrade handle ID, fail   return 0
@@ -780,10 +710,8 @@ dwUser[in]:callback function parameters<br/>
 <tr><td style="background-color:#9cf">Return value
 </td><td style="background-color:#69c">Success return 1, fail return 0
 </table>
-<br/>
 
-#### 1.10.2Cloud upgrade  ####
-<br/>
+### Cloud upgrade 
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -820,10 +748,8 @@ dwUser[in]:callback function parameters<br/>
 <tr><td style="background-color:#9cf">Return value
 </td><td style="background-color:#69c">Success return 0, fail return <0
 </table>
-<br/>
 
-#### 1.10.3Search device information ####
-<br/>
+### Search device information
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -833,10 +759,10 @@ dwUser[in]:callback function parameters<br/>
 </td><td style="background-color:#B9B973">Search local area network device
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">szBuf[out]:	 receive buffer<br/>
-nBufLen[in]:	receive   buffer size, sizeof(<a href="http://open.xmeye.net/zh/#NET_COMMON_V2">SDK_CONFIG_NET_COMMON_V2</a>)*n<br/>
-pRetLen[in]:	returned   size<br/>
-nSearchTime[in]:wait time<br/>
+</td><td style="background-color:#B9B973;text-align:left;">szBuf[out]:	 receive buffer
+nBufLen[in]:	receive   buffer size, sizeof(<a href="http://open.xmeye.net/zh/#NET_COMMON_V2">SDK_CONFIG_NET_COMMON_V2</a>)*n
+pRetLen[in]:	returned   size
+nSearchTime[in]:wait time
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
@@ -855,9 +781,9 @@ nSearchTime[in]:wait time<br/>
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
 </td><td style="background-color:#B9B973;text-align:left;">pfNetCom[out]:callback function
-<br/>
-userData[in]:	callback parameters <br/>
-nSearchTime[in]:wait time<br/>
+
+userData[in]:	callback parameters 
+nSearchTime[in]:wait time
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
@@ -869,20 +795,17 @@ nSearchTime[in]:wait time<br/>
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
 </td><td style="background-color:#B9B973;text-align:left;">szBuf[out]:	receive buffer 
-<br/>
-nBufLen[in]:	 receive buffer size, sizeof(<a href="http://open.xmeye.net/zh/#NET_COMMON_V2">SDK_CONFIG_NET_COMMON_V2</a>))*n<br/>
-pRetLen[in]:	returned size<br/>
-nSearchTime[in]:wait time<br/>
+
+nBufLen[in]:	 receive buffer size, sizeof(<a href="http://open.xmeye.net/zh/#NET_COMMON_V2">SDK_CONFIG_NET_COMMON_V2</a>))*n
+pRetLen[in]:	returned size
+nSearchTime[in]:wait time
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.11Voice intercom ####
-<br/>
-
+## Voice intercom
 
 <table>
 <tr><td style="background-color:#cfc;width:30%;">Callback function
@@ -897,9 +820,9 @@ nSearchTime[in]:wait time<br/>
 </td><td style="background-color:#B9B973">Start voice intercom
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:  login handle<br/>
-pVcb[out]:	receive intercom data callback<br/>
-dwDataUser[in]:callback function parameters<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:  login handle
+pVcb[out]:	receive intercom data callback
+dwDataUser[in]:callback function parameters
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">> 0 intercom   handle, <= 0 fail
@@ -910,9 +833,9 @@ dwDataUser[in]:callback function parameters<br/>
 </td><td style="background-color:#69c">Send intercom data, forwarding voice   intercom data collected by PC</td></tr>
 <tr><td style="background-color:#9cf">Function parameters
 </td><td style="background-color:#69c">lVoiceHandle[in]:the return value handle of <a href="http://open.xmeye.net/zh/#StartVoiceCom_MR">H264_DVR_StartVoiceCom_MR</a>fucntion
-<br/>
-pSendBuf[in]:	 intercom data<br/>
-lBufSize[in]:	intercom   data size<br/>
+
+pSendBuf[in]:	 intercom data
+lBufSize[in]:	intercom   data size
 </td></tr>
 <tr><td style="background-color:#9cf">Return value
 </td><td style="background-color:#69c">Success return   TRUE, fail return FALSE
@@ -939,10 +862,8 @@ pTalkMode[in]: intercom   mode structure see: SDK_AudioInFormatConfig channel nu
 </td><td style="background-color:#69c">Success return   TRUE, fail return FALSE
 </table>
 </table>
-<br/>
 
-#### 1.12Record mode settings ####
-<br/>
+## Record mode settings
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -952,9 +873,9 @@ pTalkMode[in]: intercom   mode structure see: SDK_AudioInFormatConfig channel nu
 </td><td style="background-color:#B9B973">Set record mode
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:login handle<br/>
-nChannelNo[in]:channel number, -1   represents the full channel, 0-n represents a single channel<br/>
-lRecordType[in]:record mode, see enum<a href="http://open.xmeye.net/zh/#RecordModeTypes">SDK_RecordModeTypes</a><br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:login handle
+nChannelNo[in]:channel number, -1   represents the full channel, 0-n represents a single channel
+lRecordType[in]:record mode, see enum<a href="http://open.xmeye.net/zh/#RecordModeTypes">SDK_RecordModeTypes</a>
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
@@ -966,16 +887,14 @@ lRecordType[in]:record mode, see enum<a href="http://open.xmeye.net/zh/#RecordMo
 </td><td style="background-color:#69c">Close record
 </td></tr>
 <tr><td style="background-color:#9cf">Function parameters
-</td><td style="background-color:#69c">lLoginID[in]: login handle<br/>
-nChannelNo[in]: -1   represents the full channel, 0-n represents a single channel<br/>
+</td><td style="background-color:#69c">lLoginID[in]: login handle
+nChannelNo[in]: -1   represents the full channel, 0-n represents a single channel
 </td></tr>
 <tr><td style="background-color:#9cf">Return value
 </td><td style="background-color:#69c">Success return   TRUE, fail return FALSE
 </table>
-<br/>
 
-#### 1.13Set system time ####
-<br/>
+## Set system time
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -985,17 +904,17 @@ nChannelNo[in]: -1   represents the full channel, 0-n represents a single channe
 </td><td style="background-color:#B9B973">Set system time
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:login handle<br/>
-pSysTime[in]: time-see enumeration <a href="http://open.xmeye.net/zh/#SYSTEM_TIME">SDK_SYSTEM_TIME</a><br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:login handle
+pSysTime[in]: time-see enumeration <a href="http://open.xmeye.net/zh/#SYSTEM_TIME">SDK_SYSTEM_TIME</a>
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.14Get set running status information ####
-<br/>
+
+## 1.14Get set running status information
+
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1005,16 +924,14 @@ pSysTime[in]: time-see enumeration <a href="http://open.xmeye.net/zh/#SYSTEM_TIM
 </td><td style="background-color:#B9B973">Get device working status information 
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle<br/>
-pWorkState[out]:device working   status-see<a href="http://open.xmeye.net/zh/#WORKSTATE">SDK_DVR_WORKSTATE</a>structure<br/></td></tr>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle
+pWorkState[out]:device working   status-see<a href="http://open.xmeye.net/zh/#WORKSTATE">SDK_DVR_WORKSTATE</a>structure</td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.15Network keyboard ####
-<br/>
+## Network keyboard
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1024,17 +941,17 @@ pWorkState[out]:device working   status-see<a href="http://open.xmeye.net/zh/#WO
 </td><td style="background-color:#B9B973">Send network keyboard key messages
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]: login handle
 pKeyBoardData[in]:network keyboard parameters-see <a href="http://open.xmeye.net/zh/#NetKeyBoardData">SDK_NetKeyBoardData<a>
-<br/></td></tr>
+</td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.16Network alarm ####
-<br/>
+
+## 1.16Network alarm
+
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1044,25 +961,23 @@ pKeyBoardData[in]:network keyboard parameters-see <a href="http://open.xmeye.net
 </td><td style="background-color:#B9B973">Send network alarm information
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:login handle<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:login handle
 pAlarmInfo[in]:network alarm parameters-see <a href="http://open.xmeye.net/zh/#NetAlarmInfo">SDK_NetAlarmInfo</a>
-<br/></td></tr>
+</td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.17Alarm center  ####
-<br/>
+## Alarm center 
 
 <table>
 <tr><td style="background-color:#cfc;width:30%;">Callback funtion
 </td><td style="background-color:#9c6">typedef bool (CALL_METHOD *fMessCallBack)(long lLoginID, char *pBuf, unsigned long dwBufLen, long dwUser);</td></tr>
 <tr><td style="background-color:#cfc"> Callback funtion description
-</td><td style="background-color:#9c6;text-align:left">Message (alarm, active registration) callback prototype<br/>
-1.Alarm, pBuf description,,SDK_AlarmInfo alarmInfo;memcpy ( &alarmInfo, pBuf, dwBufLen );<br/>
-2.Active registration, pBuf description,H264_DVR_ACTIVEREG_INFO activeInfo;memcpy ( &alarmInfo, pBuf, dwBufLen );<br/>
+</td><td style="background-color:#9c6;text-align:left">Message (alarm, active registration) callback prototype
+1.Alarm, pBuf description,,SDK_AlarmInfo alarmInfo;memcpy ( &alarmInfo, pBuf, dwBufLen );
+2.Active registration, pBuf description,H264_DVR_ACTIVEREG_INFO activeInfo;memcpy ( &alarmInfo, pBuf, dwBufLen );
 </td></tr>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
 </td><td style="background-color:#B9B973">H264_DVR_API bool CALL_METHOD H264_DVR_StartAlarmCenterListen(int nPort, fMessCallBack cbAlarmCenter, unsigned long dwDataUser);
@@ -1070,9 +985,9 @@ pAlarmInfo[in]:network alarm parameters-see <a href="http://open.xmeye.net/zh/#N
 <tr><td style="background-color:#dedebe">Function description
 </td><td style="background-color:#B9B973">Start alarm center monitor</td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">nPort[in]:port number<br/>
-cbAlarmCenter[out]:data callback <a href="http://open.xmeye.net/zh/#fMessCallBack">fMessCallBack</a>function<br/>
-dwDataUser[in]:callback function   parameters<br/>
+</td><td style="background-color:#B9B973;text-align:left;">nPort[in]:port number
+cbAlarmCenter[out]:data callback <a href="http://open.xmeye.net/zh/#fMessCallBack">fMessCallBack</a>function
+dwDataUser[in]:callback function   parameters
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
@@ -1088,10 +1003,8 @@ dwDataUser[in]:callback function   parameters<br/>
 </td><td style="background-color:#69c">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.18Disk management  ####
-<br/>
+## Disk management 
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1107,24 +1020,24 @@ dwDataUser[in]:callback function   parameters<br/>
 </td><td style="background-color:#B9B973">> 0 success，<=0   fail
 </td></tr>
 </table>
-<br/>
 
-#### 1.19Capture image ####
-<br/>
+
+## 1.19Capture image
+
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
 </td><td style="background-color:#B9B973">H264_DVR_API bool CALL_METHOD H264_DVR_CatchPic(long lLoginID, int nChannel, char *sFileName);
 </td></tr>
 <tr><td style="background-color:#dedebe">Function description
-</td><td style="background-color:#B9B973;text-align:left">Device capture image that is capture the   memory buf of an instant picture sent by device, external generates files.<br/>
-1.This interface is effective when it   has screenshot configuration option in the device configuration.<br/>
-2.If meet 1, the   default resolution is D1. If you want to capture the same resolution video   images, we need to modify the screenshot resolution in the encoding setting.  (If there is no screenshot resolution option   in the    encoding setting, you need to   customize the program which supports this option).<br/>
+</td><td style="background-color:#B9B973;text-align:left">Device capture image that is capture the   memory buf of an instant picture sent by device, external generates files.
+1.This interface is effective when it   has screenshot configuration option in the device configuration.
+2.If meet 1, the   default resolution is D1. If you want to capture the same resolution video   images, we need to modify the screenshot resolution in the encoding setting.  (If there is no screenshot resolution option   in the    encoding setting, you need to   customize the program which supports this option).
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left">lLoginID[in]:  login handle<br/>
-nChannel[in]: channel number<br/>
-sFileName[in]:saved path<br/>
+</td><td style="background-color:#B9B973;text-align:left">lLoginID[in]:  login handle
+nChannel[in]: channel number
+sFileName[in]:saved path
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
@@ -1135,26 +1048,24 @@ sFileName[in]:saved path<br/>
 </td><td style="background-color:#B9B973">H264_DVR_API bool CALL_METHOD H264_DVR_CatchPicInBuffer(long lLoginID, int nChannel, char *pBuffer, int nBufLen, int *pPicLen);
 </td></tr>
 <tr><td style="background-color:#dedebe">Function description
-</td><td style="background-color:#B9B973;text-align:left">Device capture image that is capture the   memory buf of an instant picture sent by device, external generates files.<br/>
-1.This interface is effective when it   has screenshot configuration option in the device configuration.<br/>
-2.If meet 1, the   default resolution is D1. If you want to capture the same resolution video   images, we need to modify the screenshot resolution in the encoding setting.  (If there is no screenshot resolution option   in the    encoding setting, you need to   customize the program which supports this option).<br/>
+</td><td style="background-color:#B9B973;text-align:left">Device capture image that is capture the   memory buf of an instant picture sent by device, external generates files.
+1.This interface is effective when it   has screenshot configuration option in the device configuration.
+2.If meet 1, the   default resolution is D1. If you want to capture the same resolution video   images, we need to modify the screenshot resolution in the encoding setting.  (If there is no screenshot resolution option   in the    encoding setting, you need to   customize the program which supports this option).
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left">lLoginID[in]:  login handle <br/>
-nChannel[in]: channel number <br/>
-pBuffer[out]:receive buffer<br/>
-nBufLen[in]:receive buffer   size<br/>
-pPicLen[in]:actual returned size<br/>
+</td><td style="background-color:#B9B973;text-align:left">lLoginID[in]:  login handle 
+nChannel[in]: channel number 
+pBuffer[out]:receive buffer
+nBufLen[in]:receive buffer   size
+pPicLen[in]:actual returned size
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 （view the specific error values via <a href="http://open.xmeye.net/zh/#GetLastError">H264_DVR_GetLastError</a>）
 </td></tr>
 </table>
-<br/>
 
-#### 1.20Transparent 232, 485 ####
-<br/>
+## Transparent 232, 485
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1164,10 +1075,10 @@ pPicLen[in]:actual returned size<br/>
 </td><td style="background-color:#B9B973">Write data to the device via the   serial port
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:login handle<br/>
-nType[in]:serial port   type-see enumeration <a href="http://open.xmeye.net/zh/#SERIAL_TYPE">SERIAL_TYPE</a><br/>
-pBuffer[in]: data<br/>
-nBufLen[in]: data length<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:login handle
+nType[in]:serial port   type-see enumeration <a href="http://open.xmeye.net/zh/#SERIAL_TYPE">SERIAL_TYPE</a>
+pBuffer[in]: data
+nBufLen[in]: data length
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
@@ -1179,20 +1090,18 @@ nBufLen[in]: data length<br/>
 </td><td style="background-color:#69c">Read data from the device via the   serial port
 </td></tr>
 <tr><td style="background-color:#9cf">Function parameters
-</td><td style="background-color:#69c;text-align:left;">lLoginID[in]: login handle<br/>
-nType[in]: serial port type-see enumeration<a href="http://open.xmeye.net/zh/#SERIAL_TYPE">SERIAL_TYPE</a><br/>
-pBuffer[out]: receive data<br/>
-nBufLen[in]: receive data length<br/>
-pReadLen[out]:received data   length<br/>
+</td><td style="background-color:#69c;text-align:left;">lLoginID[in]: login handle
+nType[in]: serial port type-see enumeration<a href="http://open.xmeye.net/zh/#SERIAL_TYPE">SERIAL_TYPE</a>
+pBuffer[out]: receive data
+nBufLen[in]: receive data length
+pReadLen[out]:received data   length
 </td></tr>
 <tr><td style="background-color:#9cf">Return value
 </td><td style="background-color:#69c">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.21Get DDNS information ####
-<br/>
+## Get DDNS information
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1203,18 +1112,16 @@ pReadLen[out]:received data   length<br/>
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
 </td><td style="background-color:#B9B973;text-align:left">searchmode[in]:search information
-<br/>
-pDevicInfo[out]:DDNS information<br/>
-maxDeviceNum[in]:maximum number of   devices<br/>
-nretNum[out]:obtained number of devices<br/>
+
+pDevicInfo[out]:DDNS information
+maxDeviceNum[in]:maximum number of   devices
+nretNum[out]:obtained number of devices
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">>= 0 success, <   0 fail</td></tr>
 </table>
-<br/>
 
-#### 1.22Support forced I-frames ####
-<br/>
+## Support forced I-frames
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1224,18 +1131,16 @@ nretNum[out]:obtained number of devices<br/>
 </td><td style="background-color:#B9B973">forced I-frames
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left">lLoginID[in]:login handle<br/>
-nChannel[in]:channel number<br/>
-nStream[in]:the code stream type, 0 represents the main stream, and 1   represents the sub stream.<br/>
+</td><td style="background-color:#B9B973;text-align:left">lLoginID[in]:login handle
+nChannel[in]:channel number
+nStream[in]:the code stream type, 0 represents the main stream, and 1   represents the sub stream.
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.23Set timeout and attempt times of login device ####
-<br/>
+## Set timeout and attempt times of login device
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1245,17 +1150,17 @@ nStream[in]:the code stream type, 0 represents the main stream, and 1   represen
 </td><td style="background-color:#B9B973">Set timeout and attempt times of login   device
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left">nWaitTime[in]: when the unit ms is not   set, default 5000ms<br/>
-nTryTimes[in]:when the number of   times do not set, default 3 times<br/>
+</td><td style="background-color:#B9B973;text-align:left">nWaitTime[in]: when the unit ms is not   set, default 5000ms
+nTryTimes[in]:when the number of   times do not set, default 3 times
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.24Transparent serial port   ####
-<br/>
+
+## 1.24Transparent serial port  
+
 
 <table>
 <tr><td style="background-color:#cfc;width:30%;">Callback funtion
@@ -1273,10 +1178,10 @@ nTryTimes[in]:when the number of   times do not set, default 3 times<br/>
 </td><td style="background-color:#B9B973">Create the transparent serial port   channel
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:login handle<br/>
-TransInfo[in]:	transparent   serial port parameters<br/>
-cbTransCom[out]: device data callback <a href="http://open.xmeye.net/zh/#fTransComCallBack">fTransComCallBack</a>function<br/>
-lUser[in]:  callback function parameters<br/>
+</td><td style="background-color:#B9B973;text-align:left;">lLoginID[in]:login handle
+TransInfo[in]:	transparent   serial port parameters
+cbTransCom[out]: device data callback <a href="http://open.xmeye.net/zh/#fTransComCallBack">fTransComCallBack</a>function
+lUser[in]:  callback function parameters
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
@@ -1287,8 +1192,8 @@ lUser[in]:  callback function parameters<br/>
 </td><td style="background-color:#69c">Close the transparent serial port channel
 </td></tr>
 <tr><td style="background-color:#9cf">Function parameters
-</td><td style="background-color:#69c;text-align:left;">lLoginID[in]:login handle <br/>
-nType[in]: transparent   serial port type, see enumeration <a href="http://open.xmeye.net/zh/#SERIAL_TYPE">SERIAL_TYPE</a><br/>
+</td><td style="background-color:#69c;text-align:left;">lLoginID[in]:login handle 
+nType[in]: transparent   serial port type, see enumeration <a href="http://open.xmeye.net/zh/#SERIAL_TYPE">SERIAL_TYPE</a>
 </td></tr>
 <tr><td style="background-color:#9cf">Return value
 </td><td style="background-color:#69c">Success return   TRUE, fail return FALSE
@@ -1300,18 +1205,16 @@ nType[in]: transparent   serial port type, see enumeration <a href="http://open.
 </td></tr>
 <tr><td style="background-color:#9cf">Function parameters
 </td><td style="background-color:#69c;text-align:left;">lLoginID[in]:device login handle
-<br/>
-nType[in]:for details, see <a href="http://open.xmeye.net/zh/#State_Type">SDK_State_Type</a><br/>
-pState[in]:data return<br/>
+
+nType[in]:for details, see <a href="http://open.xmeye.net/zh/#State_Type">SDK_State_Type</a>
+pState[in]:data return
 </td></tr>
 <tr><td style="background-color:#9cf">Return value
 </td><td style="background-color:#69c">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.25DVR local user operation interface screenshot ####
-<br/>
+## DVR local user operation interface screenshot
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1320,19 +1223,16 @@ pState[in]:data return<br/>
 </td><td style="background-color:#B9B973">Get DVR local user operation interface   screenshot
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left">lLoginID[in]:login handle<br/>
-saveFileName[in]:image saved path<br/>
-type[in]: saved picture type, 1: the   whole picture, 2: activity area picture.<br/>
+</td><td style="background-color:#B9B973;text-align:left">lLoginID[in]:login handle
+saveFileName[in]:image saved path
+type[in]: saved picture type, 1: the   whole picture, 2: activity area picture.
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-
-#### 1.26Client record ####
-<br/>
+## Client record
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1341,9 +1241,9 @@ type[in]: saved picture type, 1: the   whole picture, 2: activity area picture.<
 </td><td style="background-color:#B9B973">Start local record</td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
 </td><td style="background-color:#B9B973;text-align:left">lRealHandle[in]:play handle the return value of <a href="http://open.xmeye.net/zh/#RealPlay">H264_DVR_RealPlay</a>function
-<br/>
-szSaveFileName[in]:record path <br/>
-type[in]: record type (0: file name suffix is .h264; 2:   file name suffix is .avi), default is 0<br/>
+
+szSaveFileName[in]:record path 
+type[in]: record type (0: file name suffix is .h264; 2:   file name suffix is .avi), default is 0
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
@@ -1359,10 +1259,8 @@ type[in]: record type (0: file name suffix is .h264; 2:   file name suffix is .a
 </td><td style="background-color:#69c">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.27Open voice intercom (2)   ####
-<br/>
+## Open voice intercom (2)  
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1378,11 +1276,9 @@ type[in]: record type (0: file name suffix is .h264; 2:   file name suffix is .a
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
 
-#### 1.28Client audio   ####
-<br/>
+## Client audio  
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1405,11 +1301,8 @@ type[in]: record type (0: file name suffix is .h264; 2:   file name suffix is .a
 </td><td style="background-color:#69c">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-
-#### 1.29Client capture image ####
-<br/>
+## Client capture image
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1423,11 +1316,8 @@ type[in]: record type (0: file name suffix is .h264; 2:   file name suffix is .a
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-
-#### 1.30Play location  ####
-<br/>
+## Play location 
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1451,10 +1341,8 @@ type[in]: record type (0: file name suffix is .h264; 2:   file name suffix is .a
 </td><td style="background-color:#69c">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.31Set information frame callback ####
-<br/>
+## Set information frame callback
 
 <table>
 <tr><td style="background-color:#cfc;width:30%;">Callback function
@@ -1468,21 +1356,17 @@ type[in]: record type (0: file name suffix is .h264; 2:   file name suffix is .a
 </td><td style="background-color:#B9B973">Set information frame callback
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left">lRealHandle[in]:play handle, the return value of <a href="http://open.xmeye.net/zh/#RealPlay">H264_DVR_RealPlay</a>function or<a href="http://open.xmeye.net/zh/#PlayBackByName">H264_DVR_PlayBackByName</a>function or<a href="http://open.xmeye.net/zh/#StartLocalPlay">H264_DVR_StartLocalPlay</a>function or<a href="http://open.xmeye.net/zh/#PlayBackByTimeEx">H264_DVR_PlayBackByTimeEx</a>function<br/>
-callback[out]:	 information frame   callback <br/>
-user[in]:Callback function   parameters<br/>
+</td><td style="background-color:#B9B973;text-align:left">lRealHandle[in]:play handle, the return value of <a href="http://open.xmeye.net/zh/#RealPlay">H264_DVR_RealPlay</a>function or<a href="http://open.xmeye.net/zh/#PlayBackByName">H264_DVR_PlayBackByName</a>function or<a href="http://open.xmeye.net/zh/#StartLocalPlay">H264_DVR_StartLocalPlay</a>function or<a href="http://open.xmeye.net/zh/#PlayBackByTimeEx">H264_DVR_PlayBackByTimeEx</a>function
+callback[out]:	 information frame   callback 
+user[in]:Callback function   parameters
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </td></tr>
 </table>
-<br/>
 
-
-
-#### 1.32Client video color ####
-<br/>
+## Client video color
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1491,12 +1375,12 @@ user[in]:Callback function   parameters<br/>
 <tr><td style="background-color:#dedebe">Function description
 </td><td style="background-color:#B9B973">Get play video color information, preview / playback / local play a function</td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left">lHandle[in]:real-time play handle or playback handle   or local play handl, thereturn value of <a href="http://open.xmeye.net/zh/#RealPlay">H264_DVR_RealPlay</a> function or <a href="http://open.xmeye.net/zh/#PlayBackByName">H264_DVR_PlayBackByName</a> function or <a href="http://open.xmeye.net/zh/#StartLocalPlay">H264_DVR_StartLocalPlay</a> function or <a href="http://open.xmeye.net/zh/#PlayBackByTimeEx">H264_DVR_PlayBackByTimeEx</a>function<br/>
-nRegionNum[in]:display area, if   only one display area (usually) is set to 0<br/>
-pBrightness[out]:brightness  <br/>	 
-pContrast[out]:	contrast<br/>
-pSaturation[out]:saturation<br/>
-pHue[out]:hue<br/>
+</td><td style="background-color:#B9B973;text-align:left">lHandle[in]:real-time play handle or playback handle   or local play handl, thereturn value of <a href="http://open.xmeye.net/zh/#RealPlay">H264_DVR_RealPlay</a> function or <a href="http://open.xmeye.net/zh/#PlayBackByName">H264_DVR_PlayBackByName</a> function or <a href="http://open.xmeye.net/zh/#StartLocalPlay">H264_DVR_StartLocalPlay</a> function or <a href="http://open.xmeye.net/zh/#PlayBackByTimeEx">H264_DVR_PlayBackByTimeEx</a>function
+nRegionNum[in]:display area, if   only one display area (usually) is set to 0
+pBrightness[out]:brightness  	 
+pContrast[out]:	contrast
+pSaturation[out]:saturation
+pHue[out]:hue
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
@@ -1508,22 +1392,19 @@ pHue[out]:hue<br/>
 <tr><td style="background-color:#dedebe">Function description
 </td><td style="background-color:#B9B973">Set play video color information, preview / playback / local play a function</td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left">lHandle[in]:real-time play handle or playback handle   or local play handl, thereturn value of <a href="http://open.xmeye.net/zh/#RealPlay">H264_DVR_RealPlay</a> function or <a href="http://open.xmeye.net/zh/#PlayBackByName">H264_DVR_PlayBackByName</a> function or <a href="http://open.xmeye.net/zh/#StartLocalPlay">H264_DVR_StartLocalPlay</a> function or <a href="http://open.xmeye.net/zh/#PlayBackByTimeEx">H264_DVR_PlayBackByTimeEx</a>function<br/>
-nRegionNum[in]:display area, if   only one display area (usually) is set to 0<br/>
-pBrightness[out]:brightness  <br/>	 
-pContrast[out]:	contrast<br/>
-pSaturation[out]:saturation<br/>
-pHue[out]:hue<br/>
+</td><td style="background-color:#B9B973;text-align:left">lHandle[in]:real-time play handle or playback handle   or local play handl, thereturn value of <a href="http://open.xmeye.net/zh/#RealPlay">H264_DVR_RealPlay</a> function or <a href="http://open.xmeye.net/zh/#PlayBackByName">H264_DVR_PlayBackByName</a> function or <a href="http://open.xmeye.net/zh/#StartLocalPlay">H264_DVR_StartLocalPlay</a> function or <a href="http://open.xmeye.net/zh/#PlayBackByTimeEx">H264_DVR_PlayBackByTimeEx</a>function
+nRegionNum[in]:display area, if   only one display area (usually) is set to 0
+pBrightness[out]:brightness  	 
+pContrast[out]:	contrast
+pSaturation[out]:saturation
+pHue[out]:hue
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-
-#### 1.33Play client local file ####
-<br/>
+## Play client local file
 
 <table>
 <tr><td style="background-color:#cfc;width:30%;">Callback function
@@ -1539,10 +1420,10 @@ pHue[out]:hue<br/>
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
 </td><td style="background-color:#B9B973;text-align:left">pFileName[in]:video file path
-<br/>
-hWnd[in]:Play window   handle<br/>
-drawCallBack[out]:superpose drawing callback function (do not use can set   to NULL)<br/>
-user[in]:callback function   parameters<br/>
+
+hWnd[in]:Play window   handle
+drawCallBack[out]:superpose drawing callback function (do not use can set   to NULL)
+user[in]:callback function   parameters
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Fail return 0, success return play ID   (local play handle)</td></tr>
@@ -1570,9 +1451,9 @@ user[in]:callback function   parameters<br/>
 </td><td style="background-color:#69c">Local file play end callback
 </td></tr>
 <tr><td style="background-color:#9cf">Function parameters
-</td><td style="background-color:#69c;text-align:left">lPlayHandle[in]:callback handle or   local play handle, the return value of <a href="http://open.xmeye.net/zh/#StartLocalPlay">H264_DVR_StartLocalPlay</a>function<br/>
-callBack[out]:play end callback<br/>
-user[in]:callback function parameters<br/>
+</td><td style="background-color:#69c;text-align:left">lPlayHandle[in]:callback handle or   local play handle, the return value of <a href="http://open.xmeye.net/zh/#StartLocalPlay">H264_DVR_StartLocalPlay</a>function
+callBack[out]:play end callback
+user[in]:callback function parameters
 </td></tr>
 <tr><td style="background-color:#9cf">Return value
 </td><td style="background-color:#69c">Success return   TRUE, fail return FALSE
@@ -1584,19 +1465,16 @@ user[in]:callback function parameters<br/>
 <tr><td style="background-color:#9cf">Function description
 </td><td style="background-color:#69c">Pc file play control (play, pause,   recover, fast-forward, slow motion)</td></tr>
 <tr><td style="background-color:#9cf">Function parameters
-</td><td style="background-color:#69c;text-align:left">lPlayHandle[in]:playback handle or local   play handle, the return value of  <a href="http://open.xmeye.net/zh/#StartLocalPlay">H264_DVR_StartLocalPlay</a>function<br/>
-action[in]:play control type <a href="http://open.xmeye.net/zh/#LoalPlayAction">SDK_LoalPlayAction</a><br/>
-lCtrlValue[in]: control speed fast-forward (1,2,3,4   level), and slow motion (1,2,3,4 level)<br/>
+</td><td style="background-color:#69c;text-align:left">lPlayHandle[in]:playback handle or local   play handle, the return value of  <a href="http://open.xmeye.net/zh/#StartLocalPlay">H264_DVR_StartLocalPlay</a>function
+action[in]:play control type <a href="http://open.xmeye.net/zh/#LoalPlayAction">SDK_LoalPlayAction</a>
+lCtrlValue[in]: control speed fast-forward (1,2,3,4   level), and slow motion (1,2,3,4 level)
 </td></tr>
 <tr><td style="background-color:#9cf">Return value
 </td><td style="background-color:#69c">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-
-#### 1.34Bind local IP ####
-<br/>
+## Bind local IP
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1610,10 +1488,10 @@ lCtrlValue[in]: control speed fast-forward (1,2,3,4   level), and slow motion (1
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.35Set reported data callback  ####
-<br/>
+
+## 1.35Set reported data callback 
+
 
 <table>
 <tr><td style="background-color:#cfc;width:30%;">Callback function
@@ -1627,10 +1505,10 @@ lCtrlValue[in]: control speed fast-forward (1,2,3,4   level), and slow motion (1
 <tr><td style="background-color:#dedebe">Function description
 </td><td style="background-color:#B9B973">Open the data report, currently only   have vehicle-borne data upload</td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left">lLoginID[in]:login handle<br/>
-upLoadType[in]:report data type<br/>
-callBack[out]:report data callback<br/>
-lUser[in]:callback function parameters<br/>
+</td><td style="background-color:#B9B973;text-align:left">lLoginID[in]:login handle
+upLoadType[in]:report data type
+callBack[out]:report data callback
+lUser[in]:callback function parameters
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
@@ -1646,10 +1524,8 @@ lUser[in]:callback function parameters<br/>
 </td><td style="background-color:#69c">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.36Support device active registration ####
-<br/>
+## Support device active registration
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1659,9 +1535,9 @@ lUser[in]:callback function parameters<br/>
 </td><td style="background-color:#B9B973">Start active registration
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left">nPort[in]:listen the port number,0<=nPort<=65535<br/>
-cbFunc[out]:  register on-line callback   function <a href="http://open.xmeye.net/zh/#fMessCallBack">fMessCallBack</a><br/>
-dwDataUser[in]:callback function   parameters<br/>
+</td><td style="background-color:#B9B973;text-align:left">nPort[in]:listen the port number,0<=nPort<=65535
+cbFunc[out]:  register on-line callback   function <a href="http://open.xmeye.net/zh/#fMessCallBack">fMessCallBack</a>
+dwDataUser[in]:callback function   parameters
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
@@ -1679,10 +1555,8 @@ dwDataUser[in]:callback function   parameters<br/>
 </td><td style="background-color:#69c">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.37Set sub connection disconnect callback ####
-<br/>
+## Set sub connection disconnect callback
 
 <table>
 <tr><td style="background-color:#cfc;width:30%;">Callback function
@@ -1696,17 +1570,17 @@ dwDataUser[in]:callback function   parameters<br/>
 </td><td style="background-color:#B9B973">Detect sub connection abnormal   disconnection
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left">callBack[out]:sub connection   disconnect callback <a href="http://open.xmeye.net/zh/#fSubDisConnectCallBack">fSubDisConnectCallBack</a><br/>
-userData[in]: callback function   parameters<br/>
+</td><td style="background-color:#B9B973;text-align:left">callBack[out]:sub connection   disconnect callback <a href="http://open.xmeye.net/zh/#fSubDisConnectCallBack">fSubDisConnectCallBack</a>
+userData[in]: callback function   parameters
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.38Set heartbeat packet time and break time ####
-<br/>
+
+## 1.38Set heartbeat packet time and break time
+
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1714,18 +1588,16 @@ userData[in]: callback function   parameters<br/>
 <tr><td style="background-color:#dedebe">Function description
 </td><td style="background-color:#B9B973">Set keep-alive time, perKeeplifeTime   (heartbeat interval): default 10 seconds, detectDisconTime (disconnection   detection time): default 60 seconds</td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left">lLoginID[in]:login handle<br/>
-perKeeplifeTime[in]:  keep-alive time (unit seconds)<br/>
-detectDisconTime[in]: disconnection   detection time (unit seconds)<br/>
+</td><td style="background-color:#B9B973;text-align:left">lLoginID[in]:login handle
+perKeeplifeTime[in]:  keep-alive time (unit seconds)
+detectDisconTime[in]: disconnection   detection time (unit seconds)
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.39Search local area network device ####
-<br/>
+## Search local area network device
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1733,19 +1605,17 @@ detectDisconTime[in]: disconnection   detection time (unit seconds)<br/>
 <tr><td style="background-color:#dedebe">Function description
 </td><td style="background-color:#B9B973">The device which is searched by   device, the device is in the same local area network with device, deviec to   search, and then return the results             (H264_DVR_SearchDevice this   interface is searched by sdk itself, the resultsof both return is consistent)</td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left">lLoginID[in]: login handle<br/>
-pDevlist[out]:device list<br/>
-transferProtocol[in]:transmission   protocol, see enum  <a href="http://open.xmeye.net/zh/#TransferProtocol_V2">SDK_TransferProtocol_V2</a><br/>
-waittime[in]:wait time<br/>
+</td><td style="background-color:#B9B973;text-align:left">lLoginID[in]: login handle
+pDevlist[out]:device list
+transferProtocol[in]:transmission   protocol, see enum  <a href="http://open.xmeye.net/zh/#TransferProtocol_V2">SDK_TransferProtocol_V2</a>
+waittime[in]:wait time
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return   TRUE, fail return FALSE
 </td></tr>
 </table>
-<br/>
 
-#### 1.40Get public IP ####
-<br/>
+## Get public IP
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1760,10 +1630,10 @@ waittime[in]:wait time<br/>
 </td><td style="background-color:#B9B973">Success return TRUE, fail return <=   0
 </td></tr>
 </table>
-<br/>
 
-#### 1.41Get smart socket control commands ####
-<br/>
+
+## 1.41Get smart socket control commands
+
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1774,21 +1644,19 @@ waittime[in]:wait time<br/>
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
 </td><td style="background-color:#B9B973;text-align:left">lLoginID[in]: login handle
-<br/>dwCommand[in]:json name<br/>
-nChannelNO[in]:channel number, -1:   get the full channel configuration, 0-n: get a single channel configuration,   starting from 0<br/>
-lpOutBuffer[out]:receive json buffer<br/>
-dwOutBufferSize[in]:receive buffer   size<br/>
-lpBytesReturned[out]:obtained buffer   size (byte)<br/>
-waittime[in]: wait time<br/>
+dwCommand[in]:json name
+nChannelNO[in]:channel number, -1:   get the full channel configuration, 0-n: get a single channel configuration,   starting from 0
+lpOutBuffer[out]:receive json buffer
+dwOutBufferSize[in]:receive buffer   size
+lpBytesReturned[out]:obtained buffer   size (byte)
+waittime[in]: wait time
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success >0, fail <= 0
 </td></tr>
 </table>
-<br/>
 
-#### 1.42Set smart socket control commands ####
-<br/>
+## Set smart socket control commands
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1799,21 +1667,19 @@ waittime[in]: wait time<br/>
 </td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
 </td><td style="background-color:#B9B973;text-align:left">lLoginID[in]: login handle
-<br/>dwCommand[in]:json name<br/>
-nChannelNO[in]:channel number, -1:   get the full channel configuration, 0-n: get a single channel configuration,   starting from 0<br/>
-lpOutBuffer[out]:receive json buffer<br/>
-dwOutBufferSize[in]:receive buffer   size<br/>
-lpBytesReturned[out]:obtained buffer   size (byte)<br/>
-waittime[in]: wait time<br/>
+dwCommand[in]:json name
+nChannelNO[in]:channel number, -1:   get the full channel configuration, 0-n: get a single channel configuration,   starting from 0
+lpOutBuffer[out]:receive json buffer
+dwOutBufferSize[in]:receive buffer   size
+lpBytesReturned[out]:obtained buffer   size (byte)
+waittime[in]: wait time
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return 1, fail <=0
 </td></tr>
 </table>
-<br/>
 
-#### 1.43Smart socket control command parameters description ####
-<br/>
+## Smart socket control command parameters description
 
 <table>
 <tr><td style="width:33%;background-color:#fcc">Enum value
@@ -1833,10 +1699,8 @@ waittime[in]: wait time<br/>
 <tr><td style="width:33%;background-color:#fcc">E_SDK_CFG_WECHATRENEW</td><td style="width:33%;background-color:#fc9">"PowerSocket.WechatRenew"</td><td style="width:33%;background-color:#f93"></td></tr>
 <tr><td style="width:33%;background-color:#fcc">E_SDK_CFG_POWERSOCKET_WIFI</td><td style="width:33%;background-color:#fc9">"PowerSocket.WiFi"</td><td style="width:33%;background-color:#f93"></td></tr>
 </table>
-<br/>
 
-#### 1.44Get set control commands (mainly used in the company's internal mobile terminal command control) ####
-<br/>
+## Get set control commands (mainly used in the company's internal mobile terminal command control)
 
 <table>
 <tr><td style="background-color:#dedebe;width:30%;">Interface   function
@@ -1845,23 +1709,21 @@ waittime[in]: wait time<br/>
 <tr><td style="background-color:#dedebe">Function description
 </td><td style="background-color:#B9B973">Not only can get but also can   configure the device parameters</td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left">lLoginID[in]: login handle<br/>
-nCmdReq[in]: request command<br/>
-szCmd[in]:json name<br/>
-lpOutBuffer[out]:receive json buffer<br/>
-dwOutBufferSize[in]: receive buffer   size (byte)<br/>
-lpBytesReturned[out]:received json   size<br/>
-nTimeout[in]:wait time<br/>
-pInParam[in]:requested command send   to device json string<br/>
-nInParamLen[in]:requested command send to device json size (byte)<br/>
+</td><td style="background-color:#B9B973;text-align:left">lLoginID[in]: login handle
+nCmdReq[in]: request command
+szCmd[in]:json name
+lpOutBuffer[out]:receive json buffer
+dwOutBufferSize[in]: receive buffer   size (byte)
+lpBytesReturned[out]:received json   size
+nTimeout[in]:wait time
+pInParam[in]:requested command send   to device json string
+nInParamLen[in]:requested command send to device json size (byte)
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return 0, fail return < 0</td></tr>
 </table>
-<br/>
 
-#### 1.45Check whether the device is online  ####
-<br/>
+## Check whether the device is online 
 
 <table>
 <tr><td style="background-color:#cfc;width:30%;">Callback function
@@ -1873,13 +1735,12 @@ nInParamLen[in]:requested command send to device json size (byte)<br/>
 <tr><td style="background-color:#dedebe">Function description
 </td><td style="background-color:#B9B973">Check whether multiple devices are   online V2 version</td></tr>
 <tr><td style="background-color:#dedebe">Function parameters
-</td><td style="background-color:#B9B973;text-align:left">pStates[out]: a number of device   information needed to query SDK_SDevicesState, will return the device status<br/>
-nTimeout[in]: wait time<br/>
-decCb[out]:  the callback of device   online or not <br/>
-userData[out]:callback parameters<br/>
+</td><td style="background-color:#B9B973;text-align:left">pStates[out]: a number of device   information needed to query SDK_SDevicesState, will return the device status
+nTimeout[in]: wait time
+decCb[out]:  the callback of device   online or not 
+userData[out]:callback parameters
 </td></tr>
 <tr><td style="background-color:#dedebe">Return value
 </td><td style="background-color:#B9B973">Success return 0, fail return < 0
 </td></tr>
 </table>
-<br/>
