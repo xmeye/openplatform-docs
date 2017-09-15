@@ -1,5 +1,6 @@
 ## 典型调用顺序
 
+```
 A.初始化 ：       
     SDK初始化             P_Client_Init ()
 B.SDK功能信息获取： 
@@ -21,6 +22,7 @@ F.回放：
                        P_Client_PlaybackByTime ()
 G.释放SDK资源：
     SDK退出            P_Client_ClearUp ()
+```
 
 ## 错误码
 
