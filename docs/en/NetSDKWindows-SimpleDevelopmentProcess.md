@@ -2,16 +2,6 @@
 
 ## Initialization
 
-<style>
-	table{
-		border-collapse:collapse;
-		width:100%;
-		text-align:center;
-	}
-	table tr td{
-		border:1px solid #fff;
-	}
-</style>
 <table>
 <tr><td style="background-color:#dedebe">Calling function</td><td style="background-color:#B9B973">Significance</td></tr>
 <tr><td style="background-color:#dedebe">H264_DVR_Init()
