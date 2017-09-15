@@ -2,13 +2,12 @@
 
 基本说明：
 
-<div style="margin-left:25px;">
 SDK中把很多本地解码播放的部分集成进去，只调用网络SDK就可以完成网络传输和视频播放；这种用法使得二次开发用起来很方便，像常用的功能基本上都只要调用NETSDK就可以完成啦。
-</div>
+
 要点：
-<div style="margin-left:25px;">
+
 关键是在开始播放的参数中传入窗口句柄；
-</div>
+
 
 ## 应用基本过程
 
@@ -23,26 +22,21 @@ SDK中把很多本地解码播放的部分集成进去，只调用网络SDK就�
 
 ## ClientDemo2
 
-<div style="margin-left:25px;">
 网络和解码两套SDK完全分开，两套SDK配合起来完成最终的功能实现；
 
 运用灵活是这种用法的的特点，对于想对网络数据进行二次处理或转发的应用是个好选择，还有显示上做特殊效果的处理，播放SDK就能灵活的应用起来。
-</div>
+
 
 ## ConfigDemo
 
-<div style="margin-left:25px;">
 配置的数据处理繁多，这个demon清楚的演示了几乎所有配置的获取和设置。
-</div>
+
 
 ## Transparent
 
-<div style="margin-left:25px;">
 对透明485应用的简单调用演示
-</div>
+
 
 ## AlarmCenter
 
-<div style="margin-left:25px;">
 报警中心的运用
-</div>
