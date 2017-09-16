@@ -13,7 +13,7 @@
 <tr><td>4013</td><td>用户名为空</td></tr>
 <tr><td>4014</td><td>密码为空</td></tr>
 <tr><td>4015</td><td>确认密码为空</td></tr>
-<tr><td>4016</td><td>手机号为空/td></tr>
+<tr><td>4016</td><td>手机号为空</td></tr>
 <tr><td>4017</td><td>用户名格式不正确</td></tr>
 <tr><td>4018</td><td>密码格式不正确</td></tr>
 <tr><td>4019</td><td>确认密码格式不正确</td></tr>
