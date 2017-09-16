@@ -27,48 +27,48 @@
 
 整个时间戳采用计数器（counter）与格林时间（timeMillis）拼接组成。counter为前6位，不足6位用0补位，timeMillis获取本地毫秒时间即可。
 
-  java实列代码：
-  ```java
+java实列代码：
 
-	public class TimeMillisUtil {
-	  private static long timMillis;//时间戳
-	  private static long counter = 0l;//计数器
-	  /**
-	  * 获取计数器
-	  *
-	  * @return
-	  */
-	  private static synchronized String getCounter(){
-	  ++counter;
-	  if (counter < 10L)
-	    return "000000" + String.valueOf(counter);
-	  else if (counter < 100L)
-	    return "00000" + String.valueOf(counter);
-	  else if (counter < 1000L)
-	    return "0000" + String.valueOf(counter);
-	  else if (counter < 10000L)
-	    return "000" + String.valueOf(counter);
-	  else if (counter < 100000L)
-	    return "00" + String.valueOf(counter);
-	  else if (counter < 1000000L)
-	    return "0" + String.valueOf(counter);
-	  else if (counter < 10000000L)
-	    return String.valueOf(counter);
-	  else {
-	    counter = 1L;
-	    return "000000" + String.valueOf(counter);
-	  }
-	}
-	/**
-	 * 获取组合时间戳
-	 *
-	 * @return
-	 */
-	  public static String getTimMillis() {
-	    timMillis = System.currentTimeMillis();
-	    return getCounter() + String.valueOf(timMillis);
-	  }
-	}
+```java
+public class TimeMillisUtil {
+  private static long timMillis;//时间戳
+  private static long counter = 0l;//计数器
+  /**
+  * 获取计数器
+  *
+  * @return
+  */
+  private static synchronized String getCounter(){
+  ++counter;
+  if (counter < 10L)
+    return "000000" + String.valueOf(counter);
+  else if (counter < 100L)
+    return "00000" + String.valueOf(counter);
+  else if (counter < 1000L)
+    return "0000" + String.valueOf(counter);
+  else if (counter < 10000L)
+    return "000" + String.valueOf(counter);
+  else if (counter < 100000L)
+    return "00" + String.valueOf(counter);
+  else if (counter < 1000000L)
+    return "0" + String.valueOf(counter);
+  else if (counter < 10000000L)
+    return String.valueOf(counter);
+  else {
+    counter = 1L;
+    return "000000" + String.valueOf(counter);
+  }
+}
+/**
+ * 获取组合时间戳
+ *
+ * @return
+ */
+  public static String getTimMillis() {
+    timMillis = System.currentTimeMillis();
+    return getCounter() + String.valueOf(timMillis);
+  }
+}
 ```
 
 ### 2.加密字校验权限算法
@@ -80,59 +80,61 @@
  d)原二进制数组与移位后的二进制数组合并得到合并二进制数组
  e)将合并的二进制数组md5加密一次生成密钥
 
-  java实例代码：
+java实例代码：
 
-	/**
-	 * 获取签名字符串
-	 *
-	 * @param uuid       客户唯一标识
-	 * @param appKey     应用key
-	 * @param appSecret  应用密钥
-	 * @param timeMillis 时间戳
-	 * @param movedCard  移动取模基数
-	 * @return
-	 * @throws Exception
-	 */
-	public static String getEncryptStr(String uuid, String appKey, String appSecret, String timeMillis, int movedCard) throws Exception {
-		String encryptStr = uuid + appKey + appSecret + timeMillis;
-		byte[] encryptByte = encryptStr.getBytes("iso-8859-1");
-		byte[] changeByte = change(encryptStr, movedCard);
-		byte[] mergeByte = mergeByte(encryptByte, changeByte);
-		return DigestUtils.md5Hex(mergeByte);
-	}
+```java
+/**
+ * 获取签名字符串
+ *
+ * @param uuid       客户唯一标识
+ * @param appKey     应用key
+ * @param appSecret  应用密钥
+ * @param timeMillis 时间戳
+ * @param movedCard  移动取模基数
+ * @return
+ * @throws Exception
+ */
+public static String getEncryptStr(String uuid, String appKey, String appSecret, String timeMillis, int movedCard) throws Exception {
+    String encryptStr = uuid + appKey + appSecret + timeMillis;
+    byte[] encryptByte = encryptStr.getBytes("iso-8859-1");
+    byte[] changeByte = change(encryptStr, movedCard);
+    byte[] mergeByte = mergeByte(encryptByte, changeByte);
+    return DigestUtils.md5Hex(mergeByte);
+}
 
-	/**
-	* 简单移位
-	*/
-	private static byte[] change(String encryptStr, int moveCard) throws UnsupportedEncodingException {
-		byte[] encryptByte = encryptStr.getBytes("iso-8859-1");
-		int encryptLength = encryptByte.length;
-		byte temp;
-		for (int i = 0; i < encryptLength; i++) {
-			temp = ((i % moveCard) > ((encryptLength - i) % moveCard)) ? encryptByte[i] : encryptByte[encryptLength - (i + 1)];
-			encryptByte[i] = encryptByte[encryptLength - (i + 1)];
-			encryptByte[encryptLength - (i + 1)] = temp;
-		}
-		return encryptByte;
-	}
+/**
+* 简单移位
+*/
+private static byte[] change(String encryptStr, int moveCard) throws UnsupportedEncodingException {
+    byte[] encryptByte = encryptStr.getBytes("iso-8859-1");
+    int encryptLength = encryptByte.length;
+    byte temp;
+    for (int i = 0; i < encryptLength; i++) {
+        temp = ((i % moveCard) > ((encryptLength - i) % moveCard)) ? encryptByte[i] : encryptByte[encryptLength - (i + 1)];
+        encryptByte[i] = encryptByte[encryptLength - (i + 1)];
+        encryptByte[encryptLength - (i + 1)] = temp;
+    }
+    return encryptByte;
+}
 
-	/**
-	 * 合并
-	 *
-	 * @param encryptByte
-	 * @param changeByte
-	 * @return
-	 */
-	private static byte[] mergeByte(byte[] encryptByte, byte[] changeByte) {
-		int encryptLength = encryptByte.length;
-		int encryptLength2 = encryptLength * 2;
-		byte[] temp = new byte[encryptLength2];
-		for (int i = 0; i < encryptByte.length; i++) {
-			temp[i] = encryptByte[i];
-			temp[encryptLength2 - 1 - i] = changeByte[i];
-		}
-		return temp;
-	}
+/**
+ * 合并
+ *
+ * @param encryptByte
+ * @param changeByte
+ * @return
+ */
+private static byte[] mergeByte(byte[] encryptByte, byte[] changeByte) {
+    int encryptLength = encryptByte.length;
+    int encryptLength2 = encryptLength * 2;
+    byte[] temp = new byte[encryptLength2];
+    for (int i = 0; i < encryptByte.length; i++) {
+        temp[i] = encryptByte[i];
+        temp[encryptLength2 - 1 - i] = changeByte[i];
+    }
+    return temp;
+}
+```
 
   **算法校验值：**
 
