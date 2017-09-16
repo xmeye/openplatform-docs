@@ -1,6 +1,6 @@
-- [开放平台](http://open.xmeye.net)
+- [首页](http://open.xmeye.net)
 
-- Translations
+- 语言
   - [:cn: 中文](/)
   - [:uk: English](/en/)
   
