@@ -28,6 +28,7 @@
 整个时间戳采用计数器（counter）与格林时间（timeMillis）拼接组成。counter为前6位，不足6位用0补位，timeMillis获取本地毫秒时间即可。
 
   java实列代码：
+  ```java
 
 	public class TimeMillisUtil {
 	  private static long timMillis;//时间戳
@@ -68,6 +69,7 @@
 	    return getCounter() + String.valueOf(timMillis);
 	  }
 	}
+```
 
 ### 2.加密字校验权限算法
 
