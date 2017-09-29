@@ -52,6 +52,7 @@
  - [MyEye简易开发文档](MyeyeSDKdevelopmentguide/MyeyeSDKdevelopmentguide-MyEyesimpledevelopmentdocument.md)
  - [错误码说明](MyeyeSDKdevelopmentguide/MyeyeSDKdevelopmentguide-Errorcodedescription.md)
  - [接口定义](MyeyeSDKdevelopmentguide/MyeyeSDKdevelopmentguide-interfacedefinition.md)
+ - [更新日志](MyeyeSDKdevelopmentguide/MyeyeSDKdevelopmentguide-UpdateLog.md)
  
 - 下载中心
  - [FunSDK下载(Android & iOS)](downloadcenter/downloadcenter-FunSDKdowmload.md)
