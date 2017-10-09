@@ -1,6 +1,9 @@
 <table>
 <tr><td style="width:100px;text-align:center;">更新日期</td>
 <td style="text-align:center;">修改内容</td></tr>
+ <tr><td> 2017-09-27</td>
+<td>SDK for ios 更新：<br/>解决IOS11 适配可能出现的问题
+</td></tr>
 <tr><td> 2017-06-23</td>
 <td>SDK for Android & ios 更新：<br/>修复P2P视频播放异常的bug
 </td></tr>
