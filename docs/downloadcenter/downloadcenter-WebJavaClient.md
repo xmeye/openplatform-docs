@@ -3,6 +3,8 @@
 <table style="width:100%;border-collapse:collapse;text-align:center">
 <tr><td><a href="https://ks3-cn-beijing.ksyun.com/xmopen/web-client/client/clinet-1.2-snapshots.jar">下载 SDK for WebClient v1.2</a>
 </td><td><a href="http://ks3-cn-beijing.ksyun.com/xmopen/web-client/demo/Demo-1.1.zip">下载 Demo  for WebClient v1.1 2016-08-04</a>
+</td>
+<td><a href="https://ks3-cn-beijing.ksyun.com/xmopen/web-client/demo/OCX_demo.rar">下载 OCX_Demo</a>
 </td></tr>
 </table>
 
