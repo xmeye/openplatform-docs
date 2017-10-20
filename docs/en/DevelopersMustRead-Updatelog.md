@@ -13,6 +13,15 @@
 <table>
 <tr><td style="width:100px;text-align:center;">Update date</td>
 <td style="text-align:center;">Modified content</td></tr>
+
+<tr><td> 2017-10-20</td>
+<td>Demo for Android Update:<br/>
+	1.Add function to control camerafisheye bulb, like turn on , turn off and adjust duty<br/>
+    SDK for IOS　Update:<br/>
+	1. fix IOS-11 video playback black screen problem<br/>
+	2. optimize the success rate of P2P video connection
+</td></tr> 
+	
 <tr><td> 2017-06-23</td>
 <td>SDK for Android & ios Update:<br/>Fixed video playback exception bug of P2P
 </td></tr> 
