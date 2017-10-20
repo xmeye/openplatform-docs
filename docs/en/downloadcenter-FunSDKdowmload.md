@@ -7,9 +7,9 @@
 
 </td><td>
 
-<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDK.framework_iOS_ForCustom_V1.2.4_170805.zip">
+<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDK.framework_iOS_ForCustom_V1.2.6_171014.zip">
 
-download SDK for iOS 2017-08-05
+download SDK for iOS 2017-10-20
 
 </a>
 
@@ -38,9 +38,9 @@ Download SDK   for Android v1.1.8 2017-08-05
 
 </td><td>
 
-<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKDemo_v1.3.5.zip"><br/>
+<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKDemo_v1.3.6_20171019.zip"><br/>
 
- Download Demo for Android v1.3.5 2017-07-31
+ Download Demo for Android v1.3.6 2017-10-20
 
 </a> 
 
