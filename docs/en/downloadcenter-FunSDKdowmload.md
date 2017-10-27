@@ -7,9 +7,9 @@
 
 </td><td>
 
-<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDK.framework_iOS_ForCustom_V1.2.6_171014.zip">
+<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDK.framework_iOS_ForCustom_V1.2.7_171023.zip">
 
-download SDK for iOS 2017-10-20
+download SDK for iOS 2017-10-23
 
 </a>
 
