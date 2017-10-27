@@ -1,12 +1,21 @@
 <table>
 <tr><td style="width:100px;text-align:center;">更新日期</td>
 <td style="text-align:center;">修改内容</td></tr>
-  <tr><td> 2017-10-19</td>
+ 
+<tr>
+  <td> 2017-10-23</td>
+  <td>
+  SDK For IOS 更新：<br/>
+  1.修复模拟器内存扩张问题<br/>
+  </td>
+</tr> 
+  
+<tr><td> 2017-10-19</td>
 <td>Demo for android 更新：<br/>
   1.增加语言灯泡的开关亮度配置等<br/>SDK For IOS 更新：<br/>
   1.修复IOS-11 视频播放黑屏问题 <br/>
   2.优化P2P视频连接成功率</td></tr>
- <tr><td> 2017-09-27</td>
+<tr><td> 2017-09-27</td>
 <td>SDK for ios 更新：<br/>解决IOS11 适配可能出现的问题
 </td></tr>
 <tr><td> 2017-06-23</td>
