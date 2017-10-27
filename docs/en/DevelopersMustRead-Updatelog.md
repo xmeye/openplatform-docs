@@ -13,6 +13,13 @@
 <table>
 <tr><td style="width:100px;text-align:center;">Update date</td>
 <td style="text-align:center;">Modified content</td></tr>
+	
+<tr><td> 2017-10-23</td>
+<td>
+    SDK for IOS　Update:<br/>
+	1. Fix memory expansion problem in IOS simulator
+<br/>
+</td></tr> 	
 
 <tr><td> 2017-10-20</td>
 <td>Demo for Android Update:<br/>
