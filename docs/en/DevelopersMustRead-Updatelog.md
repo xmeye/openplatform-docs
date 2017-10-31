@@ -14,6 +14,13 @@
 <tr><td style="width:100px;text-align:center;">Update date</td>
 <td style="text-align:center;">Modified content</td></tr>
 	
+<tr><td> 2017-10-31</td>
+<td>
+    Demo for Android　Update:<br/>
+	1. Fix the bug only can preview one channel of DVR or NVR
+<br/>
+</td></tr> 		
+	
 <tr><td> 2017-10-23</td>
 <td>
     SDK for IOS　Update:<br/>
