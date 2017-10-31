@@ -38,9 +38,9 @@ Download SDK   for Android v1.1.8 2017-08-05
 
 </td><td>
 
-<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKDemo_v1.3.6_20171019.zip"><br/>
+<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKDemo_v1.3.7_20171031.zip"><br/>
 
- Download Demo for Android v1.3.6 2017-10-20
+ Download Demo for Android v1.3.7 2017-10-31
 
 </a> 
 
