@@ -3,6 +3,14 @@
 <td style="text-align:center;">修改内容</td></tr>
  
 <tr>
+  <td> 2017-10-31</td>
+  <td>
+  Demo For Android 更新：<br/>
+  1.多通道只能打开一个画面问题<br/>
+  </td>
+</tr> 
+  
+<tr>
   <td> 2017-10-23</td>
   <td>
   SDK For IOS 更新：<br/>
