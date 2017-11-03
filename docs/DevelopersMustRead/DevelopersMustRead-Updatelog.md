@@ -2,6 +2,15 @@
 <tr><td style="width:100px;text-align:center;">更新日期</td>
 <td style="text-align:center;">修改内容</td></tr>
  
+ <tr>
+  <td> 2017-11-03</td>
+  <td>
+  SDK For Android 更新：<br/>
+  1.H265解码优化<br/>
+  2.部分bug修复
+  </td>
+</tr> 
+ 
 <tr>
   <td> 2017-10-31</td>
   <td>
