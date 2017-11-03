@@ -14,6 +14,14 @@
 <tr><td style="width:100px;text-align:center;">Update date</td>
 <td style="text-align:center;">Modified content</td></tr>
 	
+<tr><td> 2017-11-03</td>
+<td>
+    SDK for Android　Update:<br/>
+	1. H265 coding optimization
+	2. Fix some bugs
+<br/>
+</td></tr> 	
+	
 <tr><td> 2017-10-31</td>
 <td>
     Demo for Android　Update:<br/>
