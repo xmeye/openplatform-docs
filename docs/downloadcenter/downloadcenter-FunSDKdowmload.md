@@ -16,7 +16,7 @@
 	<td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDK.framework_iOS_ForCustom_V1.2.7_171023.zip">下载 SDK for iOS 2017-10-23</a></td>
 	<td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDKDemo_iOS_New_V1.2.zip">下载 Demo  for iOS 2017-07-14</a></td></tr>
 <tr><td><img src="http://open.xmeye.net/upload/image/20160516/1463375687266037320.png"></td>
-	<td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKLibs_ReleaseV1.1.8_20170805.zip">下载 SDK for Android v1.1.8 2017-08-15</a>
+	<td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKLibs_ReleaseV1.1.9_20171014.zip">下载 SDK for Android v1.1.9 2017-10-14</a>
 </td><td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKDemo_v1.3.7_20171031.zip">下载 Demo for Android v1.3.7 2017-10-31</a> 
 </td></tr>
 </table>
