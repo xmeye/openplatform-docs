@@ -5,6 +5,15 @@
  <tr>
   <td> 2017-11-03</td>
   <td>
+  Demo For Android 更新：<br/>
+  1.语言矫正部分逻辑整理<br/>
+  2.修复运动相机图片操作bug
+  </td>
+</tr> 
+ 
+ <tr>
+  <td> 2017-11-03</td>
+  <td>
   SDK For Android 更新：<br/>
   1.H265解码优化<br/>
   2.部分bug修复
