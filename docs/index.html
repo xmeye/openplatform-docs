@@ -21,6 +21,9 @@
     </style>
 </head>
 <body>
+<div id="tips" style="font-size: 20px;font-weight: bold;padding-left: 40px;display: none">
+    请将IE浏览器升级至10以上!<a href="https://support.microsoft.com/zh-cn/help/17621/internet-explorer-downloads">升级IE</a>
+</div>
 <div id="app">Loading ...</div>
 <i id="btn" class="fa fa-angle-double-up fa-2x"></i>
 </body>
@@ -67,6 +70,54 @@
         ]
     }
     window.onload = function(){
+        var userAgent = navigator.userAgent,
+            rMsie = /(msie\s|trident.*rv:)([\w.]+)/,
+            rFirefox = /(firefox)\/([\w.]+)/,
+            rOpera = /(opera).+version\/([\w.]+)/,
+            rChrome = /(chrome)\/([\w.]+)/,
+            rSafari = /version\/([\w.]+).*(safari)/;
+        var browser;
+        var version;
+        var ua = userAgent.toLowerCase();
+
+        function uaMatch(ua) {
+            var match = rMsie.exec(ua);
+            if (match != null) {
+                return {browser: "IE", version: match[2] || "0"};
+            }
+            var match = rFirefox.exec(ua);
+            if (match != null) {
+                return {browser: match[1] || "", version: match[2] || "0"};
+            }
+            var match = rOpera.exec(ua);
+            if (match != null) {
+                return {browser: match[1] || "", version: match[2] || "0"};
+            }
+            var match = rChrome.exec(ua);
+            if (match != null) {
+                return {browser: match[1] || "", version: match[2] || "0"};
+            }
+            var match = rSafari.exec(ua);
+            if (match != null) {
+                return {browser: match[2] || "", version: match[1] || "0"};
+            }
+            if (match != null) {
+                return {browser: "", version: "0"};
+            }
+        }
+
+        var browserMatch = uaMatch(userAgent.toLowerCase());
+        if (browserMatch.browser) {
+            browser = browserMatch.browser;
+            version = browserMatch.version;
+        }
+        if (browser == 'IE') {
+            if (parseInt(version) < 10) {
+                document.getElementById("app").style.display = "none";
+                document.getElementById("tips").style.display = "inline";
+            }
+        }
+
         var obtn = document.getElementById('btn');  //获取回到顶部按钮的ID
         var clientHeight = document.documentElement.clientHeight;   //获取可视区域的高度
         var timer = null; //定义一个定时器
