@@ -2,8 +2,17 @@
 <html lang="en">
 <head>
     <style type="text/css">
-        #btn {position:fixed;cursor: pointer; right:25px; bottom:50px; display:none;}
-        #btn:hover{color: #108ee9}
+        #btn {
+            position: fixed;
+            cursor: pointer;
+            right: 25px;
+            bottom: 50px;
+            display: none;
+        }
+
+        #btn:hover {
+            color: #108ee9
+        }
     </style>
     <meta charset="UTF-8">
     <title>开放平台</title>
@@ -28,48 +37,7 @@
 <i id="btn" class="fa fa-angle-double-up fa-2x"></i>
 </body>
 <script>
-    window.$docsify = {
-/*        alias: {
-            '.*?/changelog': 'https://raw.githubusercontent.com/QingWei-Li/docsify/master/CHANGELOG',
-            '/.*!/_navbar.md': '/_navbar.md'
-        },*/
-        themeColor: '#108ee9',
-        auto2top: true,
-        coverpage: true,
-        executeScript: true,
-        loadSidebar: true,
-        loadNavbar: true,
-        mergeNavbar: true,
-        maxLevel: 4,
-        subMaxLevel: 2,
-        name: 'Resource Center',
-        search: {
-            noData: {
-                '/en/': 'No results!',
-                '/': '没有结果!'
-            },
-            paths: 'auto',
-            placeholder: {
-                '/en/': 'Search',
-                '/': '搜索'
-            }
-        },
-        formatUpdated: '{MM}/{DD} {HH}:{mm}',
-        plugins: [
-            function (hook, vm) {
-                hook.beforeEach(function (html) {
-                    var url = 'https://github.com/xmeye/openplatform-docs/blob/master/docs/' + vm.route.file
-                    var editHtml = '[:memo: Edit Document](' + url + ')\n'
-
-                    return html
-                        + '\n----\n'
-                        + 'Last modified {docsify-updated} '
-                        + editHtml
-                })
-            }
-        ]
-    }
-    window.onload = function(){
+    window.onload = function () {
         var userAgent = navigator.userAgent,
             rMsie = /(msie\s|trident.*rv:)([\w.]+)/,
             rFirefox = /(firefox)\/([\w.]+)/,
@@ -111,7 +79,7 @@
             browser = browserMatch.browser;
             version = browserMatch.version;
         }
-        if (browser == 'IE') {
+        if (browser == "IE") {
             if (parseInt(version) < 10) {
                 document.getElementById("app").style.display = "none";
                 document.getElementById("tips").style.display = "inline";
@@ -123,19 +91,19 @@
         var timer = null; //定义一个定时器
         var isTop = true; //定义一个布尔值，用于判断是否到达顶部
 
-        window.onscroll = function(){         //滚动条滚动事件
+        window.onscroll = function () {         //滚动条滚动事件
 
             //获取滚动条的滚动高度
             var osTop = document.documentElement.scrollTop || document.body.scrollTop;
 
-            if(osTop >= clientHeight){  //如果滚动高度大于可视区域高度，则显示回到顶部按钮
+            if (osTop >= clientHeight) {  //如果滚动高度大于可视区域高度，则显示回到顶部按钮
                 obtn.style.display = 'block';
-            }else{         //否则隐藏
+            } else {         //否则隐藏
                 obtn.style.display = 'none';
             }
 
             //主要用于判断当 点击回到顶部按钮后 滚动条在回滚过程中，若手动滚动滚动条，则清除定时器
-            if(!isTop){
+            if (!isTop) {
 
                 clearInterval(timer);
             }
@@ -143,21 +111,63 @@
 
         }
 
-        obtn.onclick = function(){    //回到顶部按钮点击事件
+        obtn.onclick = function () {    //回到顶部按钮点击事件
             //设置一个定时器
-            timer = setInterval(function(){
+            timer = setInterval(function () {
                 //获取滚动条的滚动高度
                 var osTop = document.documentElement.scrollTop || document.body.scrollTop;
                 //用于设置速度差，产生缓动的效果
                 var speed = Math.floor(-osTop / 6);
                 document.documentElement.scrollTop = document.body.scrollTop = osTop + speed;
-                isTop =true;  //用于阻止滚动事件清除定时器
-                if(osTop == 0){
+                isTop = true;  //用于阻止滚动事件清除定时器
+                if (osTop == 0) {
                     clearInterval(timer);
                 }
-            },30);
+            }, 30);
         }
     }
+    window.$docsify = {
+        /*        alias: {
+                    '.*?/changelog': 'https://raw.githubusercontent.com/QingWei-Li/docsify/master/CHANGELOG',
+                    '/.*!/_navbar.md': '/_navbar.md'
+                },*/
+        themeColor: '#108ee9',
+        auto2top: true,
+        coverpage: true,
+        executeScript: true,
+        loadSidebar: true,
+        loadNavbar: true,
+        mergeNavbar: true,
+        maxLevel: 4,
+        subMaxLevel: 2,
+        name: 'Resource Center',
+        search: {
+            noData: {
+                '/en/': 'No results!',
+                '/': '没有结果!'
+            },
+            paths: 'auto',
+            placeholder: {
+                '/en/': 'Search',
+                '/': '搜索'
+            }
+        },
+        formatUpdated: '{MM}/{DD} {HH}:{mm}',
+        plugins: [
+            function (hook, vm) {
+                hook.beforeEach(function (html) {
+                    var url = 'https://github.com/xmeye/openplatform-docs/blob/master/docs/' + vm.route.file
+                    var editHtml = '[:memo: Edit Document](' + url + ')\n'
+
+                    return html
+                        + '\n----\n'
+                        + 'Last modified {docsify-updated} '
+                        + editHtml
+                })
+            }
+        ]
+    };
+
 </script>
 <script src="//cdn.jsdelivr.net/npm/docsify@latest/lib/docsify.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/docsify@latest/lib/plugins/search.min.js"></script>
