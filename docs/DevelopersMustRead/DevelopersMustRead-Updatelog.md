@@ -3,6 +3,14 @@
 <td style="text-align:center;">修改内容</td></tr>
  
  <tr>
+  <td> 2017-11-21</td>
+  <td>
+  Demo For Android 更新：<br/>
+  1.灯泡控制功能兼容双光灯<br/>
+  </td>
+</tr> 
+ 
+ <tr>
   <td> 2017-11-03</td>
   <td>
   Demo For Android 更新：<br/>
