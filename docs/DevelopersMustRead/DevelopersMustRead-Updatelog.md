@@ -2,6 +2,15 @@
 <tr><td style="width:100px;text-align:center;">更新日期</td>
 <td style="text-align:center;">修改内容</td></tr>
  
+<tr>
+  <td> 2017-11-27</td>
+  <td>
+  Demo For Android 更新：<br/>
+  1.增加本地文件升级功能<br/>
+  </td>
+</tr> 
+ 
+ 
  <tr>
   <td> 2017-11-21</td>
   <td>
