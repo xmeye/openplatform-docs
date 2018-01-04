@@ -3,6 +3,14 @@
 <td style="text-align:center;">修改内容</td></tr>
  
 <tr>
+  <td> 2018-01-04</td>
+  <td>
+  Demo For ios 更新：<br/>
+  1.修复部分bug<br/>
+  </td>
+</tr> 
+ 
+<tr>
   <td> 2017-11-27</td>
   <td>
   Demo For Android 更新：<br/>
