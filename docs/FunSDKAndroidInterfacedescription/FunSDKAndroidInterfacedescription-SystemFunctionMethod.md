@@ -31,7 +31,7 @@
 <tr><td style="text-align:center">arg1
 </td><td>>=0：设备条数；<0：失败，详见错误码说明</td></tr>
 <tr><td style="text-align:center">pData
-</td><td>指向SDBDeviceInfo数组的字节流（可使用G.BytesToObj转换字节流与对象之间的）</td></tr>
+</td><td>指向SDBDeviceInfo数组的字节流（可使用G.BytesToObj函数转换字节流与对象）</td></tr>
 </table>
 
 ## 添加设备
