@@ -261,46 +261,6 @@ typedef struct SDBDeviceInfo
 </td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
 </table>
 
-## 同步登录
-
-<table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_SysLoginToXM(UI_HANDLE hUser, const char *UserName, const char *pwd, int nSeq);</td></tr>
-<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">同步登录
-</td></tr>
-<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
-<tr><td style="text-align:center">UserName
-</td><td>用户名</td></tr>
-<tr><td style="text-align:center">pwd</td>
-<td>密码</td></tr>
-<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
-</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
-</td></tr>
-<tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG   . EMSG_ SYS_GET_DEV_INFO_BY_USER_XM
-</td></tr>
-<tr><td style="text-align:center">arg1
-</td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
-</table>
-
-## 同步退出
-
-<table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_SysLogout(UI_HANDLE hUser, int nSeq = 0);</td></tr>
-<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">同步退出
-</td></tr>
-<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
-<tr style="text-align:center"><td>无
-</td><td>   </td></tr>
-<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
-</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
-</td></tr>
-<tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG   . SYS_LOGOUT_TO_XM
-</td></tr>
-<tr><td style="text-align:center">arg1
-</td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
-</table>
-
 ## 上传本地视频文件
 
 <table >
