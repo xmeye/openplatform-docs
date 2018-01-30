@@ -236,25 +236,30 @@ Message at the end of the playback will notify via“EUIMSG   .EMSG_ON_PLAY_END�
 </table>
 <br/>
 
-<div name="tingzhi" id="tingzhi" style="font-size:20px;"><b>5.9 Video control – pause</b></div>
+
+<div name="tingzhiluxiang" id="tingzhiluxiang" style="font-size:20px;"><b>5.9 Video control – pause</b></div>
 <br/>
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition</td><td colspan="2">int  MediaStop(INT  hPlayer, int  nSeq = 0);
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition</td><td colspan="2">int  MediaStopRecord (int  hPlayer, int  nSeq = 0);
 </td></tr>
-<tr><td style="background-color:#ccc;text-align:center">Description</td><td colspan="2">Video control – pause</td></tr>
-<tr><td rowspan="2" style="background-color:#ccc;text-align:center">Parameters<br/>Description</td><td style="background-color:#ccc;text-align:center;width:20%;">Name</td><td style="background-color:#ccc;text-align:center">Description
+<tr><td style="background-color:#ccc;text-align:center">Description</td><td colspan="2">5.9 Video control – pause</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">Parameters <br/>Description</td><td style="background-color:#ccc;text-align:center;width:20%;">Name</td><td style="background-color:#ccc;text-align:center">Description
 </td></tr>
 <tr><td style="text-align:center">hPlayer</td>
-<td>	
-Video control handle - the return value of video play</td></tr>
-<tr><td rowspan="3" style="background-color:#ccc;text-align:center">Result<br/>message
+<td>Video control handle - the return value of video play</td></tr>
+<tr><td rowspan="4" style="background-color:#ccc;text-align:center">Result   <br/>message
 </td><td style="background-color:#ccc;text-align:center;width:20%;">Name</td><td style="background-color:#ccc;text-align:center;">Description
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>Message value：EUIMSG   .EMSG_STOP_PLAY</td></tr>
+</td><td>Message value：EUIMSG   .EMSG_STOP_SAVE_MEDIA_FILE</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>==EE_OK： success; <0: fail, for details, see error code   description</td></tr>
+<tr><td  style="text-align:center">szStr</td>
+<td>Save file name</td></tr>
 </table>
 <br/>
+
 
 <div name="weizhi" id="weizhi" style="font-size:20px;"><b>5.10 Video control - locate play position</b></div>
 <br/>
@@ -374,28 +379,27 @@ Video control handle - the return value of video play</td></tr>
 </table>
 <br/>
 
-<div name="tingzhiluxiang" id="tingzhiluxiang" style="font-size:20px;"><b>5.15 Stop recording</b></div>
+
+<div name="tingzhi" id="tingzhi" style="font-size:20px;"><b>5.15  Stop recording</b></div>
 <br/>
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition</td><td colspan="2">int  MediaStopRecord (int  hPlayer, int  nSeq = 0);
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">Definition</td><td colspan="2">int  MediaStop(INT  hPlayer, int  nSeq = 0);
 </td></tr>
-<tr><td style="background-color:#ccc;text-align:center">Description</td><td colspan="2">Stop recording</td></tr>
-<tr><td rowspan="2" style="background-color:#ccc;text-align:center">Parameters <br/>Description</td><td style="background-color:#ccc;text-align:center;width:20%;">Name</td><td style="background-color:#ccc;text-align:center">Description
+<tr><td style="background-color:#ccc;text-align:center">Description</td><td colspan="2"> Stop recording</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">Parameters<br/>Description</td><td style="background-color:#ccc;text-align:center;width:20%;">Name</td><td style="background-color:#ccc;text-align:center">Description
 </td></tr>
 <tr><td style="text-align:center">hPlayer</td>
-<td>Video control handle - the return value of video play</td></tr>
-<tr><td rowspan="4" style="background-color:#ccc;text-align:center">Result   <br/>message
+<td>	
+Video control handle - the return value of video play</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">Result<br/>message
 </td><td style="background-color:#ccc;text-align:center;width:20%;">Name</td><td style="background-color:#ccc;text-align:center;">Description
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>Message value：EUIMSG   .EMSG_STOP_SAVE_MEDIA_FILE</td></tr>
-<tr><td  style="text-align:center">arg1</td>
-<td>==EE_OK： success; <0: fail, for details, see error code   description</td></tr>
-<tr><td  style="text-align:center">szStr</td>
-<td>Save file name</td></tr>
+</td><td>Message value：EUIMSG   .EMSG_STOP_PLAY</td></tr>
 </table>
 <br/>
+
 
 <div name="zhuatu" id="zhuatu" style="font-size:20px;"><b>5.16 Video capture</b></div>
 <br/>
