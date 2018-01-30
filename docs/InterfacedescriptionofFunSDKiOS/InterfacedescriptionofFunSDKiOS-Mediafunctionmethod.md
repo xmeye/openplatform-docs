@@ -221,18 +221,22 @@
 ## 视频控制-停止
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int FUN_MediaStopRecord(FUN_HANDLE hPlayer, int nSeq = 0);
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int FUN_MediaStop(FUN_HANDLE hPlayer, void *env = NULL);
 </td></tr>
-<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">视频控制—停止</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">视频控制-停止</td></tr>
 <tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
 </td></tr>
 <tr><td style="text-align:center">hPlayer</td>
 <td>视频控制句柄—视频播放的返回值</td></tr>
-<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+<tr><td rowspan="4" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_STOP_PLAY</td></tr>
+</td><td>消息值：EUIMSG   .EMSG_STOP_SAVE_MEDIA_FILE</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
+<tr><td  style="text-align:center">szStr</td>
+<td>保存文件名称</td></tr>
 </table>
 
 ## 视频控制-定位播放位置
@@ -344,22 +348,18 @@
 ## 停止录像
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int FUN_MediaStop(FUN_HANDLE hPlayer, void *env = NULL);
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int FUN_MediaStopRecord(FUN_HANDLE hPlayer, int nSeq = 0);
 </td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">停止录像</td></tr>
 <tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
 </td></tr>
 <tr><td style="text-align:center">hPlayer</td>
 <td>视频控制句柄—视频播放的返回值</td></tr>
-<tr><td rowspan="4" style="background-color:#ccc;text-align:center">结果消息
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_STOP_SAVE_MEDIA_FILE</td></tr>
-<tr><td  style="text-align:center">arg1</td>
-<td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
-<tr><td  style="text-align:center">szStr</td>
-<td>保存文件名称</td></tr>
+</td><td>消息值：EUIMSG   .EMSG_STOP_PLAY</td></tr>
 </table>
 
 ## 视频抓图
