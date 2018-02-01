@@ -2,6 +2,13 @@
 <tr><td style="width:100px;text-align:center;">更新日期</td>
 <td style="text-align:center;">修改内容</td></tr>
 <tr>
+  <td> 2018-02-01</td>
+  <td>
+  Demo For ios 更新：<br/>
+  1.增加全屏功能<br/>
+  </td>
+</tr> 
+<tr>
   <td> 2018-01-12</td>
   <td>
   Demo For ios 更新：<br/>
