@@ -4,7 +4,7 @@
  <tr>
   <td> 2018-02-07</td>
   <td>
-  Demo For ios 更新：<br/>
+  SDK For ios & android 更新：<br/>
   1.增加稳定性<br/>
   </td>
 </tr>  
