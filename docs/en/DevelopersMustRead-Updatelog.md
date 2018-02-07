@@ -14,6 +14,13 @@
 <tr><td style="width:100px;text-align:center;">Update date</td>
 <td style="text-align:center;">Modified content</td></tr>
 	
+<tr><td> 2018-02-07</td>
+<td>
+    SDK for Android & ios　Update:<br/>
+	1.Optimize stability
+<br/>
+</td></tr> 	
+	
 <tr><td> 2017-11-27</td>
 <td>
     Demo for Android　Update:<br/>
