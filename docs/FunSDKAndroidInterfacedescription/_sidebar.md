@@ -39,7 +39,7 @@
  - [设备功能方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-devicefunctionmethod.md)
  - [媒体功能方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-Mediafunctionmethod.md)
  - [日志功能方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-Logfunctionmethod.md)
-  -[报警功能方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-Alarminterfacedescription.md)
+ - [报警功能方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-Alarminterfacedescription.md)
  - [广告功能方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-Advertisementfunctionmethod.md)
  - [语言相关方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-Languagefunctionmethod.md)
  - [JPEG转MP4方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-JPEGtoMp4functionmenthod.md)
