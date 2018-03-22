@@ -287,7 +287,7 @@ typedef enum EOBJ_ATTR
 }EOBJ_ATTR;  
 </pre></div> 
  
-##设备状态<label style="color:Dodgerblue">EFunDevState</label>枚举值说明</b>
+## 设备状态<label style="color:Dodgerblue">EFunDevState</label>枚举值说明</b>
 
 <div> <pre>
 typedef enum EFunDevState
@@ -302,7 +302,7 @@ typedef enum EFunDevState
 
  </pre></div>
 
-##设备状态类型<label style="color:Dodgerblue">EFunDevStateType</label>枚举值说明</b>
+## 设备状态类型<label style="color:Dodgerblue">EFunDevStateType</label>枚举值说明</b>
 
 <div><pre>
 typedef enum EFunDevStateType
@@ -320,7 +320,7 @@ typedef enum EFunDevStateType
 }EFunDevStateType;
 </pre></div>
 
-##设备普通网络设置<label style="color:Dodgerblue">SDK_CONFIG_NET_COMMON_V2</label>结构体说明</b>
+## 设备普通网络设置<label style="color:Dodgerblue">SDK_CONFIG_NET_COMMON_V2</label>结构体说明</b>
 
 <div><pre>
 ypedef struct SDK_CONFIG_NET_COMMON_V2
@@ -368,7 +368,7 @@ ypedef struct SDK_CONFIG_NET_COMMON_V2
 
 </pre></div>
 
-##录像文件<label style="color:Dodgerblue">H264_DVR_FILE_DATA</label>结构体说明</b>
+## 录像文件<label style="color:Dodgerblue">H264_DVR_FILE_DATA</label>结构体说明</b>
 
 <div><pre>
 typedef struct H264_DVR_FILE_DATA
@@ -391,7 +391,7 @@ typedef struct H264_DVR_FILE_DATA
 
 </pre></div>
 
-##视频流畅度等级<label style="color:Dodgerblue">EDECODE_TYPE</label>枚举值说明</b>
+## 视频流畅度等级<label style="color:Dodgerblue">EDECODE_TYPE</label>枚举值说明</b>
 
 <div><pre>
 typedef enum EDECODE_TYPE
@@ -408,7 +408,7 @@ typedef enum EDECODE_TYPE
 
 </pre></div>
 
-##捕获压缩格式类型<label style="color:Dodgerblue">SDK_CAPTURE_COMP_t</label>枚举值说明</b>
+## 捕获压缩格式类型<label style="color:Dodgerblue">SDK_CAPTURE_COMP_t</label>枚举值说明</b>
 
 <div><pre>
 /// 捕获压缩格式类型
@@ -427,7 +427,7 @@ enum SDK_CAPTURE_COMP_t {
 </pre>
 </div>
 
-##分辨率<label style="color:Dodgerblue">SDK_CAPTURE_SIZE_t</label>枚举值说明</b>
+## 分辨率<label style="color:Dodgerblue">SDK_CAPTURE_SIZE_t</label>枚举值说明</b>
 
 <div><pre>
 //这些结构体和枚举是提供给外部使用，所有可能会和设备那边定义了2次,所以都在前面加了SDK_
@@ -471,7 +471,7 @@ enum SDK_CAPTURE_SIZE_t {
 
 </pre></div>
 
-##设备类型<label style="color:Dodgerblue">EFUN_DEV_TYPE</label>枚举值说明</b>
+## 设备类型<label style="color:Dodgerblue">EFUN_DEV_TYPE</label>枚举值说明</b>
 
 <div><pre>
 // 库对象全局变量设置
