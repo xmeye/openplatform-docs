@@ -1,5 +1,5 @@
 
-##通用、常用错误定义
+## 通用、常用错误定义
 
     EE_OK = 0,
     EE_OBJ_NOT_EXIST = -1239510,
@@ -24,7 +24,7 @@
     EE_FILE_IS_ILLEGAL = -90001, // FILE IS ILLEGAL
 
 
-##本接口用到的错误值枚举
+# 本接口用到的错误值枚举
 	
     EE_DVR_SDK_NOTVALID            = -10000,            // 非法请求
     EE_DVR_ILLEGAL_PARAM        = -10002,            // 用户参数不合法
@@ -38,7 +38,7 @@
     EE_DVR_SUB_CONNECT_SEND_ERROR = -11203,            // 媒体子连接通讯失败
     EE_DVR_NATCONNET_REACHED_MAX  = -11204,         // Nat视频链接达到最大，不允许新的Nat视频链接
     
-##用户管理部分错误码
+## 用户管理部分错误码
 	
     EE_DVR_NOPOWER                    = -11300,            // 无权限
     EE_DVR_PASSWORD_NOT_VALID        = -11301,            // 账号密码不对
@@ -60,7 +60,7 @@
     EE_DVR_PASSWORD_ENC_NOT_SUP     = -11317,           // 不支持此种加密方式登录
     EE_DVR_PASSWORD_NOT_VALID2        = -11318,            // 账号密码不对2
     
-##配置管理相关错误码
+## 配置管理相关错误码
 	
     EE_DVR_OPT_RESTART                = -11400,            // 保存配置后需要重启应用程序
     EE_DVR_OPT_REBOOT                = -11401,            // 需要重启系统
@@ -74,11 +74,11 @@
     EE_DVR_CFG_NOT_ENABLE       = -11502,             // 配置未启用
     EE_DVR_VIDEO_DISABLE        = -11503,             // 视频功能被禁用
     
-##DNS协议解析返回错误码
+## DNS协议解析返回错误码
 	
     EE_DVR_CONNECT_FULL                = -11612,        // 服务器连接数已满
     
-##版权相关
+## 版权相关
 		
     EE_DVR_PIRATESOFTWARE           =-11700,         // 设备盗版
     
@@ -89,7 +89,7 @@
     EE_USER_NO_DEV = -200004,            // 相同序列号的设备设备已经存在
     EE_USER_EXSIT = -200007,            // 用户名已经被注册
     
-##公共命令字
+## 公共命令字
 	
     EE_MC_UNKNOWNERROR = -201101,        /// 未知错误
     EE_MC_NOTVALID = -201102,            /// 非法请求
@@ -160,7 +160,7 @@
     EE_AS_CHECK_PWD_CODE3 =-210607, //验证码错误
     EE_AS_CHECK_PWD_CODE4 =-210614, //手机号码不存在
 	
-##视频广场相关
+## 视频广场相关
 	
     EE_AS_GET_PUBLIC_DEV_LIST_CODE = -210700, // 服务器响应失败
     
@@ -408,7 +408,7 @@
     EE_MNETSDK_TALK_NOT_START = -400100,   //设备错误码往后写(设备端错误码503:对讲未开启)
     EE_MNETSDK_STORAGE_IS_FULL = -400101,  //设备存储已满
     
-##用户相关
+## 用户相关
 	
     EE_ACCOUNT_HTTP_USERNAME_PWD_ERROR = -604000,     //4000 : 用户名或密码错误
     
@@ -440,7 +440,7 @@
     EE_ACCOUNT_USER_FAIL_MAIL_BIND = -604038,                   //4037: 邮箱绑定失败
     EE_ACCOUNT_NOT_OPENED = -604600,                           //4600: 功能未开通
     
-##设备相关
+## 设备相关
 	
     EE_ACCOUNT_DEVICE_ILLEGAL_NOT_ADD = -604100,        //4100 : 设备非法不允许添加
     EE_ACCOUNT_DEVICE_ALREADY_EXSIT = -604101,          //4101 : 设备已经存在（等同EE_USER_NO_DEV）
@@ -452,18 +452,18 @@
     EE_ACCOUNT_DEVICE_PORT_ILLEGAL = -604107,            //4107 : 设备端口参数异常
     EE_ACCOUNT_DEVICE_EXTEND_ILLEGAL = -604108,            //4108 : 设备扩展字段参数异常
     
-##授权系统
+## 授权系统
 	
     EE_ACCOUNT_ADD_OPEN_APP_FAIL = -604200,                //4200 : 添加授权失败
     EE_ACCOUNT_UPDATE_OPEN_APP_FAIL = -604201,            //4201 : 修改授权失败
     EE_ACCOUNT_DELETE_OPEN_APP_FAIL = -604202,            //4202 : 删除授权失败
     EE_ACCOUNT_SYN_TYPE_APP_FAIL = -604203,                //4203 : 单个授权同步失败(原因可能是type参数不对,或者云产品线未返回)
     
-##发送邮件授权码
+## 发送邮件授权码
 	
     EE_ACCOUNT_SEND_CODE_FAIL  = -604300,                      //4300 : 发送失败
     
-##发送手机授权码
+## 发送手机授权码
 		
     EE_ACCOUNT_MESSAGE_INTERFACE_CHECK_ERROR  = -604400,        //4400 : 短信接口验证失败，请联系我们
     EE_ACCOUNT_MESSAGE_INTERFACE_PARM_ERROR = -604401,         //4401 : 短信接口参数错误，请联系我们
@@ -472,13 +472,13 @@
     EE_ACCOUNT_MESSAGE_SEND_OFTEN = -604404,                   //4404 : 发送太频繁了，请间隔120秒
     EE_ACCOUNT_MESSAGE_NONE_FAIL = -604405,                    //4405 : 未知错误？？
     
-##开放平台接口
+## 开放平台接口
 	
     EE_ACCOUNT_OPEN_USER_LIST_NULL = -604500,                   //4500 : 未查到用户列表或用户列表为空
     EE_ACCOUNT_OPEN_DEVICE_LIST_NULL = -604502,                 //4502 : 未查到设备列表或设备列表为空
     EE_ACCOUNT_RESET_OPEN_APP_SECRET_FAIL = -604503,            //4503 : 重置 app secret 失败
     
-##服务器异常错误
+## 服务器异常错误
 	
     EE_ACCOUNT_HTTP_SERVER_ERROR = -605000 ,                   //5000 : 服务器故障
     EE_ACCOUNT_CERTIFICATE_NOT_EXIST = -605001,                //5001 : 证书不存在
@@ -536,7 +536,7 @@
     EE_DVR_XMSDK_HEARTBEAT_IS_TIMEOUT        = -79026,    // 心跳超时
     EE_DVR_XMSDK_MSGSVR_ERRNO_DISCONNECT    = -79027,    // 连接断开
     
-##网络操作错误号
+## 网络操作错误号
 	
     EE_COMMAND_INVALID = -70501,                             //501 : 命令不合法
     EE_UPGRADE_ALAREADY_START = -70510,                        //510 : 已经开始升级
