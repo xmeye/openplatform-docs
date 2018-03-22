@@ -98,7 +98,7 @@ LOG_NET_MSG ：发送网络
 ## 通过错误id获取错误提示信息（英文）
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">String FunSDK_GetErrorInfoByEId(int nEId);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">String GetErrorInfoByEId(int nEId);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">通过错误id获取错误提示信息（英文）</td></tr>
 <tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
 <tr><td style="text-align:center">nEId</td>
