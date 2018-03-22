@@ -32,6 +32,57 @@
 </td><td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
 </table>
 
+## 通过URL链接播放视频
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int MediaPlayByURL(int hUser, String strUrl, Object hWnd, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">通过URL链接播放视频</td></tr>
+<tr><td rowspan="4" style="background-color:#ccc;text-align:center">参数<br>说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">strUrl</td>
+<td>视频Url链接</td></tr>
+<tr><td style="text-align:center">hWnd</td>
+<td>显示窗口GLSurfaceView20对象</td></tr>
+<tr><td  style="text-align:center">nSeq
+</td><td>操作序列号（用户自定义）</td></tr>
+<tr><td  style="background-color:#ccc;text-align:center">返回</td>
+<td colspan="2">视频播放对象句柄，可用来实现本视频的开始、抓图、录像等操作</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG .EMSG_ START_PLAY<br>
+缓存结束，开始播放:EUIMSG . ON_PLAY_BUFFER_END
+</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
+</table>
+
+## 通过URL链接播放视频- -播放国标Rtsp流
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int MediaPlayByURLEx(int hUser, String strUrl, int nType, Object hWnd, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">通过URL链接播放视频- -播放国标Rtsp流</td></tr>
+<tr><td rowspan="4" style="background-color:#ccc;text-align:center">参数<br>说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">strUrl</td>
+<td>视频Url链接</td></tr>
+<tr><td style="text-align:center">nType</td>
+<td>流类型nType == 0时同MediaPlayByURL; 100:GB-Rtsp</td></tr>
+<tr><td  style="text-align:center">hWnd
+</td><td>显示窗口GLSurfaceView20对象</td></tr>
+<tr><td  style="background-color:#ccc;text-align:center">返回</td>
+<td colspan="2">视频播放对象句柄，可用来实现本视频的开始、抓图、录像等操作</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG . START_PLAY<br>
+缓存结束，开始播放:EUIMSG . ON_PLAY_BUFFER_END
+</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
+</table>
 
 ## 播放远程录像
 
@@ -52,14 +103,13 @@
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_START_PLAY
-回放过程中的信息通过“EUIMSG   .EMSG_ON_PLAY_INFO”消息定时通知
-回放结束时通过消息“EUIMSG   .EMSG_ON_PLAY_END”通知
+</td><td>消息值：EUIMSG .START_PLAY<br>
+回放过程中的信息通过“EUIMSG .ON_PLAY_INFO”消息定时通知<br>
+回放结束时通过消息“EUIMSG . ON_PLAY_END”通知
 </td></tr>
 <tr><td  style="text-align:center">arg1</td>
 <td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
 </table>
-
 
 ## 播放远程录像—按时间
 
@@ -71,7 +121,7 @@
 <tr><td style="text-align:center">szDevId</td>
 <td>设备序列号</td></tr>
 <tr><td style="text-align:center">pH264_DVR_FINDINFO
-</td><td>录像信息结构体对像H264_DVR_FILE_DATA字节流</td></tr>
+</td><td>录像信息结构体对像H264_DVR_FINDINFO字节流</td></tr>
 <tr><td  style="text-align:center">hWnd</td>
 <td>显示窗口GLSurfaceView20对象</td></tr>
 <tr><td  style="background-color:#ccc;text-align:center">返回</td>
@@ -80,9 +130,9 @@
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_START_PLAY
-回放过程中的信息通过“EUIMSG   .EMSG_ON_PLAY_INFO”消息定时通知
-回放结束时通过消息“EUIMSG   .EMSG_ON_PLAY_END”通知
+</td><td>消息值：EUIMSG . START_PLAY<br>
+回放过程中的信息通过“EUIMSG . ON_PLAY_INFO”消息定时通知<br>
+回放结束时通过消息“EUIMSG . ON_PLAY_END”通知
 </td></tr>
 <tr><td  style="text-align:center">arg1</td>
 <td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
@@ -105,28 +155,57 @@
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_START_PLAY
-回放过程中的信息通过“EUIMSG   .EMSG_ON_PLAY_INFO”消息定时通知
-回放结束时通过消息“EUIMSG   .EMSG_ON_PLAY_END”通知
+</td><td>消息值：EUIMSG . START_PLAY<br>
+回放过程中的信息通过“EUIMSG . ON_PLAY_INFO”消息定时通知<br>
+回放结束时通过消息“EUIMSG . ON_PLAY_END”通知
 </td></tr>
 <tr><td  style="text-align:center">arg1</td>
 <td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
 </table>
 
-## 云播放录像
+## 播放本地录像-通过url播放录像
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int   MediaCloudRecordPlay(int hUser, String szFileName,int nType, int nStartTime,   Object hWnd, int nSeq);
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">INT  (int hUser, String sRecord, Object hWnd, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">播放本地录像-通过url播放录像</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">sRecord</td>
+<td>本地文件路径及名称/url及名称</td></tr>
+<tr><td  style="text-align:center">hWnd</td>
+<td>显示窗口GLSurfaceView20对象</td></tr>
+<tr><td  style="background-color:#ccc;text-align:center">返回</td>
+<td colspan="2">视频播放对象句柄，可用来实现本视频的开始、抓图、录像等操作</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG . START_PLAY<br>
+回放过程中的信息通过“EUIMSG . ON_PLAY_INFO”消息定时通知<br>
+回放结束时通过消息“EUIMSG . ON_PLAY_END”通知
+</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
+</table>
+
+## 云录像播放
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int MediaCloudRecordPlay(int hUser, String szDevId, int nChannel, String sStreamType, int nStartTime, int nEndTime, Object hWnd, int nSeq);
 </td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">云播放录像</td></tr>
-<tr><td rowspan="5" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+<tr><td rowspan="7" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
 </td></tr>
-<tr><td style="text-align:center">szFileName</td>
-<td>本地文件路径及名称</td></tr>
-<tr><td style="text-align:center">nType</td>
+<tr><td style="text-align:center">szDevId</td>
+<td>设备序列号</td></tr>
+<tr><td style="text-align:center">nChannel</td>
+<td>通道号</td></tr>
+<tr><td style="text-align:center">sStreamType</td>
 <td>类型</td></tr>
 <tr><td style="text-align:center">nStartTime</td>
 <td>开始时间</td></tr>
+<tr><td style="text-align:center">nEndTime</td>
+<td>结束时间</td></tr>
 <tr><td style="text-align:center">hWnd</td>
 <td>显示窗口GLSurfaceView20对象</td></tr>
 <tr><td  style="background-color:#ccc;text-align:center">返回</td>
@@ -135,19 +214,55 @@
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_START_PLAY
-回放过程中的信息通过“EUIMSG   .EMSG_ON_PLAY_INFO”消息定时通知
-回放结束时通过消息“EUIMSG   .EMSG_ON_PLAY_END”通知
+</td><td>消息值：EUIMSG . START_PLAY<br>
+回放过程中的信息通过“EUIMSG . ON_PLAY_INFO”消息定时通知<br>
+回放结束时通过消息“EUIMSG . ON_PLAY_END”通知
 </td></tr>
 <tr><td  style="text-align:center">arg1</td>
 <td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
+</table>
+
+## 云录像下载
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int MediaCloudRecordDownload(int hUser, String szDevId, int nChannel, String sStreamType, int nStartTime, int nEndTime, String sFileName, int nSeq);
+</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">云播放下载</td></tr>
+<tr><td rowspan="7" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">szDevId</td>
+<td>设备序列号</td></tr>
+<tr><td style="text-align:center">nChannel</td>
+<td>通道号</td></tr>
+<tr><td style="text-align:center">sStreamType</td>
+<td>类型</td></tr>
+<tr><td style="text-align:center">nStartTime</td>
+<td>开始时间</td></tr>
+<tr><td style="text-align:center">nEndTime</td>
+<td>结束时间</td></tr>
+<tr><td style="text-align:center">sFileName</td>
+<td>下载的文件名</td></tr>
+<tr><td  style="background-color:#ccc;text-align:center">返回</td>
+<td colspan="2">视频播放对象句柄，可用来实现本视频的开始、抓图、录像等操作</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG . ON_FILE_DOWNLOAD:下载函数调用结果<br>
+EUIMSG . ON_FILE_DLD_COMPLETE:下载完成消息回调<br>
+EUIMSG . ON_FILE_DLD_POS:下载进度消息回调<br>
+</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
+<tr><td  style="text-align:center">str</td>
+<td>码流类型</td></tr>
 </table>
 
 ## 播放实时流录像
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int   MediaRtspPlay(int hUser, String uuid, int mediaId,String sUrl, Object hWnd,   int nSeq);</td></tr>
-<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">云播放录像</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">播放实时流录像-废弃接口--20170805</td></tr>
 <tr><td rowspan="5" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
 </td></tr>
 <tr><td style="text-align:center">uuid</td>
@@ -164,9 +279,9 @@
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_START_PLAY
-回放过程中的信息通过“EUIMSG   .EMSG_ON_PLAY_INFO”消息定时通知
-回放结束时通过消息“EUIMSG   .EMSG_ON_PLAY_END”通知
+</td><td>消息值：EUIMSG . START_PLAY<br>
+回放过程中的信息通过“EUIMSG . ON_PLAY_INFO”消息定时通知<br>
+回放结束时通过消息“EUIMSG . ON_PLAY_END”通知
 </td></tr>
 <tr><td  style="text-align:center">arg1</td>
 <td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
@@ -187,9 +302,9 @@
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_START_PLAY
-回放过程中的信息通过“EUIMSG   .EMSG_ON_PLAY_INFO”消息定时通知
-回放结束时通过消息“EUIMSG   .EMSG_ON_PLAY_END”通知
+</td><td>消息值：消息值：EUIMSG . START_PLAY<br>
+回放过程中的信息通过“EUIMSG . ON_PLAY_INFO”消息定时通知<br>
+回放结束时通过消息“EUIMSG . ON_PLAY_END”通知
 </td></tr>
 <tr><td  style="text-align:center">arg1</td>
 <td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
@@ -210,15 +325,33 @@
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_PAUSE_PLAY</td></tr>
+</td><td>消息值：EUIMSG . PAUSE_PLAY</td></tr>
 <tr><td  style="text-align:center">arg1</td>
 <td>当前状态；1：正在播放；0：暂停状态</td></tr>
+</table>
+
+## 视频控制-刷新
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int  MediaRefresh (int  hPlayer, int  nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">视频控制-刷新</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">hPlayer</td>
+<td>视频控制句柄—视频播放的返回值</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG . REFRESH_PLAY</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>=EE_OK：成功；<0：失败，详见错误码说明</td></tr>
 </table>
 
 ## 视频控制-停止
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int  MediaStop(INT  hPlayer, int  nSeq = 0);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int  MediaStop(int  hPlayer);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">视频控制—停止</td></tr>
 <tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
 </td></tr>
@@ -228,7 +361,7 @@
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_STOP_PLAY</td></tr>
+</td><td>消息值：无</td></tr>
 </table>
 
 ## 视频控制-定位播放位置
@@ -246,7 +379,7 @@
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_ SEEK_TO_POS</td></tr>
+</td><td>消息值：EUIMSG . SEEK_TO_POS</td></tr>
 <tr><td  style="text-align:center">arg1</td>
 <td>0</td></tr>
 </table>
@@ -263,14 +396,37 @@
 <tr><td style="text-align:center">nAddTime</td>
 <td>总的时间</td></tr>
 <tr><td style="text-align:center">nAbsTime</td>
-<td>绝对时间</td></tr>
+<td>绝对时间time_t的值 
+两者二选一，如果nAbsTime不为-1，则使用nAbsTime<br>
+nAbsTime后面不再支持,替换为MediaSeekToMSTime
+</td></tr>
 <tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG .EMSG_ SEEK_TO_TIME</td></tr>
+</td><td>消息值：EUIMSG . SEEK_TO_TIME</td></tr>
 <tr><td  style="text-align:center">arg1</td>
 <td>0</td></tr>
+</table>
+
+## 视频控制—-定位绝对播放时间
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">Int MediaSeekToMSTime(int hPlayer, uint64 nMSecond, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">视频控制—-定位绝对播放时间</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">hPlayer</td>
+<td>视频控制句柄—视频播放的返回值</td></tr>
+<tr><td style="text-align:center">nMSecond</td>
+<td>绝对时间time_t的值</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG . SEEK_TO_TIME</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>无</td></tr>
 </table>
 
 ## 视频控制—设置声音
@@ -288,7 +444,232 @@
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_ SET_SOUND</td></tr>
+</td><td>消息值：EUIMSG . SET_SOUND</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>无</td></tr>
+</table>
+
+## 视频控制-设置大小
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int MediaSetPlaySize(int hPlayer, int nType, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">视频控制-设置大小 实时播放/云存储播放有效</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">hPlayer</td>
+<td>视频控制句柄—视频播放的返回值</td></tr>
+<tr><td style="text-align:center">nType</td>
+<td>播放类型 0:高清 1:标清 2:高清/标清 3:流畅(实时视频有效)</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG . ON_MEDIA_SET_PLAY_SIZE</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>无</td></tr>
+</table>
+
+## 视频控制-获取当前播放时间
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">long MediaGetCurTime(int hPlayer);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">视频控制-获取当前播放时间 ms</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">hPlayer</td>
+<td>视频控制句柄—视频播放的返回值</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>当前播放时间
+</td><tr>
+</table>
+
+## 视频控制-调整显示
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int MediaSetDisplayBCSG(int hPlayer, int nBrightness, int nContrast, int nSaturation, int nGray);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">视频控制—调整显示的亮度(brightness)\对比度(contrast)\饱合度(saturation)\灰度(gray)<br>
+(只影响显示，对原始视频数据无影响)
+</td></tr>
+<tr><td rowspan="6" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">hPlayer</td>
+<td>视频控制句柄—视频播放的返回值</td></tr>
+<tr><td style="text-align:center">nBrightness</td>
+<td>亮度</td></tr>
+<tr><td style="text-align:center">nContrast</td>
+<td>对比度</td></tr>
+<tr><td style="text-align:center">nSaturation</td>
+<td>饱和度</td></tr>
+<tr><td style="text-align:center">nGray</td>
+<td>灰度</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG .  SET_MEDIA_DISPLAY_BCSG</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>无</td></tr>
+</table>
+
+## 视频控制-智能回放
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int MediaSetIntellPlay(int hPlayer, int nValue, int nSpeed, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">视频控制—智能回放
+</td></tr>
+<tr><td rowspan="4" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">hPlayer</td>
+<td>视频控制句柄—视频播放的返回值</td></tr>
+<tr><td style="text-align:center">nValue</td>
+<td>类型 详见EMSSubType</td></tr>
+<tr><td style="text-align:center">nSpeed</td>
+<td>播放速度。取值-3~3分别代表-8、-4、-2、1、2、4、8倍速 ==0:取消智能快放</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG . SET_INTELL_PLAY</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
+</table>
+
+## 视频控制-改变播放显示窗口
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int MediaSetPlayView(int hPlayer, Object hWnd, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">视频控制—改变播放显示窗口
+</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">hPlayer</td>
+<td>视频控制句柄—视频播放的返回值</td></tr>
+<tr><td style="text-align:center">hWnd</td>
+<td>显示窗口GLSurfaceView20对象</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG . MEDIA_SETPLAYVIEW</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>无</td></tr>
+</table>
+
+## 视频控制-设置视频流畅度等级
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int MediaSetFluency(int hPlayer, int nLevel, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">视频控制—设置视频流畅度等级
+</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">hPlayer</td>
+<td>视频控制句柄—视频播放的返回值</td></tr>
+<tr><td style="text-align:center">nLevel</td>
+<td>流畅度等级 详见EDECODE_TYPE</td></tr>
+</table>
+
+## 视频控制-抓取缩略图
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int MediaGetThumbnail(int hPlayer, String szFileName, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">视频控制—抓取缩略图
+</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">hPlayer</td>
+<td>视频控制句柄—视频播放的返回值</td></tr>
+<tr><td style="text-align:center">szFileName</td>
+<td>保存的文件名称</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：消息值：EUIMSG . ON_Media_Thumbnail</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
+</table>
+
+## 视频控制-抓取*.私有码流缩略图
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int GetMediaThumbnail(String strInFileName, String strOutFileName);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">视频控制—抓取*.私有码流缩略图
+</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">strInFileName</td>
+<td>视频文件路径</td></tr>
+<tr><td style="text-align:center">strOutFileName</td>
+<td>获取的缩略图路径</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>==EE_OK：成功；<0：失败，详见错误码说明
+</td><tr>
+</table>
+
+## 视频控制-获取解码参数
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">byte[] MediaGetDecParam(String sFile);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">视频控制—获取解码参数
+</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">sFile</td>
+<td>文件名</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>视频帧的头数据的byte数组-必要的控制信息
+</td><tr>
+</table>
+
+## 视频控制-获取鱼眼解码参数
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">byte[] MediaGetFishParam(String sFile);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">视频控制—获取鱼眼解码参数
+</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">sFile</td>
+<td>文件名</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>鱼眼视频帧的头数据结构体FishEyeFrameParam的byte数组-必要的控制信息 
+</td><tr>
+</table>
+
+## 实时流的保存
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int DevSaveRealTimeStream(int hUser, String szDevId, int nChannel, int nStreamType, String szFileName, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">实时流的保存
+</td></tr>
+<tr><td rowspan="5" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">szDevId</td>
+<td>序列号</td></tr>
+<tr><td style="text-align:center">nChannel</td>
+<td>通道号</td></tr>
+<tr><td style="text-align:center">nStreamType</td>
+<td>码流类型</td></tr>
+<tr><td style="text-align:center">szFileName</td>
+<td>保存的文件名称</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>视频播放对象句柄，可用来实现本视频的开始、抓图等操作 
+</td><tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG . START_PLAY保存数据开始<br>
+EUIMSG . ON_MediaData_Save<br>
+已保存数据大小，单位kB  EUIMSG . MediaData_Save_Process 
+</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
+</table>
+
+## 关闭实时流的保存
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int DevCloseRealTimeStream(int hSaveObj);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">关闭实时流的保存
+</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">hSaveObj</td>
+<td>实时流保存返回的值</td></tr>
+
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG .STOP_PLAY 
+</td></tr>
 <tr><td  style="text-align:center">arg1</td>
 <td>无</td></tr>
 </table>
@@ -308,7 +689,7 @@
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_SET_PLAY_SPEED</td></tr>
+</td><td>消息值：EUIMSG  . SET_PLAY_SPEED</td></tr>
 <tr><td  style="text-align:center">arg1</td>
 <td>当前速度值</td></tr>
 </table>
@@ -329,7 +710,7 @@
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_START_SAVE_MEDIA_FILE</td></tr>
+</td><td>消息值：EUIMSG . START_SAVE_MEDIA_FILE</td></tr>
 <tr><td  style="text-align:center">arg1</td>
 <td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
 <tr><td  style="text-align:center">szStr</td>
@@ -350,7 +731,7 @@
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_STOP_SAVE_MEDIA_FILE</td></tr>
+</td><td>消息值：EUIMSG . STOP_SAVE_MEDIA_FILE</td></tr>
 <tr><td  style="text-align:center">arg1</td>
 <td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
 <tr><td  style="text-align:center">szStr</td>
@@ -381,6 +762,132 @@
 </table>
 
 
+## 播放视频XMp4
 
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int MediaPlayXMp4(int hUser, int hXMp4, Object hWnd, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">播放视频XMp4</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">hXMp4</td>
+<td>mp4文件</td></tr>
+<tr><td style="text-align:center">hWnd</td>
+<td>显示窗口GLSurfaceView20对象
+</td></tr>
+<tr><td rowspan="4" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG . START_PLAY<br>
+回放过程中的信息通过“EUIMSG . ON_PLAY_INFO”消息定时通知<br>
+回放结束时通过消息“EUIMSG . ON_PLAY_END”通知
+</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
+<tr><td  style="text-align:center">szStr</td>
+<td>保存文件名称</td></tr>
+</table>
 
+## 播放视频
 
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int MediaPlay(int hPlayer, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">播放视频</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">hPlayer</td>
+<td>视频控制句柄—视频播放的返回值</td></tr>
+<tr><td rowspan="4" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG . START_PLAY<br>
+回放过程中的信息通过“EUIMSG . ON_PLAY_INFO”消息定时通知<br>
+回放结束时通过消息“EUIMSG . ON_PLAY_END”通知
+</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
+<tr><td  style="text-align:center">szStr</td>
+<td>保存文件名称</td></tr>
+</table>
+
+## 视频缓存时间设置
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int MediaSetBufferByTime(int hPlayer,int nMaxBufferTime, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">视频缓存时间设置</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">hPlayer</td>
+<td>视频控制句柄—视频播放的返回值</td></tr>
+<tr><td style="text-align:center">nMaxBufferTime</td>
+<td>最大缓存时间</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>
+</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
+</table>
+
+## 获取媒体文件信息
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">byte[]GetMediaFileInfo(String sFile)</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">获取媒体文件信息</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">sFile</td>
+<td>视频文件路径</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>视频文件信息结构体的byte数组
+</td><tr>
+
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>
+</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
+</table>
+
+## 转时间类型
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int ToTimeType(int time[]);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">转时间类型</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">time</td>
+<td>时间</td></tr>
+</table>
+
+## 转时间
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">ToTime(int time_t, int time[]);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">转时间</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">time_t</td>
+<td>秒级时间</td></tr>
+<tr><td style="text-align:center">time</td>
+<td>时间</td></tr>
+</table>
+
+## 加密MD5
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">String DevMD5Encrypt(String strInput);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">加密MD5</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">strInput</td>
+<td>明文</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>密文
+</td><tr>
+
+</table>
