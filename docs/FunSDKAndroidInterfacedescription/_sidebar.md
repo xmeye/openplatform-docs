@@ -21,9 +21,15 @@
  - [设备功能方法](FunSDKAndroidInterfacedescription/FunSDKAndroidInterfacedescription-devicefunctionmethod.md)
  - [媒体功能方法](FunSDKAndroidInterfacedescription/FunSDKAndroidInterfacedescription-mediafunctionmethod.md)
  - [日志功能方法](FunSDKAndroidInterfacedescription/FunSDKAndroidInterfacedescription-LogFunctionMethod.md)
+ - [报警功能方法](FunSDKAndroidInterfacedescription/FunSDKAndroidInterfacedescription-Alarminterfacedescription.md)
+ - [广告功能方法](FunSDKAndroidInterfacedescription/FunSDKAndroidInterfacedescription-Advertisementfunctionmethod.md)
+ - [语言相关方法](FunSDKAndroidInterfacedescription/FunSDKAndroidInterfacedescription-Languagefunctionmethod.md)
+ - [JPEG转MP4方法](FunSDKAndroidInterfacedescription/FunSDKAndroidInterfacedescription-JPEGtoMp4functionmenthod.md)
+ - [云存储功能方法](FunSDKAndroidInterfacedescription/FunSDKAndroidInterfacedescription-CloudStoragefunctionmethod.md)
+ - [DSS服务相关方法](FunSDKAndroidInterfacedescription/FunSDKAndroidInterfacedescription-DssServerfunctionmethod.md)
+ - [媒体文件编译方法](FunSDKAndroidInterfacedescription/FunSDKAndroidInterfacedescription-MediaFileEditfunctionmethod.md)
  - [枚举及结构体](FunSDKAndroidInterfacedescription/FunSDKAndroidInterfacedescription-Enumerationandstructure.md)
  - [错误码说明](FunSDKAndroidInterfacedescription/FunSDKAndroidInterfacedescription-Errorcodedescription.md)
- - [报警接口说明](FunSDKAndroidInterfacedescription/FunSDKAndroidInterfacedescription-Alarminterfacedescription.md)
  - [部分配置使用说明](FunSDKAndroidInterfacedescription/FunSDKAndroidInterfacedescription-PartConfigurationInstructions.md)
  
 - FunSDK(ios)接口说明
@@ -33,9 +39,15 @@
  - [设备功能方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-devicefunctionmethod.md)
  - [媒体功能方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-Mediafunctionmethod.md)
  - [日志功能方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-Logfunctionmethod.md)
+  -[报警功能方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-Alarminterfacedescription.md)
+ - [广告功能方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-Advertisementfunctionmethod.md)
+ - [语言相关方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-Languagefunctionmethod.md)
+ - [JPEG转MP4方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-JPEGtoMp4functionmenthod.md)
+ - [云存储功能方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-CloudStoragefunctionmethod.md)
+ - [DSS服务相关方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-DssServerfunctionmethod.md)
+ - [媒体文件编译方法](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-MediaFileEditfunctionmethod.md)
  - [枚举及结构体](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-EnumerationandStructure.md)
  - [错误码说明](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-Errorcodedescription.md)
- - [报警接口说明](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-Alarmcodedescription.md)
 
 - EConfigCmd配置命令字
  - [EConfigCmd配置命令字](EConfigCmdconfigurationcommandword/EConfigCmdconfigurationcommandword.md)
