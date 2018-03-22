@@ -10,7 +10,7 @@
 	}
 </style>
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">void   LogInit(UI_HANDLE hUser, const char *szServerIP, int nServerPort, const char   *szLogFile, int nLogLevel = 0x3);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int LogInit(int hUser, String szServerIP, int nServerPort, String szLogFile, int nLogLevel);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">日志初始化</td></tr>
 <tr><td rowspan="5" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
 <tr><td style="text-align:center">szServerIP</td>
@@ -40,7 +40,7 @@ LOG_NET_MSG ：发送网络
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id</td>
-<td>消息值：EUIMSG   .EMSG_START_PLAY</td></tr>
+<td>消息值：EUIMSG   .ELOG_MSG_INIT</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
 </table>
@@ -48,7 +48,7 @@ LOG_NET_MSG ：发送网络
 ## 打印日志
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">Void  Log(char *szLog);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int Log(String szLog);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">打印日志：输出的位置根据初始化中日志级别和服务信息以及文件信息等参数来确定</td></tr>
 <tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
 <tr><td style="text-align:center">szLog</td>
@@ -57,14 +57,14 @@ LOG_NET_MSG ：发送网络
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id</td>
-<td>消息值：EUIMSG   .EMSG_APP_ON_MSG_LOG，日志信息在字符串参数中获取
+<td>消息值：EUIMSG . APP_ON_MSG_LOG，日志信息在字符串参数中获取
 </td></tr>
 </table>
 
 ## 发送日志
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">Void   SendLogFile(const char *szFile);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int SendLogFile(String szFile);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">发送日志</td></tr>
 <tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
 <tr><td style="text-align:center">szFile</td>
@@ -81,7 +81,7 @@ LOG_NET_MSG ：发送网络
 ## 捕捉异常
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">void   Fun_Crash(char *crashInfo);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int Crash(String szCrashMsg);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">发送捕获到的异常信息至服务器</td></tr>
 <tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
 <tr><td style="text-align:center">crashInfo</td>
@@ -95,3 +95,14 @@ LOG_NET_MSG ：发送网络
 <td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
 </table>
 
+## 通过错误id获取错误提示信息（英文）
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">String FunSDK_GetErrorInfoByEId(int nEId);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">通过错误id获取错误提示信息（英文）</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr><td style="text-align:center">nEId</td>
+<td>错误值ID</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>通过错误id获取错误提示信息的字符串
+</td><tr>
+</table>
