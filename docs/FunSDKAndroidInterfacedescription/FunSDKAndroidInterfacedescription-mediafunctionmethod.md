@@ -887,7 +887,6 @@ EUIMSG . ON_MediaData_Save<br>
 </td></tr>
 <tr><td style="text-align:center">strInput</td>
 <td>明文</td></tr>
-<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>密文
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="1" style="text-align:center";>密文
 </td><tr>
-
 </table>
