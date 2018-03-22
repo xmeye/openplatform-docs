@@ -10,24 +10,27 @@
 	}
 </style>
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int FUN_DevGetChnName(UI_HANDLE hUser, const char *szDevId, const char *szUser, const char *szPwd, int nSeq = 0);
-</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int FUN_DevGetChnName(UI_HANDLE hUser, const char *szDevId, const char *szUser, const char *szPwd, int nSeq = 0);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">获取通道名称</td></tr>
 <tr><td rowspan="4" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
 </td></tr>
-<tr><td style="text-align:center">szDevId</td>
-<td>设备序列号</td></tr>
+<tr><td style="text-align:center">devId</td><td>设备序列号</td></tr>
 <tr><td style="text-align:center">szUser
 </td><td>设备登录用户名；为空时，使用默认用户名（默认为添加设备时的用户名）</td></tr>
-<tr><td style="text-align:center">szPwd</td>
-<td>设备登录密码；</td></tr>
-<tr><td rowspan="4" style="background-color:#ccc;text-align:center">结果消息
+<tr><td style="text-align:center">password</td><td>设备登录密码；</td></tr>
+<tr><td rowspan="7" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id</td>
-<td>消息值：EUIMSG   .EMSG_DEV_GET_CHN_NAME</td></tr>
+<td>消息值：EUIMSG  . EMSG_DEV_GET_CHN_NAME</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>>0：通道个数；<0：失败，详见错误码说明</td></tr>
+<tr><td style="text-align:center">arg2
+</td><td>Net类型：0:p2p连接，1转发模式 2:IP地址直连</td></tr>
+<tr><td style="text-align:center">arg1
+</td><td>"ChannelTitle"信息大小</td></tr>
+<tr><td style="text-align:center">arg1
+</td><td>设备id</td></tr>
 <tr><td style="text-align:center">pData
 </td><td>指向SDK_ChannelNameConfigAll对象字节流</td></tr>
 </table>
@@ -35,11 +38,12 @@
 ## 查询录像
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:100px;">定义</td><td colspan="2">int FUN_DevFindFile(UI_HANDLE hUser, const char *szDevId, H264_DVR_FINDINFO* lpFindInfo, int nMaxCount, int waittime = 10000, int nSeq = 0);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:100px;">定义</td><td colspan="2">int FUN_DevFindFile(UI_HANDLE hUser, const char *szDevId, H264_DVR_FINDINFO* lpFindInfo, int nMaxCount, int waittime = 10000, int nSeq = 0);
+</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">查询录像</td></tr>
 <tr><td rowspan="5" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
 </td></tr>
-<tr><td style="text-align:center">szDevId</td>
+<tr><td style="text-align:center">devId</td>
 <td>设备序列号</td></tr>
 <tr><td style="text-align:center">pH264_DVR_FINDINFO</td>
 <td>查询条件。H264_DVR_FINDINFO对象字节流</td></tr>
@@ -65,16 +69,16 @@
 </td></tr>
 <tr><td rowspan="4" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
 </td></tr>
-<tr><td style="text-align:center">szDevId</td>
+<tr><td style="text-align:center">devId</td>
 <td>设备序列号</td></tr>
-<tr><td style="text-align:center">lpFindInfo
+<tr><td style="text-align:center">pSDK_SearchByTime
 </td><td>查询条件。SDK_SearchByTime对象字节流</td></tr>
 <tr><td  style="text-align:center">waittime</td><td>超时时间</td></tr>
 <tr><td rowspan="4" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   . DEV_FIND_FILE_BY_TIME
+</td><td>消息值：EUIMSG   . EMSG_DEV_FIND_FILE_BY_TIME
 </td></tr>
 <tr><td  style="text-align:center">arg1
 </td><td>>0：结果条数；<0：失败，详见错误码说明</td></tr>
@@ -85,11 +89,11 @@
 ## 按文件录像下载
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">FUN_HANDLE FUN_DevDowonLoadByFile(UI_HANDLE hUser, const char *szDevId, H264_DVR_FILE_DATA *pH264_DVR_FILE_DATA, const char *szFileName, int nSeq = 0);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">FUN_HANDLE FUN_DevDowonLoadByFile(UI_HANDLE hUser,const char*szDevId,H264_DVR_FILE_DATA *pH264_DVR_FILE_DATA,const char *szFileName,int nSeq = 0);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">按文件下载录像</td></tr>
 <tr><td rowspan="4" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
 </td></tr>
-<tr><td style="text-align:center">szDevId</td>
+<tr><td style="text-align:center">devId</td>
 <td>设备序列号</td></tr>
 <tr><td style="text-align:center">pH264_DVR_FILE_DATA
 </td><td>查询条件。H264_DVR_FILE_DATA对象字节流</td></tr>
@@ -98,9 +102,9 @@
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG   . EMSG_ON_FILE_DOWNLOAD:下载函数调用结果
-EUIMSG   . EMSG_ON_FILE_DLD_COMPLETE:下载完成消息回调
-EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
+</td><td>消息值：EUIMSG  . EMSG_ON_FILE_DOWNLOAD:下载函数调用结果<br>
+EUIMSG  . EMSG_ON_FILE_DLD_COMPLETE:下载完成消息回调<br>
+EUIMSG  . EMSG_ON_FILE_DLD_POS:下载进度消息回调<br>
 </td></tr>
 <tr><td style="text-align:center">arg1
 </td><td><0：失败，详见错误码说明</td></tr>
@@ -109,11 +113,11 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 ## 按时间录像下载
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">FUN_HANDLE FUN_DevDowonLoadByTime(UI_HANDLE hUser, const char *szDevId, H264_DVR_FINDINFO *pH264_DVR_FINDINFO, const char *szFileName, int nSeq = 0);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">FUN_HANDLE FUN_DevDowonLoadByTime(UI_HANDLE hUser, const char*szDevId,H264_DVR_FINDINFO *pH264_DVR_FINDINFO, const char *szFileName, int nSeq = 0);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">按文件下载录像</td></tr>
 <tr><td rowspan="4" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
 </td></tr>
-<tr><td style="text-align:center">szDevId</td>
+<tr><td style="text-align:center">devIds</td>
 <td>设备序列号</td></tr>
 <tr><td style="text-align:center">pH264_DVR_FINDINFO
 </td><td>查询条件。H264_DVR_FINDINFO对象字节流</td></tr>
@@ -122,9 +126,37 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .EMSG_ON_FILE_DOWNLOAD:下载函数调用结果
-EUIMSG   . EMSG_ON_FILE_DLD_COMPLETE:下载完成消息回调
-EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
+</td><td>消息值：EUIMSG . EMSG_ON_FILE_DOWNLOAD:下载函数调用结果<br>
+EUIMSG  .  EMSG_ON_FILE_DLD_COMPLETE:下载完成消息回调<br>
+EUIMSG  .  EMSG_ON_FILE_DLD_POS:下载进度消息回调<br>
+</td></tr>
+<tr><td style="text-align:center">arg1
+</td><td><0：失败，详见错误码说明</td></tr>
+</table>
+
+## 图像列表下载
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">FUN_HANDLE FUN_DevImgListDowonLoad(UI_HANDLE hUser, const char *szDevId, H264_DVR_FILE_DATA_IMG_LIST *pH264_DVR_FILE_DATA_IMG_LIST, const char *szFileListMsk, const char *szFileDirName, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">图像列表下载</td></tr>
+<tr><td rowspan="6" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">devId</td>
+<td>设备序列号</td></tr>
+<tr><td style="text-align:center">pData</td>
+<td>图片下载信息</td></tr>
+<tr><td style="text-align:center">fileName</td>
+<td>文件名</td></tr>
+<tr><td style="text-align:center">chnId
+</td><td>通道号</td></tr>
+<tr><td  style="text-align:center">fileTypeMask</td><td>掩码（下载序列）</td></tr>
+<tr><td rowspan="4" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG . EMSG_ON_FILE_DOWNLOAD:下载函数调用结果<br>
+EUIMSG  .  EMSG_ON_FILE_DLD_COMPLETE:下载完成消息回调<br>
+EUIMSG  .  EMSG_ON_FILE_DLD_POS:下载进度消息回调<br>
 </td></tr>
 <tr><td style="text-align:center">arg1
 </td><td><0：失败，详见错误码说明</td></tr>
@@ -144,31 +176,36 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：无</td></tr>
+</td><td>消息值：EUIMSG . Stop_DownLoad . 5530</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td><0：失败，详见错误码说明</td></tr>
 </table>
 
-## 4.7 云台控制
+## 云台控制
 
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int FUN_DevPTZControl(UI_HANDLE hUser, const char *szDevId, int nChnIndex, int nPTZCommand, bool bStop = false, int nSpeed = 4, int nSeq = 0);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">云台控制
 </td></tr>
-<tr><td rowspan="4" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
-<tr><td style="text-align:center">szDevId</td>
-<td>设备序列号</td></tr>
+<tr><td rowspan="6" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr><td style="text-align:center">devId</td><td>设备序列号</td></tr>
 <tr><td style="text-align:center">nChnIndex</td>
 <td>通道号（从0开始）</td></tr>
 <tr><td style="text-align:center">nPTZCommand</td>
 <td>云台命令（详见EPTZCMD）</td></tr>
-<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+<tr><td style="text-align:center">bStop</td>
+<td>0:stop 1:start</td></tr>
+<tr><td style="text-align:center">nSpeed</td>
+<td>默认值4</td></tr>
+<tr><td rowspan="4" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id</td>
-<td>消息值：EUIMSG   . EMSG_DEV_PTZ_CONTROL</td></tr>
+<td>消息值：EUIMSG  . EMSG_DEV_PTZ_CONTROL</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
+<tr><td style="text-align:center">pData
+</td><td>指向结果对象字节流</td></tr>
 </table>
 
 ## 语音对讲-开始
@@ -186,7 +223,7 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG   . EMSG_DEV_START_TALK
+</td><td>消息值：EUIMSG . EMSG_DEV_START_TALK
 </td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
@@ -204,7 +241,7 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG   . EMSG_DEV_STOP_TALK</td></tr>
+</td><td>消息值：EUIMSG  . EMSG_DEV_STOP_TALK</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
 </table>
@@ -212,7 +249,7 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 ## 语音对讲-发送数据
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int   FUN_DevSendTalkData(const char *szDevId, const char *pPCMData, int nDataLen);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevSendTalkData(const char *szDevId, const char *pPCMData, int nDataLen);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">发送语音对讲客户端的数据</td></tr>
 <tr><td rowspan="4" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
 <tr><td style="text-align:center">szDevId</td>
@@ -220,12 +257,12 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 <tr><td style="text-align:center">pPCMData</td>
 <td>PCM格式数据</td></tr>
 <tr><td style="text-align:center">nDataLen</td>
-<td>PCM数据长度</td></tr>
+<td>PCM格式数据大小</td></tr>
 <tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG   . EMSG_DEV_SEND_MEDIA_DATA</td></tr>
+</td><td>消息值：EUIMSG  . EMSG_DEV_SEND_MEDIA_DATA</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
 </table>
@@ -239,7 +276,7 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 <tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
 <tr><td style="text-align:center">nTimeout</td>
 <td>超时时间</td></tr>
-<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+<tr><td rowspan="5" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
@@ -247,41 +284,17 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 </td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
-</table>
-
-## 参数配置-获取配置
-
-<table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevGetConfig(UI_HANDLE hUser, const char *szDevId, int nCommand, int nOutBufLen, int nChannelNO = -1, int nTimeout = 5000, int nSeq = 0);</td></tr>
-<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">获取设备配置</td></tr>
-<tr><td rowspan="6" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
-<tr><td style="text-align:center">szDevId
-</td><td>设备序列号</td></tr>
-<tr><td style="text-align:center">nCommand</td>
-<td>配置命令字（详见EConfigCmd）</td></tr>
-<tr><td style="text-align:center">nOutBufLen
-</td><td>结果长度</td></tr>
-<tr><td style="text-align:center">nChannelNO</td>
-<td>通道号（从0开始）</td></tr>
-<tr><td style="text-align:center">nTimeout
-</td><td>超时时间</td></tr>
-<tr><td rowspan="4" style="background-color:#ccc;text-align:center">结果消息
-</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
-</td></tr>
-<tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG   . EMSG_DEV_GET_CONFIG
-</td></tr>
-<tr><td style="text-align:center">arg1
-</td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
+<tr><td style="text-align:center">arg2
+</td><td>消息长度</td></tr>
 <tr><td style="text-align:center">pData
-</td><td>指向结果对象字节流</td></tr>
+</td><td>指向结果对象字节流SDK_CONFIG_NET_COMMON_V2</td></tr>
 </table>
+
 
 ## 参数配置-获取配置(Json)
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevGetConfig_Json(UI_HANDLE hUser, const char *szDevId, const char *szCommand, int nOutBufLen, int nChannelNO = -1, int nTimeout = 5000, int nSeq = 0);
-</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevGetConfig_Json(UI_HANDLE hUser, const char *szDevId, const char *szCommand, int nOutBufLen, int nChannelNO = -1, int nTimeout = 15000, int nSeq = 0);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">获取设备配置(Json)</td></tr>
 <tr><td rowspan="6" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
 <tr style="text-align:center"><td>szDevId
@@ -294,50 +307,62 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 </td><td>通道号（从0开始）</td></tr>
 <tr style="text-align:center"><td>nTimeout
 </td><td>超时时间</td></tr>
-<tr><td rowspan="4" style="background-color:#ccc;text-align:center">结果消息
+<tr><td rowspan="6" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG   . EMSG_DEV_GET_CONFIG_JSON
+</td><td>消息值：EUIMSG . EMSG_DEV_GET_JSON 5128
 </td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
+<tr><td style="text-align:center">arg2
+</td><td>通道号（从0开始）；配置命令字是"SystemInfo"的时候->NetType; //0:p2p连接，1转发模式 2:IP地址直连</td></tr>
+<tr><td style="text-align:center">str
+</td><td>配置命令字</td></tr>
 <tr><td style="text-align:center">pData
 </td><td>指向结果对象字节流</td></tr>
 </table>
 
-## 参数配置-保存配置
+## 参数配置-获取配置(Json2)
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:20px;">定义</td><td colspan="2">int FUN_DevSetConfig(UI_HANDLE hUser, const char *szDevId, int nCommand, const void *pConfig, int nConfigLen, int nChannelNO = -1, int nTimeout = 5000, int nSeq = 0);
-</td></tr>
-<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">保存设备配置</td></tr>
-<tr><td rowspan="6" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
-<tr><td style="text-align:center">szDevId</td>
-<td>设备序列号</td></tr>
-<tr><td style="text-align:center">nCommand</td>
-<td>配置命令字（详见EConfigCmd）</td></tr>
-<tr><td style="text-align:center">pConfig
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevGetConfigJson(UI_HANDLE hUser, const char *szDevId, const char *szCmd, int nChannelNO = -1, int nCmdReq = 0, int nSeq = 0, const char *pInParam = NULL, int nCmdRes = 0, int nTimeout = 0);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">获取设备配置(Json)</td></tr>
+<tr><td rowspan="8" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr style="text-align:center"><td>szDevId
+</td><td>设备序列号</td></tr>
+<tr style="text-align:center"><td>szCommand
+</td><td>配置命令字（详见EConfigCmd）</td></tr>
+<tr style="text-align:center"><td>pConfig
 </td><td>配置对象字节流</td></tr>
-<tr><td style="text-align:center">nChannelNO
+<tr style="text-align:center"><td>nChannelNO
 </td><td>通道号（从0开始）</td></tr>
-<tr><td style="text-align:center">nTimeout
+<tr style="text-align:center"><td>nCmdReq
+</td><td>命令ID</td></tr>
+<tr style="text-align:center"><td>nCmdRes
+</td><td>暂时未使用</td></tr>
+<tr style="text-align:center"><td>nTimeout
 </td><td>超时时间</td></tr>
-<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+<tr><td rowspan="6" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG   . EMSG_DEV_SET_CONFIG
+</td><td>消息值：EUIMSG . EMSG_DEV_GET_JSON 5128
 </td></tr>
 <tr><td style="text-align:center">arg1
-</td><td>==0：成功；<0：失败，详见错误码说明
-</td></tr>
+</td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
+<tr><td style="text-align:center">arg2
+</td><td>通道号（从0开始）；配置命令字是"SystemInfo"的时候->NetType; //0:p2p连接，1转发模式 2:IP地址直连</td></tr>
+<tr><td style="text-align:center">str
+</td><td>配置命令字</td></tr>
+<tr><td style="text-align:center">pData
+</td><td>指向结果对象字节流</td></tr>
 </table>
 
 ## 参数配置-保存配置(Json)
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevSetConfig_Json(UI_HANDLE hUser, const char *szDevId, const char *szCommand, const void *pConfig, int nConfigLen, int nChannelNO = -1, int nTimeout = 5000, int nSeq = 0);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevSetConfig_Json(UI_HANDLE hUser, const char *szDevId, const char *szCommand, const void *pConfig, int nConfigLen, int nChannelNO = -1, int nTimeout = 15000, int nSeq = 0);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">保存设备配置(Json)</td></tr>
 <tr><td rowspan="6" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
 <tr><td style="text-align:center">szDevId</td>
@@ -350,35 +375,81 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 <td>通道号（从0开始）</td></tr>
 <tr><td style="text-align:center">nTimeout
 </td><td>超时时间</td></tr>
-<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+<tr><td rowspan="6" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG   . EMSG_DEV_SET_CONFIG_JSON
+</td><td>消息值：EUIMSG   . EMSG_DEV_SET_JSON 5129
 </td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明
 </td></tr>
+<tr><td style="text-align:center">arg2
+</td><td>通道号（从0开始）；配置命令字是"SystemInfo"的时候->NetType; //0:p2p连接，1转发模式 2:IP地址直连
+</td></tr>
+<tr><td style="text-align:center">str
+</td><td>配置命令字
+</td></tr>
+<tr><td style="text-align:center">pData
+</td><td>指向结果对象字节流
+</td></tr>
+</table>
+
+## 参数配置-保存配置(Json2)
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevSetConfigJson(UI_HANDLE hUser, const char *szDevId, const char *szCmd, const char *pInParam, int nChannelNO = -1, int nCmdReq = 0, int nSeq = 0, int nCmdRes = 0, int nTimeout = 0);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">获取设备配置(Json)</td></tr>
+<tr><td rowspan="8" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr style="text-align:center"><td>szDevId
+</td><td>设备序列号</td></tr>
+<tr style="text-align:center"><td>szCommand
+</td><td>配置命令字（详见EConfigCmd）</td></tr>
+<tr style="text-align:center"><td>pConfig
+</td><td>配置对象字节流</td></tr>
+<tr style="text-align:center"><td>nChannelNO
+</td><td>通道号（从0开始）</td></tr>
+<tr style="text-align:center"><td>nCmdReq
+</td><td>命令ID</td></tr>
+<tr style="text-align:center"><td>nCmdRes
+</td><td>暂时未使用</td></tr>
+<tr style="text-align:center"><td>nTimeout
+</td><td>超时时间</td></tr>
+<tr><td rowspan="6" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td style="text-align:center">id
+</td><td>消息值：EUIMSG . EMSG_DEV_SET_JSON 5129
+</td></tr>
+<tr><td style="text-align:center">arg1
+</td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
+<tr><td style="text-align:center">arg2
+</td><td>通道号（从0开始）；配置命令字是"SystemInfo"的时候->NetType; //0:p2p连接，1转发模式 2:IP地址直连</td></tr>
+<tr><td style="text-align:center">str
+</td><td>配置命令字</td></tr>
+<tr><td style="text-align:center">pData
+</td><td>指向结果对象字节流</td></tr>
 </table>
 
 ## 参数配置-获取设备属性
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevGetAttr(UI_HANDLE hUser, const char *szDevId, int nCommand, int nOutBufLen, int nChannelNO = -1, int nTimeout = 5000, int nSeq = 0);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevGetAttr(UI_HANDLE hUser, const char *szDevId, int nCommand, int nOutBufLen, int nChannelNO = -1, int nTimeout = 15000, int nSeq = 0);
+</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
  获取设备属性</td></tr>
 <tr><td rowspan="6" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
-<tr><td style="text-align:center">szDevId</td>
+<tr><td style="text-align:center">devId</td>
 <td>设备序列号</td></tr>
 <tr><td style="text-align:center">nCommand</td>
-<td>配置命令字（详见EConfigCmd）</td></tr>
+<td>配置命令字（详见EConfigCmd/EDEV_ATTR）</td></tr>
 <tr><td style="text-align:center">nOutBufLen
 </td><td>结果长度</td></tr>
 <tr><td style="text-align:center">nChannelNO</td>
 <td>通道号（从0开始）</td></tr>
 <tr><td style="text-align:center">nTimeout
 </td><td>超时时间</td></tr>
-<tr><td rowspan="4" style="background-color:#ccc;text-align:center">结果消息
+<tr><td rowspan="6" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
@@ -386,6 +457,10 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 </td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明</td>
+<tr><td style="text-align:center">arg2
+</td><td>NetType; //0:p2p连接，1转发模式 2:IP地址直连</td>
+<tr><td style="text-align:center">arg1
+</td><td>arg1 < 0的时候返回错误信息，否则返回设备序列号</td>
 <tr><td style="text-align:center">pData
 </td><td>结果返回字节流</td>
 </tr>
@@ -394,28 +469,33 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 ## 参数配置-设置设备属性
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevSetAttr(UI_HANDLE hUser, const char *szDevId, int nCommand, const void *pConfig, int nConfigLen, int nChannelNO = -1, int nTimeout = 5000, int nSeq = 0);
-</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevSetAttr(UI_HANDLE hUser, const char *szDevId, int nCommand, const void *pConfig, int nConfigLen, int nChannelNO = -1, int nTimeout = 15000, int nSeq = 0);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
- 设置设备属性</td></tr>
+ 设置设备属性--EDA_OPT_ALARM（EDEV_ATTR）现在只能配置报警功能</td></tr>
 <tr><td rowspan="6" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
-<tr><td style="text-align:center">szDevId</td>
+<tr><td style="text-align:center">devId</td>
 <td>设备序列号</td></tr>
 <tr><td style="text-align:center">nCommand</td>
-<td>配置命令字（详见EConfigCmd）</td></tr>
+<td>配置命令字（详见EConfigCmd/EDEV_ATTR）</td></tr>
 <tr><td style="text-align:center">pConfig
 </td><td>配置对象字节流</td></tr>
 <tr><td style="text-align:center">nChannelNO</td>
 <td>通道号（从0开始）</td></tr>
 <tr><td style="text-align:center">nTimeout
 </td><td>超时时间</td></tr>
-<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+<tr><td rowspan="6" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
 </td><td>消息值：EUIMSG   . EMSG_DEV_SET_ATTR</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明</td>
+<tr><td style="text-align:center">arg2
+</td><td>控制开关 本地报警推送0:开启, 1:关闭</td>
+<tr><td style="text-align:center">str
+</td><td>配置命令字（详见EDEV_ATTR）</td>
+<tr><td style="text-align:center">pData
+</td><td>arg1 < 0的时候返回错误信息</td>
 </tr>
 </table>
 
@@ -425,9 +505,9 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 <tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevStartAPConfig(UI_HANDLE hUser, int nGetRetType, const char *ssid, const char *data, const char *info, const char *ipaddr, int type, int isbroad, const unsigned char wifiMac[6], int nTimeout = 10000);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
  快速配置开启</td></tr>
-<tr><td rowspan="9" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr><td rowspan="10" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
 <tr><td style="text-align:center">nGetRetType</td>
-<td>获取网络类型</td></tr>
+<td>获取网络类型1:外网;2:内网 0x3:一起</td></tr>
 <tr><td style="text-align:center">ssid</td>
 <td>id</td></tr>
 <tr><td style="text-align:center">data</td>
@@ -440,23 +520,28 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 <td>类型</td></tr>
 <tr><td style="text-align:center">isbroad</td>
 <td>范围</td></tr>
+<tr><td style="text-align:center">mac</td>
+<td>mac：以“：”分隔的16进制形式</td></tr>
 <tr><td style="text-align:center">nTimeout</td>
 <td>超时时间</td></tr>
-<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+<tr><td rowspan="4" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG   . EMSG_DEV_AP_CONFIG
+</td><td>消息值：EUIMSG   . EMSG_EMSG_DEV_AP_CONFIG
 </td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明</td>
+</tr>
+<tr><td style="text-align:center">pData
+</td><td>网络设置，指向SDK_CONFIG_NET_COMMON_V2字节流</td>
 </tr>
 </table>
 
 ## 快速配置关闭
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">void FUN_DevStopAPConfig(int nStopType = 0x3);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">void FUN_DevStopAPConfig(int nStopType)</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
  快速配置关闭</td></tr>
 <tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
@@ -472,64 +557,118 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 <td>无 </td></tr>
 </table>
 
-## 设置WIFI配置
+## WIFI配置-手机APP通过局域网登录时
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int   FUN_DevSetWIFIConfig(UI_HANDLE hUser, const char *pCfg, int nCfgLen, const   char *szUser, const char *szPwd, int nTimeout, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevStartWifiConfig(UI_HANDLE hUser, const char *szDevId, const char *szSSID, const char *szPassword, int nTimeout = 120000);
+</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
- 设置WIFI配置</td></tr>
-<tr><td rowspan="6" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
-<tr><td style="text-align:center">pCfg</td>
-<td>网络配置</td></tr>
-<tr><td style="text-align:center">nCfgLen</td>
-<td>长度</td></tr>
-<tr><td style="text-align:center">szUser</td>
-<td>用户名</td></tr>
-<tr><td style="text-align:center">szPwd</td>
+WIFI配置配置接口（这种方式需要可以登录设备，通过协议把SSID和密码发给设备<br>
+手机APP通过局域网登录时（过程：调用接口->回调返回结果）
+</td></tr>
+<tr><td rowspan="5" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr><td style="text-align:center">szDevId</td>
+<td>序列号</td></tr>
+<tr><td style="text-align:center">szSSID</td>
+<td>SSID</td></tr>
+<tr><td style="text-align:center">szPassword</td>
 <td>密码</td></tr>
 <tr><td style="text-align:center">nTimeout</td>
-<td>超时时间</td></tr>
+<td>超时时间,默认值120s</td></tr>
 <tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG   . EMSG_DEV_SET_WIFI_CFG</td></tr>
+</td><td>消息值：消息值：EUIMSG . EMSG_DEV_SET_WIFI_CFG</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明</td>
+</tr>
+</table>
+
+## WIFI配置-手机APP通过设备热点连接时
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int DevStartWifiConfigByAPLogin(int hUser, String szDevId, String szSSID, String szPassword, int nTimeout);
+</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
+手机APP通过设备热点连接时（过程：手机连接设备热点->调用接口->返回1->切换到家里的WIFI->返回结果）/td></tr>
+<tr><td rowspan="5" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr><td style="text-align:center">szDevId</td>
+<td>序列号</td></tr>
+<tr><td style="text-align:center">szSSID</td>
+<td>SSID</td></tr>
+<tr><td style="text-align:center">szPassword</td>
+<td>密码</td></tr>
+<tr><td style="text-align:center">nTimeout</td>
+<td>超时时间,默认值120s</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td style="text-align:center">id
+</td><td>消息值：消息值：EUIMSG . EMSG_DEV_SET_WIFI_CFG</td></tr>
+<tr><td style="text-align:center">arg1
+</td><td>==0：成功；<0：失败，详见错误码说明</td>
+</tr>
+</table>
+
+## 结束WIFI配置
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">void FUN_DevStopWifiConfig();</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
+ 结束WIFI配置</td></tr>
+</table>
+
+## 设备登录
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevLogin(UI_HANDLE hUser, const char *szDevId, const char *szUser, const char *szPwd, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
+ 设备登录，如果本地数据库中没有此设备，则创建</td></tr>
+<tr><td rowspan="4" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr><td style="text-align:center">szDevId</td>
+<td>设备序列号</td></tr>
+<tr><td style="text-align:center">szUser</td>
+<td>用户名</td></tr>
+<tr><td style="text-align:center">szPwd</td>
+<td>密码</td></tr>
+<tr><td rowspan="4" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td style="text-align:center">id
+</td><td>消息值：EUIMSG . EMSG_DEV_LOGIN 5139</td></tr>
+<tr><td style="text-align:center">arg1
+</td><td>==0：成功；<0：失败，详见错误码说明</td>
+<tr><td style="text-align:center">str
+</td><td>正确时返回””，错误的时候返回错误信息</td>
 </tr>
 </table>
 
 ## 设备退出登录
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevLogout(UI_HANDLE hUser, const char *szDevId);
-</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevLogout(UI_HANDLE hUser, const char *szDevId);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
- 设置退出登录</td></tr>
+ 设备退出登录</td></tr>
 <tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
 <tr><td style="text-align:center">szDevId</td>
 <td>设备序列号</td></tr>
-<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
-</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
-</td></tr>
-<tr><td style="text-align:center">id
-</td><td>消息值：无</td></tr>
-<tr><td style="text-align:center">arg1
-</td><td>无</td>
-</tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>==0：成功；<0：失败，详见错误码说明
+</td><tr>
 </table>
 
 ## 设备选项
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevOption(UI_HANDLE hUser, const char *szDevId, int nOptId, void *pData = NULL, int nDataLen = 0, int param1 = 0, int param2 = 0, int param3 = 0, const char *szStr = "", int seq = 0);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevOption(UI_HANDLE hUser, const char *szDevId, int nOptId, void *pData = NULL, int nDataLen = 0, int param1 = 0, int param2 = 0, int param3 = 0, const char *szStr = "", int seq = 0);
+</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
 设备选项</td></tr>
 <tr><td rowspan="9" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
 <tr><td style="text-align:center">szDevId</td>
 <td>设备序列号</td></tr>
 <tr><td style="text-align:center">nOptId</td>
-<td>选项ID</td></tr>
+<td>选项ID，详见FunSDK; enum EDEV_OPTERATE</td></tr>
 <tr><td style="text-align:center">pData</td>
 <td>数据</td></tr>
 <tr><td style="text-align:center">nDataLen</td>
@@ -558,10 +697,11 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 </tr>
 </table>
 
+
 ### 透明串口
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int DevOption(int hUser, String szDevId, int nOptId,byte[] pData, int   nDataLen, int param1, int param2, int param3,String szStr, int seq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevOption(UI_HANDLE hUser, const char *szDevId, int nOptId, void *pData = NULL, int nDataLen = 0, int param1 = 0, int param2 = 0, int param3 = 0, const char *szStr = "", int seq = 0);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
 透明串口提供三个操作：打开串口、写串口、关闭串口</td></tr>
 <tr><td rowspan="7" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
@@ -586,7 +726,7 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG.EMSG_DEV_OPTION
+</td><td>消息值：EUIMSG.EMSG_EMSG_DEV_OPTION
 </td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>>=0：成功；<0：失败，详见错误码说明</td>
@@ -603,7 +743,7 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 ## 设备设置用户数据
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int   DevSetUserData(int nType, byte[] pData);
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int DevSetUserData(int nType, byte[] pData);
 </td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
 设备设置用户数据</td></tr>
@@ -626,7 +766,8 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 ## 设备检查升级
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevCheckUpgrade(UI_HANDLE hUser, const char *szDevId, int nSeq = 0);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevCheckUpgrade(UI_HANDLE hUser, const char *szDevId, int nSeq = 0); 
+</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
 设备检查升级</td></tr>
 <tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
@@ -638,7 +779,29 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 <tr><td style="text-align:center">id</td>
 <td>消息值：EUIMSG   . EMSG_DEV_CHECK_UPGRADE</td></tr>
 <tr ><td style="text-align:center">arg1
-</td><td>0：当前为最新程序，1：支持云升级，2：本地或服务器升级；<0：失败，详见错误码说明
+</td><td>0：当前为最新程序<br>1：支持云升级<br>2：本地或服务器升级<br><0：失败，详见错误码说明
+</td></tr>
+</table>
+
+## 子设备检查升级
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevCheckUpgradeEx(UI_HANDLE hUser, const char *szDevId, const SSubDevInfo *szSubDevInfo = NULL, int nSeq = 0);
+</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
+智联中心检查子设备升级</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr style="text-align:center"><td>szDevId</td>
+<td>设备序列号</td></tr>
+<tr style="text-align:center"><td>pSDK_SubDevInfo</td>
+<td>子设备信息，检查更新时，Type可选， 默认“IPC”，其它需赋值；<br>开始升级时，暂时只需要SN、 SoftWareVer，其它可选</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td style="text-align:center">id</td>
+<td>消息值：EUIMSG   . EMSG_DEV_CHECK_UPGRADE</td></tr>
+<tr ><td style="text-align:center">arg1
+</td><td>0：当前为最新程序<br>1：支持云升级<br>2：本地或服务器升级<br><0：失败，详见错误码说明
 </td></tr>
 </table>
 
@@ -658,9 +821,36 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG   . EMSG_DEV_START_UPGRADE
-升级中升级文件下载情况通过消息”   EUIMSG . EMSG_CHECK_FILE_COMPLETE”处理
-升级文件下载进度情况通过消息” EUIMSG .EMSG_DEV_ON_UPGRADE_PROGRESS”处理
+</td><td>消息值：EUIMSG  . EMSG_DEV_START_UPGRADE<br>
+升级中升级文件下载情况通过消息”   EUIMSG . EMSG_CHECK_FILE_COMPLETE”处理<br>
+升级文件下载进度情况通过消息” EUIMSG . EMSG_DEV_ON_UPGRADE_PROGRESS”处理
+</td></tr>
+<tr><td style="text-align:center">arg1
+</td><td>==0：成功；<0：失败，详见错误码说明</td>
+</tr>
+</table>
+
+## 子设备开始升级
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevStartUpgradeEx(UI_HANDLE hUser, const char *szDevId, int nType, const SSubDevInfo *szSubDevInfo = NULL, int nSeq = 0);
+</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
+子设备开始升级-智联中心子设备升级接口</td></tr>
+<tr><td rowspan="4" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr><td style="text-align:center">szDevId</td>
+<td>设备序列号</td></tr>
+<tr><td style="text-align:center">pSDK_SubDevInfo</td>
+<td>子设备信息， 检查更新时，Type可选， 默认“IPC”，其它需赋值；<br>开始升级时，暂时只需要SN、 SoftWareVer，其它可选</td></tr>
+<tr><td style="text-align:center">nType</td>
+<td>升级类型</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td style="text-align:center">id
+</td><td>消息值：EUIMSG  . EMSG_DEV_START_UPGRADE<br>
+升级中升级文件下载情况通过消息”   EUIMSG . EMSG_CHECK_FILE_COMPLETE”处理<br>
+升级文件下载进度情况通过消息” EUIMSG . EMSG_DEV_ON_UPGRADE_PROGRESS”处理
 </td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明</td>
@@ -670,8 +860,7 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 ## 通过文件升级
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int FUN_DevStartUpgradeByFile(UI_HANDLE hUser, const char *szDevId, const char *szFileName, int nSeq = 0);
-</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:100px;">定义</td><td colspan="2">int FUN_DevStartUpgradeByFile(UI_HANDLE hUser, const char *szDevId, const char *szFileName, int nSeq = 0);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">通过文件升级</td></tr>
 <tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
 </td></tr>
@@ -683,7 +872,29 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   .</td></tr>
+</td><td>消息值：EUIMSG 同上  .</td></tr>
+<tr><td  style="text-align:center">arg1</td>
+<td>==0：成功；<0：失败，详见错误码说明</td></tr>
+</table>
+
+## 子设备通过文件升级
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:100px;">定义</td><td colspan="2">int FUN_DevStartUpgradeByFileEx(UI_HANDLE hUser, const char *szDevId, const char *szSubDevId, const char *szFileName, int nSeq = 0);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">子设备通过文件升级-智联中心子设备本地升级接口</td></tr>
+<tr><td rowspan="4" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td  style="text-align:center">szDevId
+</td><td>设备序列号</td></tr>
+<tr><td  style="text-align:center">szSubDevId
+</td><td>子设备序列号</td></tr>
+<tr><td  style="text-align:center">szFileName</td>
+<td>升级文件名称</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG 同上  .</td></tr>
 <tr><td  style="text-align:center">arg1</td>
 <td>==0：成功；<0：失败，详见错误码说明</td></tr>
 </table>
@@ -691,7 +902,7 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 ## 设备停止升级
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:50px;">定义</td><td colspan="2">int FUN_DevStopUpgrade(const char *szDevId, int nSeq = 0);
+<tr><td style="background-color:#ccc;text-align:center;width:50px;">定义</td><td colspan="2">int FUN_DevStopUpgrade(UI_HANDLE hUser, const char *szDevId, int nSeq = 0);
 </td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">设备停止升级</td></tr>
 <tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
@@ -702,7 +913,7 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG   . EMSG_DEV_STOP_UPGRADE
+</td><td>消息值：EUIMSG  . EMSG_DEV_STOP_UPGRADE
 </td></tr>
 <tr><td  style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
@@ -711,28 +922,33 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 ## 设备检查升级—云升级
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int Fun_SysCloudUpGradeCheck (UI_HANDLE hUser, const char *szDevId, int nSeq =0);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int Fun_SysCloudUpGradeCheck(UI_HANDLE hUser,  const char *szDevId, int nSeq = 0);
+</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
 设备检查升级—云升级</td></tr>
 <tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
 </td></tr>
 <tr><td style="text-align:center">szDevId</td>
 <td>设备序列号</td></tr>
-<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+<tr><td rowspan="4" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG . SYS_CLOUDUPGRADE_CHECK
+</td><td>消息值：EUIMSG . EMSG_SYS_CLOUDUPGRADE_CHECK
 </td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>0：当前为最新程序，1：设备连接升级服务器升级，2：本地升级,但升级文件还没有下载下来；3：本地升级,升级文件已经下载下来了  <0：失败，详见错误码说明
+</td></tr>
+<tr><td style="text-align:center">str
+</td><td>日志信息，新版本的日志信息也要返回
 </td></tr>
 </table>
 
 ## 下载升级文件—云升级
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int Fun_SysCloudUpGradeDownLoad (UI_HANDLE hUser, const char *szDevId, int nSeq=0);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int Fun_SysCloudUpGradeDownLoad(UI_HANDLE hUser, const char *szDevId, int nSeq = 0);
+</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
 通过文件升级—云升级</td></tr>
 <tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
@@ -744,7 +960,7 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td  style="text-align:center">id
-</td><td>消息值：EUIMSG . SYS_CLOUDUPGRADE_DOWNLOAD
+</td><td>消息值：EUIMSG . EMSG_SYS_CLOUDUPGRADE_DOWNLOAD
 </td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明
@@ -754,7 +970,8 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 ## 停止下载升级文件—云升级
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int Fun_SysStopCloudUpGradeDownLoad (UI_HANDLE hUser, const char *szDevId, int nSeq =0);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int Fun_SysStopCloudUpGradeDownLoad(UI_HANDLE hUser, const char *szDevId, int nSeq = 0);
+</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
 通过文件升级</td></tr>
 <tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
@@ -765,10 +982,37 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG . STOP_CLOUDUPGRADE_DOWNLOAD</td></tr>
+</td><td>消息值：EUIMSG . EMSG_STOP_CLOUDUPGRADE_DOWNLOAD</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
 </table>
+
+## 获取推荐码流值
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int DEV_GetDefaultBitRate(int nEncType, int iResolution, int iQuality, int iGOP, int nFrameRate, int nVideoStd = 0, int nDevType = EE_DEV_NORMAL_MONITOR);
+</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
+获取推荐码流值</td></tr>
+<tr><td rowspan="8" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td  style="text-align:center">szDevId</td>
+<td>编码方式 详见SDK_CAPTURE_COMP_t 7:h264 8:H265</td></tr>
+<tr><td  style="text-align:center">szDevId</td>
+<td>分辨率 详见SDK_CAPTURE_SIZE_t</td></tr>
+<tr><td  style="text-align:center">szDevId</td>
+<td>图像质量 1~6</td></tr>
+<tr><td  style="text-align:center">szDevId</td>
+<td>帧之间的间隔时间，1-12</td></tr>
+<tr><td  style="text-align:center">szDevId</td>
+<td>帧率</td></tr>
+<tr><td  style="text-align:center">szDevId</td>
+<td>视频制式 0 : P 1 : N</td></tr><tr><td  style="text-align:center">szDevId</td>
+<td>设备类型 详见EFUN_DEV_TYPE</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>获取到的推荐码流值
+</td><tr>
+</table>
+
 
 ## 其它方法
 
@@ -861,7 +1105,6 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
       ]
 
   }"
-</b>
 }
 </pre>
 *加粗的部分需要使用base64进行编码
@@ -871,7 +1114,7 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG. CSS_API_CMD_CFS</td></tr>
+</td><td>消息值：EUIMSG. EMSG_CSS_API_CMD_CFS</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
 </table>
@@ -879,9 +1122,7 @@ EUIMSG   . EMSG_ON_FILE_DLD_POS:下载进度消息回调
 ## 设置开启/关闭局域网报警
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int DevSetAttrAlarmByInt(int hUser, String szDevId, int nCommand, int nValue, int nSeq)
-int DevSetAttrAlarmByInt(int hUser, String szDevId, int nCommand, int nValue, int nChannelNO, int nTimeout, int nSeq)
-int DevSetAttrAlarmByString(int hUser, String szDevId, int nCommand, String sValue, int nChannelNO, int nTimeout, int nSeq)
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int DevSetAttrAlarm(int hUser, String szDevId, int nCommand, byte[] pConfig,int nChannelNO, int nTimeout, int nSeq);
 </td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">开启/关闭局域网报警</td></tr>
 <tr><td rowspan="6" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
@@ -899,7 +1140,7 @@ int DevSetAttrAlarmByString(int hUser, String szDevId, int nCommand, String sVal
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG.DEV_SET_AT(5110)
+</td><td>消息值：EUIMSG.EMSG_DEV_SET_AT(5110)
 </td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
@@ -917,9 +1158,10 @@ IOS: 使用FUN_DevSetAttr (UI_HANDLE hUser, const char *szDevId, int nCommand, c
 ## 局域网报警功能
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">FUN_HANDLE FUN_DevGetAlarmState(UI_HANDLE hUser, int nSeq);</td></tr>
-<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">局域网报警功能,设置实时报警消息的接收者,所有设备的报警信息均由此接收,设置一次即可<label style="color:red">注调用此接口前必须先调用一次DevSetAttrAlarm开启局域网报警功能
-</label></td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">FUN_HANDLE FUN_DevSetAlarmListener(UI_HANDLE hUser, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">局域网报警功能,设置实时报警消息的接收者,所有设备的报警信息均由此接收,设置一次即可<br>设置本地报警接受者,不再使用FUN_DevGetAlarmState(此名字含义不明显)， 使用FUN_DevSetAlarmListener
+注调用此接口前必须先调用一次DevSetAttrAlarm开启局域网报警功能
+</td></tr>
 <tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
 <tr><td style="text-align:center"> </td>
 <td></td></tr>
@@ -927,7 +1169,7 @@ IOS: 使用FUN_DevSetAttr (UI_HANDLE hUser, const char *szDevId, int nCommand, c
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG .DEV_GET_LAN_ALARM（5132）</td></tr>
+</td><td>消息值：EUIMSG .EMSG_DEV_GET_LAN_ALARM（5132）</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>>0：成功（报警信息长度）；<=0：失败，详见错误码说明</td></tr>
 <tr><td style="text-align:center">pData
@@ -939,7 +1181,7 @@ IOS: 使用FUN_DevSetAttr (UI_HANDLE hUser, const char *szDevId, int nCommand, c
 ## 通用命令接口
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:20px;">定义</td><td colspan="2">int   DevCmdGeneral(int hUser, String szDevId,int nCmdReq, String szCmd, int   nRetSize, int nTimeout,byte[] pInParam, int nCmdRes, int nSeq);
+<tr><td style="background-color:#ccc;text-align:center;width:20px;">定义</td><td colspan="2">int FUN_DevCmdGeneral(UI_HANDLE hUser, const char *szDevId, int nCmdReq, const char *szCmd, int nRetSize, int nTimeout, char *pInParam = NULL, int nInParamLen = 0, int nCmdRes = -1, int nSeq = 0);
 </td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">本接口为通用接口，大多数的命令都可调用此接口实现</td></tr>
 <tr><td rowspan="8" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
@@ -961,7 +1203,7 @@ IOS: 使用FUN_DevSetAttr (UI_HANDLE hUser, const char *szDevId, int nCommand, c
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG   . DEV_CMD_EN</td></tr>
+</td><td>消息值：EUIMSG   . EMSG_DEV_CMD_EN</td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>>=0：成功；<0：失败，详见错误码说明</td></tr>
 <tr><td style="text-align:center">arg2
@@ -974,10 +1216,11 @@ IOS: 使用FUN_DevSetAttr (UI_HANDLE hUser, const char *szDevId, int nCommand, c
 </td><td>返回的字节流</td></tr>
 </table>
 
-### 录像日历查询
+### 1、录像日历查询
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevCmdGeneral(UI_HANDLE hUser, const char *szDevId, int nCmdReq, const char *szCmd, int nRetSize, int nTimeout, char *pInParam = NULL, int nInParamLen = 0, int nCmdRes = -1, int nSeq = 0);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_DevCmdGeneral(UI_HANDLE hUser, const char *szDevId, int nCmdReq, const char *szCmd, int nRetSize, int nTimeout, char *pInParam = NULL, int nInParamLen = 0, int nCmdRes = -1, int nSeq = 0);
+</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">录像日历查询</td></tr>
 <tr><td rowspan="8" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
 <tr><td style="text-align:center">szDevId</td>
@@ -1001,7 +1244,7 @@ IOS: 使用FUN_DevSetAttr (UI_HANDLE hUser, const char *szDevId, int nCommand, c
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG   .DEV_CMD_EN
+</td><td>消息值：EUIMSG   .EMSG_DEV_CMD_EN
 </td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>>=0：成功；  <0：失败，详见错误码说明</td></tr>
@@ -1009,10 +1252,10 @@ IOS: 使用FUN_DevSetAttr (UI_HANDLE hUser, const char *szDevId, int nCommand, c
 </td><td colspan="2">其它信息可参考4.35</td></tr>
 </table>
 
-### 透明传输
+### 2、透明传输
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int   DevCmdGeneral(int hUser, String szDevId,int nCmdReq, String szCmd, int   nRetSize, int nTimeout,byte[] pInParam, int nCmdRes, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int FUN_DevCmdGeneral(UI_HANDLE hUser, const char *szDevId, int nCmdReq, const char *szCmd, int nRetSize, int nTimeout, char *pInParam = NULL, int nInParamLen = 0, int nCmdRes = -1, int nSeq = 0);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">数据透明传输</td></tr>
 <tr><td rowspan="8" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
 <tr><td style="text-align:center">szDevId</td>
@@ -1033,7 +1276,7 @@ IOS: 使用FUN_DevSetAttr (UI_HANDLE hUser, const char *szDevId, int nCommand, c
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG.DEV_CMD_EN
+</td><td>消息值：EUIMSG.DEMSG_EV_CMD_EN
 </td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>>=0：成功；   <0：失败，详见错误码说明</td></tr>
@@ -1041,13 +1284,11 @@ IOS: 使用FUN_DevSetAttr (UI_HANDLE hUser, const char *szDevId, int nCommand, c
 </td><td colspan="2">其它信息可参考4.35</td></tr>
 </table>
 
-### 查询月份录像或图片信息
+### 3、查询月份录像或图片信息
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int  DevCmdGeneral(int hUser, String szDevId,int   nCmdReq, String szCmd, int   nRetSize, int nTimeout,byte[] pInParam, int   nCmdRes, int nSeq)
-</td></tr>
-<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
-查询一个月中的录像或图片信息</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:35px;">定义</td><td colspan="2">int FUN_DevCmdGeneral(UI_HANDLE hUser, const char *szDevId, int nCmdReq, const char *szCmd, int nRetSize, int nTimeout, char *pInParam = NULL, int nInParamLen = 0, int nCmdRes = -1, int nSeq = 0);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">查询一个月中的录像或图片信息</td></tr>
 <tr><td rowspan="8" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
 <tr><td style="text-align:center">szDevId</td>
 <td>序列号</td></tr>
@@ -1061,27 +1302,25 @@ IOS: 使用FUN_DevSetAttr (UI_HANDLE hUser, const char *szDevId, int nCommand, c
 <td>超时时间(单位: ms),建议5000ms</td></tr>
 <tr><td style="text-align:center">pInParam</td>
 <td>
-<pre>
 {
     "Name":   "OPSCalendar",
       "OPSCalendar": {
         "Event":   "*",
-          "FileType": "h264",     //录像为“h264"，图片为“jpg”
+          "FileType": "h264", //录像为“h264"，图片为“jpg”
         "Month":   8,
         "Rev":   "",
         "Year":   2016
     },
     "SessionID":   "0x00000001"
-
 }
-</pre></td></tr>
+</td></tr>
 <tr><td style="text-align:center">nCmdRes</td>
 <td>暂时无用</td></tr>
 <tr><td rowspan="4" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG.DEV_CMD_EN
+</td><td>消息值：EUIMSG.EMSG_DEV_CMD_EN
 </td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>>=0：成功； <0：失败，详见错误码说明</td></tr>
@@ -1097,7 +1336,10 @@ IOS: 使用FUN_DevSetAttr (UI_HANDLE hUser, const char *szDevId, int nCommand, c
       "SessionID": "0x1c"
 }
 </pre>
-说明：Mask为一个二进制32位的数，从第一位开始判断，0：没有录像，1：有录像，直到整个月判断完毕
+说明：Mask为一个二进制32位的数，从第一位开始判断:
+<br/>
+0：没有录像;
+1：有录像，直到整个月判断完毕
 </td></tr>
 </table>
 
@@ -1106,7 +1348,7 @@ IOS: 使用FUN_DevSetAttr (UI_HANDLE hUser, const char *szDevId, int nCommand, c
 <table >
 <tr><td style="background-color:#ccc;text-align:center;width:20px;">定义</td><td colspan="2">int FUN_DevSearchPic(UI_HANDLE hUser, const char *szDevId, int nCmdReq, int nRetSize, int nTimeout, char *pInParam, int nInParamLen, int nCount, int nCmdRes = -1, const char * szFileName = NULL, int nSeq = 0);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
-查询设备缩略图  （该接口只适用于部分设备）</td></tr>
+查询、下载设备缩略图  （该接口只适用于部分设备）</td></tr>
 <tr><td rowspan="9" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
 <tr><td style="text-align:center">szDevId</td>
 <td>序列号</td></tr>
@@ -1134,49 +1376,587 @@ IOS: 使用FUN_DevSetAttr (UI_HANDLE hUser, const char *szDevId, int nCommand, c
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
 <tr><td style="text-align:center">id
-</td><td>消息值：EUIMSG   . DEV_SEARCH_PIC
+</td><td>消息值：EUIMSG   . EMSG_DEV_SEARCH_PIC
 </td></tr>
 <tr><td style="text-align:center">arg1
 </td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
 </table>
 
-## 保存设备实时流
-
+## 停止查询缩略图
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int DevSaveRealTimeStream (int hUser, String szDevId, int nChannel,   int nStreamType, String szFileName, int nSeq)</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_StopDevSearchPic(UI_HANDLE hUser, const char *szDevId, int nSeq);
+</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
-开始保存实时流</td></tr>
-<tr><td rowspan="4" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
-<tr><td style="text-align:center">nChannel</td>
-<td>通道号</td></tr>
-<tr><td style="text-align:center">nStreamType</td>
-<td>码流类型</td></tr>
-<tr><td style="text-align:center">szFileName
-</td><td>保存的文件名（绝对路径），如xx/xx/xx.mp4</td></tr>
-<tr><td rowspan="5" style="background-color:#ccc;text-align:center">结果消息
+ 停止查询，下载缩略图</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr><td style="text-align:center">szDevId</td>
+<td>设备序列号</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
 </td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
 </td></tr>
-<tr><td rowspan="3" style="text-align:center">id
-</td><td>START_PLAY(5501),打开视频</td></tr>
-<tr><td>EMSG_ON_MediaData_Save（5528，新加），开始保存数据</td></tr>
-<tr><td>EMSG_MediaData_Save_Process（5529， 新加），已保存数据的大小，每2s发送一次
+<tr><td style="text-align:center">id
+</td><td>消息值：EUIMSG   . EMSG_DEV_SEARCH_PIC_STOP
 </td></tr>
 <tr><td style="text-align:center">arg1
-</td><td><0：失败，详见错误码说明；>=0：成功，在id = EMSG_MediaData_Save_Process时，为保存数据的大小</td></tr>
-<tr><td style="background-color:#ccc;text-align:center">说明</td>
-<td colspan="2">如果返回失败，不需调用DevCloseRealTimeStream</td></tr>
+</td><td>无</td></tr>
 </table>
 
-## 停止保存实时流
+## 录像缩略图下载-单张图片
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int DevCloseRealTimeStream(<label
-style="color:red">int</label> <label style="color:#f63">hSaveObj<label>)
+<tr><td style="background-color:#ccc;text-align:center;width:20px;">定义</td><td colspan="2">int DownloadRecordBImage(int hUser, String szDevId, int nChannel, int nTime, String szFileName, int nTypeMask, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
+录像缩略图下载（最新固件才会支持2017.07.19）</td></tr>
+<tr><td rowspan="7" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr><td style="text-align:center">szDevId</td>
+<td>序列号</td></tr>
+<tr><td style="text-align:center">nChannel</td>
+<td>设备能力级-详见EDEV_STREM_TYPE
+</td></tr>
+<tr><td style="text-align:center">nTime</td>
+<td>图片时间点</td></tr>
+<tr><td style="text-align:center">szFileName</td>
+<td>文件存放路径</td></tr>
+<tr><td style="text-align:center">nTypeMask</td>
+<td>掩码  默认-1全部类型</td></tr>
+<tr><td style="text-align:center">szFileName</td>
+<td>图片文件名</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>nDownId：可用于FUN_CancelDownloadRecordImage，取消下载用
+</td><tr>
+<tr><td rowspan="6" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td style="text-align:center">id
+</td><td>消息值：异步消息EUIMSG . DOWN_RECODE_BPIC_START =  5534,    //录像缩略图下载开始<br>DOWN_RECODE_BPIC_FILE  =  5535,    //录像缩略图下载--文件下载结果返回<br>DOWN_RECODE_BPIC_COMPLETE =  5536, //录像缩略图下载-下载完成（结束）
+</td></tr>
+<tr><td style="text-align:center">arg1
+</td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
+<tr><td style="text-align:center">arg2
+</td><td>图片总个数</td></tr>
+<tr><td style="text-align:center">arg3
+</td><td>下载个数</td></tr>
+<tr><td style="text-align:center">str
+</td><td>图片名称</td></tr>
+</table>
 
+## 录像缩略图下载-多张图片
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:20px;">定义</td><td colspan="2">int FUN_DownloadRecordBImages(UI_HANDLE hUser, const char *szDevId, int nChannel, int nStartTime, int nEndTime, const char *szFilePath, int nTypeMask = -1, int nSeq = 0, int nMaxPicCount = 0x7fffffff);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
+录像缩略图下载（最新固件才会支持2017.07.19）</td></tr>
+<tr><td rowspan="9" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr><td style="text-align:center">szDevId</td>
+<td>序列号</td></tr>
+<tr><td style="text-align:center">nChannel</td>
+<td>设备能力级-详见EDEV_STREM_TYPE
+</td></tr>
+<tr><td style="text-align:center">nStartTime</td>
+<td>开始时间</td></tr>
+<tr><td style="text-align:center">nEndTime</td>
+<td>结束时间</td></tr>
+<tr><td style="text-align:center">szFileName</td>
+<td>文件存放路径</td></tr>
+<tr><td style="text-align:center">nTypeMask</td>
+<td>掩码  默认-1全部类型</td></tr>
+<tr><td style="text-align:center">szFileName</td>
+<td>图片文件名</td></tr>
+<tr><td style="text-align:center">nMaxPicCount</td>
+<td>最大下载个数 默认值: 0x7fffffff</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>nDownId：可用于FUN_CancelDownloadRecordImage，取消下载用
+</td><tr>
+<tr><td rowspan="6" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td style="text-align:center">id
+</td><td>消息值：异步消息EUIMSG . DOWN_RECODE_BPIC_START =  5534,    //录像缩略图下载开始<br>DOWN_RECODE_BPIC_FILE  =  5535,    //录像缩略图下载--文件下载结果返回<br>DOWN_RECODE_BPIC_COMPLETE =  5536, //录像缩略图下载-下载完成（结束）
+</td></tr>
+<tr><td style="text-align:center">arg1
+</td><td>==0：成功；<0：失败，详见错误码说明</td></tr>
+<tr><td style="text-align:center">arg2
+</td><td>图片总个数</td></tr>
+<tr><td style="text-align:center">arg3
+</td><td>下载个数</td></tr>
+<tr><td style="text-align:center">str
+</td><td>图片名称</td></tr>
+</table>
+
+## 取消录像缩略图下载
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_CancelDownloadRecordImage(const char *szDevId, int nDownId);
 </td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
- 停止保存实时流</td></tr>
+ 取消录像缩略图下载</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr><td style="text-align:center">szDevId</td>
+<td>设备序列号</td></tr>
+<tr><td style="text-align:center">nDownId</td>
+<td>录像下载开始的返回值，如果==0表示全部停止</td></tr>
+</table>
+
+## 设置设备下载队列最多任务数
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int FUN_SetDownRBImageQueueSize(const char *szDevId, int nMaxSize);
+</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
+ 设置设备下载队列最多任务数</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr><td style="text-align:center">szDevId</td>
+<td>设备序列号</td></tr>
+<tr><td style="text-align:center">nMaxSize</td>
+<td>下载队列最多任务数: nMaxSize == 0取消限制； nMaxSize > 0：下载最大排队任务数</td></tr>
+</table>
+
+## 获取掩码设置
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">bool Dev_IsSelectHex(const char *szHex, unsigned int nIndex);
+</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
+ 获取掩码设置-获取设置 0xffffffff ffffffff ffffffff: 31~0 63~32 95~64...</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr><td style="text-align:center">szHex</td>
+<td>掩码相关参数</td></tr>
+<tr><td style="text-align:center">nIndex</td>
+<td>掩码相关参数</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>False失败 
+</td><tr>
+</table>
+
+## 设置掩码设置
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">char *Dev_SetSelectHex(char szHex[48], unsigned int nIndex, bool bSelected);
+</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
+ 设置掩码设置</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr><td style="text-align:center">szHex</td>
+<td>掩码相关参数</td></tr>
+<tr><td style="text-align:center">nIndex</td>
+<td>掩码相关参数</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>修改的掩码 
+</td><tr>
+</table>
+
+## 通过SSID获取设备类型
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">int CheckDevType(const char *szDevSSID);
+</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
+ 通过SSID获取设备类型</td></tr>
 <tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
-<tr><td style="text-align:center">hSaveObj</td>
-<td>DevSaveRealTimeStream的返回值</td></tr>
+<tr><td style="text-align:center">szDevSSID</td>
+<td>设备的SSID</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>设备类型枚举值
+</td><tr>
+</table>
+
+## 获取设备运行状态
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">const char *SM_GetObjRunState(const char *szFun, const char *szObjId);
+</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
+ 获取设备运行状态</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr><td style="text-align:center">sFun</td>
+<td></td></tr>
+<tr><td style="text-align:center">sObjId</td>
+<td></td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>获取到的设备运行状态字节流
+</td><tr>
+</table>
+
+## 设置设备运行使能
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:40px;">定义</td><td colspan="2">void FunSDK_SMEnable(int hUser, String sFun, String sObjId, boolean bEnable)
+</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">
+ 设置设备运行使能</td></tr>
+<tr><td rowspan="4" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明</td></tr>
+<tr><td style="text-align:center">sFun</td>
+<td></td></tr>
+<tr><td style="text-align:center">sObjId</td>
+<td></td></tr>
+<tr><td style="text-align:center">bEnable</td>
+<td></td></tr>
+</td><tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>设备类型枚举值
+</td><tr>
+</table>
+
+## 使设备进入休眠状态(门铃)
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:50px;">定义</td><td colspan="2">int FUN_DevSleep(UI_HANDLE hUser, const char *szDevId, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">使设备进入休眠状态(门铃)
+</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">devId</td>
+<td>设备序列号</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG . EMSG_DEV_SLEEP 5141
+</td></tr>
+<tr><td  style="text-align:center">arg1
+</td><td>==EE_OK：成功；ps：不再等结果，默认总会成功，就算失败，过15秒，设备也会自动休眠</td></tr>
+</table>
+
+## 唤醒设备(门铃)
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:50px;">定义</td><td colspan="2">int FUN_DevWakeUp(UI_HANDLE hUser, const char *szDevId, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">唤醒设备，使之进入唤醒状态(适用于门铃)<br>
+注意：调用唤醒接口后，不管当前状态，执行唤醒操作，成功后马上返回结果并后台登录，15秒超时
+</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">devId</td>
+<td>设备序列号</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>消息值：EUIMSG . EMSG_DEV_WAKE_UP
+</td></tr>
+<tr><td  style="text-align:center">arg1
+</td><td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
+</table>
+
+## 获取DSS支持的能力级
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:50px;">定义</td><td colspan="2">uint FUN_GetDSSAbility(const char *szDevId, int nChannel);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">获取DSS支持的能力级
+</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">szDevId</td>
+<td>设备序列号</td></tr>
+<tr><td style="text-align:center">nChannel</td>
+<td>设备能力级-详见EDEV_STREM_TYPE</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>返回是否支持 > 0表示有此功能能力  <=0表示无
+</td><tr>
+</table>
+
+## 设置本地保存密码/用户名
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:50px;">定义</td><td colspan="2">int FUN_DevSetLocalPwd(const char *szDevId, const char *szUser, const char *szPwd);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">设置本地保存密码/用户名
+</td></tr>
+<tr><td rowspan="4" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">szDevId</td>
+<td>设备序列号</td></tr>
+<tr><td style="text-align:center">szUser</td>
+<td>用户名</td></tr>
+<tr><td style="text-align:center">szPwd</td>
+<td>密码</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>成功返回0，参数传递错误返回-1；
+</td><tr>
+</table>
+
+## 获取本地保存密码
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:50px;">定义</td><td colspan="2">char *FUN_DevGetLocalPwd(const char *szDevId, char szPwd[64]);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">获取本地保存密码
+</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">szDevId</td>
+<td>设备序列号</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>获取到的密码
+</td><tr>
+</table>
+
+## 获取本地保存用户名
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:50px;">定义</td><td colspan="2">char *FUN_DevGetLocalUserName(const char *szDevId, char szUserName[64]);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">获取本地保存用户名
+</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">szDevId</td>
+<td>设备序列号</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>获取到的用户名
+</td><tr>
+</table>
+
+## 获取设备能力级
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:50px;">定义</td><td colspan="2">int FUN_GetDevAbility(const char *szDevId, const char *szAbility);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">获取设备能力级
+</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">devId</td>
+<td>设备序列号</td></tr>
+<tr><td style="text-align:center">ability</td>
+<td>获取设备什么能力级参数<br>
+例：智能录像放回能力 "OtherFunction/SupportIntelligentPlayBack"<br>
+是否开通云存储 "XXXAbillity/CloudStore"<br><pre>
+能力级类型
+“OtherFunction/SupportIntelligentPlayBack”：是否支持智能回放
+其它说明：
+"SystemFunction": {
+        "AlarmFunction": {
+            "AlarmConfig": true,
+            "BlindDetect": true,
+            "IPCAlarm": false,
+            "LossDetect": true,
+            "MotionDetect": true,
+            "NetAbort": true,
+            "NetAbortExtend": false,
+            "NetAlarm": true,
+            "NetIpConflict": true,
+            "NewVideoAnalyze": true,
+            "PIRAlarm": false,
+            "SerialAlarm": false,
+            "StorageFailure": true,
+            "StorageLowSpace": true,
+            "StorageNotExist": true,
+            "VideoAnalyze": true
+        },
+        "CommFunction": {
+            "CommRS232": true,
+            "CommRS485": true
+        },
+        "EncodeFunction": {
+            "CombineStream": false,
+            "DoubleStream": true,
+            "IFrameRange": false,
+            "LowBitRate": false,
+            "SmartH264": false,
+            "SnapStream": false,
+            "WaterMark": false
+        },
+        "InputMethod": {
+            "NoSupportChinese": false
+        },
+        "MobileDVR": {
+            "CarPlateSet": false,
+            "DVRBootType": false,
+            "DelaySet": false,
+            "GpsTiming": false,
+            "StatusExchange": false
+        },
+        "NetServerFunction": {
+            "MACProtocol": false,
+            "MonitorPlatform": false,
+            "NATProtocol": false,
+            "Net3G": true,
+            "Net4G": true,
+            "NetARSP": true,
+            "NetAlarmCenter": true,
+            "NetAnJuP2P": false,
+            "NetBaiduCloud": false,
+            "NetBjlThy": false,
+            "NetDAS": false,
+            "NetDDNS": true,
+            "NetDHCP": true,
+            "NetDNS": true,
+            "NetDataLink": false,
+            "NetEmail": true,
+            "NetFTP": true,
+            "NetGodEyeAlarm": false,
+            "NetIPFilter": true,
+            "NetIPv6": false,
+            "NetKaiCong": false,
+            "NetKeyboard": false,
+            "NetLocalSdkPlatform": false,
+            "NetMobile": false,
+            "NetMobileWatch": false,
+            "NetMutliCast": false,
+            "NetNTP": true,
+            "NetNat": true,
+            "NetOpenVPN": false,
+            "NetPMS": true,
+            "NetPMSV2": true,
+            "NetPPPoE": true,
+            "NetPhoneMultimediaMsg": false,
+            "NetPhoneShortMsg": false,
+            "NetPlatMega": false,
+            "NetPlatShiSou": false,
+            "NetPlatVVEye": false,
+            "NetPlatXingWang": false,
+            "NetRTSP": true,
+            "NetSPVMN": false,
+            "NetSPVMNSIP": false,
+            "NetTUTKIOTC": false,
+            "NetUPNP": true,
+            "NetVPN": false,
+            "NetWifi": true,
+            "NetWifiMode": false,
+            "PlatFormGBeyes": false,
+            "XMHeartBeat": false
+        },
+        "OtherFunction": {
+            "AlterDigitalName": true,
+            "DownLoadPause": true,
+            "HddLowSpaceUseMB": false,
+            "HideDigital": true,
+            "MusicFilePlay": false,
+            "NOHDDRECORD": false,
+            "NotSupportAH": true,
+            "NotSupportAV": true,
+            "NotSupportTalk": false,
+            "SDsupportRecord": false,
+            "ShowAlarmLevelRegion": true,
+            "ShowFalseCheckTime": false,
+            "SupportAbnormitySendMail": true,
+            "SupportBT": false,
+            "SupportC7Platform": false,
+            "SupportCamareStyle": false,
+            "SupportCameraMotorCtrl": false,
+            "SupportCfgCloudupgrade": true,
+            "SupportCloudUpgrade": true,
+            "SupportCommDataUpload": false,
+            "SupportCorridorMode": false,
+            "SupportCustomOemInfo": false,
+            "SupportDigitalEncode": true,
+            "SupportDigitalPre": false,
+            "SupportDimenCode": true,
+            "SupportEncodeAddBeep": false,
+            "SupportFTPTest": false,
+            "SupportFishEye": false,
+            "SupportImpRecord": false,
+            "SupportIntelligentPlayBack": true,
+            "SupportMailTest": true,
+            "SupportMaxPlayback": true,
+            "SupportModifyFrontcfg": true,
+            "SupportNVR": true,
+            "SupportNetLocalSearch": true,
+            "SupportOSDInfo": false,
+            "SupportOnvifClient": true,
+            "SupportPOS": false,
+            "SupportPWDSafety": true,
+            "SupportPlayBackExactSeek": true,
+            "SupportPtzIdleState": false,
+            "SupportRTSPClient": false,
+            "SupportResumePtzState": false,
+            "SupportSPVMNNasServer": false,
+            "SupportSetDigIP": true,
+            "SupportShowConnectStatus": false,
+            "SupportShowProductType": false,
+            "SupportSmallChnTitleFont": false,
+            "SupportSnapCfg": false,
+            "SupportSnapSchedule": false,
+            "SupportSplitControl": true,
+            "SupportStatusLed": false,
+            "SupportStorageFailReboot": true,
+            "SupportSwitchResolution": true,
+            "SupportTextPassword": true,
+            "SupportTimeZone": true,
+            "SupportUserProgram": false,
+            "SupportWIFINVR": false,
+            "SupportWriteLog": true,
+            "Supportonviftitle": true,
+            "SuppportChangeOnvifPort": false,
+            "TitleAndStateUpload": true,
+            "USBsupportRecord": false
+        },
+        "PreviewFunction": {
+            "GUISet": false,
+            "Tour": false
+        },
+        "TipShow": {
+            "NoBeepTipShow": false,
+            "NoEmailTipShow": false,
+            "NoFTPTipShow": false
+        }
+    }
+</pre></td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>正常情况下返回 > 0表示有此功能能力 <=0表示无<br>是否开通云存储返回：-1：未知；0（不支持）、 1（支持已开通，正常使用）、2（支持已开通，服务到期） 、3（支持未开通）
+</td><tr>
+</table>
+
+## 设备是否处于局域网中
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:50px;">定义</td><td colspan="2">int Fun_DevIsSearched(const char *szDevId, SDK_CONFIG_NET_COMMON_V2 *devInfo);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">设备是否处于局域网中
+</td></tr>
+<tr><td rowspan="3" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">szDevId</td>
+<td>设备序列号</td></tr>
+<tr><td style="text-align:center">devInfo</td>
+<td>设备信息,需分配对象空间new byte[244];详见SDK_CONFIG_NET_COMMON_V2</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>返回值<=0,未搜到; 1,搜到
+</td><tr>
+</table>
+
+## 获取通道个数
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:50px;">定义</td><td colspan="2">int FUN_GetDevChannelCount(const char *szDevId);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">获取通道个数，该接口支持DSS的设备可用
+</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">szDevId</td>
+<td>设备序列号</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>通道个数，不在线返回0
+</td><tr>
+</table>
+
+## 通过SN获取对应的外网IP地址
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:50px;">定义</td><td colspan="2">Bool Fun_DevGetNetIPBySN(char* ip, const char *uuid);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">通过SN获取对应的外网IP地址
+</td></tr>
+<tr><td rowspan="2" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">uuid</td>
+<td>设备唯一标示符</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">返回</td><td colspan="2" style="text-align:center";>获取到的ip地址
+</td><tr>
+</table>
+
+## 跨网段设置设备配置
+
+<table >
+<tr><td style="background-color:#ccc;text-align:center;width:50px;">定义</td><td colspan="2">int FUN_DevSetNetCfgOverUDP(UI_HANDLE hUser, Bool bTempCfg, SNetCFG *pNetCfg, const char *szDeviceMac, const char *szDeviceSN, const char *szDevUserName, const char *szDevPassword, int nTimeout = 4000, int nSeq = 0);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">跨网段设置设备配置，目前只支持对有线网络配置进行设置
+</td></tr>
+<tr><td rowspan="8" style="background-color:#ccc;text-align:center">参数说明</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center">说明
+</td></tr>
+<tr><td style="text-align:center">bTempCfg</td>
+<td>存储标识：1临时保存,其他为永久保存</td></tr>
+<tr><td style="text-align:center">pNetCfg</td>
+<td>SNetCFG结构体地址</td></tr>
+<tr><td style="text-align:center">szDeviceMac</td>
+<td>设备Mac地址</td></tr>
+<tr><td style="text-align:center">szDeviceSN</td>
+<td>设备序列号</td></tr>
+<tr><td style="text-align:center">szDevUserName</td>
+<td>设备登录用户名</td></tr>
+<tr><td style="text-align:center">szDevPassword</td>
+<td>设备登录密码</td></tr>
+<tr><td style="text-align:center">nTimeout</td>
+<td>等待超时时间,单位毫秒</td></tr>
+</td><tr>
+tr><td rowspan="4" style="background-color:#ccc;text-align:center">结果消息
+</td><td style="background-color:#ccc;text-align:center;width:20%;">名称</td><td style="background-color:#ccc;text-align:center;">说明
+</td></tr>
+<tr><td  style="text-align:center">id
+</td><td>异步返回，EUIMSG . EMSG_DEV_SET_NET_IP_BY_UDP
+</td></tr>
+<tr><td  style="text-align:center">arg1
+</td><td>==EE_OK：成功；<0：失败，详见错误码说明</td></tr>
+<tr><td  style="text-align:center">arg1
+</td><td>设备Mac地址</td></tr>
 </table>
