@@ -24,7 +24,7 @@
     EE_FILE_IS_ILLEGAL = -90001, // FILE IS ILLEGAL
 
 
-#本接口用到的错误值枚举
+##本接口用到的错误值枚举
 	
     EE_DVR_SDK_NOTVALID            = -10000,            // 非法请求
     EE_DVR_ILLEGAL_PARAM        = -10002,            // 用户参数不合法
