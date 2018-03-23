@@ -1,7 +1,15 @@
 <table>
-<tr><td style="width:100px;text-align:center;">更新日期</td>
-<td style="text-align:center;">修改内容</td></tr>
- <tr>
+<tr>
+ <td style="width:100px;text-align:center;">更新日期</td> <td style="text-align:center;">修改内容</td>
+</tr>
+<tr>
+  <td> 2018-03-23</td>
+  <td>
+  Demo For ios更新：<br/>
+  1.IOS-FunSDKDemo缺少设备局域网搜索功能，在合适的界面加上去<br/>
+  </td>
+</tr>  
+<tr>
   <td> 2018-02-07</td>
   <td>
   SDK For ios & android 更新：<br/>
