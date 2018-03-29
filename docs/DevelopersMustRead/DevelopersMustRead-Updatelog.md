@@ -3,6 +3,13 @@
  <td style="width:100px;text-align:center;">更新日期</td> <td style="text-align:center;">修改内容</td>
 </tr>
 <tr>
+  <td> 2018-03-29</td>
+  <td>
+  Demo For ios更新：<br/>
+  1.预览和回放去除XM logo<br/>
+  </td>
+</tr>  
+<tr>
   <td> 2018-03-23</td>
   <td>
   Demo For ios更新：<br/>
