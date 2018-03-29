@@ -76,6 +76,12 @@
  - [Android常见问题](CommonproblemofFunSDKdevelopment/CommonproblemofFunSDKdevelopment-CommonproblemsAndroid.md)
  - [IOS常见问题](CommonproblemofFunSDKdevelopment/CommonproblemofFunSDKdevelopment-CommonproblemsiOS.md)
  - [其他常见问题](CommonproblemofFunSDKdevelopment/CommonproblemofFunSDKdevelopment-otherCommonproblems.md)
+ 
+- 开放平台问题汇总
+ - [用户常见问题](OpenPlatform/OpenPlatform-CommonUserProblems.md)
+ - [邮箱设置问题](OpenPlatform/OpenPlatform-MailboxSetting.md)
+ - [短信设置问题](OpenPlatform/OpenPlatform-TextMessageSetting.md)
+ - [其他常见问题](OpenPlatform/OpenPlatform-OtherCommonProblems.md)
 
 
 
