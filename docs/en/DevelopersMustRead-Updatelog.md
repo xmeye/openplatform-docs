@@ -13,6 +13,13 @@
 <table>
 <tr><td style="width:100px;text-align:center;">Update date</td>
 <td style="text-align:center;">Modified content</td></tr>
+
+<tr><td> 2018-03-23</td>
+<td>
+    Demo for ios　Update:<br/>
+	1.remove XM logo in preview
+<br/>
+</td></tr> 
 	
 <tr><td> 2018-03-23</td>
 <td>
