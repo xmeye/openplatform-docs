@@ -15,7 +15,7 @@
 <tr>
 	<td style="width:300px;"><img src="http://open.xmeye.net/upload/image/20160516/1463375682024076806.png"></td>
 	<td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDK.framework_IOS_ForCustom_V1.2.8_180207.zip">下载 SDK for iOS 2018-02-07</a></td>
-	<td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDKDemo_IOS_V2.2_20180323.zip">下载 Demo  for iOS 2018-03-23</a></td>
+	<td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDKDemo_IOS_V2.3_20180329.zip">下载 Demo  for iOS 2018-03-29</a></td>
 </tr>
 	
 <tr>
