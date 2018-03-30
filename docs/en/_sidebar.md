@@ -63,6 +63,11 @@
  - [Common problems Android](en/CommonproblemofFunSDKdevelopment-CommonproblemsAndroid.md)
  - [Common problems iOS](en/CommonproblemofFunSDKdevelopment-CommonproblemsiOS.md)
  - [other Common problems](en/CommonproblemofFunSDKdevelopment-otherCommonproblems.md)
-
+ 
+- Summary of open platform issues
+ - [Common user problems](en/OpenPlatform-CommonUserProblems.md)
+ - [Mailbox setting](en/OpenPlatform-MailboxSetting.md)
+ - [TextMessage setting](en/OpenPlatform-TextMessageSetting.md)
+ - [Other common problems](en/OpenPlatform-OtherCommonProblems.md)
 
 
