@@ -13,6 +13,13 @@
 <table>
 <tr><td style="width:100px;text-align:center;">Update date</td>
 <td style="text-align:center;">Modified content</td></tr>
+	
+<tr><td> 2018-04-11</td>
+<td>
+    SDK for ios　Update:<br/>
+	1.Optimize the experience of preview
+<br/>
+</td></tr> 
 
 <tr><td> 2018-03-29</td>
 <td>
