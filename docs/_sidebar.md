@@ -70,7 +70,7 @@
  - [Web(Java) Client](downloadcenter/downloadcenter-WebJavaClient.md)
  - [NetSDK下载(Windows)](downloadcenter/downloadcenter-NetSDKdownloadWin32.md)
  - [NetSDK下载(Linux & Mac)](downloadcenter/downloadcenter-NetSDKdownloadLinuxMAC.md)
- - [MyeyeSDK下载(Win32)](downloadcenter/downloadcenter-MyeyeSDKdownloadWin32.md)
+ - [MyeyeSDK下载](downloadcenter/downloadcenter-MyeyeSDKdownloadWin32.md)
 
 - FunSDK开发常见问题
  - [Android常见问题](CommonproblemofFunSDKdevelopment/CommonproblemofFunSDKdevelopment-CommonproblemsAndroid.md)
