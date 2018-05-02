@@ -4,7 +4,10 @@
 <tr><td style="width:300px;" rowSpan="2">Win</td><td><a href="https://pan.sohu.net/f/ODMxMTcsdWtoaGk.htm">下载MyeyeSDK_Sohu.</a></td><td><a href="https://kss.ksyun.com/xmcfs/sdk/ClientSDK%20Demo_12713.zip">ClientSDK Demo_12713_Ksyun</a></td></tr>
 <tr><td><a href="https://pan.sohu.net/s/ODU1MTksdXFxaHg.htm">下载MyEyeWeb开发包_Sohu</a></td><td><a href="https://kss.ksyun.com/xmcfs/sdk/myeye_client_web.rar">myeye_client_web_Ksyun</a></td></tr>
  
-<tr><td style="width:300px;">Android</td><td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/myeyesdk/demo/android/Android_AS_Demo_20180122.zip">Demo For Android_20180122</a></td><td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/myeyesdk/sdk/MyEyeSDK_20170930.zip">MyEyeSDK For Android</a></td></tr>
+<tr>
+<td style="width:300px;">Android</td><td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/myeyesdk/demo/android/Android_AS_Demo_20180502.zip">Demo For Android_20180502</a></td>
+<td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/myeyesdk/sdk/MyEyeSDK_20170930.zip">MyEyeSDK For Android</a></td>
+</tr>
 
 <tr><td style="width:300px;">IOS</td><td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/myeyesdk/demo/ios/MyEyeSDKDemo_20180111.zip">Demo For IOS 20180111</a></td><td>SDK For IOS</td></tr>
 
