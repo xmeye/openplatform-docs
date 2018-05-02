@@ -57,7 +57,7 @@
  - [Web Java Client](en/downloadcenter-WebJavaClient.md)
  - [NetSDK download Win32](en/downloadcenter-NetSDKdownloadWin32.md)
  - [NetSDK download LinuxMAC](en/downloadcenter-NetSDKdownloadLinuxMAC.md)
- - [MyeyeSDK download Win32](en/downloadcenter-MyeyeSDKdownloadWin32.md)
+ - [MyeyeSDK download](en/downloadcenter-MyeyeSDKdownloadWin32.md)
 
 - Common problems of FunSDK development
  - [Common problems Android](en/CommonproblemofFunSDKdevelopment-CommonproblemsAndroid.md)
