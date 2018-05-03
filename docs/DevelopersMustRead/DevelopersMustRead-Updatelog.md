@@ -3,6 +3,20 @@
  <td style="width:100px;text-align:center;">更新日期</td> <td style="text-align:center;">修改内容</td>
 </tr>
 <tr>
+  <td> 2018-05-03</td>
+  <td>
+  SDK For Android更新：<br/>
+  1.添加对门铃的支持<br/>
+  2.添加了从服务器获取能力级接口SysGetDevAbilitySetFromServer<br/>
+  3.添加了从服务器端获取当前的账号是否为该设备的主账号的接口SysIsDevMasterAccountFromServer<br/>
+  4.添加了删除设备下关联的所有账号报警订阅的接口UnlinkAllAccountsOfDev<br/>
+  5.DSS视频实时流密码校验方式可设置同步为设备登录方式
+    Android: FunSDK.SetFunIntAttr(EFUN_ATTR.DSS_STREAM_ENC_SYN_DEV, 1);
+    IOS:       FUN_SetFunIntAttr(EFUN_ATTR_DSS_STREAM_ENC_SYN_DEV, 1);<br/>
+  6.已知bug修复
+  </td>
+</tr>   
+<tr>
   <td> 2018-04-21</td>
   <td>
   Demo For ios更新：<br/>
