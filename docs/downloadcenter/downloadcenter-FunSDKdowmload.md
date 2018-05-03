@@ -22,8 +22,8 @@
 	
 <tr>
 	<td><img src="http://open.xmeye.net/upload/image/20160516/1463375687266037320.png"></td>
-	<td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKLibs_ReleaseV1.2.0_20180207.zip">
-		下载 SDK for Android v1.2.0 2018-02-07</a></td>
+	<td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKLibs_ReleaseV1.2.1_20180503.zip">
+		下载 SDK for Android v1.2.1 2018-05-03</a></td>
 	<td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKDemo_v1.4.0_20171127.zip">
 		下载 Demo for Android v1.4.0 2017-11-27</a> </td>
 </tr>
