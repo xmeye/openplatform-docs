@@ -30,9 +30,9 @@ Download Demo for iOS 2018-4-21 new
 
 </td><td>
 
-<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKLibs_ReleaseV1.2.0_20180207.zip"><br/>
+<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKLibs_ReleaseV1.2.1_20180503.zip"><br/>
 
-Download SDK   for Android v1.2.0 2017-02-07
+Download SDK   for Android v1.2.1 2018-05-03
 
 </a>
 
