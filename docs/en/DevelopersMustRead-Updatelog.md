@@ -13,7 +13,21 @@
 <table>
 <tr><td style="width:100px;text-align:center;">Update date</td>
 <td style="text-align:center;">Modified content</td></tr>
-	
+
+<tr><td> 2018-05-03</td>
+<td>
+    SDK for Android　Update:<br/>
+	1. Add support for doorbells<br/>
+	2. Added ability to get the ability level interface from server SysGetDevAbilitySetFromServer<br/>
+	3. Added interface SysIsDevMasterAccountFromServer to obtain from the server whether the current account is the master 		   account of the device<br/>
+	4. Added the interface UnlinkAllAccountsOfDev to delete all account alarm subscriptions associated with the device<br/>
+	5. DSS video real-time stream password verification mode can be set to synchronize the device login <br/>
+	Android:FunSDK.SetFunIntAttr (EFUN_ATTR.DSS_STREAM_ENC_SYN_DEV, 1);<br/>
+	IOS: FUN_SetFunIntAttr (EFUN_ATTR_DSS_STREAM_ENC_SYN_DEV, 1);<br/>
+	6. Known bug fixes
+<br/>
+</td></tr> 
+
 <tr><td> 2018-04-21</td>
 <td>
     Demo for ios　Update:<br/>
