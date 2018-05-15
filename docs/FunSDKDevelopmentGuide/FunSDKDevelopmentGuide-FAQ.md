@@ -12,10 +12,8 @@ A： 虽然新的版本依然保持了在无用户登录情况下的设备直接
 <label style="color:#c30"><b> Q： 为什么查询设备状态失败？</b></label><br>
 A： 首先确认手机网络连接是否正常；再次确认是否根据设备方式进行了正确的初始化，如果是本地模式直接通过序列号查询设备状态，确保<label style="color:#000044;"><b>FunSDK.SysInitLocal()</b></label>已经被执行，如果是用户模式，确保<label style="color:#000044;"><b>FunSDK.SysInitNet()</b></label>已经被执行，并且ServerIP是可用的；
 
-
 <label style="color:#c30"><b> Q： 用户无法登陆，用户注册失败，用户相关接口都无法使用？</b></label><br>
 A： 确认<label style="color:#000044;"><b>FunSDK.XMCloudPlatformInit(uuid, AppKey, AppSecret, moveCard)</b></label>已经被正确调用，同时确认APP证书的正确性；
-
 
 <label style="color:#c30"><b>Q： 设备断电后，设备列表中设备状态仍然为在线状态，如何处理？</b></label><br>
 A： 设备断电后，如果在3分钟内状态设备状态更新为“离线”，为正常情况；如果超出3分钟仍然显示为在线状态，请确认APP已经及时刷新设备状态，如果已经刷新了设备列表/设备状态，仍然显示为在线状态，还请及时联系业务员或客服人员；
@@ -24,16 +22,20 @@ A： 设备断电后，如果在3分钟内状态设备状态更新为“离线�
 ## 低功耗产品唤醒接口说明
 
 门铃等设备唤醒接口:
+
 ```
 public static native int DevWakeUp(int hUser, String szDevId, int nSeq);
 hUser:回调ID
 szDevId：设备序列号
 nSeq:默认传0即可
 ```
+
 需要唤醒设备的时候直接调用:
+
 ```
 FunSDK.DevWakeUp(GetId(), GetCurDevId(), 0);
 ```
+
 然后在回调函数中再去登录设备或者打开视频操作:
 ![](../image/Wake-up-interface.jpg)
 
@@ -43,6 +45,7 @@ msg.arg1 < 0的时候 表示唤醒失败
 ```
 
 让设备休眠的时候直接登出设备即可:
+
 ```
 FunSDK.DevLogout(this.GetId(),GetCurDevId(), 0);
 ```
