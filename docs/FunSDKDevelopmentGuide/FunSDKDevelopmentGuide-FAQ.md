@@ -28,24 +28,24 @@ A： 设备断电后，如果在3分钟内状态设备状态更新为“离线�
 ## 低功耗产品唤醒接口说明
 
 门铃等设备唤醒接口:
-
+```
 public static native int DevWakeUp(int hUser, String szDevId, int nSeq);
     hUser:回调ID
     szDevId：设备序列号
     nSeq:默认传0即可
-
+```
 需要唤醒设备的时候直接调用:
-
+```
 FunSDK.DevWakeUp(GetId(), GetCurDevId(), 0);
-
+```
 然后在回调函数中再去登录设备或者打开视频操作:
 ![](../image/Wake-up-interface.jpg)
-
+```
 msg.arg1 >= 0的时候 表示唤醒成功，然后可以登录、打开视频操作了
 msg.arg1 < 0的时候 表示唤醒失败
-
+```
 让设备休眠的时候直接登出设备即可:
-
+```
 FunSDK.DevLogout(this.GetId(),GetCurDevId(), 0);
-
+```
 <label style="color:#c30">注：设备是在没有任何客户端连接的情况下会自动休眠</label>
