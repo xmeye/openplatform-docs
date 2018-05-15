@@ -38,7 +38,7 @@ FunSDK.DevWakeUp(GetId(), GetCurDevId(), 0);
 ```
 
 然后在回调函数中再去登录设备或者打开视频操作:
-![](../image/Wake-up-interface.jpg)
+
 
 ```
 msg.arg1 >= 0的时候 表示唤醒成功，然后可以登录、打开视频操作了
