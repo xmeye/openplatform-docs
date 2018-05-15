@@ -19,36 +19,4 @@ A： 确认<label style="color:#000044;"><b>FunSDK.XMCloudPlatformInit(uuid, App
 A： 设备断电后，如果在3分钟内状态设备状态更新为“离线”，为正常情况；如果超出3分钟仍然显示为在线状态，请确认APP已经及时刷新设备状态，如果已经刷新了设备列表/设备状态，仍然显示为在线状态，还请及时联系业务员或客服人员。
 
 
-## 低功耗产品唤醒接口说明
 
-
-### 门铃等设备唤醒接口:
-
-```
-public static native int DevWakeUp(int hUser, String szDevId, int nSeq);
-hUser:回调ID
-szDevId：设备序列号
-nSeq:默认传0即可
-```
-
-### 需要唤醒设备的时候直接调用:
-
-```
-FunSDK.DevWakeUp(GetId(), GetCurDevId(), 0);
-```
-
-### 然后在回调函数中再去登录设备或者打开视频操作:
-![](../image/Wake-up-interface.jpg)
-
-```
-msg.arg1 >= 0的时候 表示唤醒成功，然后可以登录、打开视频操作了
-msg.arg1 < 0的时候 表示唤醒失败
-```
-
-### 让设备休眠的时候直接登出设备即可:
-
-```
-FunSDK.DevLogout(this.GetId(),GetCurDevId(), 0);
-```
-
-<label style="color:#c30">注：设备是在没有任何客户端连接的情况下会自动休眠</label>
