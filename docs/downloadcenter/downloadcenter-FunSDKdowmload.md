@@ -29,6 +29,8 @@
 </tr>
 </table>
 
+<label style="color:#039"> 注：Demo 里的库版本较新，但只做为测试库，仅供调试开发使用</label>
+
 ## 集成相关问题及解决方法
 
 <div style="margin-left:20px;">
