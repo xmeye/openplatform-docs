@@ -5,7 +5,7 @@
 <tr><td><a href="https://pan.sohu.net/s/ODU1MTksdXFxaHg.htm">下载MyEyeWeb开发包_Sohu</a></td><td><a href="https://kss.ksyun.com/xmcfs/sdk/myeye_client_web.rar">myeye_client_web_Ksyun</a></td></tr>
  
 <tr>
-<td style="width:300px;">Android</td><td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/myeyesdk/demo/android/Android_AS_Demo_20180502.zip">Demo For Android_20180502</a></td>
+<td style="width:300px;">Android</td><td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/myeyesdk/demo/android/Android_AS_Demo_20180518.zip">Demo For Android_20180518</a></td>
 <td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/myeyesdk/sdk/MyEyeSDK_20170930.zip">MyEyeSDK For Android</a></td>
 </tr>
 
