@@ -13,3 +13,5 @@
 
 <tr><td style="width:300px;">Documents</td><td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/myeyesdk/document/MyEyeSDK%28Android%29%E6%8E%A5%E5%8F%A3%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.docx">MyEyeSDK(Android)接口说明</a></td><td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/myeyesdk/document/MyEyeSDK%28iOS%29%E6%8E%A5%E5%8F%A3%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.docx">MyEyeSDK(iOS)接口使用说明</a></td></tr>
  </table>
+ 
+ <label style="color:#900"> 注：Demo 里的库版本较新，但只做为测试库，仅供调试开发使用</label>
