@@ -1613,7 +1613,7 @@ IOS: 使用FUN_DevSetAttr (UI_HANDLE hUser, const char *szDevId, int nCommand, c
 ## 唤醒设备(门铃)
 
 <table >
-<tr><td style="background-color:#ccc;text-align:center;width:50px;">定义</td><td colspan="2">int DevSleep(int hUser, String szDevId, int nSeq);</td></tr>
+<tr><td style="background-color:#ccc;text-align:center;width:50px;">定义</td><td colspan="2">int DevWakeUp(int hUser, String szDevId, int nSeq);</td></tr>
 <tr><td style="background-color:#ccc;text-align:center">描述</td><td colspan="2">唤醒设备，使之进入唤醒状态(适用于门铃)<br>
 注意：调用唤醒接口后，不管当前状态，执行唤醒操作，成功后马上返回结果并后台登录，15秒超时
 </td></tr>
