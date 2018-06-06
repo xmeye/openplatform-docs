@@ -39,6 +39,9 @@
 ![](../image/ali9.jpg)
 
 5、设置模板：
+
+<label style="color:#c30">注册短信模板和找回密码的绑定模板都需要设置。至少要设置两个模板。</label>
+
 ![](../image/ali10.jpg)
 
 ![](../image/ali11.jpg)
