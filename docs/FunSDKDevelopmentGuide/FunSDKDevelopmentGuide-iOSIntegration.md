@@ -29,6 +29,11 @@ FunSDK.framework
 7、C++ Standard Library : Compiler Default     
 8、Preprocessor Macros : Debug:DEBUG=1 OS_IOS=1 FORMAL=1     
                          Release :OS_IOS=1 FORMAL=1
+			 
+			 
+####需要添加的系统framework：    AVKit,AssetsLibrary,UserNotification,AudioToolBox,CoreMedia,OpenAL,MediaPlayer,AVFoundation,OpenGLES,GLKit,VideoToolbox 
+libz.tbd,libstdc++.6.0.9.tbd,libz2.tbd,libresolv.tbd
+libvrsoft.a 这是我司自己编译的鱼眼库，要集成鱼眼设备的用户，可以添加
 
 
 ## 基本功能集成
