@@ -32,7 +32,7 @@ FunSDK.framework
 			 
 			 
 ####需要添加的系统framework：    AVKit,AssetsLibrary,UserNotification,AudioToolBox,CoreMedia,OpenAL,MediaPlayer,AVFoundation,OpenGLES,GLKit,VideoToolbox 
-libz.tbd,libstdc++.6.0.9.tbd,libz2.tbd,libresolv.tbd
+libz.tbd,libstdc++.6.0.9.tbd,libz2.tbd,libresolv.tbd         
 libvrsoft.a 这是我司自己编译的鱼眼库，要集成鱼眼设备的用户，可以添加
 
 
