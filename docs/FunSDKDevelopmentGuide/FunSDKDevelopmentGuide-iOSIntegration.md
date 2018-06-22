@@ -20,15 +20,15 @@ FunSDK.framework
 除了 <lable style="color:red">FunSDK.framework </lable>之外， 还需要加入  <lable style="color:red"> OpenAL.framework, libresolv,libiconv,libbz2,libz</lable>这几个系统自带的framework/库。
 
 #### 3、bulid settings配置：
-1、Build Active Architure Only :YES \n
-2、Enable Bitode :NO
-3、Enable Testability:NO
-4、Other Linker Flags :-ObjC
-5、C Language Dialect : Compiler Default
-6、C++ Language Dialect :Compiler Default
-7、C++ Standard Library : Compiler Default
-8、Preprocessor Macros : Debug:DEBUG=1 OS_IOS=1 FORMAL=1
-                                     Release :OS_IOS=1 FORMAL=1
+####1、Build Active Architure Only :YES 
+####2、Enable Bitode :NO
+####3、Enable Testability:NO
+####4、Other Linker Flags :-ObjC
+####5、C Language Dialect : Compiler Default
+####6、C++ Language Dialect :Compiler Default
+####7、C++ Standard Library : Compiler Default
+####8、Preprocessor Macros : Debug:DEBUG=1 OS_IOS=1 FORMAL=1
+####                                     Release :OS_IOS=1 FORMAL=1
 
 
 ## 基本功能集成
