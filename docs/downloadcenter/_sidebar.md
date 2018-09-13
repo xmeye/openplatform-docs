@@ -57,8 +57,7 @@
 - 下载中心
  - [FunSDK下载(Android & iOS)](downloadcenter/downloadcenter-FunSDKdowmload.md)
  - [Web(Java) Client](downloadcenter/downloadcenter-WebJavaClient.md)
- - [NetSDK下载(Windows)](downloadcenter/downloadcenter-NetSDKdownloadWin32.md)
- - [NetSDK下载(Linux & Mac)](downloadcenter/downloadcenter-NetSDKdownloadLinuxMAC.md)
+ - [NetSDK下载](downloadcenter/downloadcenter-NetSDKdownloadWin32.md)
  - [MyeyeSDK下载](downloadcenter/downloadcenter-MyeyeSDKdownloadWin32.md)
 
 - FunSDK开发常见问题
