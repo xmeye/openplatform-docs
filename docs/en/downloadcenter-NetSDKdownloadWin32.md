@@ -4,12 +4,14 @@
 
          Thank you!
 
-## SDK and Demo download address
+## download address
 
-<table>
-<tr><td style="width:200px;"> </td><td style="width:200px;">Sohu</td><td style="width:200px;">Ksyun</td></tr>
-<tr><td></td><td><a href="https://pan.sohu.net/f/MTY4MzQsaGR1a20.htm">download NetSDK</a> </td><td><a href="https://kss.ksyun.com/xmcfs/sdk/NETSDK(20170418).zip">download NetSDK</a>
-</td></tr>
-<tr><td></td><td><a href="https://pan.sohu.net/s/ODU5OTEsdXF4eGg.htm">download CGI SDK</a></td><td>
-	<a href="https://kss.ksyun.com/xmcfs/sdk/CGI_demo.zip">download CGI SDK</a></td></tr>
-</table>
+ <table>
+ <tr><td style="width:200px;"> </td><td style="width:200px;">Sohu</td><td style="width:200px;">Ksyun</td><td>Explanation</td><td>Version</td></tr>
+ <tr><td>Windows</td><td><a href="https://pan.sohu.net/f/MTY4MzQsaGR1a20.htm">Download NetSDK</a> </td><td><a href="https://kss.ksyun.com/xmcfs/sdk/NETSDK(20180115).zip">Download NetSDK</a>
+  </td><td></td><td></td></tr>
+ <tr><td>Linux</td><td><a href="https://pan.sohu.net/s/ODk2NDgsdXhkbXU.htm">Linux</a></td><td><a href="https://kss.ksyun.com/xmcfs/sdk/Linux(20170519).zip">Linux</a></td><td></td><td></td></tr>
+<tr><td>Mac</td><td><a href="https://pan.sohu.net/s/ODk2NDcsdXhkbWk.htm">Mac</a></td><td><a href="https://kss.ksyun.com/xmcfs/sdk/MAC(20170518).zip">Mac</a></td><td></td><td></td></tr>
+ <tr><td>CGI</td><td><a href="https://pan.sohu.net/s/ODU5OTEsdXF4eGg.htm">download CGI SDK</a></td><td><a href="https://kss.ksyun.com/xmcfs/sdk/CGI_demo.zip">download CGI SDK</a></td><td></td><td></td></tr>
+ <tr><td>XNetSDK</td><td></td><td></td><td></td><td></td></tr>
+ </table>
