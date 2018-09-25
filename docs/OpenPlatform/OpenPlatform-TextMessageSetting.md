@@ -52,6 +52,18 @@
 
 #### 腾讯云平台
 
+![](../image/tx0.jpg)
+
+![](../image/tx1.jpg)
+
+![](../image/tx2.jpg)
+
+![](../image/tx3.jpg)
+
+![](../image/tx4.jpg)
+
+<label style="color:#c30">将获取到的1、SDK AppID 2、App Key 3、模板ID 三个值填入开放平台短信模板中，就可以使用自己的短信模板了</label>
+
 #### 华为云平台
 
 ![](../image/hw0.jpg)
