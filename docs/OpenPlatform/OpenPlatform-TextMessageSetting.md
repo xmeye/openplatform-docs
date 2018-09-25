@@ -12,9 +12,7 @@
 ### 短信模板支持哪些平台？
 答：我们目前支持
     1、[阿里云平台短信服务](https://www.aliyun.com/product/sms)
-
     2、[腾讯云平台短信服务](https://cloud.tencent.com/product/sms)
-
     3、[华为云平台短信服务](https://www.huaweicloud.com/product/msgsms.html)
 
 
@@ -73,9 +71,7 @@
 ### 短信模板上要填写的信息哪来？
 答：我们目前支持
     1、[阿里云平台短信服务](https://www.aliyun.com/product/sms)
-
     2、[腾讯云平台短信服务](https://cloud.tencent.com/product/sms)
-
     3、[华为云平台短信服务](https://www.huaweicloud.com/product/msgsms.html)
 
     请去相对应的页面进行短信服务申请，申请成功后，将短信模板所需要的信息填入测试成功后保存即可。
