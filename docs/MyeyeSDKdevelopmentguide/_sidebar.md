@@ -9,6 +9,9 @@
   - [库方法说明](WebDevelopmentGuide/WebDevelopmentGuide-Librarymetheddescription.md)
   - [状态码说明](WebDevelopmentGuide/WebDevelopmentGuide-StateCodeDescription.md)
 
+- Misc接口
+  - [对外开放Misc接口使用说明](MiscInterface/MiscInterface-InstructionsForOpeningMiscInterface.md)
+
 - FunSDK开发指南
  - [iOS集成](FunSDKDevelopmentGuide/FunSDKDevelopmentGuide-iOSIntegration.md)
  - [Android集成](FunSDKDevelopmentGuide/FunSDKDevelopmentGuide-AndroidIntegration.md)
@@ -52,7 +55,6 @@
  - [MyEye简易开发文档](MyeyeSDKdevelopmentguide/MyeyeSDKdevelopmentguide-MyEyesimpledevelopmentdocument.md)
  - [错误码说明](MyeyeSDKdevelopmentguide/MyeyeSDKdevelopmentguide-Errorcodedescription.md)
  - [接口定义](MyeyeSDKdevelopmentguide/MyeyeSDKdevelopmentguide-interfacedefinition.md)
- - [更新日志](MyeyeSDKdevelopmentguide/MyeyeSDKdevelopmentguide-UpdateLog.md)
  
 - 下载中心
  - [FunSDK下载(Android & iOS)](downloadcenter/downloadcenter-FunSDKdowmload.md)
