@@ -10,7 +10,7 @@
   - [状态码说明](WebDevelopmentGuide/WebDevelopmentGuide-StateCodeDescription.md)
 
 - Misc接口
-  - [对外开放Misc接口使用说明](InstructionsForOpeningMiscInterface/MiscInterface-InstructionsForOpeningMiscInterface.md)
+  - [对外开放Misc接口使用说明](MiscInterface/MiscInterface-InstructionsForOpeningMiscInterface.md)
 
 - FunSDK开发指南
  - [iOS集成](FunSDKDevelopmentGuide/FunSDKDevelopmentGuide-iOSIntegration.md)
