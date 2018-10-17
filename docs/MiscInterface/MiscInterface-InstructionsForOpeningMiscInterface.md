@@ -37,6 +37,4 @@ URL : https://misc.xmeye.net/api/getPlayUrl
 
 示例：
 
-https://misc.xmeye.net/api/getPlayUrl?uuid=9605b67eadbe47c98448f4a72e724bb6&appkey=4e5c
-c7a4424348daa50698771c5fe72a&tm=00000011539754039447&sign=fa254a979feed5ee840a7c4
-923497c2b&sn=c5bf7751f17a23bd&ver=1
+https://misc.xmeye.net/api/getPlayUrl?uuid=9605b67eadbe47c98448f4a72e724bb6&appkey=4e5cc7a4424348daa50698771c5fe72a&tm=00000011539754039447&sign=fa254a979feed5ee840a7c4923497c2b&sn=c5bf7751f17a23bd&ver=1
