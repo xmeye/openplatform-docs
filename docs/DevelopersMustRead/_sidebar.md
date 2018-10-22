@@ -13,7 +13,7 @@
   - [对外开放Misc接口使用说明](MiscInterface/MiscInterface-InstructionsForOpeningMiscInterface.md)
 
 - 雄迈云平台
-  - [雄迈云平台第三方对接](XMCloudPlatform/XMCloudPlatform-ThirdInterface.md)
+  - [报警消息推送对接](XMCloudPlatform/XMCloudPlatform-ThirdInterface.md)
 
 - FunSDK开发指南
  - [iOS集成](FunSDKDevelopmentGuide/FunSDKDevelopmentGuide-iOSIntegration.md)
