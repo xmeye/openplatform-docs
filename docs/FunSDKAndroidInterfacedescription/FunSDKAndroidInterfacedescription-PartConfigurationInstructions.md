@@ -378,12 +378,15 @@ public class SMCInitInfo {
     }
 }
 
-//使用Url初始化报警推送,只需要将url设置到token参数里就行
+
+//使用Url初始化报警推送,主要修改: appType设置”Third:url”
 SMCInitInfo info = new SMCInitInfo();
-        G.SetValue(info.st_0_user, mUserName);
-        G.SetValue(info.st_1_password, mPassWord);
-        G.SetValue(info.st_2_token, url);
+G.SetValue(info.st_0_user, mUserName);
+G.SetValue(info.st_1_password, mPassWord);
+G.SetValue(info.st_2_token, token);
+G.SetValue(mSMCInitInfo.st_5_appType, "Third:http://xxxxx xxxx");//(例：Third:http(s)://xmey.net:80/xxx/xxx 或 Third:ip:80 中间用“:”做分隔符)
 MpsClient.Init(userId, G.ObjToBytes(info), 0);
+
 ```
 
 
