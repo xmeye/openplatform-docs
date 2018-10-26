@@ -210,6 +210,158 @@ TimeSection 设置在某段时间内录像
 0001普通录像
 0010 和0011和0100 代表报警录像
 
+## 时间夏令时同步
+
+### 同步设备时间
+
+```
+  JsonConfig.OPTIME_SET  =  "OPTimeSetting"
+    protected void syncDevTime(int userID,String devSN) {
+        Calendar c = Calendar.getInstance(Locale.getDefault());
+        String time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(c.getTime());
+        FunSDK.DevSetConfigByJson(userID,devSN, JsonConfig.OPTIME_SET,
+                HandleConfigData.getSendData(JsonConfig.OPTIME_SET, "0x00000001", time), -1, 5000, 0);
+    }
+```
+
+### 设备时区同步
+
+```
+    /**
+     * JsonConfig.SYSTEM_TIMEZONE = "System.TimeZone"
+     * @param userID
+     * @param devSN  设备序列号
+     */
+    protected void syncDevTimeZone(int userID,String devSN){
+        TimeZoneBean timeZoneBean = new TimeZoneBean();
+        timeZoneBean.timeMin = setTimeZone();
+        timeZoneBean.FirstUserTimeZone = 0;
+        FunSDK.DevSetConfigByJson(userID, devSN, JsonConfig.SYSTEM_TIMEZONE,
+                HandleConfigData.getSendData(JsonConfig.SYSTEM_TIMEZONE, "0x1", timeZoneBean), -1, 5000, 0);
+
+    }
+```
+
+### 同步夏令时
+```
+/**
+     * @ param userID
+     * @param userID
+     * @param locationBean  设置夏令时之前要先获取” General.Location”配置,然后设置该配置
+     */
+
+    protected void syncDevTimeZone(int userID, String devSN, LocationBean locationBean){
+        TimeZoneBean timeZoneBean = new TimeZoneBean();
+        timeZoneBean.timeMin = setTimeZone();
+        timeZoneBean.FirstUserTimeZone = 0;
+        FunSDK.DevSetConfigByJson(userID, devSN, JsonConfig.SYSTEM_TIMEZONE,
+                HandleConfigData.getSendData(JsonConfig.SYSTEM_TIMEZONE, "0x1", timeZoneBean), -1, 5000, 0);
+        if (locationBean != null) {
+            DayLightTimeBean dayLightTimeBean = getDayLightTimeInfo(TimeZone.getDefault());
+            if (dayLightTimeBean != null) {
+                if (dayLightTimeBean.useDLT) {
+                    locationBean.setdSTRule("On");
+                    DSTimeBean dstStart = new DSTimeBean();
+                    dstStart.setYear(dayLightTimeBean.year);
+                    dstStart.setMonth(dayLightTimeBean.beginMonth);
+                    dstStart.setDay(dayLightTimeBean.beginDay);
+                    DSTimeBean dstEnd = new DSTimeBean();
+                    dstEnd.setYear(dayLightTimeBean.year);
+                    dstEnd.setMonth(dayLightTimeBean.endMonth);
+                    dstEnd.setDay(dayLightTimeBean.endDay);
+                    locationBean.setdSTStart(dstStart);
+                    locationBean.setdSTEnd(dstEnd);
+                }else {
+                    locationBean.setdSTRule("Off");
+                }
+            }
+            FunSDK.DevSetConfigByJson(userID, devSN, ” General.Location”,
+                    HandleConfigData.getSendData(” General.Location”, "0x02", locationBean), -1, 5000, 0);
+        }
+    }
+```
+
+### 时区设置
+
+```
+    private int setTimeZone() {
+        Calendar cal = Calendar.getInstance(Locale.getDefault());
+        float zoneOffset = (float) cal.get(java.util.Calendar.ZONE_OFFSET);
+        float zone = (float) (zoneOffset / 60.0 / 60.0 / 1000.0);// 时区，东时区数字为正，西时区为负
+        return (int) (-zone * 60);
+    }
+```
+
+### 通过时区信息返回当年的夏令时的起止日期
+
+```
+    /**
+     * @param tz
+     * @return
+     */
+    protected DayLightTimeBean getDayLightTimeInfo(TimeZone tz) {
+        DayLightTimeBean dltInfo = new DayLightTimeBean();
+        dltInfo.useDLT = tz.useDaylightTime();
+        if (dltInfo.useDLT) {
+            try {
+                Date date = new Date();
+                SimpleDateFormat sdfYear = new SimpleDateFormat("yyyy");
+                sdfYear.setTimeZone(tz);
+
+                SimpleDateFormat sdfDay = new SimpleDateFormat("yyyy-MM-dd");
+                sdfDay.setTimeZone(tz);
+
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+                sdf.setTimeZone(tz);
+
+                // 年份就取当年
+                dltInfo.year = Integer.parseInt(sdfYear.format(date));
+
+                // 先找到起始月份
+                for ( int month = 1; month <= 12; month ++ ) {
+                    String tmpStr = String.format("%04d-%02d-%02d", dltInfo.year, month, 1);
+
+                    if ( dltInfo.beginMonth == 0 && tz.inDaylightTime(sdfDay.parse(tmpStr)) ) {
+                        dltInfo.beginMonth = month;
+                    }
+
+                    if ( dltInfo.beginMonth > 0 && dltInfo.endMonth == 0 && !tz.inDaylightTime(sdfDay.parse(tmpStr)) ) {
+                        // 这个只是可能的结束月份,实际的结束月份很可能是上个月
+                        dltInfo.endMonth = month;
+                        break;
+                    }
+                }
+
+                // 起始天肯定在起始月份当中的某一天,简单查找,就认为每个月都有31天吧
+                for ( int day = 1; day <= 31; day ++ ) {
+                    String tmpStr = String.format("%04d-%02d-%02d", dltInfo.year, dltInfo.beginMonth, day);
+                    if ( tz.inDaylightTime(sdfDay.parse(tmpStr)) ) {
+                        dltInfo.beginDay = day;
+                        break;
+                    }
+                }
+
+                // 结束的天,应该是上述结束月份中的1号,或者是之前一个月的某一天
+                if ( dltInfo.endMonth > 1 ) {
+                    dltInfo.endDay = 1;
+                    // 上个月中查找是否存在结束日期,如果不存在就是之前找到的月份的1号,简单查找,就认为每个月都有31天吧
+                    for ( int day = 1; day <= 31; day ++ ) {
+                        String tmpStr = String.format("%04d-%02d-%02d", dltInfo.year, dltInfo.endMonth-1, day);
+                        if ( !tz.inDaylightTime(sdfDay.parse(tmpStr)) ) {
+                            dltInfo.endMonth = dltInfo.endMonth-1;
+                            dltInfo.endDay = day;
+                            break;
+                        }
+                    }
+                }
+                // 时/分暂不处理,暂定00:00
+            } catch (Exception e) {
+            }
+        }
+        return dltInfo;
+    }
+```
+
 
 
 
