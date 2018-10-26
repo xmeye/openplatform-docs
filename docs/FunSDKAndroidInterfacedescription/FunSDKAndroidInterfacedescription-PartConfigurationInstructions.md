@@ -362,6 +362,30 @@ TimeSection 设置在某段时间内录像
     }
 ```
 
+## 用URL初始化报警消息订阅
+
+```
+public class SMCInitInfo {
+    public byte[] st_0_user = new byte[512];
+    public byte[] st_1_password = new byte[512];
+    public byte[] st_2_token = new byte[256];
+    public int st_3_language;
+    public int st_4_appType;
+    public byte[] st_5_appType = new byte[64];
+
+    public SMCInitInfo() {
+        this.st_5_appType[0] = 0;
+    }
+}
+
+//使用Url初始化报警推送,只需要将url设置到token参数里就行
+SMCInitInfo info = new SMCInitInfo();
+        G.SetValue(info.st_0_user, mUserName);
+        G.SetValue(info.st_1_password, mPassWord);
+        G.SetValue(info.st_2_token, url);
+MpsClient.Init(userId, G.ObjToBytes(info), 0);
+```
+
 
 
 
