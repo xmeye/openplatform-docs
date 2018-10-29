@@ -42,6 +42,7 @@
  - [枚举及结构体](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-EnumerationandStructure.md)
  - [错误码说明](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-Errorcodedescription.md)
  - [报警接口说明](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-Alarmcodedescription.md)
+ - [部分配置使用说明](InterfacedescriptionofFunSDKiOS/InterfacedescriptionofFunSDKiOS-PartConfigurationInstructions.md)
 
 - EConfigCmd配置命令字
  - [EConfigCmd配置命令字](EConfigCmdconfigurationcommandword/EConfigCmdconfigurationcommandword.md)
