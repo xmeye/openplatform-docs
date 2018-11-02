@@ -1,7 +1,7 @@
 ## 下载地址
 
  <table>
- <tr><td style="width:200px;"> </td><td style="width:200px;">Sohu</td><td style="width:200px;">Ksyun</td><td>说明</td><td>版本</td></tr>
+ <tr><td style="width:200px;"> </td><td style="width:200px;">Sohu</td><td style="width:200px;">Cloud</td><td>说明</td><td>版本</td></tr>
  <tr><td>Windows</td><td><a href="https://pan.sohu.net/f/MTY4MzQsaGR1a20.htm">下载 NetSDK</a> </td><td><a href="https://kss.ksyun.com/xmcfs/sdk/NETSDK(20181023).zip">下载 NetSDK</a>
   </td><td></td><td></td></tr>
  <tr><td>Linux</td><td><a href="https://pan.sohu.net/s/ODk2NDgsdXhkbXU.htm">Linux版本</a></td><td><a href="https://kss.ksyun.com/xmcfs/sdk/Linux(20170519).zip">Linux版本</a></td><td></td><td></td></tr>
