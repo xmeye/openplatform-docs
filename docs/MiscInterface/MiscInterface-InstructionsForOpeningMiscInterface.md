@@ -30,13 +30,13 @@ URL : https://misc.xmeye.net/api/getPlayUrl
 
 ```
 {
-"deviceSn": "c5bf7751f17a23bd",
-"playUrl":"http://pub-dss-hls.secu100.net:8080/hls/0199957bf94b099029/c5bf7751f17a23bd/1.m3u8"
-}
+"deviceSn":"b723e62f184f3da8",
+"playUrl":"http://pub-dss-hls.secu100.net:8080/hls/YWNiZTQxOWI0NnxiNzIzZTYyZjE4NGYzZGE4fGV5SndJam9pZEd4S2QzQmliellpTENKMUlq4b2lZV1J0YVc0aWZRPT18MTU0MjE5MDYxMDc0NHxkc3N8MTgzLjEyOS4xOTguMjQyfG1kNQ%3D%3D.45203f5d6ba7e1a61f19c2e1aa46cf41/b723e62f184f3da8/1131973286/1.m3u8",
+"stopUrl":"http://pub-dss-hls.secu100.net:8080/hls/stop/YWNiZTQxOWI0NnxiNzIzZTYyZjE4NGYzZGE4fGV5SndJam9pZEd4S2QzQmliellpTENKMUlq4b2lZV1J0YVc0aWZRPT18MTU0MjE5MDYxMDc0NHxkc3N8MTgzLjEyOS4xOTguMjQyfG1kNQ%3D%3D.45203f5d6ba7e1a61f19c2e1aa46cf41/b723e62f184f3da8/1131973286/1.m3u8"}
 ```
 
 示例：
 
-<a href="https://misc.xmeye.net/api/getPlayUrl?uuid=9605b67eadbe47c98448f4a72e724bb6&appkey=4e5cc7a4424348daa50698771c5fe72a&tm=00000011539754039447&sign=fa254a979feed5ee840a7c4923497c2b&sn=c5bf7751f17a23bd&ver=1" target="_blank">https://misc.xmeye.net/api/getPlayUrl?uuid=9605b67eadbe47c98448f4a72e724bb6&appkey=4e5cc7a4424348daa50698771c5fe72a&tm=00000011539754039447&sign=fa254a979feed5ee840a7c4923497c2b&sn=c5bf7751f17a23bd&ver=1</a>
+<a href="https://misc.xmeye.net/api/getPlayUrl?uuid=9605b67eadbe47c98448f4a72e724bb6&appkey=4e5cc7a4424348daa50698771c5fe72a&tm=00000011539754039447&sign=fa254a979feed5ee840a7c4923497c2b&sn=c5bf7751f17a23bd&ver=1" target="_blank">https://misc.xmeye.net/api/getPlayUrl?uuid=9605b67eadbe47c98448f4a72e724bb6&appkey=4e5cc7a4424348daa50698771c5fe72a&tm=00000011539754039447&sign=fa254a979feed5ee840a7c4923497c2b&sn=c5bf7751f17a23bd</a>
 
 
