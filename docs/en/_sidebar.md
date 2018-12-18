@@ -55,7 +55,7 @@
 - Download Center
  - [FunSDK dowmload](en/downloadcenter-FunSDKdowmload.md)
  - [Web Java Client](en/downloadcenter-WebJavaClient.md)
- - [NetSDK download Win32](en/downloadcenter-NetSDKdownloadWin32.md)
+ - [NetSDK download](en/downloadcenter-NetSDKdownloadWin32.md)
  - [NetSDK download LinuxMAC](en/downloadcenter-NetSDKdownloadLinuxMAC.md)
  - [MyeyeSDK download](en/downloadcenter-MyeyeSDKdownloadWin32.md)
 
