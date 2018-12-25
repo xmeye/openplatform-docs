@@ -16,8 +16,8 @@
 	<td style="width:300px;"><img src="http://open.xmeye.net/upload/image/20160516/1463375682024076806.png"></td>
 	<td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDK.framework_IOS_ForCustom_V1.2.9_180329.zip">
 		下载 SDK for iOS V1.2.9</a></td>
-	<td><a href="https://codeload.github.com/xmeye-team/FunSDKDemo_iOS/zip/master">
-		下载 Demo</a></td>
+	<td><a href="https://codeload.github.com/xmeye-team/FunSDKDemo_iOS/zip/master"> 下载Demo</a></td>
+	<td><a href="https://github.com/xmeye-team/FunSDKDemo_iOS.git"> Demo下载路径2</a></td>
 </tr>
 	
 <tr>
