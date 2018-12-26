@@ -30,9 +30,10 @@ URL : https://misc.xmeye.net/api/getPlayUrl
 
 ```
 {
-"deviceSn":"b723e62f184f3da8",
-"playUrl":"http://pub-dss-hls.secu100.net:8080/hls/YWNiZTQxOWI0NnxiNzIzZTYyZjE4NGYzZGE4fGV5SndJam9pZEd4S2QzQmliellpTENKMUlq4b2lZV1J0YVc0aWZRPT18MTU0MjE5MDYxMDc0NHxkc3N8MTgzLjEyOS4xOTguMjQyfG1kNQ%3D%3D.45203f5d6ba7e1a61f19c2e1aa46cf41/b723e62f184f3da8/1131973286/1.m3u8",
-"stopUrl":"http://pub-dss-hls.secu100.net:8080/hls/stop/YWNiZTQxOWI0NnxiNzIzZTYyZjE4NGYzZGE4fGV5SndJam9pZEd4S2QzQmliellpTENKMUlq4b2lZV1J0YVc0aWZRPT18MTU0MjE5MDYxMDc0NHxkc3N8MTgzLjEyOS4xOTguMjQyfG1kNQ%3D%3D.45203f5d6ba7e1a61f19c2e1aa46cf41/b723e62f184f3da8/1131973286/1.m3u8"}
+	"deviceSn": "b723e62f184f3da8",
+	"playUrl": "http://pub-dss-hls.secu100.net:8080/hls/YWNiZTQxOWI0NnxiNzIzZTYyZjE4NGYzZGE4fGV5SndJam9pZEd4S2QzQmliellpTENKMUlq4b2lZV1J0YVc0aWZRPT18MTU0MjE5MDYxMDc0NHxkc3N8MTgzLjEyOS4xOTguMjQyfG1kNQ==.45203f5d6ba7e1a61f19c2e1aa46cf41/b723e62f184f3da8/1131973286/1.m3u8",
+	"stopUrl": "http://pub-dss-hls.secu100.net:8080/hls/stop/YWNiZTQxOWI0NnxiNzIzZTYyZjE4NGYzZGE4fGV5SndJam9pZEd4S2QzQmliellpTENKMUlq4b2lZV1J0YVc0aWZRPT18MTU0MjE5MDYxMDc0NHxkc3N8MTgzLjEyOS4xOTguMjQyfG1kNQ==.45203f5d6ba7e1a61f19c2e1aa46cf41/b723e62f184f3da8/1131973286/1.m3u8"
+}
 ```
 
 示例：
@@ -91,9 +92,11 @@ URL : https://misc.xmeye.net/api/getPicUrl
 返回：
 
 ```
-{"deviceSn":"c5bf7751f17a23bd",
-  "alarmId":"123",
-  "picUrl":"http://118.31.244.240:8082/download/YWNiZTQxOWI0NnxjNWJmNzc1MWYxN2EyM2JkfEB8MTU0NT4c5MTgwNzcyNHxwaWN8MTgzLjEyOS4xOTguMjQyfG1kNQ%3D%3D.1b84a7f959f512287525297150dca42d/c5bf7751f17a23bd/123.jpeg"}
+{
+	"deviceSn": "c5bf7751f17a23bd",
+	"alarmId": "123",
+	"picUrl": "http://118.31.244.240:8082/download/YWNiZTQxOWI0NnxjNWJmNzc1MWYxN2EyM2JkfEB8MTU0NT4c5MTgwNzcyNHxwaWN8MTgzLjEyOS4xOTguMjQyfG1kNQ==.1b84a7f959f512287525297150dca42d/c5bf7751f17a23bd/123.jpeg"
+}
 ```
 
 示例：
