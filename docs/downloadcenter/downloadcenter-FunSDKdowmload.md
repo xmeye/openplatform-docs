@@ -13,8 +13,8 @@
 </style>
 <table id="table1">
 <tr>
-	<td style="width:240px;"><img src="http://open.xmeye.net/upload/image/20160516/1463375682024076806.png"></td>
-	<td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDK.framework_IOS_ForCustom_V1.2.9_180329.zip">
+	<td style="width:200px;"><img src="http://open.xmeye.net/upload/image/20160516/1463375682024076806.png"></td>
+	<td><a href="https://obs-cn-xm.obs.cn-south-1.myhwclouds.com/openPlat/20181227/FunSDK.framework.zip">
 		下载 SDK for iOS V1.2.9</a></td>
 	<td><a href="https://codeload.github.com/xmeye-team/FunSDKDemo_iOS/zip/master"> iOS_Demo下载路径1</a></td>
 	<td><a href="https://github.com/xmeye-team/FunSDKDemo_iOS.git"> iOS_Demo下载路径2</a></td>
