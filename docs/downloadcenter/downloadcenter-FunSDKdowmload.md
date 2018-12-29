@@ -22,10 +22,10 @@
 	
 <tr>
 	<td><img src="http://open.xmeye.net/upload/image/20160516/1463375687266037320.png"></td>
-	<td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKLibs_ReleaseV1.2.2_20180705.zip">
-		下载 SDK for Android v1.2.2 2018-07-05</a></td>
-	<td><a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKDemo_v1.4.0_20171127.zip">
-		下载 Demo for Android v1.4.0 2017-11-27</a> </td>
+	<td><a href="https://obs-cn-xm.obs.cn-south-1.myhwclouds.com/openPlat/20181229/SDK.zip">
+		下载 SDK for Android 2018-12-29</a></td>
+	<td><a href="https://obs-cn-xm.obs.cn-south-1.myhwclouds.com/openPlat/20181228/FunSDKDemo.zip">
+		下载 Demo for Android 2018-12-29</a> </td>
 </tr>
 </table>
 
