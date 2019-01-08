@@ -34,7 +34,7 @@
 ## 集成相关问题及解决方法
 
 <div style="margin-left:20px;">
-1.FunSDKDemo里面的FunSDK.Framework是测试库，需要替换成上面下载链接下载的正式版SDK，FunSDK.Framework文件夹位置：supporting/library/FunSDK.Framework <br/> 
+1.FunSDKDemo里面的FunSDK.Framework是测试库，需要替换成上面下载链接下载的正式版SDK，FunSDK.Framework文件在Demo中的位置：supporting/library/FunSDK.Framework <br/> 
 2. FunSDKDemo集成常见bug(ios).docx  <a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDKDemo%E9%9B%86%E6%88%90%E5%B8%B8%E8%A7%81bug%28iOS%29.docx">下载</a><br/>
 3. 开放平台FunSDK使用时常见问题以及解决方法.docx  <a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/SDK/%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0FunSDK%E4%BD%BF%E7%94%A8%E6%97%B6%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.docx"> 下载 </a><br/>    
 4. FunSDK库使用说明(ios).doc   <a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDK%E5%BA%93%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%28IOS%29.docx">下载</a> <br/>
