@@ -91,30 +91,30 @@
     
 ## 公共命令字
 	
-    EE_MC_UNKNOWNERROR = -201101,        /// 未知错误
-    EE_MC_NOTVALID = -201102,            /// 非法请求
-    EE_MC_MSGFORMATERR = -201103,        /// 消息格式错误
-    EE_MC_LOGINED = -201104,            /// 该用户已经登录
-    EE_MC_UNLOGINED = -201105,            /// 该用户未登录
-    EE_MC_USERORPWDERROR = -201106,        /// 用户名密码错误
-    EE_MC_NOPOWER = -201107,            /// 无权限
-    EE_MC_NOTSUPPORT = -201108,            /// 版本不支持
-    EE_MC_TIMEOUT = -201109,            /// 超时
-    EE_MC_NOTFOUND = -201110,            /// 查找失败，没有找到对应文件
-    EE_MC_FOUND = -201111,                /// 查找成功，返回全部文件
-    EE_MC_FOUNDPART = -201112,            /// 查找成功，返回部分文件
-    EE_MC_PIRATESOFTWARE = -201113,        /// 盗版软件
-    EE_MC_FILE_NOT_FOUND = -201114,        /// 没有查询到文件
-    EE_MC_PEER_ONLINE = -201115,           /// 对端在线
-    EE_MC_PEER_NOT_ONLINE = -201116,    /// 对端不在线
-    EE_MC_PEERCONNET_REACHED_MAX = -201117,    /// 对端连接数已达上限
-    EE_MC_LINK_SERVER_ERROR = -201118,    ///连接服务器失败
-    EE_MC_APP_TYPE_ERROR = -201119,        ///APP类型错误
-    EE_MC_SEND_DATA_ERROR = -201120,    ///发送数据出错
-    EE_MC_AUTHCODE_ERROR = -201121,        ///获取AUTHCODE有误
-    EE_MC_XPMS_UNINIT = -201122,        ///未初始化
+    EE_MC_UNKNOWNERROR = -201101,        // 未知错误
+    EE_MC_NOTVALID = -201102,            // 非法请求
+    EE_MC_MSGFORMATERR = -201103,        // 消息格式错误
+    EE_MC_LOGINED = -201104,            // 该用户已经登录
+    EE_MC_UNLOGINED = -201105,            // 该用户未登录
+    EE_MC_USERORPWDERROR = -201106,        // 用户名密码错误
+    EE_MC_NOPOWER = -201107,            // 无权限
+    EE_MC_NOTSUPPORT = -201108,            // 版本不支持
+    EE_MC_TIMEOUT = -201109,            // 超时
+    EE_MC_NOTFOUND = -201110,            // 查找失败，没有找到对应文件
+    EE_MC_FOUND = -201111,                // 查找成功，返回全部文件
+    EE_MC_FOUNDPART = -201112,            // 查找成功，返回部分文件
+    EE_MC_PIRATESOFTWARE = -201113,        // 盗版软件
+    EE_MC_FILE_NOT_FOUND = -201114,        // 没有查询到文件
+    EE_MC_PEER_ONLINE = -201115,           // 对端在线
+    EE_MC_PEER_NOT_ONLINE = -201116,    // 对端不在线
+    EE_MC_PEERCONNET_REACHED_MAX = -201117,    // 对端连接数已达上限
+    EE_MC_LINK_SERVER_ERROR = -201118,    //连接服务器失败
+    EE_MC_APP_TYPE_ERROR = -201119,        //APP类型错误
+    EE_MC_SEND_DATA_ERROR = -201120,    //发送数据出错
+    EE_MC_AUTHCODE_ERROR = -201121,        //获取AUTHCODE有误
+    EE_MC_XPMS_UNINIT = -201122,        //未初始化
     
-    //EE_AS_PHONE_CODE = 10001：发送成功
+    EE_AS_PHONE_CODE = 10001：发送成功
     EE_AS_PHONE_CODE0 =-210002, //接口验证失败
     EE_AS_PHONE_CODE1 =-210003, //参数错误
     EE_AS_PHONE_CODE2 =-210004, //手机号码已被注册
