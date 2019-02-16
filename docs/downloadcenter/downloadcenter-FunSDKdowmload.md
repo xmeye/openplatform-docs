@@ -14,18 +14,16 @@
 <table id="table1">
 <tr>
 	<td style="width:200px;"><img src="http://open.xmeye.net/upload/image/20160516/1463375682024076806.png"></td>
-	<td><a href="https://obs-cn-xm.obs.cn-south-1.myhwclouds.com/openPlat/20181229/FunSDK.framework_181229.zip">
-		下载 SDK for iOS 2018-12-29</a></td>
-	<td><a href="https://codeload.github.com/xmeye-team/FunSDKDemo_iOS/zip/master"> iOS_Demo下载路径1</a></td>
-	<td><a href="https://github.com/xmeye-team/FunSDKDemo_iOS.git"> iOS_Demo下载路径2</a></td>
+	<td><a href="https://gitlab.xmcloud.io/demo/FunSDKDemo_iOS">
+		FunSDKDemo_iOS's GitLab</a></td>
+	<td><a href=""></a></td>
 </tr>
 	
 <tr>
 	<td><img src="http://open.xmeye.net/upload/image/20160516/1463375687266037320.png"></td>
-	<td><a href="https://obs-cn-xm.obs.cn-south-1.myhwclouds.com/openPlat/20181229/SDK.zip">
-		下载 SDK for Android 2018-12-29</a></td>
-	<td><a href="https://obs-cn-xm.obs.cn-south-1.myhwclouds.com/openPlat/20181228/FunSDKDemo.zip">
-		下载 Demo for Android 2018-12-29</a> </td>
+	<td><a href="https://gitlab.xmcloud.io/demo/FunSDKDemo_Android_Old2018">
+		FunSDKDemo_Android(Old Version) 's GitLab</a></td>
+	<td>new version is comming soon</td>
 </tr>
 </table>
 
