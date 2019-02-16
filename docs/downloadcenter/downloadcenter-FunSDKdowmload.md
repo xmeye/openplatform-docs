@@ -16,8 +16,6 @@
 	<td style="width:200px;"><img src="http://open.xmeye.net/upload/image/20160516/1463375682024076806.png"></td>
 	<td><a href="https://gitlab.xmcloud.io/demo/FunSDKDemo_iOS">
 		FunSDKDemo_iOS's GitLab</a></td>
-
-	<td><a href=""></a></td>
 </tr>
 	
 <tr>
