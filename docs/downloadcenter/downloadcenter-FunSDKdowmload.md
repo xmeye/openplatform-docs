@@ -22,7 +22,7 @@
 	<td><img src="http://open.xmeye.net/upload/image/20160516/1463375687266037320.png"></td>
 	<td><a href="https://gitlab.xmcloud.io/demo/FunSDKDemo_Android_Old2018">
 		FunSDKDemo_Android(Old Version) 's GitLab</a></td>
-	<td>new version is comming soon</td>
+	<td>new version is coming soon</td>
 </tr>
 </table>
 
