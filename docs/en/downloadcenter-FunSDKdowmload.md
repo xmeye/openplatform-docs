@@ -1,52 +1,20 @@
 ## SDK and Demo download address
 
 <table id="table1">
-<tr><td style="width:300px;">
-
-<img src="http://open.xmeye.net/upload/image/20160516/1463375682024076806.png">
-
-</td><td>
-
-<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDK.framework_IOS_ForCustom_V1.2.9_180329.zip">
-
-download SDK for iOS v1.2.9
-
-</a>
-
-</td><td>
-
-
-<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/ios/FunSDKDemo_IOS_V2.3.1_20180421.zip"><br/>
-
-Download Demo for iOS 2018-4-21 new
-
-</a>
-
-</td></tr>
-
-<tr><td>
-
-<img src="http://open.xmeye.net/upload/image/20160516/1463375687266037320.png"><br/>
-
-</td><td>
-
-<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKLibs_ReleaseV1.2.1_20180503.zip"><br/>
-
-Download SDK   for Android v1.2.1 2018-05-03
-
-</a>
-
-</td><td>
-
-<a href="http://xmopen.ks3-cn-beijing.ksyun.com/funsdk/android/FunSDKDemo_v1.4.0_20171127.zip"><br/>
-
- Download Demo for Android v1.4.0 2017-11-27
-
-</a> 
-
-</td></tr>
-
+<tr>
+	<td style="width:200px;"><img src="http://open.xmeye.net/upload/image/20160516/1463375682024076806.png"></td>
+	<td><a href="https://gitlab.xmcloud.io/demo/FunSDKDemo_iOS">
+		FunSDKDemo_iOS's GitLab</a></td>
+</tr>
+	
+<tr>
+	<td><img src="http://open.xmeye.net/upload/image/20160516/1463375687266037320.png"></td>
+	<td><a href="https://gitlab.xmcloud.io/demo/FunSDKDemo_Android_Old2018">
+		FunSDKDemo_Android(Old Version) 's GitLab</a></td>
+	<td>new version is coming soon</td>
+</tr>
 </table>
+
 <br/>
 **Demo function description**
 <div style="margin-left:20px;">
