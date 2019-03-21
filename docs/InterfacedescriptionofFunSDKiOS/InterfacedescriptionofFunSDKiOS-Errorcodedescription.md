@@ -2,26 +2,26 @@
 ## 通用、常用错误定义
 
     EE_OK = 0,
-    EE_OBJ_NOT_EXIST = -1239510,
-    EE_VALUE_NOT_EXIST = -1239511,
+        EE_OBJ_NOT_EXIST = -1239510, //对象不存在
+    EE_VALUE_NOT_EXIST = -1239511, //值不存在
     EE_ERROR = -100000,
-    EE_PARAM_ERROR = -99999,
-    EE_CREATE_FILE = -99998,
-    EE_OPEN_FILE = -99997,
-    EE_WRITE_FILE = -99996,
-    EE_READ_FILE = -99995,
-    EE_NO_SUPPORTED = -99994,
-    EE_NET = -99993,    				// NET ERROR
-    EE_OBJ_EXIST = -99992,
-    EE_TIMEOUT = -99991,
-    EE_NOT_FOUND = -99990,
-    EE_NEW_BUFFER = -99989,
-    EE_NET_RECV = -99988,
-    EE_NET_SEND = -99987,
-    EE_OBJECT_BUSY = -99986,
+    EE_PARAM_ERROR = -99999, //参数错误
+    EE_CREATE_FILE = -99998, //创建文件失败
+    EE_OPEN_FILE = -99997, //打开文件失败
+    EE_WRITE_FILE = -99996, //写文件失败
+    EE_READ_FILE = -99995, //读文件失败
+    EE_NO_SUPPORTED = -99994,//不支持
+    EE_NET = -99993,		//网络错误			
+    EE_OBJ_EXIST = -99992, //对象存在
+    EE_TIMEOUT = -99991, //超时
+    EE_NOT_FOUND = -99990, //没有找到
+    EE_NEW_BUFFER = -99989, //创建缓存失败
+    EE_NET_RECV = -99988, //网路接收错误
+    EE_NET_SEND = -99987, //网络发送错误
+    EE_OBJECT_BUSY = -99986,  //对象繁忙
     EE_SERVER_INTERNAL_ERROR = -99985,  //服务器内部错误
-    EE_USER_CANCEL = -90000,
-    EE_FILE_IS_ILLEGAL = -90001, // FILE IS ILLEGAL
+    EE_USER_CANCEL = -90000, //用户取消
+    EE_FILE_IS_ILLEGAL = -90001, // 文件非法 FILE IS ILLEGAL
 
 
 # 本接口用到的错误值枚举
@@ -356,21 +356,36 @@
     EE_AS_SYS_NO_VALIDATED_REGISTER_EXTEND_CODE3 = -215006, // 用户名已被注册
     EE_AS_SYS_NO_VALIDATED_REGISTER_EXTEND_CODE4 = -215010, // 注册失败
     
+    //Dss相关错误
     EE_DSS_XMCloud_InvalidParam = -215100,    //通过XMCloud获取设备DSS信息
     EE_DSS_XMCloud_ConnectHls = -215101,    //DSS连接Hls服务器失败
     EE_DSS_XMCloud_InvalidStream= -215102,    //DSS服务器异常
     EE_DSS_XMCloud_Request = -215103,    //DSS服务器请求失败
     EE_DSS_XMCloud_StreamInterrupt = -215104,    //DSS码流格式解析失败
-    
+
     EE_DSS_SQUARE_PARSE_URL = -215110,      //解析雄迈云返回的视频广场url失败
     
     EE_DSS_MINOR_STREAM_DISABLE = -215120,   // DSS  服务器禁止此种码流(-1)
     EE_DSS_NO_VIDEO = -215121,               // NVR  前端未连接视频源(-2)
     EE_DSS_DEVICE_NOT_SUPPORT = -215122,     // 前端不支持此种码流(-3)
+    EE_DSS_NOT_PUSH_STRREAM = -215123,       // DSS 服务器未推流(0)
+    EE_DSS_NOT_OPEN_MIXED_STRREAM = -215124, // DSS 不能使用组合编码通道进行打开，请重新打开
     
     EE_DSS_BAD_REQUEST = -215130,            // 无效请求（http）
     EE_MEDIA_CONNET_REACHED_MAX  = -215131,  // 媒体视频链接达到最大，访问受限
     
+    //和Dss Token/AuthCode相关的错误
+    EE_DSS_XMClOUD_ERROR_INVALID_TOKEN_FORMAT= -215140, //100001 无效的令牌格式
+    EE_DSS_XMClOUD_ERROR_NOT_MATCH_TOKEN_SERINUMBER = -215141, //100002 不匹配令牌序列号
+    EE_DSS_XMClOUD_ERROR_REMOTE_IP_NOT_MATCH_TOKEN_IP = -215142, //100003 远程ip不匹配令牌ip
+    EE_DSS_XMClOUD_ERROR_TOKNE_EXPIRSE = -215143, //100004 令牌到期
+    EE_DSS_XMClOUD_ERROR_GET_SECRET_KEY_FAILED = -215144, //100005 获取秘钥key失败
+    EE_DSS_XMClOUD_ERROR_TOKEN_NOT_MATCH_SIGN = -215145, //100006 令牌不符
+    EE_DSS_XMClOUD_ERROR_KEY_DATA_INVALIED_FORMAT = -215146, //100007 令牌数据无效格式
+    EE_DSS_XMClOUD_ERROR_DECODE_KEY_DATA_FAILED = -215147, //100008 解密秘钥数据失败
+    EE_DSS_XMClOUD_ERROR_AUTHCODE_NOT_MATCH = -215148, //100009 authcode不匹配
+    EE_DSS_XMClOUD_ERROR_AUTHCODE_CHANGE = -215149, //100010 更改了authcode
+
     EE_ALARM_CHECK_AUTHCODE_FAILED = -221201, //报警授权码错误
     EE_ALARM_NOT_SUPPORTED = -221202,          //不支持（比较在中国界内不支持Google报警）
     
@@ -405,6 +420,9 @@
     EE_MNETSDK_USEREXIST = -400016,          //设备已存在
     EE_MNETSDK_CAPTURE_PIC_FAILURE = -400017,        //抓图失败
     
+    EE_MNETSDK_FILE_SIZE_LIMIT = -400018,// 超出文件大小限制（64kb）
+    EE_MNETSDK_CHECK_FILE_SIZE = -400019,// 文件大小校验失败
+
     EE_MNETSDK_TALK_NOT_START = -400100,   //设备错误码往后写(设备端错误码503:对讲未开启)
     EE_MNETSDK_STORAGE_IS_FULL = -400101,  //设备存储已满
     
