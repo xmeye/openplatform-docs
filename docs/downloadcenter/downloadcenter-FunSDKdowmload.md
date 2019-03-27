@@ -26,8 +26,6 @@
 </tr>
 </table>
 
-<label style="color:#900"> 注：Demo里的库版本较新，做为测试库，可能会存在问题。需要在上面SDK下载路径下载正式版SDK进行替换。FunSDK.Framework文件在Demo中的位置：supporting/library/FunSDK.Framework </label>
-
 ## 集成相关问题及解决方法
 
 <div style="margin-left:20px;">
