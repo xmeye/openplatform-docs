@@ -7,6 +7,6 @@
  <tr><td>Linux</td><td><a href="https://kss.ksyun.com/xmcfs/sdk/Linux(20170519).zip">Linux版本</a></td><td></td><td></td></tr>
 <tr><td>Mac</td><td><a href="https://obs-cn-xm.obs.cn-south-1.myhwclouds.com/openPlat/20181217/MAC(20181217).zip">Mac版本</a></td><td></td><td></td></tr>
  <tr><td>CGI</td><td><a href="https://kss.ksyun.com/xmcfs/sdk/CGI_demo.zip">下载CGI开发包</a></td><td></td><td></td></tr>
- <tr><td>XNetSDK</td><td><a href="https://obs-cn-xm.obs.cn-south-1.myhwclouds.com/openPlat/20181130/XNetSDK_181130.zip">XNetSDK(20181130)
+ <tr><td>XNetSDK</td><td><a href="https://obs-cn-xm.obs.cn-south-1.myhwclouds.com/openPlat/20190730/XNetSDK_181130.zip">XNetSDK(20181130)
 </a></td><td></td><td></td></tr>
  </table>
